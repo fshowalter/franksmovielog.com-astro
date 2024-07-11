@@ -1,0 +1,117 @@
+# feed
+/feed/ /feed.xml 301
+
+# stats 
+/reviews/stats /viewings/stats 301
+/reviews/stats/* /viewings/:splat 301
+/stats/* /viewings/stats/:splat 301
+
+# sitemap 
+/sitemap.xml /sitemap-index.xml 301
+
+# old review links to new
+/browse/reviews /reviews 301
+/browse/reviews/* /reviews/:splat 301
+/movies/* /reviews/:splat 301
+/reviews/murder-to-the-tune-of-the-seven-black-notes-1977 /reviews/the-psychic-1977 301
+/reviews/dune-2021 /reviews/dune-part-one-2021 301
+
+# watchlist to cast-and-crew
+/browse/* /cast-and-crew/:splat 301
+/watchlist/cast/* /cast-and-crew/:splat 301
+/watchlist/performers/* /cast-and-crew/:splat 301
+/watchlist/directors/* /cast-and-crew/:splat 301
+/watchlist/writers/* /cast-and-crew/:splat 301
+/watchlist/collections/* /collections/:splat 301
+
+# misc spam
+*/wlwmanifest.xml /gone 410
+/.aws/credentials /gone 410
+/.env /gone 410
+//* /gone 410
+// /gone 410
+//upl.php /gone 410
+//rxr.php /gone 410
+//upload.php /gone 410
+/admin /gone 410
+/admin/* /gone 410
+/adminer.php /gone 410
+/backup /gone 410
+/blog/* /gone 410
+/cms /gone 410
+/config.bak.php /gone 410
+/demo /gone 410
+/dev /gone 410
+/home /gone 410
+/main/* /gone 410
+/new/* /gone 410
+/newsite /gone 410
+/old/* /gone 410
+/portal /gone 410
+/site /gone 410
+/test /gone 410
+/testing /gone 410
+/tmp /gone 410
+/web /gone 410
+/wlwmanifest.xml /gone 410
+/wordpress /gone 410
+/wordpress/* /gone 410
+/wp /gone 410
+/wp-admin /gone 410
+/wp-admin/* /gone 410
+/wp-content /gone 410
+/wp-content/* /gone 410
+/wp-includes /gone 410
+/wp-includes/* /gone 410
+/wp-login.php /gone 410
+/wp/* /gone 410
+/xmlrpc.php /gone 410
+
+
+# old favicons
+/favicon.ico /gone 410
+/apple-touch-icon.png /gone 410
+/apple-touch-icon-120x120.png /gone 410
+/apple-touch-icon-152x152.png /gone 410
+/apple-touch-icon-120x120-precomposed.png /gone 410
+/apple-touch-icon-precomposed.png /gone 410
+
+# misc old links
+/images/5-stars-4661cb2a.svg /gone 410
+/metrics /gone 410
+
+# misc
+/ads.txt /gone 410
+/inputs.php /gone 410
+/page-* /reviews 301
+/repeater.php /gone 410
+/sitemap/* /sitemap-index.xml 301
+
+
+# resized images
+/static/:contenthash/0e001/* /gone 410
+/static/:contenthash/1015f/* /gone 410
+/static/:contenthash/10b75/* /gone 410
+/static/:contenthash/10e3d/* /gone 410
+/static/:contenthash/141a0/* /gone 410
+/static/:contenthash/22a6f/* /gone 410
+/static/:contenthash/4006c/* /gone 410
+/static/:contenthash/467f6/* /gone 410
+/static/:contenthash/5dbd5/* /gone 410
+/static/:contenthash/7de85/* /gone 410
+/static/:contenthash/894b0/* /gone 410
+/static/:contenthash/8a152/* /gone 410
+/static/:contenthash/8ab54/* /gone 410
+/static/:contenthash/9025e/* /gone 410
+/static/:contenthash/936aa/* /gone 410
+/static/:contenthash/992e1/* /gone 410
+/static/:contenthash/ad189/* /gone 410
+/static/:contenthash/ad875/* /gone 410
+/static/:contenthash/c3c10/* /gone 410
+/static/:contenthash/ced04/* /gone 410
+/static/:contenthash/d5f84/* /gone 410
+/static/:contenthash/e34c3/* /gone 410
+/static/:contenthash/f249d/* /gone 410
+/static/:contenthash/f2565/* /gone 410
+/static/:contenthash/f4320/* /gone 410
+/static/231bfbacc3282741d84e44ddb751b11c/31a81/high-pressure-1932.avif /gone 410

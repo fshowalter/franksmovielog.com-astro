@@ -1,0 +1,30 @@
+---
+import SiteSearchForm from "./SiteSearchForm.astro";
+import NavListItems from "./NavListItems.astro";
+---
+
+<header
+  class="border-bottom px-pageMargin bg-default desktop:sticky desktop:top-4 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:justify-between desktop:py-8 desktop:text-left flex flex-col items-center gap-6 py-6 text-center"
+>
+  <div class="items-inherit justify-items-inherit flex flex-col">
+    <h1
+      class="whitespace-nowrap font-normal leading-8"
+      style={{ fontSize: "1.5625rem" }}
+    >
+      <a class="text-default" href="/"> Frank&apos;s Movie Log </a>
+    </h1>
+    <p class={"text-muted desktop:pl-px w-full text-sm italic leading-4"}>
+      My life at the movies.
+    </p>
+  </div>
+  <div class="desktop:w-auto max:order-4 w-full max-w-prose">
+    <SiteSearchForm />
+  </div>
+  <nav class="max:w-auto w-full">
+    <ul
+      class="tablet:gap-x-6 text-accent desktop:justify-start flex flex-wrap justify-center gap-x-4 gap-y-2"
+    >
+      <NavListItems activeClass="text-muted" />
+    </ul>
+  </nav>
+</header>

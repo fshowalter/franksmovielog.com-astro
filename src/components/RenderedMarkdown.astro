@@ -1,0 +1,16 @@
+---
+import { twMerge } from "tailwind-merge";
+
+interface Props  {
+  text: string | null;
+  className?: string;
+  as: any;
+}
+
+const { text, className, as="div"}  = Astro.props;
+
+const Component = as;
+
+---
+
+<Component class={twMerge("rendered-markdown font-light", className)} >{text}</Component>

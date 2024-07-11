@@ -1,6 +1,10 @@
 ---
+import Mast from '@/components/Mast.astro';
+import Footer from '@/components/Footer.astro';
+import "./base.css";
+
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,44 +12,33 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+<div>
+	<a
+	  href="#content"
+	  class="bg-subtle text-accent translate-skip-to-content absolute left-1/2 top-0.5 z-50 mx-auto px-6 py-2 text-center"
+	>
+	  Skip to content
+	</a>
+	<div
+	  class={"image-filter bg-notcomingsoon max-w-canvas desktop:sticky desktop:top-0 desktop:z-40 mx-auto min-h-4 w-full"}
+	>
+	</div>
+	<div class="max-w-canvas bg-default mx-auto flex min-h-full flex-col">
+	  <Mast />
+	  <div class="grow" id="content">
 		<slot />
-	</body>
+	  </div>
+	  <Footer />
+	</div>
+  </div>
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
