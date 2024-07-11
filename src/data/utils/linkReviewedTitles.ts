@@ -14,10 +14,12 @@ export function linkReviewedTitles(
     );
 
     if (!reviewedMovie) {
-      result = result.replace(
-        `<span data-imdb-id="${match[2]}">${match[3]}</span>`,
-        match[3],
-      );
+      if (match[3]) {
+        result = result.replace(
+          `<span data-imdb-id="${match[2]}">${match[3]}</span>`,
+          match[3],
+        );
+      }
     } else {
       result = result.replace(
         `<span data-imdb-id="${match[2]}">${match[3]}</span>`,

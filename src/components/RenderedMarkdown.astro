@@ -1,15 +1,16 @@
 ---
 import { twMerge } from "tailwind-merge";
+import type { HTMLTag, Polymorphic } from "astro/types"
 
-interface Props  {
+type Props<Tag extends HTMLTag> = Polymorphic<{
   text: string | null;
   className?: string;
-  as: any;
-}
+  as: Tag;
+}>
 
-const { text, className, as="div"}  = Astro.props;
+const { text, className, as}  = Astro.props;
 
-const Component = as;
+const Component = as || "div";
 
 ---
 
