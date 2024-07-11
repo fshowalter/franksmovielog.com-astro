@@ -4,5 +4,7 @@
   },
   "editor.quickSuggestions": {
     "strings": "on"
-  }
+  },
+  "editor.defaultFormatter": "astro-build.astro-vscode",
+  "editor.formatOnSave": true
 }
