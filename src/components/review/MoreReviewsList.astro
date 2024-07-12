@@ -1,0 +1,29 @@
+---
+import StillList from "@/components/StillList.astro";
+import StillListHeading from "@/components/StillListHeading.astro";
+import StillListItem from "@/components/StillListItem.astro";
+import StillListNav from "../StillListNav.astro";
+import type { ComponentProps } from "astro/types";
+
+interface Props {
+  leadText: string;
+  linkText: string;
+  linkTarget: string;
+  items: ComponentProps<typeof StillListItem>[];
+}
+
+const props = Astro.props;
+---
+
+<StillListNav>
+  <StillListHeading
+    leadText={props.leadText}
+    linkText={props.linkText}
+    href={props.linkTarget}
+  />
+  <StillList
+    titles={props.items}
+    seeAllLinkTarget={props.linkTarget}
+    seeAllLinkText={props.linkText}
+  />
+</StillListNav>

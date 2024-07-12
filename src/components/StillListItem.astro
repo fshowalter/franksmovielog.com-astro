@@ -1,0 +1,59 @@
+---
+import Grade from "@/components/Grade.astro";
+import Still from "@/components/Still.astro";
+
+interface Props {
+  title: string;
+  grade: string;
+  slug: string;
+  year: string;
+  genres: string[];
+}
+
+const props = Astro.props;
+---
+
+<li
+  class="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default"
+>
+  <div class="row-start-1 row-end-1">
+    <a
+      href={`/reviews/${props.slug}/`}
+      class="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
+    >
+      <Still
+        slug={props.slug}
+        title={props.title}
+        year={props.year}
+        width={312}
+        height={175.5}
+        sizes="(min-width: 312px) 312px, 100vw"
+        className="h-auto"
+      />
+    </a>
+  </div>
+  <div class="row-start-2 mb-2 tablet:m-0 tablet:px-6">
+    <a href={`/reviews/${props.slug}/`} class="block text-md text-default">
+      {props.title}{" "}
+      <span class="text-sm font-light leading-none text-muted">
+        {props.year}
+      </span>
+    </a>
+  </div>
+  <div class="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
+    <Grade grade={props.grade} height={16} />
+  </div>
+  <div class="tablet:px-6">
+    <div class="text-sm leading-4 tracking-0.5px text-subtle">
+      {
+        props.genres.map((genre, index) => {
+          if (index === 0) {
+            return <span>{genre}</span>;
+          }
+
+          return <span> | {genre}</span>;
+        })
+      }
+    </div>
+  </div>
+</li>

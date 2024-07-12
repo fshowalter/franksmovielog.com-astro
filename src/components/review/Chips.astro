@@ -1,0 +1,47 @@
+---
+import Chip from "./Chip.astro";
+
+interface CastAndCrewMember {
+  name: string;
+  slug: string;
+}
+
+interface Collection {
+  name: string;
+  slug: string;
+}
+
+export interface ChipsData {
+  castAndCrew: CastAndCrewMember[];
+  collections: Collection[];
+}
+
+interface Props extends ChipsData {}
+
+const props = Astro.props;
+---
+
+<ul class="flex flex-wrap gap-2">
+  {
+    props.castAndCrew.map((member) => {
+      return (
+        <Chip
+          href={`/cast-and-crew/${member.slug}`}
+          slug={member.slug}
+          name={member.name}
+        />
+      );
+    })
+  }
+  {
+    props.collections.map((collection) => {
+      return (
+        <Chip
+          href={`/collections/${collection.slug}`}
+          slug={collection.slug}
+          name={collection.name}
+        />
+      );
+    })
+  }
+</ul>

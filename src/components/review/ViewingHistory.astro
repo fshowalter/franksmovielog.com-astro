@@ -1,0 +1,21 @@
+---
+import ViewingHistoryListItem from "./ViewingHistoryListItem.astro";
+import type { ComponentProps } from "astro/types";
+
+interface Props {
+  viewings: ComponentProps<typeof ViewingHistoryListItem>[];
+  class?: string;
+}
+
+const props = Astro.props;
+---
+
+<div class={props.class}>
+  <h3 class="border-bottom px-gutter text-md font-normal text-subtle">
+    Viewing History
+    <div class="h-2 min-h-2"></div>
+  </h3>
+  <ul>
+    {props.viewings.map((viewing) => <ViewingHistoryListItem {...viewing} />)}
+  </ul>
+</div>

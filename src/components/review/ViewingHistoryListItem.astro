@@ -1,0 +1,89 @@
+---
+import DateIcon from "@/components/DateIcon.astro";
+import RenderedMarkdown from "@/components/RenderedMarkdown.astro";
+
+interface Props {
+  date: Date;
+  venue: string | null;
+  venueNotes: string | null;
+  medium: string | null;
+  mediumNotes: string | null;
+  viewingNotes: string | null;
+  sequence: number;
+}
+
+const dateFormat = new Intl.DateTimeFormat("en-US", {
+  weekday: "short",
+  month: "short",
+  day: "numeric",
+  year: "numeric",
+  timeZone: "UTC",
+});
+
+function formatDate(date: Date) {
+  return dateFormat.format(date);
+}
+
+const props = Astro.props;
+---
+
+<li class="flex flex-col px-gutter even:bg-subtle">
+  <div class="flex gap-x-[1ch] py-4">
+    <div class="h-5 w-4">
+      <DateIcon class="mt-1 w-4" />{" "}
+    </div>
+    <div class="grow">
+      <span class="inline-block text-default">{formatDate(props.date)}</span>{
+        " "
+      }
+      {
+        props.medium && (
+          <span class="font-light text-muted">
+            <span>via</span> <span>{props.medium}</span>
+          </span>
+        )
+      }
+      {
+        props.mediumNotes && (
+          <span class="text-sm font-light leading-none text-subtle">
+            <RenderedMarkdown
+              text={`(${props.mediumNotes})`}
+              class="text-sm leading-none"
+              as="span"
+            />
+          </span>
+        )
+      }
+      {
+        props.venue && (
+          <span class="font-light text-subtle">
+            <span>at</span> <span>{props.venue}</span>
+          </span>
+        )
+      }
+      {
+        props.venueNotes && (
+          <span class="text-sm font-light leading-none text-subtle">
+            <RenderedMarkdown
+              text={`(${props.venueNotes})`}
+              class="text-sm leading-none"
+              as="span"
+            />
+          </span>
+        )
+      }
+    </div>
+  </div>
+  <div>
+    {
+      props.viewingNotes && (
+        <div class="pb-6">
+          <RenderedMarkdown
+            class="leading-normal text-default"
+            text={props.viewingNotes}
+          />
+        </div>
+      )
+    }
+  </div>
+</li>

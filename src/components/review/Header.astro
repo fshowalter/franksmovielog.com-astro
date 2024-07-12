@@ -1,0 +1,46 @@
+---
+import PageTitle from "@/components/PageTitle.astro";
+import { twMerge } from "tailwind-merge";
+
+interface Props {
+  title: string;
+  originalTitle: string | null;
+  year: string;
+  countries: string[];
+  runtimeMinutes: number;
+  class?: string;
+}
+
+const props = Astro.props;
+---
+
+<header class={twMerge("flex flex-col gap-y-4", props.class)}>
+  <PageTitle>{props.title}</PageTitle>
+  {props.originalTitle && <div class="text-muted">({props.originalTitle})</div>}
+  <div class="text-muted">
+    {props.year}
+    <span>|</span>{" "}
+    {
+      props.countries.reduce((acc, country) => {
+        if (acc === null) {
+          return <>{country}</>;
+        }
+
+        return (
+          <>
+            {acc}
+            <span>&ndash;</span>
+            {country}
+          </>
+        );
+      }, null)
+    }{" "}
+    <span>|</span>
+    {props.runtimeMinutes}
+    &#x02009;min{" "}
+    <span>
+      <span>|</span>
+      <a href="#credits">More...</a>
+    </span>
+  </div>
+</header>

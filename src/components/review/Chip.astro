@@ -1,0 +1,25 @@
+---
+interface Props {
+  href: string;
+  slug: string;
+  name: string;
+}
+
+const props = Astro.props;
+---
+
+<li class="block">
+  <a
+    href={props.href}
+    class="border-all hover:border-all-accent flex items-center whitespace-nowrap rounded-lg bg-inverse px-4 py-2"
+  >
+    <img
+      src={`/assets/avatars/${props.slug}.png`}
+      alt={`More ${props.name} reviews`}
+      width={40}
+      height={40}
+      class="avatar-border mr-[1ch] block size-10"
+    />
+    {props.name}
+  </a>
+</li>

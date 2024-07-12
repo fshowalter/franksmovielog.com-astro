@@ -75,7 +75,7 @@ function getHtml(
   return linkReviewedTitles(html, reviewedTitles);
 }
 
-interface MarkdownViewing {
+export interface MarkdownViewing {
   sequence: number;
   imdbId: string;
   date: Date;

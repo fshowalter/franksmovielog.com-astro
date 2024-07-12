@@ -1,0 +1,16 @@
+---
+interface Props {
+  leadText: string;
+  linkText: string;
+  href: string;
+}
+
+const props = Astro.props;
+---
+
+<div
+  class="border-bottom w-full px-gutter py-2 tablet:py-4 tablet:shadow-none desktop:px-pageMargin desktop:py-4"
+>
+  <span class="font-semibold text-muted">{props.leadText} </span>
+  <a href={props.href}>{props.linkText}</a>
+</div>

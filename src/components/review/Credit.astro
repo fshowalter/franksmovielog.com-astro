@@ -1,0 +1,13 @@
+---
+interface Props {
+  title: string;
+  children: any;
+}
+
+const props = Astro.props;
+---
+
+<div class="overflow-hidden">
+  <dt class="font-bold text-subtle">{props.title}</dt>
+  <dd class="text-subtle"><slot /></dd>
+</div>

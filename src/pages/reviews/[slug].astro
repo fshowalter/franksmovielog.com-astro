@@ -1,0 +1,124 @@
+---
+import Content from "@/components/review/Content.astro";
+import Credits from "@/components/review/Credits.astro";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/review/Header.astro";
+import MoreReviews from "@/components/review/MoreReviews.astro";
+import StructuredData from "@/components/review/StructuredData.astro";
+import ViewingHistory from "@/components/review/ViewingHistory.astro";
+import reviewedTitlesJson from "@/data/reviewedTitlesJson";
+import reviewsMarkdown from "@/data/reviewsMarkdown";
+import type { ReviewedTitleJson } from "@/data/reviewedTitlesJson";
+import type { MarkdownReview } from "@/data/reviewsMarkdown";
+import type { MarkdownViewing } from "@/data/viewingsMarkdown";
+import viewingsMarkdown from "@/data/viewingsMarkdown";
+import Still from "@/components/Still.astro";
+
+export async function getStaticPaths() {
+  const jsonTitles = await reviewedTitlesJson();
+  const markdownReviews = await reviewsMarkdown();
+  const markdownViewings = await viewingsMarkdown();
+
+  return jsonTitles.map((jsonTitle) => {
+    const markdownReview = markdownReviews.find((markdown) => {
+      return markdown.slug === jsonTitle.slug;
+    });
+
+    if (!markdownReview) {
+      throw new Error(
+        `No markdown review found with slug ${jsonTitle.slug} for title "${jsonTitle.title}"`
+      );
+    }
+
+    const viewings = markdownViewings.filter((viewing) => {
+      return viewing.imdbId === jsonTitle.imdbId;
+    });
+
+    if (viewings.length === 0) {
+      throw new Error(
+        `No markdown viewings found with imdb_id ${jsonTitle.imdbId} for title "${jsonTitle.title}"`
+      );
+    }
+
+    return {
+      params: {
+        slug: jsonTitle.slug,
+      },
+      props: {
+        json: jsonTitle,
+        markdown: markdownReview,
+        viewings,
+      },
+    };
+  });
+}
+
+interface Props {
+  json: ReviewedTitleJson;
+  markdown: MarkdownReview;
+  viewings: MarkdownViewing[];
+}
+
+const { json, markdown, viewings } = Astro.props;
+---
+
+<Layout title={`${json.title} (${json.year})`}>
+  <main id="top" class="scroll-margin-top flex flex-col items-center">
+    <Header
+      title={json.title}
+      originalTitle={json.originalTitle}
+      year={json.year}
+      countries={json.countries}
+      runtimeMinutes={json.runtimeMinutes}
+      class="px-pageMargin py-6 text-center desktop:py-8"
+    />
+    <Still
+      slug={json.slug}
+      title={json.title}
+      year={json.year}
+      width={960}
+      height={540}
+      sizes="(min-width: 960px) 960px, 100vw"
+      class="mb-[5.33px]"
+    />
+    <div class="h-6 min-h-6 tablet:h-8 tablet:min-h-8"></div>
+    <Content
+      grade={markdown.grade}
+      text={markdown.content}
+      date={markdown.date}
+      class="items-center px-pageMargin"
+    />
+    <div class="spacer-y-20"></div>
+    <ViewingHistory viewings={viewings} class="w-full max-w-popout" />
+    <div class="spacer-y-32"></div>
+    <Credits
+      title={json.title}
+      year={json.year}
+      slug={json.slug}
+      originalTitle={json.originalTitle}
+      countries={json.countries}
+      runtimeMinutes={json.runtimeMinutes}
+      directorNames={json.directorNames}
+      principalCastNames={json.principalCastNames}
+      writerNames={json.writerNames}
+      collections={json.collections}
+      castAndCrew={json.castAndCrew}
+      class="w-full max-w-popout"
+    />
+    <div class="spacer-y-32"></div>
+    <MoreReviews
+      moreCastAndCrew={json.moreCastAndCrew}
+      moreCollections={json.moreCollections}
+      moreReviews={json.moreReviews}
+      class="w-full max-w-popout tablet:max-w-full"
+    />
+    <div class="spacer-y-32 tablet:spacer-y-0"></div>
+    <StructuredData
+      title={json.title}
+      imdbId={json.imdbId}
+      directorNames={json.directorNames}
+      year={json.year}
+      grade={markdown.grade}
+    />
+  </main>
+</Layout>

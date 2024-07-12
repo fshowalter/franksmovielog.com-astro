@@ -51,7 +51,7 @@ const MoreCollectionsSchema = z.object({
   titles: z.array(MoreTitleSchema),
 });
 
-const ReviewedTitlesJsonSchema = z.object({
+const ReviewedTitleJsonSchema = z.object({
   imdbId: z.string(),
   title: z.string(),
   year: z.string(),
@@ -78,21 +78,21 @@ const ReviewedTitlesJsonSchema = z.object({
   moreReviews: z.array(MoreTitleSchema),
 });
 
-type ReviewedTitlesJson = z.infer<typeof ReviewedTitlesJsonSchema>;
+export type ReviewedTitleJson = z.infer<typeof ReviewedTitleJsonSchema>;
 
-let allReviewedTitlesJson: ReviewedTitlesJson[];
+let allReviewedTitlesJson: ReviewedTitleJson[];
 
 async function parseAllReviewedTitlesJson() {
   const json = await fs.readFile(reviewedTitlesJsonFile, "utf8");
   const data = JSON.parse(json) as unknown[];
 
   return data.map((item) => {
-    return ReviewedTitlesJsonSchema.parse(item);
+    return ReviewedTitleJsonSchema.parse(item);
   });
 }
 
 export default async function reviewedTitlesJson(): Promise<
-  ReviewedTitlesJson[]
+  ReviewedTitleJson[]
 > {
   if (!allReviewedTitlesJson) {
     allReviewedTitlesJson = await parseAllReviewedTitlesJson();

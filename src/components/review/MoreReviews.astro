@@ -1,0 +1,81 @@
+---
+import StillListItem from "@/components/StillListItem.astro";
+import { twMerge } from "tailwind-merge";
+import type { ComponentProps } from "astro/types";
+import MoreReviewsList from "./MoreReviewsList.astro";
+
+interface MoreReviewsCastAndCrewMember {
+  name: string;
+  slug: string;
+  creditKind: string;
+  titles: ComponentProps<typeof StillListItem>[];
+}
+
+interface MoreReviewsCollection {
+  name: string;
+  slug: string;
+  titles: ComponentProps<typeof StillListItem>[];
+}
+
+interface Props {
+  moreCastAndCrew: MoreReviewsCastAndCrewMember[];
+  moreCollections: MoreReviewsCollection[];
+  moreReviews: ComponentProps<typeof StillListItem>[];
+  class?: string;
+}
+
+const props = Astro.props;
+
+function leadTextForCreditKind(creditKind: string): string {
+  switch (creditKind) {
+    case "director": {
+      return "More directed by";
+    }
+    case "performer": {
+      return "More with";
+    }
+    case "writer": {
+      return "More written by";
+    }
+    default: {
+      throw new Error(`Unknown credit kind ${creditKind}`);
+    }
+  }
+}
+---
+
+<div
+  class={twMerge(
+    "flex flex-col items-center gap-y-12 bg-default tablet:bg-subtle tablet:pb-32 tablet:pt-8 desktop:gap-y-24",
+    props.class
+  )}
+>
+  {
+    props.moreCastAndCrew.map((castAndCrewMember) => (
+      <MoreReviewsList
+        leadText={leadTextForCreditKind(castAndCrewMember.creditKind)}
+        linkText={castAndCrewMember.name}
+        linkTarget={`/cast-and-crew/${castAndCrewMember.slug}`}
+        items={castAndCrewMember.titles}
+      />
+    ))
+  }
+
+  {
+    props.moreCollections.map((collection) => (
+      <MoreReviewsList
+        leadText="More"
+        linkText={collection.name}
+        linkTarget={`/collections/${collection.slug}`}
+        items={collection.titles}
+      />
+    ))
+  }
+
+  <MoreReviewsList
+    leadText="More"
+    linkText="Reviews"
+    linkTarget="/reviews/"
+    items={props.moreReviews}
+  />
+</div>

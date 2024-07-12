@@ -107,7 +107,7 @@ function getHtml(
   return linkReviewedTitles(html, reviewedTitles);
 }
 
-interface MarkdownReview {
+export interface MarkdownReview {
   slug: string;
   date: Date;
   grade: string;

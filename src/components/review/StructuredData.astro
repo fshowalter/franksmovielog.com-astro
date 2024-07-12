@@ -1,0 +1,44 @@
+---
+export interface Props {
+  title: string;
+  imdbId: string;
+  directorNames: string[];
+  year: string;
+  grade: string;
+}
+
+const props = Astro.props;
+
+const gradeMap: Record<string, number> = {
+  A: 5,
+  B: 4,
+  C: 3,
+  D: 2,
+  F: 1,
+};
+
+const structuredData = {
+  "@context": "http://schema.org",
+  "@type": "Review",
+  itemReviewed: {
+    "@type": "Movie",
+    name: props.title,
+    sameAs: `http://www.imdb.com/title/${props.imdbId}/`,
+    dateCreated: props.year,
+    director: {
+      "@type": "Person",
+      name: props.directorNames[0],
+    },
+  },
+  reviewRating: {
+    "@type": "Rating",
+    ratingValue: gradeMap[props.grade[0]],
+  },
+  author: {
+    "@type": "Person",
+    name: "Frank Showalter",
+  },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
