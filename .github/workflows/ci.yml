@@ -19,20 +19,19 @@ jobs:
           node-version-file: ".nvmrc"
           cache: "npm"
 
-      - name: get gatsby cache
-        id: gatsby-cache-build
+      - name: get astro cache
+        id: astro-cache-build
         uses: actions/cache@v4
         with:
           path: |
+            node_modules
             .astro
-            .cache
           key: ${{ runner.os }}-astro-cache-v1-${{ github.run_id }}
           restore-keys: |
             ${{ runner.os }}-astro-cache-v1-
 
-      # `--prefer-offline` gives cache priority
       - name: install dependencies
-        run: npm install
+        run: npm ci
 
       - name: build
         run: npm run build
