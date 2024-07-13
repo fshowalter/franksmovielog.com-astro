@@ -1,0 +1,26 @@
+---
+import HomeListItem from "@/components/home/HomeListItem.astro";
+import type { Review } from "@/api/reviews";
+
+interface Props {
+  reviews: Review[];
+}
+
+const { reviews } = Astro.props;
+---
+
+<main>
+  <ol class="flex flex-col">
+    {
+      reviews.map((item, index) => {
+        return <HomeListItem review={item} eagerLoadImage={index === 0} />;
+      })
+    }
+  </ol>
+  <a
+    href="/reviews/"
+    class="flex justify-end px-pageMargin py-10 text-lg text-accent"
+  >
+    All Reviews →
+  </a>
+</main>

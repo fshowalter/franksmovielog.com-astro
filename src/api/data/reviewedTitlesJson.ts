@@ -9,15 +9,6 @@ const reviewedTitlesJsonFile = join(
   "reviewed-titles.json",
 );
 
-const ViewingSchema = z.object({
-  sequence: z.number(),
-  medium: z.nullable(z.string()),
-  mediumNotes: z.nullable(z.string()),
-  date: z.string(),
-  venue: z.nullable(z.string()),
-  venueNotes: z.nullable(z.string()),
-});
-
 const CastAndCrewMemberSchema = z.object({
   name: z.string(),
   slug: z.string(),
@@ -56,7 +47,6 @@ const ReviewedTitleJsonSchema = z.object({
   title: z.string(),
   year: z.string(),
   slug: z.string(),
-  grade: z.string(),
   countries: z.array(z.string()),
   genres: z.array(z.string()),
   sortTitle: z.string(),
@@ -67,10 +57,7 @@ const ReviewedTitleJsonSchema = z.object({
   directorNames: z.array(z.string()),
   writerNames: z.array(z.string()),
   principalCastNames: z.array(z.string()),
-  reviewDate: z.string(),
-  reviewYear: z.string(),
   sequence: z.string(),
-  viewings: z.array(ViewingSchema),
   castAndCrew: z.array(CastAndCrewMemberSchema),
   collections: z.array(CollectionSchema),
   moreCastAndCrew: z.array(MoreCastAndCrewMemberSchema),
@@ -80,7 +67,7 @@ const ReviewedTitleJsonSchema = z.object({
 
 export type ReviewedTitleJson = z.infer<typeof ReviewedTitleJsonSchema>;
 
-let allReviewedTitlesJson: ReviewedTitleJson[];
+let cache: ReviewedTitleJson[];
 
 async function parseAllReviewedTitlesJson() {
   const json = await fs.readFile(reviewedTitlesJsonFile, "utf8");
@@ -91,12 +78,12 @@ async function parseAllReviewedTitlesJson() {
   });
 }
 
-export default async function reviewedTitlesJson(): Promise<
-  ReviewedTitleJson[]
-> {
-  if (!allReviewedTitlesJson) {
-    allReviewedTitlesJson = await parseAllReviewedTitlesJson();
+export async function allReviewedTitlesJson(): Promise<ReviewedTitleJson[]> {
+  if (cache) {
+    return cache;
   }
 
-  return allReviewedTitlesJson;
+  cache = await parseAllReviewedTitlesJson();
+
+  return cache;
 }

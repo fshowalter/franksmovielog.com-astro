@@ -1,0 +1,39 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { Reviews } from "@/components/reviews/Reviews.tsx";
+import { allReviews } from "@/api/reviews";
+import { allPosters } from "@/api/posters";
+
+const reviews = await allReviews();
+const posters = await allPosters(56);
+const distinctReviewYears = new Set<string>();
+const distinctReleaseYears = new Set<string>();
+const distinctGenres = new Set<string>();
+
+reviews.forEach((review) => {
+  distinctReviewYears.add(
+    review.date.toLocaleDateString("en-US", {
+      timeZone: "UTC",
+      year: "numeric",
+    })
+  );
+  review.genres.forEach((genre) => distinctGenres.add(genre));
+  distinctReleaseYears.add(review.year);
+});
+
+reviews.sort((a, b) => a.sortTitle.localeCompare(b.sortTitle));
+
+const imageCache = posters;
+---
+
+<Layout title="Frank's Movie Log">
+  <Reviews
+    client:load
+    initialSort="title-asc"
+    distinctReleaseYears={Array.from(distinctReleaseYears).toSorted()}
+    distinctReviewYears={Array.from(distinctReviewYears).toSorted()}
+    distinctGenres={Array.from(distinctGenres).toSorted()}
+    posterImageDataCache={imageCache}
+    reviews={reviews}
+  />
+</Layout>

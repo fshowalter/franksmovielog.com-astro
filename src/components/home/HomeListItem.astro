@@ -1,26 +1,37 @@
 ---
 import { toSentence } from "@/utils";
 import Grade from "@/components/Grade.astro";
-import RenderedMarkdown from "@/components/RenderedMarkdown.astro";
+import { RenderedMarkdown } from "@/components/RenderedMarkdown.tsx";
 import Still from "@/components/Still.astro";
+import type { Review } from "@/api/reviews";
+
+function formatDate(reviewDate: Date) {
+  return reviewDate.toLocaleString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+}
 
 interface Props {
-  data: {
-    imdbId: string;
-    sequence: string;
-    title: string;
-    year: string;
-    date: string;
-    slug: string;
-    grade: string;
-    principalCastNames: string[];
-    directorNames: string[];
-    reviewExcerpt: string;
-  };
+  review: Pick<
+    Review,
+    | "imdbId"
+    | "sequence"
+    | "title"
+    | "year"
+    | "date"
+    | "slug"
+    | "grade"
+    | "principalCastNames"
+    | "directorNames"
+    | "excerpt"
+  >;
   eagerLoadImage: boolean;
 }
 
-const { data, eagerLoadImage } = Astro.props;
+const { review, eagerLoadImage } = Astro.props;
 ---
 
 <li class="flex even:bg-subtle">
@@ -30,19 +41,19 @@ const { data, eagerLoadImage } = Astro.props;
     <div
       class="col-span-2 mb-6 text-center text-sm font-light uppercase leading-4 tracking-0.75px text-subtle desktop:mb-0 desktop:pb-6 desktop:text-left desktop:leading-8 max:col-span-1 max:self-start"
     >
-      {data.date}
+      {formatDate(review.date)}
     </div>
     <a
       rel="canonical"
-      href={`/reviews/${data.slug}/`}
+      href={`/reviews/${review.slug}/`}
       class="still-border block max-w-prose desktop:col-start-4 desktop:col-end-9 desktop:row-span-2 desktop:row-start-1 desktop:mt-10 desktop:self-start desktop:justify-self-end max:row-start-1 max:mt-0"
     >
       <Still
-        title={data.title}
-        year={data.year}
+        title={review.title}
+        year={review.year}
         width={512}
         height={288}
-        slug={data.slug}
+        slug={review.slug}
         sizes="(min-width: 512px) 512px, 100vw"
         loading={eagerLoadImage ? "eager" : "lazy"}
         class="h-auto rounded-xl"
@@ -53,31 +64,31 @@ const { data, eagerLoadImage } = Astro.props;
     >
       <h2 class="text-2.5xl font-bold leading-8">
         <a
-          href={`/reviews/${data.slug}/`}
+          href={`/reviews/${review.slug}/`}
           rel="canonical"
           class="inline-block text-default"
         >
-          {data.title}{" "}
+          {review.title}{" "}
           <span
             class="inline-block text-base font-light leading-none text-subtle"
           >
-            {data.year}
+            {review.year}
           </span>
         </a>
       </h2>
       <div class="spacer-y-4"></div>
-      <Grade grade={data.grade} height={32} />
+      <Grade grade={review.grade} height={32} />
       <div class="spacer-y-6"></div>
       <p
         class="text-base font-normal leading-normal tracking-0.25px text-subtle"
       >
-        Directed by {toSentence(data.directorNames)}. Starring{" "}
-        {toSentence(data.principalCastNames)}.
+        Directed by {toSentence(review.directorNames)}. Starring{" "}
+        {toSentence(review.principalCastNames)}.
       </p>
       <div class="spacer-y-6"></div>
       <RenderedMarkdown
-        text={data.reviewExcerpt}
-        class="self-start text-lg leading-normal tracking-0.3px text-muted"
+        text={review.excerpt}
+        className="self-start text-lg leading-normal tracking-0.3px text-muted"
       />
     </div>
   </article>

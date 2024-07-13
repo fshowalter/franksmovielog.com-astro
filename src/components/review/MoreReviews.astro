@@ -1,30 +1,14 @@
 ---
-import StillListItem from "@/components/StillListItem.astro";
 import { twMerge } from "tailwind-merge";
-import type { ComponentProps } from "astro/types";
 import MoreReviewsList from "./MoreReviewsList.astro";
-
-interface MoreReviewsCastAndCrewMember {
-  name: string;
-  slug: string;
-  creditKind: string;
-  titles: ComponentProps<typeof StillListItem>[];
-}
-
-interface MoreReviewsCollection {
-  name: string;
-  slug: string;
-  titles: ComponentProps<typeof StillListItem>[];
-}
+import type { Review } from "@/api/reviews";
 
 interface Props {
-  moreCastAndCrew: MoreReviewsCastAndCrewMember[];
-  moreCollections: MoreReviewsCollection[];
-  moreReviews: ComponentProps<typeof StillListItem>[];
+  review: Pick<Review, "moreCastAndCrew" | "moreCollections" | "moreReviews">;
   class?: string;
 }
 
-const props = Astro.props;
+const { review, class: className } = Astro.props;
 
 function leadTextForCreditKind(creditKind: string): string {
   switch (creditKind) {
@@ -47,11 +31,11 @@ function leadTextForCreditKind(creditKind: string): string {
 <div
   class={twMerge(
     "flex flex-col items-center gap-y-12 bg-default tablet:bg-subtle tablet:pb-32 tablet:pt-8 desktop:gap-y-24",
-    props.class
+    className
   )}
 >
   {
-    props.moreCastAndCrew.map((castAndCrewMember) => (
+    review.moreCastAndCrew.map((castAndCrewMember) => (
       <MoreReviewsList
         leadText={leadTextForCreditKind(castAndCrewMember.creditKind)}
         linkText={castAndCrewMember.name}
@@ -62,7 +46,7 @@ function leadTextForCreditKind(creditKind: string): string {
   }
 
   {
-    props.moreCollections.map((collection) => (
+    review.moreCollections.map((collection) => (
       <MoreReviewsList
         leadText="More"
         linkText={collection.name}
@@ -76,6 +60,6 @@ function leadTextForCreditKind(creditKind: string): string {
     leadText="More"
     linkText="Reviews"
     linkTarget="/reviews/"
-    items={props.moreReviews}
+    items={review.moreReviews}
   />
 </div>

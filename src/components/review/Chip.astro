@@ -1,4 +1,6 @@
 ---
+import Avatar from "../Avatar.astro";
+
 interface Props {
   href: string;
   slug: string;
@@ -13,12 +15,13 @@ const props = Astro.props;
     href={props.href}
     class="border-all hover:border-all-accent flex items-center whitespace-nowrap rounded-lg bg-inverse px-4 py-2"
   >
-    <img
+    <Avatar
+      slug={props.slug}
       src={`/assets/avatars/${props.slug}.png`}
       alt={`More ${props.name} reviews`}
       width={40}
       height={40}
-      class="avatar-border mr-[1ch] block size-10"
+      class="safair-border-radius-fix rounded-[50%] mr-[1ch] block size-10"
     />
     {props.name}
   </a>

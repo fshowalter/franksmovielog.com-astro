@@ -10,7 +10,7 @@ interface Props extends HTMLAttributes<"img"> {
   width: number;
   height: number;
   year: string | number;
-  sizes: string;
+  sizes?: string;
   class?: string;
 }
 const { width, height, sizes, title, year, slug, ...rest } = Astro.props;
@@ -33,7 +33,7 @@ const optimizedImage = await getImage({
   src: stillFile.default,
   width,
   height,
-  sizes,
+  sizes: sizes || `(min-width: ${width}px) ${width}px, 100vw`,
   format: "avif",
   widths,
   quality: 80,

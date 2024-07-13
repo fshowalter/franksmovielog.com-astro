@@ -1,29 +1,17 @@
 ---
+import type { Review } from "@/api/reviews";
 import Chip from "./Chip.astro";
 
-interface CastAndCrewMember {
-  name: string;
-  slug: string;
+interface Props {
+  review: Pick<Review, "castAndCrew" | "collections">;
 }
 
-interface Collection {
-  name: string;
-  slug: string;
-}
-
-export interface ChipsData {
-  castAndCrew: CastAndCrewMember[];
-  collections: Collection[];
-}
-
-interface Props extends ChipsData {}
-
-const props = Astro.props;
+const { review } = Astro.props;
 ---
 
 <ul class="flex flex-wrap gap-2">
   {
-    props.castAndCrew.map((member) => {
+    review.castAndCrew.map((member) => {
       return (
         <Chip
           href={`/cast-and-crew/${member.slug}`}
@@ -34,7 +22,7 @@ const props = Astro.props;
     })
   }
   {
-    props.collections.map((collection) => {
+    review.collections.map((collection) => {
       return (
         <Chip
           href={`/collections/${collection.slug}`}

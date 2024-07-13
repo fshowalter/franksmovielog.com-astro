@@ -1,27 +1,31 @@
 ---
-import PageTitle from "@/components/PageTitle.astro";
+import { PageTitle } from "@/components/PageTitle.tsx";
 import { twMerge } from "tailwind-merge";
+import type { Review } from "@/api/reviews";
 
 interface Props {
-  title: string;
-  originalTitle: string | null;
-  year: string;
-  countries: string[];
-  runtimeMinutes: number;
+  review: Pick<
+    Review,
+    "title" | "originalTitle" | "year" | "countries" | "runtimeMinutes"
+  >;
   class?: string;
 }
 
-const props = Astro.props;
+const { review, class: className } = Astro.props;
 ---
 
-<header class={twMerge("flex flex-col gap-y-4", props.class)}>
-  <PageTitle>{props.title}</PageTitle>
-  {props.originalTitle && <div class="text-muted">({props.originalTitle})</div>}
+<header class={twMerge("flex flex-col gap-y-4", className)}>
+  <PageTitle>{review.title}</PageTitle>
+  {
+    review.originalTitle && (
+      <div class="text-muted">({review.originalTitle})</div>
+    )
+  }
   <div class="text-muted">
-    {props.year}
+    {review.year}
     <span>|</span>{" "}
     {
-      props.countries.reduce((acc, country) => {
+      review.countries.reduce((acc, country) => {
         if (acc === null) {
           return <>{country}</>;
         }
@@ -36,7 +40,7 @@ const props = Astro.props;
       }, null)
     }{" "}
     <span>|</span>
-    {props.runtimeMinutes}
+    {review.runtimeMinutes}
     &#x02009;min{" "}
     <span>
       <span>|</span>

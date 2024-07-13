@@ -1,13 +1,11 @@
 ---
+import type { Review } from "@/api/reviews";
+
 export interface Props {
-  title: string;
-  imdbId: string;
-  directorNames: string[];
-  year: string;
-  grade: string;
+  review: Pick<Review, "title" | "imdbId" | "directorNames" | "year" | "grade">;
 }
 
-const props = Astro.props;
+const { review } = Astro.props;
 
 const gradeMap: Record<string, number> = {
   A: 5,
@@ -17,22 +15,26 @@ const gradeMap: Record<string, number> = {
   F: 1,
 };
 
+let reviewGrade = review.grade ? review.grade.slice(0, 1) : "";
+
+const reviewGradeValue = gradeMap[reviewGrade];
+
 const structuredData = {
   "@context": "http://schema.org",
   "@type": "Review",
   itemReviewed: {
     "@type": "Movie",
-    name: props.title,
-    sameAs: `http://www.imdb.com/title/${props.imdbId}/`,
-    dateCreated: props.year,
+    name: review.title,
+    sameAs: `http://www.imdb.com/title/${review.imdbId}/`,
+    dateCreated: review.year,
     director: {
       "@type": "Person",
-      name: props.directorNames[0],
+      name: review.directorNames[0],
     },
   },
   reviewRating: {
     "@type": "Rating",
-    ratingValue: gradeMap[props.grade[0]],
+    ratingValue: reviewGradeValue,
   },
   author: {
     "@type": "Person",

@@ -1,65 +1,15 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import reviewedTitlesJson from "@/data/reviewedTitlesJson";
-import reviewsMarkdown from "@/data/reviewsMarkdown";
-import HomeListItem from "@/components/home/HomeListItem.astro";
+import Home from "@/components/home/Home.astro";
+import { allReviews } from "@/api/reviews";
 
-function formatDate(reviewDate: Date) {
-  return reviewDate.toLocaleString("en-GB", {
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-    timeZone: "UTC",
-  });
-}
+const reviews = await allReviews();
 
-const json = await reviewedTitlesJson();
-const markdown = await reviewsMarkdown();
+reviews.sort((a, b) => b.sequence.localeCompare(a.sequence));
 
-json.sort((a, b) => b.sequence.localeCompare(a.sequence));
-
-const data = await Promise.all(
-  json.slice(0, 10).map(async (title) => {
-    const markdownReview = markdown.find(
-      (review) => review.imdbId === title.imdbId
-    );
-
-    if (!markdownReview) {
-      throw new Error(
-        `No markdown review found with imdbId"${title.imdbId} for title "${title.title}"`
-      );
-    }
-
-    return {
-      imdbId: title.imdbId,
-      sequence: title.sequence,
-      title: title.title,
-      year: title.year,
-      date: formatDate(markdownReview.date),
-      slug: title.slug,
-      grade: title.grade,
-      principalCastNames: title.principalCastNames,
-      directorNames: title.directorNames,
-      reviewExcerpt: markdownReview.excerpt,
-    };
-  })
-);
+const homePageReviews = reviews.slice(0, 10);
 ---
 
 <Layout title="Frank's Movie Log">
-  <main>
-    <ol class="flex flex-col">
-      {
-        data.map((item, index) => {
-          return <HomeListItem data={item} eagerLoadImage={index === 0} />;
-        })
-      }
-    </ol>
-    <a
-      href="/reviews/"
-      class="flex justify-end px-pageMargin py-10 text-lg text-accent"
-    >
-      All Reviews →
-    </a>
-  </main>
+  <Home reviews={homePageReviews} />
 </Layout>
