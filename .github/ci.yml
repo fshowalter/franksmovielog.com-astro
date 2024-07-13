@@ -1,0 +1,55 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+
+      - name: get gatsby cache
+        id: gatsby-cache-build
+        uses: actions/cache@v4
+        with:
+          path: |
+            .astro
+            .cache
+          key: ${{ runner.os }}-astro-cache-v1-${{ github.run_id }}
+          restore-keys: |
+            ${{ runner.os }}-astro-cache-v1-
+
+      # `--prefer-offline` gives cache priority
+      - name: install dependencies
+        run: npm install
+
+      - name: build
+        run: npm run build
+        env:
+          CI: true
+
+      - name: deploy
+        uses: nwtgck/actions-netlify@v3.0
+        with:
+          publish-dir: "./dist"
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: true
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          timeout-minutes: 5
