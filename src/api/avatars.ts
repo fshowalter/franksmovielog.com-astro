@@ -19,7 +19,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 
 const cache: Record<string, Record<string, AvatarImageData>> = {};
 
-export async function getPosters({
+export async function getAvatars({
   width,
   height,
 }: Props): Promise<Record<string, AvatarImageData>> {

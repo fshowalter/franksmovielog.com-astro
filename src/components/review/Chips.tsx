@@ -1,3 +1,4 @@
+import type { AvatarImageData } from "@/api/avatars";
 import type { Review } from "@/api/reviews";
 import { Avatar } from "@/components/Avatar";
 
@@ -10,16 +11,22 @@ export const ChipAvatarImageConfig = {
 export interface ChipsReviewData
   extends Pick<Review, "castAndCrew" | "collections"> {}
 
-export function Chips({ review }: { review: ChipsReviewData }): JSX.Element {
+export function Chips({
+  review,
+  avatars,
+}: {
+  review: ChipsReviewData;
+  avatars: Record<string, AvatarImageData>;
+}): JSX.Element {
   return (
     <ul className="flex flex-wrap gap-2">
       {review.castAndCrew.map((member) => {
         return (
           <Chip
             linkTarget={`/cast-and-crew/${member.slug}`}
-            slug={member.slug}
             name={member.name}
             key={member.slug}
+            imageData={avatars[member.slug]}
           />
         );
       })}
@@ -27,9 +34,9 @@ export function Chips({ review }: { review: ChipsReviewData }): JSX.Element {
         return (
           <Chip
             linkTarget={`/collections/${collection.slug}`}
-            slug={collection.slug}
             name={collection.name}
             key={collection.slug}
+            imageData={avatars[collection.slug]}
           />
         );
       })}
@@ -39,12 +46,12 @@ export function Chips({ review }: { review: ChipsReviewData }): JSX.Element {
 
 function Chip({
   linkTarget,
-  slug,
   name,
+  imageData,
 }: {
   linkTarget: string;
-  slug: string;
   name: string;
+  imageData: AvatarImageData | unknown;
 }) {
   return (
     <li className="block">
@@ -57,6 +64,9 @@ function Chip({
           name={name}
           width={ChipAvatarImageConfig.width}
           height={ChipAvatarImageConfig.height}
+          imageData={imageData}
+          loading="lazy"
+          decoding="async"
           className="avatar-border mr-[1ch] block size-10"
         />
         {name}

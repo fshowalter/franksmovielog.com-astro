@@ -4,6 +4,7 @@ import {
   Review,
   StillImageConfig,
   PosterImageConfig,
+  ChipAvatarImageConfig,
 } from "@/components/Review";
 import { allReviews } from "@/api/reviews";
 import type { Review as IReview } from "@/api/reviews";
@@ -13,15 +14,20 @@ import { getImage } from "astro:assets";
 import { getPosters } from "@/api/posters";
 import type { PosterImageData } from "@/api/posters";
 import type { StillImageData } from "@/api/stills";
+import type { AvatarImageData } from "@/api/avatars";
+import { getAvatars } from "@/api/avatars";
+import { StillListItemImageConfig } from "@/components/StillListItem";
 
 export async function getStaticPaths() {
   const reviews = await allReviews();
   const stills = await getStills(StillImageConfig);
   const posters = await getPosters(PosterImageConfig);
+  const avatars = await getAvatars(ChipAvatarImageConfig);
+  const stillListStills = await getStills(StillListItemImageConfig);
 
   return await Promise.all(
     reviews.map(async (review) => {
-      let seoImage = null;
+      let seoImageSrc = null;
       const imagePath = getStillImagePath(review.slug);
       if (imagePath in images) {
         const stillFile = await images[imagePath]!();
@@ -34,7 +40,7 @@ export async function getStaticPaths() {
           quality: 80,
         });
 
-        seoImage = optimizedImage.src;
+        seoImageSrc = optimizedImage.src;
       }
 
       return {
@@ -43,9 +49,11 @@ export async function getStaticPaths() {
         },
         props: {
           review: review,
-          seoImage: seoImage,
+          seoImageSrc: seoImageSrc,
           stillImageData: stills[review.slug],
           posterImageData: posters[review.slug],
+          avatars: avatars,
+          stillListStills: stillListStills,
         },
       };
     })
@@ -54,23 +62,35 @@ export async function getStaticPaths() {
 
 interface Props {
   review: IReview;
-  seoImage: string;
+  seoImageSrc: string;
   posterImageData: PosterImageData;
   stillImageData: StillImageData;
+  avatars: Record<string, AvatarImageData>;
+  stillListStills: Record<string, StillImageData>;
 }
 
-const { review, seoImage, stillImageData, posterImageData } = Astro.props;
+const {
+  review,
+  seoImageSrc,
+  stillImageData,
+  posterImageData,
+  avatars,
+  stillListStills,
+} = Astro.props;
 ---
 
 <Layout
   title={`${review.title} (${review.year})`}
   description={`${textStarsForGrade(review.grade)} ${review.excerptPlainText ?? ""}`}
-  image={seoImage}
+  image={seoImageSrc}
   article
 >
   <Review
     review={review}
     stillImageData={stillImageData}
     posterImageData={posterImageData}
+    avatars={avatars}
+    seoImageSrc={seoImageSrc}
+    stillListStills={stillListStills}
   />
 </Layout>

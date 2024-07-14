@@ -14,6 +14,9 @@ import type { ViewingHistoryReviewData } from "./ViewingHistory";
 import type { CreditsReviewData } from "./Credits";
 import type { ChipsReviewData } from "./Chips";
 import { Chips } from "./Chips";
+import type { AvatarImageData } from "@/api/avatars";
+import type { MoreReviewsReviewData } from "./MoreReviews";
+import type { StructuredDataReviewData } from "./StructuredData";
 
 export const StillImageConfig = {
   width: 960,
@@ -28,18 +31,26 @@ interface ReviewData
     ContentReviewData,
     ViewingHistoryReviewData,
     CreditsReviewData,
-    ChipsReviewData {}
+    ChipsReviewData,
+    MoreReviewsReviewData,
+    StructuredDataReviewData {}
 
 export interface Props {
   review: ReviewData;
   stillImageData: StillImageData;
   posterImageData: PosterImageData;
+  avatars: Record<string, AvatarImageData>;
+  stillListStills: Record<string, StillImageData>;
+  seoImageSrc: string;
 }
 
 export function Review({
   review,
   stillImageData,
   posterImageData,
+  avatars,
+  seoImageSrc,
+  stillListStills,
 }: Props): JSX.Element {
   return (
     <main id="top" className="scroll-margin-top flex flex-col items-center">
@@ -48,13 +59,12 @@ export function Review({
         className="px-pageMargin py-6 text-center desktop:py-8"
       />
       <Still
-        slug={review.slug}
         title={review.title}
         year={review.year}
         width={960}
         height={540}
         sizes="(min-width: 960px) 960px, 100vw"
-        className="mb-[5.33px]"
+        className="mb-[5.33px] max-w-[960px]"
         imageData={stillImageData}
         loading="eager"
         decoding="sync"
@@ -69,15 +79,16 @@ export function Review({
         posterImageData={posterImageData}
         className="w-full max-w-popout"
       >
-        <Chips review={review} />
+        <Chips review={review} avatars={avatars} />
       </Credits>
       <div className="spacer-y-32" />
       <MoreReviews
         review={review}
+        stillListStills={stillListStills}
         className="w-full max-w-popout tablet:max-w-full"
       />
       <div className="spacer-y-32 tablet:spacer-y-0" />
-      <StructuredData review={review} />
+      <StructuredData review={review} seoImageSrc={seoImageSrc} />
     </main>
   );
 }

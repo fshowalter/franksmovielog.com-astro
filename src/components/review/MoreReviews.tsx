@@ -1,36 +1,22 @@
-import {
-  StillList,
-  StillListHeading,
-  StillListNav,
-} from "@/components/StillList";
+import { StillList } from "@/components/StillList";
+import { StillListHeading } from "@/components/StillListHeading";
+import { StillListNav } from "@/components/StillListNav";
 import { twMerge } from "tailwind-merge";
-import type { StillListItemData } from "@/components/StillList/StillListItem";
+import type { StillListItemData } from "@/components/StillListItem";
+import type { Review } from "@/api/reviews";
+import type { StillImageData } from "@/api/stills";
 
-interface MoreReviewsCastAndCrewMember {
-  name: string;
-  slug: string;
-  creditKind: string;
-  titles: StillListItemData[];
-}
-
-interface MoreReviewsCollection {
-  name: string;
-  slug: string;
-  titles: StillListItemData[];
-}
-
-export interface MoreReviewsData {
-  moreCastAndCrew: MoreReviewsCastAndCrewMember[];
-  moreCollections: MoreReviewsCollection[];
-  moreReviews: StillListItemData[];
-}
+export interface MoreReviewsReviewData
+  extends Pick<Review, "moreCastAndCrew" | "moreCollections" | "moreReviews"> {}
 
 export function MoreReviews({
-  data,
+  review,
   className,
+  stillListStills,
 }: {
-  data: MoreReviewsData;
+  review: MoreReviewsReviewData;
   className?: string;
+  stillListStills: Record<string, StillImageData>;
 }) {
   return (
     <div
@@ -39,23 +25,25 @@ export function MoreReviews({
         className,
       )}
     >
-      {data.moreCastAndCrew.map((castAndCrewMember) => (
+      {review.moreCastAndCrew.map((castAndCrewMember) => (
         <MoreReviewsList
           key={castAndCrewMember.slug}
           leadText={leadTextForCreditKind(castAndCrewMember.creditKind)}
           linkText={castAndCrewMember.name}
           linkTarget={`/cast-and-crew/${castAndCrewMember.slug}`}
-          data={castAndCrewMember.titles}
+          titles={castAndCrewMember.titles}
+          stills={stillListStills}
         />
       ))}
 
-      {data.moreCollections.map((collection) => (
+      {review.moreCollections.map((collection) => (
         <MoreReviewsList
           key={collection.slug}
           leadText="More"
           linkText={collection.name}
           linkTarget={`/collections/${collection.slug}`}
-          data={collection.titles}
+          titles={collection.titles}
+          stills={stillListStills}
         />
       ))}
 
@@ -63,7 +51,8 @@ export function MoreReviews({
         leadText="More"
         linkText="Reviews"
         linkTarget="/reviews/"
-        data={data.moreReviews}
+        titles={review.moreReviews}
+        stills={stillListStills}
       />
     </div>
   );
@@ -87,15 +76,17 @@ function leadTextForCreditKind(creditKind: string): string {
 }
 
 function MoreReviewsList({
-  data,
+  titles,
   leadText,
   linkText,
   linkTarget,
+  stills,
 }: {
   leadText: string;
   linkText: string;
   linkTarget: string;
-  data: StillListItemData[];
+  titles: StillListItemData[];
+  stills: Record<string, StillImageData>;
 }) {
   return (
     <StillListNav>
@@ -105,9 +96,10 @@ function MoreReviewsList({
         linkTarget={linkTarget}
       />
       <StillList
-        data={data}
+        titles={titles}
         seeAllLinkTarget={linkTarget}
         seeAllLinkText={linkText}
+        stills={stills}
       />
     </StillListNav>
   );

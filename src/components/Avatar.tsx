@@ -2,7 +2,7 @@ import type { AvatarImageData } from "@/api/avatars";
 
 interface AvatarProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   name: string;
-  imageData: AvatarImageData;
+  imageData: AvatarImageData | unknown;
   width: number;
   height: number;
   loading: "lazy" | "eager";
@@ -20,7 +20,7 @@ export function Avatar({
   className,
   ...rest
 }: AvatarProps): JSX.Element {
-  if (imageData.src) {
+  if (imageData) {
     return <img alt={name} {...imageData} {...rest} />;
   }
 
