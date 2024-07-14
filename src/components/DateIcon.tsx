@@ -1,7 +1,14 @@
-import SvgIcon from "@/components/SvgIcon.tsx";
+import SvgIcon from "@/components/SvgIcon";
 import { twMerge } from "tailwind-merge";
-
-export function DateIcon({ className }: { className?: string }): JSX.Element {
+/**
+ * Renders a calendar icon.
+ */
+export function DateIcon({
+  className,
+}: {
+  /** CSS class to apply to the rendered element. */
+  className?: string;
+}): JSX.Element {
   return (
     <SvgIcon className={twMerge("mr-[1ch] min-h-4 min-w-4", className)}>
       <title>Watched on</title>

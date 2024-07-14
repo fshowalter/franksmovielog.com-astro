@@ -1,39 +1,35 @@
 import { Grade } from "@/components/Grade";
 import { ListItem } from "@/components/ListItem";
-import { ListItemGenres } from "@/components/ListItemGenres.tsx";
-import { ListItemPoster } from "@/components/ListItemPoster.tsx";
-import { ListItemTitle } from "@/components/ListItemTitle.tsx";
-import { GroupedList } from "@/components/list-with-filters/GroupedList";
-import { ActionType } from "./Reviews.reducer";
-import type { Review } from "@/api/reviews";
-import type { Action } from "./Reviews.reducer";
-import type { ImageData } from "@/api/posters";
+import { ListItemGenres } from "@/components/ListItemGenres";
+import { ListItemPoster } from "@/components/ListItemPoster";
+import { ListItemTitle } from "@/components/ListItemTitle";
+import { GroupedList } from "@/components/ListWithFiltersLayout";
+import { Action, ActionType } from "./Reviews.reducer";
 
-export type ReviewedTitle = Pick<
-  Review,
-  | "imdbId"
-  | "date"
-  | "releaseSequence"
-  | "title"
-  | "year"
-  | "sortTitle"
-  | "slug"
-  | "grade"
-  | "gradeValue"
-  | "genres"
->;
+export interface ListItemData {
+  imdbId: string;
+  reviewDate: string;
+  releaseSequence: string;
+  reviewYear: string;
+  reviewMonth: string;
+  title: string;
+  year: string;
+  sortTitle: string;
+  slug: string;
+  grade: string;
+  gradeValue: number;
+  genres: string[];
+}
 
 export function List({
   groupedItems,
   totalCount,
   visibleCount,
-  imageDataCache,
   dispatch,
 }: {
-  groupedItems: Map<string, ReviewedTitle[]>;
+  groupedItems: Map<string, ListItemData[]>;
   totalCount: number;
   visibleCount: number;
-  imageDataCache: Record<string, ImageData>;
   dispatch: React.Dispatch<Action>;
 }) {
   return (
@@ -44,47 +40,24 @@ export function List({
       totalCount={totalCount}
       onShowMore={() => dispatch({ type: ActionType.SHOW_MORE })}
     >
-      {(review: ReviewedTitle) => {
-        return (
-          <ReviewListItem
-            review={review}
-            imageData={imageDataCache[review.slug]!}
-            key={review.imdbId}
-          />
-        );
-      }}
+      {(item) => <ReviewListItem data={item} key={item.imdbId} />}
     </GroupedList>
   );
 }
 
-function ReviewListItem({
-  review,
-  imageData,
-}: {
-  review: ReviewedTitle;
-  imageData: ImageData;
-}): JSX.Element {
+function ReviewListItem({ data }: { data: ListItemData }): JSX.Element {
   return (
     <ListItem className="items-center">
-      <ListItemPoster
-        slug={review.slug}
-        title={review.title}
-        year={review.year}
-        imageData={imageData}
-      />
+      <ListItemPoster slug={data.slug} title={data.title} year={data.year} />
       <div className="grow pr-gutter tablet:w-full desktop:pr-4">
         <div>
-          <ListItemTitle
-            title={review.title}
-            year={review.year}
-            slug={review.slug}
-          />
+          <ListItemTitle title={data.title} year={data.year} slug={data.slug} />
           <div className="spacer-y-1" />
           <div className="py-px">
-            <Grade grade={review.grade} height={18} />
+            <Grade grade={data.grade} height={18} />
           </div>
           <div className="spacer-y-2" />
-          <ListItemGenres genres={review.genres} />
+          <ListItemGenres genres={data.genres} />
           <div className="spacer-y-2" />
         </div>
       </div>

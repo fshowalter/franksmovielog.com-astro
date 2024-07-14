@@ -1,5 +1,7 @@
+"use client";
+
 import { useState } from "react";
-import { SelectInput } from "@/components/SelectInput.tsx";
+import { SelectInput } from "@/components/SelectInput";
 
 const options = [
   <option key={13} value={13}>

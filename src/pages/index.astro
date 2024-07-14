@@ -1,15 +1,22 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Home from "@/components/home/Home.astro";
+import { Home } from "@/components/Home/";
 import { allReviews } from "@/api/reviews";
+import { getStills } from "@/api/stills";
+import { StillImageConfig } from "@/components/Home/";
 
 const reviews = await allReviews();
 
 reviews.sort((a, b) => b.sequence.localeCompare(a.sequence));
 
 const homePageReviews = reviews.slice(0, 10);
+
+const stills = await getStills(StillImageConfig);
 ---
 
-<Layout title="Frank's Movie Log">
-  <Home reviews={homePageReviews} />
+<Layout
+  title="Frank's Movie Log"
+  description="Reviews of current, cult, classic, and forgotten films."
+>
+  <Home reviews={homePageReviews} stills={stills} />
 </Layout>

@@ -1,5 +1,5 @@
-import { Grade } from "@/components/Grade.tsx";
-import { LongFormText } from "@/components/LongFormText.tsx";
+import { Grade } from "@/components/Grade";
+import { LongFormText } from "@/components/LongFormText";
 import { twMerge } from "tailwind-merge";
 import type { Review } from "@/api/reviews";
 
@@ -15,11 +15,14 @@ function formatDate(date: Date) {
   return dateFormat.format(date);
 }
 
+export interface ContentReviewData
+  extends Pick<Review, "grade" | "date" | "content"> {}
+
 export function Content({
   review,
   className,
 }: {
-  review: Pick<Review, "grade" | "date" | "content">;
+  review: ContentReviewData;
   className?: string;
 }) {
   return (

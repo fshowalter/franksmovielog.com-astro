@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function ListItemTitle({
   title,
   year,
@@ -13,9 +15,9 @@ export function ListItemTitle({
 
   if (slug) {
     return (
-      <a href={`/reviews/${slug}/`} className="block text-md">
+      <Link href={`/reviews/${slug}/`} className="block text-md">
         {title}&#8239;&#8239;{yearBox}
-      </a>
+      </Link>
     );
   }
 

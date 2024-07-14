@@ -1,29 +1,18 @@
-import { toSentence } from "../../utils";
+import { toSentence } from "@/utils";
 import { twMerge } from "tailwind-merge";
 import type { Review } from "@/api/reviews";
+import { Poster } from "@/components/Poster";
+import type { ImageData } from "@/api/posters";
 
-function Credit({
-  title,
-  creditValue,
-}: {
-  title: string;
-  creditValue: React.ReactNode;
-}) {
-  return (
-    <div className="overflow-hidden">
-      <dt className="font-bold text-subtle">{title}</dt>
-      <dd className="text-subtle">{creditValue}</dd>
-    </div>
-  );
-}
+export const PosterImageConfig = {
+  width: 248,
+  height: 372,
+  sizes: "(min-width: 248px) 248px, 100vw",
+  quality: 80,
+};
 
-export function Credits({
-  review,
-  poster,
-  className,
-  children,
-}: {
-  review: Pick<
+export interface CreditsReviewData
+  extends Pick<
     Review,
     | "title"
     | "year"
@@ -34,10 +23,18 @@ export function Credits({
     | "directorNames"
     | "principalCastNames"
     | "writerNames"
-  >;
-  poster?: any;
+  > {}
+
+export function Credits({
+  review,
+  className,
+  children,
+  posterImageData,
+}: {
+  review: CreditsReviewData;
   className?: string;
-  children: any;
+  children: React.ReactNode;
+  posterImageData: ImageData;
 }): JSX.Element {
   return (
     <aside
@@ -52,7 +49,18 @@ export function Credits({
         <span className="text-sm font-light text-subtle">({review.year})</span>
       </header>
       <div className="mx-auto block tablet:float-left tablet:mr-gutter tablet:max-w-1/2">
-        {poster}
+        <Poster
+          slug={review.slug}
+          title={review.title}
+          year={review.year}
+          className="poster-border mx-auto mb-4 mt-0 max-w-poster rounded-lg tablet:mx-0"
+          width={PosterImageConfig.width}
+          height={PosterImageConfig.height}
+          sizes={PosterImageConfig.sizes}
+          loading="lazy"
+          decoding="async"
+          imageData={posterImageData}
+        />
       </div>
 
       <dl className="flex flex-col gap-y-4">
@@ -94,5 +102,20 @@ export function Credits({
         </svg>
       </a>
     </aside>
+  );
+}
+
+function Credit({
+  title,
+  creditValue,
+}: {
+  title: string;
+  creditValue: React.ReactNode;
+}) {
+  return (
+    <div className="overflow-hidden">
+      <dt className="font-bold text-subtle">{title}</dt>
+      <dd className="text-subtle">{creditValue}</dd>
+    </div>
   );
 }

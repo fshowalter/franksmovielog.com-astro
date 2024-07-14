@@ -1,12 +1,8 @@
-import { DateIcon } from "@/components/DateIcon.tsx";
-import { RenderedMarkdown } from "@/components/RenderedMarkdown";
+import { DateIcon } from "@/components/DateIcon";
+import { RenderedMarkdown } from "../RenderedMarkdown";
 import type { Review } from "@/api/reviews";
 
 type Viewing = Review["viewings"][0];
-
-interface Props {
-  viewing: Viewing;
-}
 
 const dateFormat = new Intl.DateTimeFormat("en-US", {
   weekday: "short",
@@ -16,11 +12,11 @@ const dateFormat = new Intl.DateTimeFormat("en-US", {
   timeZone: "UTC",
 });
 
-function Date({ viewing }: { viewing: Viewing }) {
+function Date({ date }: { date: Date }) {
   return (
     <>
       <span className="inline-block text-default">
-        {dateFormat.format(viewing.date)}
+        {dateFormat.format(date)}
       </span>{" "}
     </>
   );
@@ -99,7 +95,7 @@ function ViewingNotes({ viewing }: { viewing: Viewing }) {
   );
 }
 
-export function ViewingHistoryListItem({ viewing }: Props) {
+export function ViewingHistoryListItem({ viewing }: { viewing: Viewing }) {
   return (
     <li className="flex flex-col px-gutter even:bg-subtle">
       <div className="flex gap-x-[1ch] py-4">
@@ -107,7 +103,7 @@ export function ViewingHistoryListItem({ viewing }: Props) {
           <DateIcon className="mt-1 w-4" />{" "}
         </div>
         <div className="grow">
-          <Date viewing={viewing} />
+          <Date date={viewing.date} />
           <Medium viewing={viewing} /> <MediumNotes viewing={viewing} />
           <Venue viewing={viewing} /> <VenueNotes viewing={viewing} />
         </div>

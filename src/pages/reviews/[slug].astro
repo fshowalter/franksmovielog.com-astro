@@ -1,31 +1,76 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Review from "@/components/review/Review.astro";
+import {
+  Review,
+  StillImageConfig,
+  PosterImageConfig,
+} from "@/components/Review";
 import { allReviews } from "@/api/reviews";
 import type { Review as IReview } from "@/api/reviews";
+import { textStarsForGrade } from "@/utils/textStarsForGrade";
+import { images, getStillImagePath, getStills } from "@/api/stills";
+import { getImage } from "astro:assets";
+import { getPosters } from "@/api/posters";
+import type { PosterImageData } from "@/api/posters";
+import type { StillImageData } from "@/api/stills";
 
 export async function getStaticPaths() {
   const reviews = await allReviews();
+  const stills = await getStills(StillImageConfig);
+  const posters = await getPosters(PosterImageConfig);
 
-  return reviews.map((review) => {
-    return {
-      params: {
-        slug: review.slug,
-      },
-      props: {
-        review: review,
-      },
-    };
-  });
+  return await Promise.all(
+    reviews.map(async (review) => {
+      let seoImage = null;
+      const imagePath = getStillImagePath(review.slug);
+      if (imagePath in images) {
+        const stillFile = await images[imagePath]!();
+
+        const optimizedImage = await getImage({
+          src: stillFile.default,
+          width: 1200,
+          height: 675,
+          format: "jpeg",
+          quality: 80,
+        });
+
+        seoImage = optimizedImage.src;
+      }
+
+      return {
+        params: {
+          slug: review.slug,
+        },
+        props: {
+          review: review,
+          seoImage: seoImage,
+          stillImageData: stills[review.slug],
+          posterImageData: posters[review.slug],
+        },
+      };
+    })
+  );
 }
 
 interface Props {
   review: IReview;
+  seoImage: string;
+  posterImageData: PosterImageData;
+  stillImageData: StillImageData;
 }
 
-const { review } = Astro.props;
+const { review, seoImage, stillImageData, posterImageData } = Astro.props;
 ---
 
-<Layout title={`${review.title} (${review.year})`}>
-  <Review review={review} />
+<Layout
+  title={`${review.title} (${review.year})`}
+  description={`${textStarsForGrade(review.grade)} ${review.excerptPlainText ?? ""}`}
+  image={seoImage}
+  article
+>
+  <Review
+    review={review}
+    stillImageData={stillImageData}
+    posterImageData={posterImageData}
+  />
 </Layout>

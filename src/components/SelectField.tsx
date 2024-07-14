@@ -1,6 +1,6 @@
-import type { ChangeEvent } from "react";
-import { LabelText } from "@/components/LabelText.tsx";
-import { SelectInput } from "@/components/SelectInput.tsx";
+import { ChangeEvent } from "react";
+import { LabelText } from "@/components/LabelText";
+import { SelectInput } from "@/components/SelectInput";
 import { twMerge } from "tailwind-merge";
 
 export function SelectField({
@@ -19,7 +19,7 @@ export function SelectField({
   return (
     <label className={twMerge("flex flex-col", className)}>
       <LabelText as="span" text={label} />
-      <SelectInput value={value?.toString() || 0} onChange={onChange}>
+      <SelectInput value={value?.toString()} onChange={onChange}>
         {children}
       </SelectInput>
     </label>

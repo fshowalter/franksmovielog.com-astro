@@ -1,13 +1,13 @@
 import {
+  FilterableState,
   buildGroupItems,
   collator,
   filterTools,
   sortNumber,
   sortString,
 } from "@/utils";
-import type { FilterableState } from "@/utils";
 
-import type { ReviewedTitle } from "./List";
+import type { ListItemData } from "./List";
 
 const SHOW_COUNT_DEFAULT = 100;
 
@@ -24,28 +24,25 @@ export type Sort =
 const groupItems = buildGroupItems(groupForItem);
 const { updateFilter } = filterTools(sortItems, groupItems);
 
-function sortItems(items: ReviewedTitle[], sortOrder: Sort) {
-  const sortMap: Record<Sort, (a: ReviewedTitle, b: ReviewedTitle) => number> =
-    {
-      "release-date-desc": (a, b) =>
-        sortString(a.releaseSequence, b.releaseSequence) * -1,
-      "release-date-asc": (a, b) =>
-        sortString(a.releaseSequence, b.releaseSequence),
-      "review-date-desc": (a, b) =>
-        sortString(a.date.toISOString(), b.date.toISOString()) * -1,
-      "review-date-asc": (a, b) =>
-        sortString(a.date.toISOString(), b.date.toISOString()),
-      "title-asc": (a, b) => collator.compare(a.sortTitle, b.sortTitle),
-      "title-desc": (a, b) => collator.compare(a.sortTitle, b.sortTitle) * -1,
-      "grade-asc": (a, b) => sortNumber(a.gradeValue, b.gradeValue),
-      "grade-desc": (a, b) => sortNumber(a.gradeValue, b.gradeValue) * -1,
-    };
+function sortItems(items: ListItemData[], sortOrder: Sort) {
+  const sortMap: Record<Sort, (a: ListItemData, b: ListItemData) => number> = {
+    "release-date-desc": (a, b) =>
+      sortString(a.releaseSequence, b.releaseSequence) * -1,
+    "release-date-asc": (a, b) =>
+      sortString(a.releaseSequence, b.releaseSequence),
+    "review-date-desc": (a, b) => sortString(a.reviewDate, b.reviewDate) * -1,
+    "review-date-asc": (a, b) => sortString(a.reviewDate, b.reviewDate),
+    "title-asc": (a, b) => collator.compare(a.sortTitle, b.sortTitle),
+    "title-desc": (a, b) => collator.compare(a.sortTitle, b.sortTitle) * -1,
+    "grade-asc": (a, b) => sortNumber(a.gradeValue, b.gradeValue),
+    "grade-desc": (a, b) => sortNumber(a.gradeValue, b.gradeValue) * -1,
+  };
 
   const comparer = sortMap[sortOrder];
   return items.sort(comparer);
 }
 
-function groupForItem(item: ReviewedTitle, sortValue: Sort): string {
+function groupForItem(item: ListItemData, sortValue: Sort): string {
   switch (sortValue) {
     case "release-date-asc":
     case "release-date-desc": {
@@ -53,11 +50,7 @@ function groupForItem(item: ReviewedTitle, sortValue: Sort): string {
     }
     case "review-date-asc":
     case "review-date-desc": {
-      return item.date.toLocaleString("en-US", {
-        month: "long",
-        year: "numeric",
-        timeZone: "UTC",
-      });
+      return `${item.reviewMonth} ${item.reviewYear}`;
     }
     case "grade-asc":
     case "grade-desc": {
@@ -77,13 +70,13 @@ function groupForItem(item: ReviewedTitle, sortValue: Sort): string {
   }
 }
 
-type State = FilterableState<ReviewedTitle, Sort, Map<string, ReviewedTitle[]>>;
+type State = FilterableState<ListItemData, Sort, Map<string, ListItemData[]>>;
 
 export function initState({
   items,
   sort,
 }: {
-  items: ReviewedTitle[];
+  items: ListItemData[];
   sort: Sort;
 }): State {
   return {
@@ -180,7 +173,7 @@ export function reducer(state: State, action: Action): State {
     }
     case ActionType.FILTER_REVIEW_YEAR: {
       return updateFilter(state, "reviewYear", (item) => {
-        const reviewYear = item.date.getFullYear().toString();
+        const reviewYear = item.reviewYear;
         return reviewYear >= action.values[0] && reviewYear <= action.values[1];
       });
     }

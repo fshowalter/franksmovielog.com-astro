@@ -15,6 +15,9 @@ import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
 import { linkReviewedTitles } from "./utils/linkReviewedTitles";
 import type { Root as HastRoot } from "hast";
+import { toString } from "mdast-util-to-string";
+
+const EXCERPT_SEPARATOR = "<!-- end -->";
 
 export interface ReviewViewing extends MarkdownViewing {
   venueNotes: string | null;
@@ -25,6 +28,7 @@ export interface ReviewViewing extends MarkdownViewing {
 export interface Review extends ReviewedTitleJson, MarkdownReview {
   viewings: ReviewViewing[];
   excerpt: string;
+  excerptPlainText: string;
   content: string | null;
 }
 
@@ -156,6 +160,14 @@ function getExcerptHtml(
   return linkReviewedTitles(excerptHtml, reviewedTitles);
 }
 
+function getExcerptPlainText(content: string, excerptSeparator: string) {
+  return toString(
+    getMastProcessor()
+      .use(trimToExcerpt, { separator: excerptSeparator })
+      .parse(content),
+  );
+}
+
 export async function allReviews(): Promise<Review[]> {
   if (cache) {
     return cache;
@@ -209,9 +221,13 @@ export async function allReviews(): Promise<Review[]> {
         content: getHtml(review.rawContent, reviewedTitlesJson),
         excerpt: getExcerptHtml(
           review.rawContent,
-          "<!-- end -->",
+          EXCERPT_SEPARATOR,
           title.slug,
           reviewedTitlesJson,
+        ),
+        excerptPlainText: getExcerptPlainText(
+          review.rawContent,
+          EXCERPT_SEPARATOR,
         ),
       };
     }),

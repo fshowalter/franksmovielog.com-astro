@@ -1,6 +1,5 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 import { twMerge } from "tailwind-merge";
-import type { ChangeEvent } from "react";
 
 export function SelectInput({
   value,

@@ -1,4 +1,4 @@
-import { promises as fs, existsSync } from "node:fs";
+import { promises as fs } from "node:fs";
 import { z } from "zod";
 import { join } from "path";
 
@@ -36,7 +36,7 @@ const CastAndCrewJsonSchema = z.object({
   titles: z.array(TitleSchema),
 });
 
-let allCastAndCrewJson: CastAndCrewJson[];
+let cache: CastAndCrewMemberJson[];
 
 async function parseAllCastAndCrewJson() {
   const dirents = await fs.readdir(castAndCrewJsonDirectory, {
@@ -53,36 +53,21 @@ async function parseAllCastAndCrewJson() {
         );
 
         const json = JSON.parse(fileContents) as unknown;
-        const member = CastAndCrewJsonSchema.parse(json);
-
-        const avatar = existsSync(
-          join(
-            process.cwd(),
-            "public",
-            "assets",
-            "avatars",
-            `${member.slug}.png`,
-          ),
-        )
-          ? `/assets/avatars/${member.slug}.png`
-          : null;
-
-        return {
-          ...member,
-          avatar,
-        };
+        return CastAndCrewJsonSchema.parse(json);
       }),
   );
 }
 
-type CastAndCrewJson = z.infer<typeof CastAndCrewJsonSchema> & {
-  avatar: string | null;
-};
+export type CastAndCrewMemberJson = z.infer<typeof CastAndCrewJsonSchema>;
 
-export default async function castAndCrewJson(): Promise<CastAndCrewJson[]> {
-  if (!allCastAndCrewJson) {
-    allCastAndCrewJson = await parseAllCastAndCrewJson();
+export default async function allCastAndCrewJson(): Promise<
+  CastAndCrewMemberJson[]
+> {
+  if (cache) {
+    return cache;
   }
 
-  return allCastAndCrewJson;
+  cache = await parseAllCastAndCrewJson();
+
+  return cache;
 }

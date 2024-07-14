@@ -1,10 +1,9 @@
-import { MultiSelectField } from "@/components/MultiSelectField.tsx";
-import { DebouncedInput } from "@/components/DebouncedInput.tsx";
-import { GradeInput } from "@/components/GradeInput.tsx";
-import { SelectField } from "@/components/SelectField.tsx";
-import { YearInput } from "@/components/YearInput.tsx";
-import { ActionType } from "./Reviews.reducer";
-import type { Action, Sort } from "./Reviews.reducer";
+import { MultiSelectField } from "@/components/MultiSelectField";
+import { DebouncedInput } from "@/components/DebouncedInput";
+import { GradeInput } from "@/components/GradeInput";
+import { SelectField } from "@/components/SelectField";
+import { YearInput } from "@/components/YearInput";
+import { Action, ActionType, Sort } from "./Reviews.reducer";
 
 export function Filters({
   dispatch,

@@ -1,3 +1,6 @@
+/**
+ * Maps grade letters to their letter and alt-text.
+ */
 const gradeMap: Record<string, [string, string]> = {
   A: ["/svg/5-stars.svg", "5 stars (out of 5)"],
   "A+": ["/svg/5-stars.svg", "5 stars (out of 5)"],
@@ -27,14 +30,7 @@ export function Grade({
     return null;
   }
 
-  const gradeMapValue = gradeMap[grade];
-
-  if (!gradeMapValue) {
-    return null;
-  }
-
-  const src = gradeMapValue[0];
-  const alt = gradeMapValue[1];
+  const [src, alt] = gradeMap[grade];
 
   const width = height * 5;
 

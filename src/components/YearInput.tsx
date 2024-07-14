@@ -1,6 +1,8 @@
+"use client";
+
 import { useState } from "react";
-import { LabelText } from "@/components/LabelText.tsx";
-import { SelectInput } from "@/components/SelectInput.tsx";
+import { LabelText } from "@/components/LabelText";
+import { SelectInput } from "@/components/SelectInput";
 
 export function YearInput({
   label,
@@ -11,8 +13,8 @@ export function YearInput({
   years: readonly string[];
   onYearChange: (values: [string, string]) => void;
 }): JSX.Element {
-  const [minYear, setMinYear] = useState<string>(years[0]!);
-  const [maxYear, setMaxYear] = useState<string>(years[years.length - 1]!);
+  const [minYear, setMinYear] = useState(years[0]);
+  const [maxYear, setMaxYear] = useState(years[years.length - 1]);
 
   const handleMinChange = (value: string) => {
     const newMin = value;

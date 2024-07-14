@@ -1,11 +1,13 @@
-import { ViewingHistoryListItem } from "./ViewingHistoryListItem.tsx";
-import type { Review } from "@/api/reviews.ts";
+import type { Review } from "@/api/reviews";
+import { ViewingHistoryListItem } from "./ViewingHistoryListItem";
+
+export interface ViewingHistoryReviewData extends Pick<Review, "viewings"> {}
 
 export function ViewingHistory({
   review,
   className,
 }: {
-  review: Pick<Review, "viewings">;
+  review: ViewingHistoryReviewData;
   className?: string;
 }) {
   return (

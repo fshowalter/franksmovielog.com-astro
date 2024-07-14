@@ -1,4 +1,4 @@
-import type { ElementType } from "react";
+import { ElementType } from "react";
 
 export function LabelText({
   text,

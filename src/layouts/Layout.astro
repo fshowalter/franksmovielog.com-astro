@@ -1,13 +1,31 @@
 ---
-import Mast from "@/components/layout/Mast.astro";
-import Footer from "@/components/layout/Footer.astro";
+import { Layout as LayoutComponent } from "@/components/Layout";
 import "./base.css";
 
 interface Props {
   title: string;
+  description: string;
+  image?: string | null;
+  article?: boolean;
 }
 
-const { title } = Astro.props;
+const siteMeta = {
+  author: "Frank Showalter",
+  url: "https://www.franksmovielog.com/",
+  image: "/assets/default_og.jpg",
+  title: "Frank's Movie Log",
+};
+
+const { title, description, image, article = false } = Astro.props;
+let pageTitle;
+
+if (title.startsWith(siteMeta.title)) {
+  pageTitle = title;
+}
+
+pageTitle = `${pageTitle} | ${siteMeta.title}`;
+
+const pathname = new URL(Astro.request.url).pathname;
 ---
 
 <!doctype html>
@@ -18,29 +36,17 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>
-      {title ? `${title} | Frank's Movie Log` : "Frank's Movie Log"}
-    </title>
+    <meta name="description" content={description} />
+    <meta name="og:image" content={image} />
+    <meta property="og:url" content={`${siteMeta.url}${pathname}`} />
+    {article && <meta property="og:type" content="article" />}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <title>{pageTitle}</title>
   </head>
-  <body>
-    <div>
-      <a
-        href="#content"
-        class="bg-subtle text-accent translate-skip-to-content absolute left-1/2 top-0.5 z-50 mx-auto px-6 py-2 text-center"
-      >
-        Skip to content
-      </a>
-      <div
-        class={"image-filter bg-notcomingsoon max-w-canvas desktop:sticky desktop:top-0 desktop:z-40 mx-auto min-h-4 w-full"}
-      >
-      </div>
-      <div class="max-w-canvas bg-default mx-auto flex min-h-full flex-col">
-        <Mast />
-        <div class="grow" id="content">
-          <slot />
-        </div>
-        <Footer />
-      </div>
-    </div>
-  </body>
 </html>
+<body>
+  <LayoutComponent currentPath={pathname}>
+    <slot />
+  </LayoutComponent>
+</body>

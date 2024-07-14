@@ -1,6 +1,9 @@
 import React from "react";
 import { twMerge } from "tailwind-merge";
 
+/**
+ * Renders a search icon.
+ */
 export default function SvgIcon({
   className,
   children,
