@@ -1,5 +1,6 @@
-import React, { ChangeEvent } from "react";
+import React from "react";
 import { twMerge } from "tailwind-merge";
+import type { ChangeEvent } from "react";
 
 export function SelectInput({
   value,
@@ -7,7 +8,7 @@ export function SelectInput({
   children,
   className,
 }: {
-  value?: string | number;
+  value?: string | number | undefined;
   children: React.ReactNode;
   onChange: (e: ChangeEvent<HTMLSelectElement>) => void;
   className?: string;

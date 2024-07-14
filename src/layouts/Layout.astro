@@ -21,9 +21,9 @@ let pageTitle;
 
 if (title.startsWith(siteMeta.title)) {
   pageTitle = title;
+} else {
+  pageTitle = `${title} | ${siteMeta.title}`;
 }
-
-pageTitle = `${pageTitle} | ${siteMeta.title}`;
 
 const pathname = new URL(Astro.request.url).pathname;
 ---

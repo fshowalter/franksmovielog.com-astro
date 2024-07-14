@@ -1,5 +1,6 @@
 import { LabelText } from "@/components/LabelText";
-import Select, { MultiValue } from "react-select";
+import Select from "react-select";
+import type { MultiValue } from "react-select";
 
 export function MultiSelectField({
   onChange,

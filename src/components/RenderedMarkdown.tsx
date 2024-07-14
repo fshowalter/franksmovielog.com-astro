@@ -1,4 +1,5 @@
 import { twMerge } from "tailwind-merge";
+import type { ElementType } from "react";
 
 export function RenderedMarkdown({
   className,
@@ -7,7 +8,7 @@ export function RenderedMarkdown({
 }: {
   text: string | null;
   className?: string;
-  as?: React.ElementType;
+  as?: ElementType;
 }): JSX.Element | null {
   if (!text) {
     return null;

@@ -6,28 +6,31 @@ import { Filters } from "./Filters";
 import { Header } from "./Header";
 import { List } from "./List";
 import { initState, reducer } from "./Reviews.reducer";
-import type { ListItemData } from "./List";
+import type { ListItemReviewData } from "./List";
 import type { Sort } from "./Reviews.reducer";
+import type { PosterImageData } from "@/api/posters";
 
 export interface ReviewsProps {
-  data: ListItemData[];
+  reviews: ListItemReviewData[];
   initialSort: Sort;
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
+  posters: Record<string, PosterImageData>;
 }
 
 export function Reviews({
-  data,
+  reviews,
   initialSort,
   distinctGenres,
   distinctReleaseYears,
   distinctReviewYears,
+  posters,
 }: ReviewsProps): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
-      items: [...data],
+      items: [...reviews],
       sort: initialSort,
     },
     initState,
@@ -35,7 +38,7 @@ export function Reviews({
 
   return (
     <ListWithFiltersLayout
-      header={<Header reviewCount={data.length} />}
+      header={<Header reviewCount={reviews.length} />}
       filters={
         <Filters
           dispatch={dispatch}
@@ -51,6 +54,7 @@ export function Reviews({
           groupedItems={state.groupedItems}
           visibleCount={state.showCount}
           totalCount={state.filteredItems.length}
+          posters={posters}
         />
       }
     />

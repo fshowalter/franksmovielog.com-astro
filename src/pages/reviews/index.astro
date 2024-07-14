@@ -1,16 +1,18 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { Reviews } from "@/components/reviews/Reviews.tsx";
+import { Reviews } from "@/components/Reviews";
 import { allReviews } from "@/api/reviews";
-import { allPosters } from "@/api/posters";
+import { getFixedWidthPosters } from "@/api/posters";
+import type { ListItemReviewData } from "@/components/Reviews";
+import { ListItemPosterImageConfig } from "@/components/ListItemPoster";
 
 const reviews = await allReviews();
-const posters = await allPosters(56);
+const posters = await getFixedWidthPosters(ListItemPosterImageConfig);
 const distinctReviewYears = new Set<string>();
 const distinctReleaseYears = new Set<string>();
 const distinctGenres = new Set<string>();
 
-reviews.forEach((review) => {
+const narrowedReviews = reviews.map((review) => {
   distinctReviewYears.add(
     review.date.toLocaleDateString("en-US", {
       timeZone: "UTC",
@@ -19,21 +21,45 @@ reviews.forEach((review) => {
   );
   review.genres.forEach((genre) => distinctGenres.add(genre));
   distinctReleaseYears.add(review.year);
+
+  const listItemReviewData: ListItemReviewData = {
+    reviewDate: review.date.toISOString(),
+    reviewMonth: review.date.toLocaleDateString("en-US", {
+      timeZone: "UTC",
+      month: "long",
+    }),
+    reviewYear: review.date.toLocaleDateString("en-US", {
+      timeZone: "UTC",
+      year: "numeric",
+    }),
+    imdbId: review.imdbId,
+    title: review.title,
+    year: review.year,
+    slug: review.slug,
+    genres: review.genres,
+    grade: review.grade,
+    releaseSequence: review.releaseSequence,
+    gradeValue: review.gradeValue,
+    sortTitle: review.sortTitle,
+  };
+
+  return listItemReviewData;
 });
 
 reviews.sort((a, b) => a.sortTitle.localeCompare(b.sortTitle));
-
-const imageCache = posters;
 ---
 
-<Layout title="Frank's Movie Log">
+<Layout
+  title="Reviews"
+  description="A sortable and filterable list of every movie I've reviewed since 2012."
+>
   <Reviews
     client:load
     initialSort="title-asc"
     distinctReleaseYears={Array.from(distinctReleaseYears).toSorted()}
     distinctReviewYears={Array.from(distinctReviewYears).toSorted()}
     distinctGenres={Array.from(distinctGenres).toSorted()}
-    posterImageDataCache={imageCache}
-    reviews={reviews}
+    posters={posters}
+    reviews={narrowedReviews}
   />
 </Layout>

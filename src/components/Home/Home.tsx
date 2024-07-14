@@ -1,13 +1,13 @@
 import { HomeListItem } from "./HomeListItem";
-import type { HomeListItemReview } from "./HomeListItem";
-import type { ImageData } from "@/api/stills";
+import type { HomeListItemReviewData } from "./HomeListItem";
+import type { StillImageData } from "@/api/stills";
 
 export function Home({
   reviews,
   stills,
 }: {
-  reviews: HomeListItemReview[];
-  stills: Record<string, ImageData>;
+  reviews: HomeListItemReviewData[];
+  stills: Record<string, StillImageData>;
 }): JSX.Element {
   return (
     <main>

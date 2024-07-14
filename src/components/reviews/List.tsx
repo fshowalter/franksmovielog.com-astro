@@ -3,22 +3,28 @@ import { ListItem } from "@/components/ListItem";
 import { ListItemGenres } from "@/components/ListItemGenres";
 import { ListItemPoster } from "@/components/ListItemPoster";
 import { ListItemTitle } from "@/components/ListItemTitle";
-import { GroupedList } from "@/components/ListWithFiltersLayout";
-import { Action, ActionType } from "./Reviews.reducer";
+import { GroupedList } from "@/components/GroupedList";
+import { ActionType } from "./Reviews.reducer";
+import type { Review } from "@/api/reviews";
+import type { Action } from "./Reviews.reducer";
+import type { PosterImageData } from "@/api/posters";
 
-export interface ListItemData {
-  imdbId: string;
+export interface ListItemReviewData
+  extends Pick<
+    Review,
+    | "imdbId"
+    | "releaseSequence"
+    | "title"
+    | "year"
+    | "sortTitle"
+    | "slug"
+    | "grade"
+    | "gradeValue"
+    | "genres"
+  > {
   reviewDate: string;
-  releaseSequence: string;
-  reviewYear: string;
   reviewMonth: string;
-  title: string;
-  year: string;
-  sortTitle: string;
-  slug: string;
-  grade: string;
-  gradeValue: number;
-  genres: string[];
+  reviewYear: string;
 }
 
 export function List({
@@ -26,11 +32,13 @@ export function List({
   totalCount,
   visibleCount,
   dispatch,
+  posters,
 }: {
-  groupedItems: Map<string, ListItemData[]>;
+  groupedItems: Map<string, ListItemReviewData[]>;
   totalCount: number;
   visibleCount: number;
   dispatch: React.Dispatch<Action>;
+  posters: Record<string, PosterImageData>;
 }) {
   return (
     <GroupedList
@@ -40,24 +48,45 @@ export function List({
       totalCount={totalCount}
       onShowMore={() => dispatch({ type: ActionType.SHOW_MORE })}
     >
-      {(item) => <ReviewListItem data={item} key={item.imdbId} />}
+      {(review) => (
+        <ReviewListItem
+          review={review}
+          key={review.imdbId}
+          imageData={posters[review.slug]!}
+        />
+      )}
     </GroupedList>
   );
 }
 
-function ReviewListItem({ data }: { data: ListItemData }): JSX.Element {
+function ReviewListItem({
+  review,
+  imageData,
+}: {
+  review: ListItemReviewData;
+  imageData: PosterImageData;
+}): JSX.Element {
   return (
     <ListItem className="items-center">
-      <ListItemPoster slug={data.slug} title={data.title} year={data.year} />
+      <ListItemPoster
+        slug={review.slug}
+        title={review.title}
+        year={review.year}
+        imageData={imageData}
+      />
       <div className="grow pr-gutter tablet:w-full desktop:pr-4">
         <div>
-          <ListItemTitle title={data.title} year={data.year} slug={data.slug} />
+          <ListItemTitle
+            title={review.title}
+            year={review.year}
+            slug={review.slug}
+          />
           <div className="spacer-y-1" />
           <div className="py-px">
-            <Grade grade={data.grade} height={18} />
+            <Grade grade={review.grade} height={18} />
           </div>
           <div className="spacer-y-2" />
-          <ListItemGenres genres={data.genres} />
+          <ListItemGenres genres={review.genres} />
           <div className="spacer-y-2" />
         </div>
       </div>

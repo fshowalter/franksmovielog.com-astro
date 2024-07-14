@@ -1,38 +1,49 @@
-import Link from "next/link";
-import Image from "next/image";
+import type { PosterImageData } from "@/api/posters";
+
+export const ListItemPosterImageConfig = {
+  width: 56,
+  height: 84,
+  quality: 80,
+};
 
 export function ListItemPoster({
   slug,
   title,
   year,
+  imageData,
 }: {
   slug?: string | null;
   title: string;
   year: string;
+  imageData: PosterImageData;
 }) {
   if (slug) {
     return (
-      <Link
+      <a
         href={`/reviews/${slug}/`}
         className="safari-border-radius-fix min-w-14 max-w-14 shrink-0 overflow-hidden rounded-lg shadow-all"
       >
-        <Image
-          src={`/assets/posters/${slug}.png`}
+        <img
+          {...imageData}
           alt={`A poster from ${title} (${year})`}
-          width={56}
-          height={84}
+          width={ListItemPosterImageConfig.width}
+          height={ListItemPosterImageConfig.height}
+          loading="lazy"
+          decoding="async"
         />
-      </Link>
+      </a>
     );
   }
 
   return (
-    <Image
-      src="/assets/posters/default.png"
+    <img
+      {...imageData}
       alt="An unreviewed title."
       className="safari-border-radius-fix min-w-14 max-w-14 shrink-0 overflow-hidden rounded-lg shadow-all"
-      width={56}
-      height={84}
+      width={ListItemPosterImageConfig.width}
+      height={ListItemPosterImageConfig.height}
+      loading="lazy"
+      decoding="async"
     />
   );
 }

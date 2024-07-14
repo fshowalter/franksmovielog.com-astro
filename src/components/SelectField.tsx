@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react";
+import type { ChangeEvent } from "react";
 import { LabelText } from "@/components/LabelText";
 import { SelectInput } from "@/components/SelectInput";
 import { twMerge } from "tailwind-merge";

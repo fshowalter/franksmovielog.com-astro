@@ -23,6 +23,11 @@ export function Still({
   ...rest
 }: StillProps): JSX.Element {
   return (
-    <img {...imageData} {...rest} alt={`A still from ${title} (${year})`} />
+    <img
+      {...imageData}
+      {...rest}
+      alt={`A still from ${title} (${year})`}
+      style={{ maxWidth: `${width}px` }}
+    />
   );
 }

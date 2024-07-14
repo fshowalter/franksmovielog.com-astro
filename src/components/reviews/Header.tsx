@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { PageTitle } from "@/components/PageTitle";
 
 export function Header({ reviewCount }: { reviewCount: number }): JSX.Element {
@@ -20,14 +19,14 @@ export function Header({ reviewCount }: { reviewCount: number }): JSX.Element {
         <p>
           <span className="font-semibold">Looking for something new?</span>
           <br /> Peruse my list of{" "}
-          <Link href="/reviews/underseen/">underseen gems</Link>.
+          <a href="/reviews/underseen/">underseen gems</a>.
         </p>
         <div className="spacer-y-4" />
         <p>
           <span className="font-semibold">Feeling contrarian?</span>
           <br />
           Behold my list of{" "}
-          <Link href="/reviews/overrated/">overrated disappointments</Link>.
+          <a href="/reviews/overrated/">overrated disappointments</a>.
         </p>
       </div>
     </>

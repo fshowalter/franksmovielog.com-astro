@@ -64,7 +64,7 @@ export function Review({
         width={960}
         height={540}
         sizes="(min-width: 960px) 960px, 100vw"
-        className="mb-[5.33px] max-w-[960px]"
+        className="mb-[5.33px]"
         imageData={stillImageData}
         loading="eager"
         decoding="sync"

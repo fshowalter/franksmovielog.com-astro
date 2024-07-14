@@ -3,7 +3,7 @@ import { Grade } from "@/components/Grade";
 import { RenderedMarkdown } from "@/components/RenderedMarkdown";
 import { Still } from "@/components/Still";
 import type { Review } from "@/api/reviews";
-import type { ImageData } from "@/api/stills";
+import type { StillImageData } from "@/api/stills";
 
 export const StillImageConfig = {
   width: 512,
@@ -21,7 +21,7 @@ function formatDate(reviewDate: Date) {
   });
 }
 
-export interface HomeListItemReview
+export interface HomeListItemReviewData
   extends Pick<
     Review,
     | "imdbId"
@@ -41,9 +41,9 @@ export function HomeListItem({
   eagerLoadImage,
   stillImageData,
 }: {
-  review: HomeListItemReview;
+  review: HomeListItemReviewData;
   eagerLoadImage: boolean;
-  stillImageData: ImageData | undefined;
+  stillImageData: StillImageData | undefined;
 }) {
   return (
     <li className="flex even:bg-subtle">
@@ -60,7 +60,6 @@ export function HomeListItem({
             <Still
               title={review.title}
               year={review.year}
-              slug={review.slug}
               width={StillImageConfig.width}
               height={StillImageConfig.height}
               sizes={StillImageConfig.sizes}
