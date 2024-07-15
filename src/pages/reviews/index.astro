@@ -6,22 +6,13 @@ import { getFixedWidthPosters } from "@/api/posters";
 import type { ListItemReviewData } from "@/components/Reviews";
 import { ListItemPosterImageConfig } from "@/components/ListItemPoster";
 
-const reviews = await allReviews();
+const { reviews, distinctGenres, distinctReleaseYears, distinctReviewYears } =
+  await allReviews();
 const posters = await getFixedWidthPosters(ListItemPosterImageConfig);
-const distinctReviewYears = new Set<string>();
-const distinctReleaseYears = new Set<string>();
-const distinctGenres = new Set<string>();
+
+reviews.sort((a, b) => a.sortTitle.localeCompare(b.sortTitle));
 
 const narrowedReviews = reviews.map((review) => {
-  distinctReviewYears.add(
-    review.date.toLocaleDateString("en-US", {
-      timeZone: "UTC",
-      year: "numeric",
-    })
-  );
-  review.genres.forEach((genre) => distinctGenres.add(genre));
-  distinctReleaseYears.add(review.year);
-
   const listItemReviewData: ListItemReviewData = {
     reviewDate: review.date.toISOString(),
     reviewMonth: review.date.toLocaleDateString("en-US", {
@@ -45,8 +36,6 @@ const narrowedReviews = reviews.map((review) => {
 
   return listItemReviewData;
 });
-
-reviews.sort((a, b) => a.sortTitle.localeCompare(b.sortTitle));
 ---
 
 <Layout
@@ -56,9 +45,9 @@ reviews.sort((a, b) => a.sortTitle.localeCompare(b.sortTitle));
   <Reviews
     client:load
     initialSort="title-asc"
-    distinctReleaseYears={Array.from(distinctReleaseYears).toSorted()}
-    distinctReviewYears={Array.from(distinctReviewYears).toSorted()}
-    distinctGenres={Array.from(distinctGenres).toSorted()}
+    distinctReleaseYears={distinctReleaseYears}
+    distinctReviewYears={distinctReviewYears}
+    distinctGenres={distinctGenres}
     posters={posters}
     reviews={narrowedReviews}
   />

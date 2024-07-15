@@ -11,7 +11,7 @@ import type { Review as IReview } from "@/api/reviews";
 import { textStarsForGrade } from "@/utils/textStarsForGrade";
 import { images, getStillImagePath, getStills } from "@/api/stills";
 import { getImage } from "astro:assets";
-import { getPosters } from "@/api/posters";
+import { getFluidWidthPosters } from "@/api/posters";
 import type { PosterImageData } from "@/api/posters";
 import type { StillImageData } from "@/api/stills";
 import type { AvatarImageData } from "@/api/avatars";
@@ -19,9 +19,9 @@ import { getAvatars } from "@/api/avatars";
 import { StillListItemImageConfig } from "@/components/StillListItem";
 
 export async function getStaticPaths() {
-  const reviews = await allReviews();
+  const { reviews } = await allReviews();
   const stills = await getStills(StillImageConfig);
-  const posters = await getPosters(PosterImageConfig);
+  const posters = await getFluidWidthPosters(PosterImageConfig);
   const avatars = await getAvatars(ChipAvatarImageConfig);
   const stillListStills = await getStills(StillListItemImageConfig);
 

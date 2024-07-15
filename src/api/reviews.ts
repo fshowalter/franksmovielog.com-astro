@@ -34,7 +34,14 @@ export interface Review extends ReviewedTitleJson, MarkdownReview {
   content: string | null;
 }
 
-let cache: Review[];
+export interface Reviews {
+  reviews: Review[];
+  distinctReviewYears: string[];
+  distinctReleaseYears: string[];
+  distinctGenres: string[];
+}
+
+let cache: Reviews;
 
 function getMastProcessor() {
   return remark().use(remarkGfm).use(removeFootnotes).use(smartypants);
@@ -125,7 +132,7 @@ function getExcerptPlainText(content: string) {
     .toString();
 }
 
-export async function allReviews(): Promise<Review[]> {
+export async function allReviews(): Promise<Reviews> {
   if (cache) {
     return cache;
   }
@@ -133,9 +140,15 @@ export async function allReviews(): Promise<Review[]> {
   const reviewedTitlesJson = await allReviewedTitlesJson();
   const reviewsMarkdown = await allReviewsMarkdown();
   const viewingsMarkdown = await allViewingsMarkdown();
+  const distinctReviewYears = new Set<string>();
+  const distinctReleaseYears = new Set<string>();
+  const distinctGenres = new Set<string>();
 
-  cache = await Promise.all(
+  const reviews = await Promise.all(
     reviewedTitlesJson.map((title) => {
+      title.genres.forEach((genre) => distinctGenres.add(genre));
+      distinctReleaseYears.add(title.year);
+
       const review = reviewsMarkdown.find((reviewsarkdown) => {
         return reviewsarkdown.slug === title.slug;
       });
@@ -145,6 +158,13 @@ export async function allReviews(): Promise<Review[]> {
           `No markdown review found with slug ${title.slug} for title "${title.title}"`,
         );
       }
+
+      distinctReviewYears.add(
+        review.date.toLocaleDateString("en-US", {
+          timeZone: "UTC",
+          year: "numeric",
+        }),
+      );
 
       const viewings = viewingsMarkdown
         .filter((viewing) => {
@@ -185,6 +205,13 @@ export async function allReviews(): Promise<Review[]> {
       };
     }),
   );
+
+  cache = {
+    reviews: reviews,
+    distinctGenres: Array.from(distinctGenres).toSorted(),
+    distinctReleaseYears: Array.from(distinctReleaseYears).toSorted(),
+    distinctReviewYears: Array.from(distinctReviewYears).toSorted(),
+  };
 
   return cache;
 }

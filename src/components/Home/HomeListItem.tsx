@@ -9,7 +9,6 @@ export const StillImageConfig = {
   width: 512,
   height: 288,
   sizes: "(min-width: 512px) 512px, 100vw",
-  quality: 80,
 };
 
 function formatDate(reviewDate: Date) {

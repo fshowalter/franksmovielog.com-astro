@@ -23,6 +23,6 @@ export function Poster({
   ...rest
 }: PosterProps): JSX.Element {
   return (
-    <img {...imageData} {...rest} alt={`A poster from ${title} (${year})`} />
+    <img {...imageData} alt={`A poster from ${title} (${year})`} {...rest} />
   );
 }

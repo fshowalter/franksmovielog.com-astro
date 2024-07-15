@@ -1,1 +1,1 @@
-export { AllTimeStats } from "./AllTimeStats";
+export { AlltimeStats } from "./AlltimeStats";

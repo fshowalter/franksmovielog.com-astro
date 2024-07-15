@@ -22,7 +22,6 @@ export const StillImageConfig = {
   width: 960,
   height: 540,
   sizes: "(min-width: 960px) 960px, 100vw",
-  quality: 80,
 };
 
 interface ReviewData

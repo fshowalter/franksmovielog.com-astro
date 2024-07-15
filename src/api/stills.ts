@@ -12,7 +12,7 @@ export interface Props {
   height: number;
 }
 
-const reviews = await allReviews();
+const { reviews } = await allReviews();
 export const images = import.meta.glob<{ default: ImageMetadata }>(
   "/content/assets/stills/*.png",
 );

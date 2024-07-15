@@ -3,17 +3,17 @@ import {
   DecadeDistribution,
   MediaDistribution,
   MostWatchedMovies,
-} from "@/components/Stats";
-import { MostWatchedDirectors } from "@/components/Stats/MostWatchedDirectors";
-import { MostWatchedPerformers } from "@/components/Stats/MostWatchedPerformers";
-import { MostWatchedWriters } from "@/components/Stats/MostWatchedWriters";
-import { StatsNavigation } from "@/components/Stats/StatsNavigation";
+} from "@/components/";
+import { MostWatchedDirectors } from "@/components/MostWatchedDirectors";
+import { MostWatchedPerformers } from "@/components/MostWatchedPerformers";
+import { MostWatchedWriters } from "@/components/MostWatchedWriters";
+import { StatsNavigation } from "@/components/StatsNavigation";
 import { Callouts } from "./Callouts";
 import type { CalloutsData } from "./Callouts";
-import type { DecadeDistributionData } from "@/components/Stats/DecadeDistribution";
-import type { MediaDistributionData } from "@/components/Stats/MediaDistribution";
-import type { MostWatchedMovieListItemData } from "@/components/Stats/MostWatchedMovies";
-import type { MostWatchedPersonListItemData } from "@/components/Stats/MostWatchedPeople";
+import type { DecadeDistributionData } from "@/components/DecadeDistribution";
+import type { MediaDistributionData } from "@/components/MediaDistribution";
+import type { MostWatchedMovieListItemData } from "@/components/MostWatchedMovies";
+import type { MostWatchedPersonListItemData } from "@/components/MostWatchedPeople";
 
 interface YearStatsData extends CalloutsData {
   decadeDistribution: readonly DecadeDistributionData[];

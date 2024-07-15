@@ -5,7 +5,7 @@ import { allReviews } from "@/api/reviews";
 import { getStills } from "@/api/stills";
 import { StillImageConfig } from "@/components/Home/";
 
-const reviews = await allReviews();
+const { reviews } = await allReviews();
 
 reviews.sort((a, b) => b.sequence.localeCompare(a.sequence));
 

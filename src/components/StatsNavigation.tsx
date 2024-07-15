@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 function AllTimeLink({
   currentYear,
   linkFunc,
@@ -13,7 +11,7 @@ function AllTimeLink({
 
   return (
     <li className="block">
-      <Link href={linkFunc("all")}>All-Time</Link>
+      <a href={linkFunc("all")}>All-Time</a>
     </li>
   );
 }
@@ -33,7 +31,7 @@ function YearLink({
 
   return (
     <li className="block">
-      <Link href={linkFunc(year)}>{year}</Link>
+      <a href={linkFunc(year)}>{year}</a>
     </li>
   );
 }

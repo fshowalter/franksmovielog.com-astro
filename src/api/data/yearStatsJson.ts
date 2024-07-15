@@ -56,7 +56,7 @@ const YearStatsJsonSchema = z.object({
 
 type YearStatsJson = z.infer<typeof YearStatsJsonSchema>;
 
-let allYearStatsJson: YearStatsJson[];
+let cache: YearStatsJson[];
 
 async function parseAllYearStatsJson() {
   const dirents = await fs.readdir(yearStatsJsonDirectory, {
@@ -78,10 +78,11 @@ async function parseAllYearStatsJson() {
   );
 }
 
-export default async function yearStatsJson(): Promise<YearStatsJson[]> {
-  if (!allYearStatsJson) {
-    allYearStatsJson = await parseAllYearStatsJson();
+export async function yearStatsJson(): Promise<YearStatsJson[]> {
+  if (cache) {
+    return cache;
   }
+  cache = await parseAllYearStatsJson();
 
-  return allYearStatsJson;
+  return cache;
 }

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import type { PosterImageData } from "@/api/posters";
 import { ListItem } from "@/components/ListItem";
 import { ListItemMediumAndVenue } from "@/components/ListItemMediumAndVenue";
 import { ListItemPoster } from "@/components/ListItemPoster";
@@ -15,21 +15,23 @@ interface ViewingListItemData {
   slug: string | null;
 }
 
-export interface MostWatchedPersonListItemData {
+export interface MostWatchedPeopleListItemData {
   name: string;
   slug: string | null;
   count: number;
-  viewingsData: ViewingListItemData[];
+  viewings: ViewingListItemData[];
 }
 
 export function MostWatchedPeople({
-  data,
+  people,
   header,
+  posters,
 }: {
   header: string;
-  data: readonly MostWatchedPersonListItemData[];
+  people: readonly MostWatchedPeopleListItemData[];
+  posters: Record<string, PosterImageData>;
 }): JSX.Element | null {
-  if (data.length == 0) {
+  if (people.length == 0) {
     return null;
   }
 
@@ -41,7 +43,7 @@ export function MostWatchedPeople({
         <span className="text-right leading-10">Viewings</span>
       </header>
       <ol>
-        {data.map((person, index) => {
+        {people.map((person, index) => {
           return (
             <li key={person.name} className="block">
               <div
@@ -62,11 +64,12 @@ export function MostWatchedPeople({
                     Details
                   </summary>
                   <ol className="tablet:px-gutter">
-                    {person.viewingsData.map((viewing) => {
+                    {person.viewings.map((viewing) => {
                       return (
                         <MostWatchedPersonViewingListItem
                           key={viewing.sequence}
-                          data={viewing}
+                          viewing={viewing}
+                          imageData={posters[viewing.slug || "default"]!}
                         />
                       );
                     })}
@@ -81,33 +84,47 @@ export function MostWatchedPeople({
   );
 }
 
-function Name({ data }: { data: MostWatchedPersonListItemData }): JSX.Element {
+function Name({ data }: { data: MostWatchedPeopleListItemData }): JSX.Element {
   if (data.slug) {
-    return <Link href={`/cast-and-crew/${data.slug}/`}>{data.name}</Link>;
+    return <a href={`/cast-and-crew/${data.slug}/`}>{data.name}</a>;
   }
 
   return <>{data.name}</>;
 }
 
 function MostWatchedPersonViewingListItem({
-  data,
+  viewing,
+  imageData,
 }: {
-  data: ViewingListItemData;
+  viewing: ViewingListItemData;
+  imageData: PosterImageData;
 }) {
   return (
     <ListItem className="items-center">
-      <ListItemPoster slug={data.slug} title={data.title} year={data.year} />
+      <ListItemPoster
+        slug={viewing.slug}
+        title={viewing.title}
+        year={viewing.year}
+        imageData={imageData}
+      />
       <div className="grow">
         <div>
-          <ListItemTitle title={data.title} year={data.year} slug={data.slug} />
+          <ListItemTitle
+            title={viewing.title}
+            year={viewing.year}
+            slug={viewing.slug}
+          />
           <div className="spacer-y-1 tablet:spacer-y-2" />
         </div>
         <div className="flex flex-col text-sm font-light tracking-0.5px text-subtle">
           <div className="spacer-y-1 tablet:spacer-y-0" />
           <div>
-            {data.date}
+            {viewing.date}
             <div className="spacer-y-2" />
-            <ListItemMediumAndVenue medium={data.medium} venue={data.venue} />
+            <ListItemMediumAndVenue
+              medium={viewing.medium}
+              venue={viewing.venue}
+            />
           </div>
         </div>
         <div className="spacer-y-2" />

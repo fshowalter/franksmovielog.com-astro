@@ -1,21 +1,28 @@
-import { StatsCallout } from "@/components/Stats";
+import type { AlltimeStats } from "@/api/alltimeStats";
+import { StatsCallout } from "@/components/StatsCallout";
 
-export interface CalloutsData {
-  titleCount: number;
-  viewingCount: number;
-  reviewCount: number;
-  watchlistTitlesReviewedCount: number;
-}
+export interface CalloutsAlltimeStatsData
+  extends Pick<
+    AlltimeStats["stats"],
+    | "titleCount"
+    | "viewingCount"
+    | "reviewCount"
+    | "watchlistTitlesReviewedCount"
+  > {}
 
-export function Callouts({ data }: { data: CalloutsData }): JSX.Element {
+export function Callouts({
+  stats,
+}: {
+  stats: CalloutsAlltimeStatsData;
+}): JSX.Element {
   return (
     <div className="flex flex-wrap justify-center gap-6 desktop:flex-nowrap">
-      <StatsCallout label="Viewings" stat={data.viewingCount} />
-      <StatsCallout label="Movies" stat={data.titleCount} />
-      <StatsCallout label="Reviews" stat={data.reviewCount} />
+      <StatsCallout label="Viewings" stat={stats.viewingCount} />
+      <StatsCallout label="Movies" stat={stats.titleCount} />
+      <StatsCallout label="Reviews" stat={stats.reviewCount} />
       <StatsCallout
         label="From Watchlist"
-        stat={data.watchlistTitlesReviewedCount}
+        stat={stats.watchlistTitlesReviewedCount}
       />
     </div>
   );

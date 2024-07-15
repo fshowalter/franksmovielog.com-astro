@@ -2,7 +2,7 @@ import { promises as fs } from "node:fs";
 import { z } from "zod";
 import { join } from "path";
 
-const allTimeStatsFile = join(
+const alltimeStatsFile = join(
   process.cwd(),
   "content",
   "data",
@@ -45,7 +45,7 @@ const MostWatchedPersonSchema = z.object({
 
 export type MostWatchedPerson = z.infer<typeof MostWatchedPersonSchema>;
 
-const AllTimeStatsJsonSchema = z.object({
+const AlltimeStatsJsonSchema = z.object({
   viewingCount: z.number(),
   titleCount: z.number(),
   reviewCount: z.number(),
@@ -59,11 +59,11 @@ const AllTimeStatsJsonSchema = z.object({
   mostWatchedWriters: z.array(MostWatchedPersonSchema),
 });
 
-type AllTimeStatsJson = z.infer<typeof AllTimeStatsJsonSchema>;
+export type AlltimeStatsJson = z.infer<typeof AlltimeStatsJsonSchema>;
 
-export default async function allTimeStatsJson(): Promise<AllTimeStatsJson> {
-  const json = await fs.readFile(allTimeStatsFile, "utf8");
+export async function alltimeStatsJson(): Promise<AlltimeStatsJson> {
+  const json = await fs.readFile(alltimeStatsFile, "utf8");
   const data = JSON.parse(json) as unknown[];
 
-  return AllTimeStatsJsonSchema.parse(data);
+  return AlltimeStatsJsonSchema.parse(data);
 }

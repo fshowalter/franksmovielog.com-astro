@@ -1,4 +1,4 @@
-import { allReviews } from "@/api/reviews";
+import { basename, extname } from "node:path";
 import { getImage } from "astro:assets";
 
 export interface PosterImageData {
@@ -11,36 +11,27 @@ export interface Props {
   height: number;
 }
 
-const reviews = await allReviews();
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/content/assets/posters/*.png",
-);
+)!;
 
-const fluidCache: Record<string, Record<string, PosterImageData>> = {};
+const fluidWidthCache: Record<string, Record<string, PosterImageData>> = {};
 const fixedWidthCache: Record<string, Record<string, PosterImageData>> = {};
 
-const defaultImagePath = `/content/assets/posters/default.png`;
-
-export async function getPosters({
+export async function getFluidWidthPosters({
   width,
   height,
 }: Props): Promise<Record<string, PosterImageData>> {
   const key = width.toString();
 
-  if (key in fluidCache) {
-    return fluidCache[key]!;
+  if (key in fluidWidthCache) {
+    return fluidWidthCache[key]!;
   }
 
   const imageMap: Record<string, PosterImageData> = {};
 
-  reviews.forEach(async (review) => {
-    let imagePath = imagePathForSlug(review.slug);
-
-    if (!(imagePath in images)) {
-      imagePath = defaultImagePath;
-    }
-
-    const poasterFile = await images[imagePath]!();
+  Object.keys(images).forEach(async (image) => {
+    const poasterFile = await images[image]!();
 
     const optimizedImage = await getImage({
       src: poasterFile.default,
@@ -51,13 +42,13 @@ export async function getPosters({
       quality: 80,
     });
 
-    imageMap[review.slug] = {
+    imageMap[basename(image, extname(image))] = {
       srcSet: optimizedImage.srcSet.attribute,
       src: optimizedImage.src,
     };
   });
 
-  fluidCache[key] = imageMap;
+  fluidWidthCache[key] = imageMap;
 
   return imageMap;
 }
@@ -74,14 +65,8 @@ export async function getFixedWidthPosters({
 
   const imageMap: Record<string, PosterImageData> = {};
 
-  reviews.forEach(async (review) => {
-    let imagePath = imagePathForSlug(review.slug);
-
-    if (!(imagePath in images)) {
-      imagePath = defaultImagePath;
-    }
-
-    const poasterFile = await images[imagePath]!();
+  Object.keys(images).forEach(async (image) => {
+    const poasterFile = await images[image]!();
 
     const optimizedImage = await getImage({
       src: poasterFile.default,
@@ -92,7 +77,7 @@ export async function getFixedWidthPosters({
       quality: 80,
     });
 
-    imageMap[review.slug] = {
+    imageMap[basename(image, extname(image))] = {
       srcSet: optimizedImage.srcSet.attribute,
       src: optimizedImage.src,
     };
@@ -101,8 +86,4 @@ export async function getFixedWidthPosters({
   fixedWidthCache[key] = imageMap;
 
   return imageMap;
-}
-
-function imagePathForSlug(slug: string) {
-  return `/content/assets/posters/${slug}.png`;
 }
