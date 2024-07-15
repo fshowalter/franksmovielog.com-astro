@@ -17,9 +17,6 @@ export function Still({
   title,
   year,
   imageData,
-  sizes,
-  width,
-  height,
   loading = "lazy",
   decoding = "async",
   className,
@@ -28,9 +25,6 @@ export function Still({
   return (
     <img
       {...imageData}
-      width={width}
-      height={height}
-      sizes={sizes}
       alt={`A still from ${title} (${year})`}
       loading={loading}
       decoding={decoding}
