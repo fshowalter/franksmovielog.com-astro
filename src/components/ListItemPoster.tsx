@@ -3,7 +3,6 @@ import type { PosterImageData } from "@/api/posters";
 export const ListItemPosterImageConfig = {
   width: 56,
   height: 84,
-  quality: 80,
 };
 
 export function ListItemPoster({
