@@ -38,7 +38,7 @@ export async function getFluidWidthPosters({
       width: width,
       height: height,
       format: "avif",
-      widths: [0.25, 0.5, 1, 2, 3, 4].map((w) => w * width),
+      widths: [0.25, 0.5, 1, 2].map((w) => w * width),
       quality: 80,
     });
 
@@ -73,7 +73,7 @@ export async function getFixedWidthPosters({
       width: width,
       height: height,
       format: "avif",
-      densities: [1, 2, 3, 4],
+      densities: [1, 2],
       quality: 80,
     });
 
