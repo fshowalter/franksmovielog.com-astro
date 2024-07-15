@@ -1,11 +1,12 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
+import { path } from "node:path";
 
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  trailingSlash: 'always',
+  trailingSlash: "always",
   integrations: [
     react(),
     tailwind({
@@ -14,4 +15,13 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
   ],
+  vite: {
+    resolve: {
+      alias: {
+        // your aliases should mirror the ones defined in your tsconfig.json
+        // i'll re-use the ones in the official docs:
+        "@": path.resolve(path.dirname(""), "./src"),
+      },
+    },
+  },
 });
