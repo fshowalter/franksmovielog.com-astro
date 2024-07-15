@@ -1,8 +1,10 @@
-import { MultiSelectField } from "@/components/MultiSelectField";
-import { DebouncedInput } from "@/components/DebouncedInput";
-import { SelectField, SelectOptions } from "@/components/SelectField";
-import { YearInput } from "@/components/YearInput";
-import { Action, ActionType, Sort } from "./Viewings.reducer";
+import { MultiSelectField } from "src/components/MultiSelectField";
+import { DebouncedInput } from "src/components/DebouncedInput";
+import { SelectField } from "src/components/SelectField";
+import { SelectOptions } from "src/components/SelectOptions";
+import { YearInput } from "src/components/YearInput";
+import { ActionType } from "./Viewings.reducer";
+import type { Action, Sort } from "./Viewings.reducer";
 
 export function Filters({
   dispatch,

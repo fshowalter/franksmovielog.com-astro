@@ -1,24 +1,30 @@
-import { ListItem } from "@/components/ListItem";
-import { ListItemMediumAndVenue } from "@/components/ListItemMediumAndVenue";
-import { ListItemPoster } from "@/components/ListItemPoster";
-import { ListItemTitle } from "@/components/ListItemTitle";
-import { GroupedList } from "@/components/ListWithFiltersLayout";
-import { Action, ActionType } from "./Viewings.reducer";
+import { ListItem } from "src/components/ListItem";
+import { ListItemMediumAndVenue } from "src/components/ListItemMediumAndVenue";
+import { ListItemPoster } from "src/components/ListItemPoster";
+import { ListItemTitle } from "src/components/ListItemTitle";
+import { GroupedList } from "src/components/GroupedList";
+import { ActionType } from "./Viewings.reducer";
+import type { Viewing } from "src/api/viewings";
+import type { Action } from "./Viewings.reducer";
+import type { PosterImageData } from "src/api/posters";
 
-export interface ListItemData {
-  sequence: number;
-  viewingYear: string;
+export interface ListItemViewingData
+  extends Pick<
+    Viewing,
+    | "sequence"
+    | "viewingYear"
+    | "viewingDate"
+    | "releaseSequence"
+    | "title"
+    | "medium"
+    | "venue"
+    | "year"
+    | "sortTitle"
+    | "slug"
+    | "genres"
+  > {
   viewingMonth: string;
   viewingDay: string;
-  viewingDate: string;
-  releaseSequence: string;
-  title: string;
-  medium: string | null;
-  venue: string | null;
-  year: string;
-  sortTitle: string;
-  slug: string | null;
-  genres: string[];
 }
 
 export function List({
@@ -26,10 +32,12 @@ export function List({
   visibleCount,
   totalCount,
   dispatch,
+  posters,
 }: {
-  groupedItems: Map<string, Map<string, ListItemData[]>>;
+  groupedItems: Map<string, Map<string, ListItemViewingData[]>>;
   visibleCount: number;
   totalCount: number;
+  posters: Record<string, PosterImageData>;
   dispatch: React.Dispatch<Action>;
 }) {
   return (
@@ -41,9 +49,14 @@ export function List({
       onShowMore={() => dispatch({ type: ActionType.SHOW_MORE })}
     >
       {(dateGroup) => {
-        const [dayAndDate, items] = dateGroup;
+        const [dayAndDate, viewings] = dateGroup;
         return (
-          <DateListItem data={items} key={dayAndDate} dayAndDate={dayAndDate} />
+          <DateListItem
+            viewings={viewings}
+            key={dayAndDate}
+            posters={posters}
+            dayAndDate={dayAndDate}
+          />
         );
       }}
     </GroupedList>
@@ -52,10 +65,12 @@ export function List({
 
 function DateListItem({
   dayAndDate,
-  data,
+  viewings,
+  posters,
 }: {
   dayAndDate: string;
-  data: ListItemData[];
+  viewings: ListItemViewingData[];
+  posters: Record<string, PosterImageData>;
 }): JSX.Element {
   const [day, date] = dayAndDate.split("-");
 
@@ -71,27 +86,51 @@ function DateListItem({
         <div className="h-4 min-h-4" />
       </div>
       <ul className="flex grow flex-col gap-y-4">
-        {data.map((item) => {
-          return <SubListItem data={item} key={item.sequence} />;
+        {viewings.map((viewing) => {
+          return (
+            <SubListItem
+              viewing={viewing}
+              key={viewing.sequence}
+              imageData={posters[viewing.slug || "default"]!}
+            />
+          );
         })}
       </ul>
     </ListItem>
   );
 }
 
-function SubListItem({ data }: { data: ListItemData }): JSX.Element {
+function SubListItem({
+  viewing,
+  imageData,
+}: {
+  viewing: ListItemViewingData;
+  imageData: PosterImageData;
+}): JSX.Element {
   return (
     <ListItem className="items-center pt-0 shadow-bottom even:bg-unset last-of-type:shadow-none">
-      <ListItemPoster slug={data.slug} title={data.title} year={data.year} />
+      <ListItemPoster
+        slug={viewing.slug}
+        title={viewing.title}
+        year={viewing.year}
+        imageData={imageData}
+      />
       <div className="grow">
         <div>
-          <ListItemTitle title={data.title} year={data.year} slug={data.slug} />
+          <ListItemTitle
+            title={viewing.title}
+            year={viewing.year}
+            slug={viewing.slug}
+          />
           <div className="spacer-y-1 tablet:spacer-y-2" />
         </div>
         <div className="flex flex-col text-sm/none font-light tracking-0.5px text-subtle">
           <div className="spacer-y-1 tablet:spacer-y-0" />
           <div>
-            <ListItemMediumAndVenue medium={data.medium} venue={data.venue} />
+            <ListItemMediumAndVenue
+              medium={viewing.medium}
+              venue={viewing.venue}
+            />
           </div>
         </div>
         <div className="spacer-y-2" />

@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { PageTitle } from "@/components/PageTitle";
+import { PageTitle } from "src/components/PageTitle";
 
 export function Header({
   viewingCount,
@@ -23,7 +22,7 @@ export function Header({
       </div>
       <div className="h-4 min-h-4" />
       <p className="text-subtle">
-        See more <Link href="/viewings/stats/">stats</Link>.
+        See more <a href="/viewings/stats/">stats</a>.
       </p>
     </>
   );

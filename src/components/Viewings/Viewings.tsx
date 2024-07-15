@@ -1,38 +1,39 @@
-"use client";
-
 import { useReducer } from "react";
 
-import { ListWithFiltersLayout } from "@/components/ListWithFiltersLayout";
+import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
 import { Filters } from "./Filters";
 import { Header } from "./Header";
 import { List } from "./List";
 import { initState, reducer } from "./Viewings.reducer";
-import type { ListItemData } from "./List";
+import type { ListItemViewingData } from "./List";
 import type { Sort } from "./Viewings.reducer";
+import type { PosterImageData } from "src/api/posters";
 
 export interface ViewingsProps {
-  data: readonly ListItemData[];
+  viewings: readonly ListItemViewingData[];
   distinctGenres: readonly string[];
   distinctMedia: readonly string[];
   distinctVenues: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctViewingYears: readonly string[];
   initialSort: Sort;
+  posters: Record<string, PosterImageData>;
 }
 
 export function Viewings({
-  data,
+  viewings,
   distinctGenres,
   distinctMedia,
   distinctVenues,
   distinctReleaseYears,
   distinctViewingYears,
   initialSort,
+  posters,
 }: ViewingsProps): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
-      items: [...data],
+      items: [...viewings],
       sort: initialSort,
     },
     initState,
@@ -40,7 +41,7 @@ export function Viewings({
 
   return (
     <ListWithFiltersLayout
-      header={<Header viewingCount={data.length} />}
+      header={<Header viewingCount={viewings.length} />}
       filters={
         <Filters
           dispatch={dispatch}
@@ -58,6 +59,7 @@ export function Viewings({
           groupedItems={state.groupedItems}
           totalCount={state.filteredItems.length}
           visibleCount={state.showCount}
+          posters={posters}
         />
       }
     />

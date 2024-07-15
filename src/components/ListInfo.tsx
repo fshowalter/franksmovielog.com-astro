@@ -14,7 +14,7 @@ export function ListInfo({
   }
 
   return (
-    <div className="text-subtle px-gutter bg-default desktop:top-[176px] max:top-[128px] sticky top-0 z-40 text-center leading-10">
+    <div className="text-subtle px-gutter bg-default desktop:top-[176px] max:top-[129px] sticky top-0 z-40 text-center leading-10">
       {showingText}
     </div>
   );

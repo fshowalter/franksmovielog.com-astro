@@ -1,5 +1,6 @@
-import { FilterableState, filterTools, sortNumber } from "@/utils";
-import type { ListItemData } from "./List";
+import { filterTools, sortNumber } from "src/utils";
+import type { FilterableState } from "src/utils";
+import type { ListItemViewingData } from "./List";
 
 const SHOW_COUNT_DEFAULT = 100;
 
@@ -7,8 +8,11 @@ export type Sort = "viewing-date-desc" | "viewing-date-asc";
 
 const { updateFilter, clearFilter } = filterTools(sortItems, groupItems);
 
-function sortItems(items: ListItemData[], sortOrder: Sort) {
-  const sortMap: Record<Sort, (a: ListItemData, b: ListItemData) => number> = {
+function sortItems(items: ListItemViewingData[], sortOrder: Sort) {
+  const sortMap: Record<
+    Sort,
+    (a: ListItemViewingData, b: ListItemViewingData) => number
+  > = {
     "viewing-date-desc": (a, b) => sortNumber(a.sequence, b.sequence) * -1,
     "viewing-date-asc": (a, b) => sortNumber(a.sequence, b.sequence),
   };
@@ -18,9 +22,9 @@ function sortItems(items: ListItemData[], sortOrder: Sort) {
 }
 
 function groupItems(
-  items: ListItemData[],
-): Map<string, Map<string, ListItemData[]>> {
-  const groupedItems = new Map<string, Map<string, ListItemData[]>>();
+  items: ListItemViewingData[],
+): Map<string, Map<string, ListItemViewingData[]>> {
+  const groupedItems = new Map<string, Map<string, ListItemViewingData[]>>();
 
   items.map((item) => {
     const monthYearGroup = `${item.viewingMonth} ${item.viewingYear}`;
@@ -28,7 +32,7 @@ function groupItems(
     let groupValue = groupedItems.get(monthYearGroup);
 
     if (!groupValue) {
-      groupValue = new Map<string, ListItemData[]>();
+      groupValue = new Map<string, ListItemViewingData[]>();
       groupedItems.set(monthYearGroup, groupValue);
     }
 
@@ -48,16 +52,16 @@ function groupItems(
 }
 
 type State = FilterableState<
-  ListItemData,
+  ListItemViewingData,
   Sort,
-  Map<string, Map<string, ListItemData[]>>
+  Map<string, Map<string, ListItemViewingData[]>>
 >;
 
 export function initState({
   items,
   sort,
 }: {
-  items: ListItemData[];
+  items: ListItemViewingData[];
   sort: Sort;
 }): State {
   return {

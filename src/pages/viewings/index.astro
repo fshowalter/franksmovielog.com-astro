@@ -1,0 +1,67 @@
+---
+import Layout from "src/layouts/Layout.astro";
+import { Viewings } from "src/components/Viewings";
+import { getFixedWidthPosters } from "src/api/posters";
+import type { ListItemViewingData } from "src/components/Viewings";
+import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
+import { allViewings } from "src/api/viewings";
+
+const {
+  viewings,
+  distinctGenres,
+  distinctReleaseYears,
+  distinctMedia,
+  distinctVenues,
+  distinctViewingYears,
+} = await allViewings();
+const posters = await getFixedWidthPosters(ListItemPosterImageConfig);
+
+viewings.sort((a, b) => b.sequence - a.sequence);
+
+const narrowedViewings = viewings.map((viewing) => {
+  const viewingDate = new Date(viewing.viewingDate);
+  const listItemReviewData: ListItemViewingData = {
+    viewingDate: viewingDate.toLocaleString("en-US", {
+      day: "numeric",
+      timeZone: "UTC",
+    }),
+    viewingMonth: viewingDate.toLocaleString("en-US", {
+      month: "long",
+      timeZone: "UTC",
+    }),
+    viewingDay: viewingDate.toLocaleString("en-US", {
+      weekday: "short",
+      timeZone: "UTC",
+    }),
+    title: viewing.title,
+    year: viewing.year,
+    slug: viewing.slug,
+    genres: viewing.genres,
+    releaseSequence: viewing.releaseSequence,
+    sortTitle: viewing.sortTitle,
+    viewingYear: viewing.viewingYear,
+    venue: viewing.venue,
+    medium: viewing.medium,
+    sequence: viewing.sequence,
+  };
+
+  return listItemReviewData;
+});
+---
+
+<Layout
+  title="Viewing Log"
+  description="A sortable and filterable list of every movie I've watched since 2012."
+>
+  <Viewings
+    client:load
+    initialSort="viewing-date-desc"
+    distinctReleaseYears={distinctReleaseYears}
+    distinctViewingYears={distinctViewingYears}
+    distinctMedia={distinctMedia}
+    distinctVenues={distinctVenues}
+    distinctGenres={distinctGenres}
+    posters={posters}
+    viewings={narrowedViewings}
+  />
+</Layout>

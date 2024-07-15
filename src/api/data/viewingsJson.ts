@@ -23,9 +23,9 @@ const ViewingJsonSchema = z.object({
   releaseSequence: z.string(),
 });
 
-type ViewingJson = z.infer<typeof ViewingJsonSchema>;
+export type ViewingJson = z.infer<typeof ViewingJsonSchema>;
 
-export default async function viewingsJson(): Promise<ViewingJson[]> {
+export async function allViewingsJson(): Promise<ViewingJson[]> {
   const json = await fs.readFile(viewingsJsonFile, "utf8");
   const data = JSON.parse(json) as unknown[];
 
