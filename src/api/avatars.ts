@@ -42,7 +42,7 @@ export async function getAvatars({
         width: width,
         height: height,
         format: "avif",
-        densities: [1, 2],
+        densities: [1, 2, 3, 4],
         quality: 80,
       });
 

@@ -41,7 +41,7 @@ export async function getStills({
       width: width,
       height: height,
       format: "avif",
-      widths: [0.25, 0.5, 1, 2].map((w) => w * width),
+      widths: [0.25, 0.5, 1, 2, 3, 4].map((w) => w * width),
       quality: 80,
     });
 
