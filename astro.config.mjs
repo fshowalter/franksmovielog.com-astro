@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
-import { path } from "node:path";
+import path from "path";
 
 import tailwind from "@astrojs/tailwind";
 
