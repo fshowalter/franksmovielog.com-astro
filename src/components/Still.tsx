@@ -30,6 +30,7 @@ export function Still({
       {...imageData}
       width={width}
       height={height}
+      sizes={sizes}
       alt={`A still from ${title} (${year})`}
       loading={loading}
       decoding={decoding}

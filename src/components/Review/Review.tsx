@@ -60,9 +60,9 @@ export function Review({
       <Still
         title={review.title}
         year={review.year}
-        width={960}
-        height={540}
-        sizes="(min-width: 960px) 960px, 100vw"
+        width={StillImageConfig.width}
+        height={StillImageConfig.height}
+        sizes={StillImageConfig.sizes}
         className="mb-[5.33px]"
         imageData={stillImageData}
         loading="eager"
