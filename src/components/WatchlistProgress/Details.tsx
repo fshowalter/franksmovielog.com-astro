@@ -1,5 +1,4 @@
 import { BarGradient } from "@/components/BarGradient";
-import Link from "next/link";
 import { StatHeading } from "@/components/StatHeading";
 import {
   Table,
@@ -85,7 +84,7 @@ function EntityName({
     linkTarget = `/cast-and-crew/${entity.slug}`;
   }
 
-  if (entity.slug) return <Link href={linkTarget}>{entity.name}</Link>;
+  if (entity.slug) return <a href={linkTarget}>{entity.name}</a>;
 
   return <span className="text-subtle">{entity.name}</span>;
 }

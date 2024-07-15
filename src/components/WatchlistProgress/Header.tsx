@@ -1,5 +1,4 @@
 import { PageTitle } from "..//PageTitle";
-import Link from "next/link";
 
 export function Header(): JSX.Element {
   return (
@@ -12,7 +11,7 @@ export function Header(): JSX.Element {
       <div className="spacer-y-8" />
       <p className="text-subtle">
         My progress working through{" "}
-        <Link href="/watchlist/">my movie-review bucketlist</Link>.
+        <a href="/watchlist/">my movie-review bucketlist</a>.
       </p>
     </header>
   );

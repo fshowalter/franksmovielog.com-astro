@@ -2,7 +2,7 @@ interface ProgresRingProps extends React.SVGProps<SVGSVGElement> {
   total: number;
   complete: number;
   label: string;
-  subLabel?: string;
+  subLabel?: string | undefined;
 }
 
 export function ProgressRing({

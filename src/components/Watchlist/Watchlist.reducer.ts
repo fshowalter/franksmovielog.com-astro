@@ -1,11 +1,6 @@
-import {
-  FilterableState,
-  buildGroupItems,
-  collator,
-  filterTools,
-  sortString,
-} from "@/utils";
+import { buildGroupItems, collator, filterTools, sortString } from "@/utils";
 import type { ListItemData } from "./List";
+import type { FilterableState } from "@/utils";
 
 export type Sort = "release-date-desc" | "release-date-asc" | "title";
 

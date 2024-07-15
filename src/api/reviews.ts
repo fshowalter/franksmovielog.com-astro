@@ -4,20 +4,22 @@ import { allReviewsMarkdown } from "./data/reviewsMarkdown";
 import type { MarkdownReview } from "./data/reviewsMarkdown";
 import type { MarkdownViewing } from "./data/viewingsMarkdown";
 import { allViewingsMarkdown } from "./data/viewingsMarkdown";
-import type { Root, RootContent, Node, Parent } from "mdast";
+import type { Root, Node } from "mdast";
 import rehypeRaw from "rehype-raw";
 import type { Processor } from "unified";
 import remarkRehype from "remark-rehype";
 import remarkGfm from "remark-gfm";
 import smartypants from "remark-smartypants";
-import { visit, SKIP, CONTINUE } from "unist-util-visit";
 import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
 import { linkReviewedTitles } from "./utils/linkReviewedTitles";
-import type { Root as HastRoot } from "hast";
-import { toString } from "mdast-util-to-string";
-
-const EXCERPT_SEPARATOR = "<!-- end -->";
+import { removeFootnotes } from "./utils/markdown/removeFootnotes";
+import { rootAsSpan } from "./utils/markdown/rootAsSpan";
+import {
+  trimToExcerpt,
+  EXCERPT_SEPARATOR,
+} from "./utils/markdown/trimToExcerpt";
+import strip from "strip-markdown";
 
 export interface ReviewViewing extends MarkdownViewing {
   venueNotes: string | null;
@@ -33,40 +35,6 @@ export interface Review extends ReviewedTitleJson, MarkdownReview {
 }
 
 let cache: Review[];
-
-function removeFootnotes() {
-  return (tree: Node) => {
-    visit(
-      tree,
-      "footnoteReference",
-      function (
-        node: Node,
-        index: number | undefined,
-        parent: Parent | undefined,
-      ) {
-        if (parent && index && node.type === "footnoteReference") {
-          parent.children.splice(index, 1);
-          return [SKIP, index];
-        }
-        return CONTINUE;
-      },
-    );
-
-    return tree;
-  };
-}
-
-function trimToExcerpt({ separator }: { separator: string }) {
-  return (tree: Root) => {
-    const separatorIndex = tree.children.findIndex((node: RootContent) => {
-      return node.type === "html" && node.value.trim() === separator;
-    });
-
-    if (separatorIndex !== -1) {
-      tree.children.splice(separatorIndex);
-    }
-  };
-}
 
 function getMastProcessor() {
   return remark().use(remarkGfm).use(removeFootnotes).use(smartypants);
@@ -105,16 +73,6 @@ function getHtml(
   return linkReviewedTitles(html, reviewedTitles);
 }
 
-function rootAsSpan() {
-  return (tree: HastRoot) => {
-    const firstChild = tree.children[0];
-
-    if (firstChild && firstChild.type === "element") {
-      firstChild.tagName = "span";
-    }
-  };
-}
-
 function getHtmlAsSpan(
   content: string | null,
   reviewedTitles: { imdbId: string; slug: string }[],
@@ -138,16 +96,15 @@ function getHtmlAsSpan(
 
 function getExcerptHtml(
   content: string,
-  excerptSeparator: string,
   slug: string,
   reviewedTitles: { imdbId: string; slug: string }[],
 ) {
   let excerptHtml = processorToHtml(
-    getMastProcessor().use(trimToExcerpt, { separator: excerptSeparator }),
+    getMastProcessor().use(trimToExcerpt),
     content,
   );
 
-  const hasExcerptBreak = content.includes(excerptSeparator);
+  const hasExcerptBreak = content.includes(EXCERPT_SEPARATOR);
 
   if (hasExcerptBreak) {
     excerptHtml = excerptHtml.replace(/\n+$/, "");
@@ -160,12 +117,12 @@ function getExcerptHtml(
   return linkReviewedTitles(excerptHtml, reviewedTitles);
 }
 
-function getExcerptPlainText(content: string, excerptSeparator: string) {
-  return toString(
-    getMastProcessor()
-      .use(trimToExcerpt, { separator: excerptSeparator })
-      .parse(content),
-  );
+function getExcerptPlainText(content: string) {
+  return getMastProcessor()
+    .use(trimToExcerpt)
+    .use(strip)
+    .processSync(content)
+    .toString();
 }
 
 export async function allReviews(): Promise<Review[]> {
@@ -221,14 +178,10 @@ export async function allReviews(): Promise<Review[]> {
         content: getHtml(review.rawContent, reviewedTitlesJson),
         excerpt: getExcerptHtml(
           review.rawContent,
-          EXCERPT_SEPARATOR,
           title.slug,
           reviewedTitlesJson,
         ),
-        excerptPlainText: getExcerptPlainText(
-          review.rawContent,
-          EXCERPT_SEPARATOR,
-        ),
+        excerptPlainText: getExcerptPlainText(review.rawContent),
       };
     }),
   );

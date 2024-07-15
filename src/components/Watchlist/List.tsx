@@ -1,10 +1,11 @@
 import { ListItem } from "@/components/ListItem";
 import { ListItemPoster } from "@/components/ListItemPoster";
 import { ListItemTitle } from "@/components/ListItemTitle";
-import { GroupedList } from "@/components/ListWithFiltersLayout";
+import { GroupedList } from "@/components/GroupedList";
 import SvgIcon from "@/components/SvgIcon";
 import { WatchlistTitleSlug } from "@/components/WatchlistTitleSlug";
-import { Action, ActionType } from "./Watchlist.reducer";
+import { ActionType } from "./Watchlist.reducer";
+import type { Action } from "./Watchlist.reducer";
 
 export interface ListItemData {
   imdbId: string;
