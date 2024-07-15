@@ -67,7 +67,7 @@ function Chip({
           imageData={imageData}
           loading="lazy"
           decoding="async"
-          className="avatar-border mr-[1ch] block size-10"
+          className="rounded-[50%] mr-[1ch] block size-10"
         />
         {name}
       </a>
