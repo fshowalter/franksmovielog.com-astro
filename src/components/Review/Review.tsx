@@ -51,6 +51,7 @@ export function Review({
   seoImageSrc,
   stillListStills,
 }: Props): JSX.Element {
+  console.log(posterImageData);
   return (
     <main id="top" className="scroll-margin-top flex flex-col items-center">
       <Header

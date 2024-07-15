@@ -8,7 +8,6 @@ export const PosterImageConfig = {
   width: 248,
   height: 372,
   sizes: "(min-width: 248px) 248px, 100vw",
-  quality: 80,
 };
 
 export interface CreditsReviewData
