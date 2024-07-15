@@ -1,11 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import {
-  Review,
-  StillImageConfig,
-  PosterImageConfig,
-  ChipAvatarImageConfig,
-} from "@/components/Review/";
+import { Review, StillImageConfig } from "@/components/Review/Review";
+import { PosterImageConfig } from "@/components/Review/Credits";
+import { ChipAvatarImageConfig } from "@/components/Review/Chips";
 import { allReviews } from "@/api/reviews";
 import type { Review as IReview } from "@/api/reviews";
 import { textStarsForGrade } from "@/utils/textStarsForGrade";
