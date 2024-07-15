@@ -1,0 +1,32 @@
+---
+import Layout from "src/layouts/Layout.astro";
+import { Article, StillImageConfig } from "src/components/Article";
+import { getPage } from "src/api/pages";
+import { getStills } from "src/api/stills";
+import { allReviews } from "src/api/reviews";
+
+const { title, content } = await getPage("how-i-grade");
+
+const { reviews } = await allReviews();
+
+reviews.sort((a, b) => b.sequence.localeCompare(a.sequence));
+
+const recentReviews = reviews.slice(0, 4);
+
+const stills = await getStills(StillImageConfig);
+---
+
+<Layout
+  title={title}
+  description="The criteria I use to rate movies on this site."
+  article
+>
+  <Article
+    title={title}
+    alt="Empty cinema seats."
+    content={content}
+    moreReviewsStills={stills}
+    imageData={stills["how-i-grade"]!}
+    moreReviewsData={recentReviews}
+  />
+</Layout>

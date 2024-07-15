@@ -1,8 +1,8 @@
-import { MultiSelectField } from "@/components/MultiSelectField";
-import { DebouncedInput } from "@/components/DebouncedInput";
-import { GradeInput } from "@/components/GradeInput";
-import { SelectField } from "@/components/SelectField";
-import { YearInput } from "@/components/YearInput";
+import { MultiSelectField } from "src/components/MultiSelectField";
+import { DebouncedInput } from "src/components/DebouncedInput";
+import { GradeInput } from "src/components/GradeInput";
+import { SelectField } from "src/components/SelectField";
+import { YearInput } from "src/components/YearInput";
 import { ActionType } from "./Reviews.reducer";
 import type { Action, Sort } from "./Reviews.reducer";
 

@@ -1,5 +1,4 @@
-import { allReviews } from "@/api/reviews";
-import { join } from "node:path";
+import { basename, extname, join } from "node:path";
 import { getImage } from "astro:assets";
 
 export interface StillImageData {
@@ -12,7 +11,6 @@ export interface Props {
   height: number;
 }
 
-const { reviews } = await allReviews();
 export const images = import.meta.glob<{ default: ImageMetadata }>(
   "/content/assets/stills/*.png",
 );
@@ -35,26 +33,22 @@ export async function getStills({
 
   const imageMap: Record<string, StillImageData> = {};
 
-  reviews.forEach(async (review) => {
-    const imagePath = getStillImagePath(review.slug);
+  Object.keys(images).forEach(async (image) => {
+    const stillFile = await images[image]!();
 
-    if (images[imagePath]) {
-      const stillFile = await images[imagePath]();
+    const optimizedImage = await getImage({
+      src: stillFile.default,
+      width: width,
+      height: height,
+      format: "avif",
+      widths: [0.25, 0.5, 1, 2].map((w) => w * width),
+      quality: 80,
+    });
 
-      const optimizedImage = await getImage({
-        src: stillFile.default,
-        width: width,
-        height: height,
-        format: "avif",
-        widths: [0.25, 0.5, 1, 2].map((w) => w * width),
-        quality: 80,
-      });
-
-      imageMap[review.slug] = {
-        srcSet: optimizedImage.srcSet.attribute,
-        src: optimizedImage.src,
-      };
-    }
+    imageMap[basename(image, extname(image))] = {
+      srcSet: optimizedImage.srcSet.attribute,
+      src: optimizedImage.src,
+    };
   });
 
   cache[key] = imageMap;

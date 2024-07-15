@@ -1,7 +1,7 @@
 "use client";
 
 import { useReducer } from "react";
-import { ListWithFiltersLayout } from "@/components/ListWithFiltersLayout";
+import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
 import { initState, reducer } from "./CastAndCrew.reducer";
 import { Filters } from "./Filters";
 import { Header } from "./Header";

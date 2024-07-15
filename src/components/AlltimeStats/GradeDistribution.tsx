@@ -1,12 +1,12 @@
-import { BarGradient } from "@/components/BarGradient";
-import { StatHeading } from "@/components/StatHeading";
+import { BarGradient } from "src/components/BarGradient";
+import { StatHeading } from "src/components/StatHeading";
 import {
   Table,
   TableDataCell,
   TableHead,
   TableHeaderCell,
   TableRow,
-} from "@/components/StatsTable";
+} from "src/components/StatsTable";
 
 export interface GradeDistributionData {
   name: string;

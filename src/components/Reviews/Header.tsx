@@ -1,4 +1,4 @@
-import { PageTitle } from "@/components/PageTitle";
+import { PageTitle } from "src/components/PageTitle";
 
 export function Header({ reviewCount }: { reviewCount: number }): JSX.Element {
   return (

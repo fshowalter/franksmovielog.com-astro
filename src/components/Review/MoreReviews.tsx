@@ -1,10 +1,10 @@
-import { StillList } from "@/components/StillList";
-import { StillListHeading } from "@/components/StillListHeading";
-import { StillListNav } from "@/components/StillListNav";
+import { StillList } from "src/components/StillList";
+import { StillListHeading } from "src/components/StillListHeading";
+import { StillListNav } from "src/components/StillListNav";
 import { twMerge } from "tailwind-merge";
-import type { StillListItemData } from "@/components/StillListItem";
-import type { Review } from "@/api/reviews";
-import type { StillImageData } from "@/api/stills";
+import type { StillListItemData } from "src/components/StillListItem";
+import type { Review } from "src/api/reviews";
+import type { StillImageData } from "src/api/stills";
 
 export interface MoreReviewsReviewData
   extends Pick<Review, "moreCastAndCrew" | "moreCollections" | "moreReviews"> {}

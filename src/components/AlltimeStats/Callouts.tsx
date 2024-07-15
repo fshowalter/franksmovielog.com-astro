@@ -1,5 +1,5 @@
-import type { AlltimeStats } from "@/api/alltimeStats";
-import { StatsCallout } from "@/components/StatsCallout";
+import type { AlltimeStats } from "src/api/alltimeStats";
+import { StatsCallout } from "src/components/StatsCallout";
 
 export interface CalloutsAlltimeStatsData
   extends Pick<

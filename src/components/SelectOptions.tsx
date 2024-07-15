@@ -1,4 +1,4 @@
-import { collator } from "@/utils";
+import { collator } from "src/utils";
 
 /**
  * Renders options for a select.

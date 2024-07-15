@@ -1,4 +1,4 @@
-import { Fieldset } from "@/components/Fieldset";
+import { Fieldset } from "./Fieldset";
 
 export function ListWithFiltersLayout({
   header,

@@ -1,13 +1,13 @@
-import { Grade } from "@/components/Grade";
-import { ListItem } from "@/components/ListItem";
-import { ListItemGenres } from "@/components/ListItemGenres";
-import { ListItemPoster } from "@/components/ListItemPoster";
-import { ListItemTitle } from "@/components/ListItemTitle";
-import { GroupedList } from "@/components/GroupedList";
+import { Grade } from "src/components/Grade";
+import { ListItem } from "src/components/ListItem";
+import { ListItemGenres } from "src/components/ListItemGenres";
+import { ListItemPoster } from "src/components/ListItemPoster";
+import { ListItemTitle } from "src/components/ListItemTitle";
+import { GroupedList } from "src/components/GroupedList";
 import { ActionType } from "./Reviews.reducer";
-import type { Review } from "@/api/reviews";
+import type { Review } from "src/api/reviews";
 import type { Action } from "./Reviews.reducer";
-import type { PosterImageData } from "@/api/posters";
+import type { PosterImageData } from "src/api/posters";
 
 export interface ListItemReviewData
   extends Pick<

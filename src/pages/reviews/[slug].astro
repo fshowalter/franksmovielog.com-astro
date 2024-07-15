@@ -1,19 +1,22 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import { Review, StillImageConfig } from "@/components/Review/Review.tsx";
-import { PosterImageConfig } from "@/components/Review/Credits";
-import { ChipAvatarImageConfig } from "@/components/Review/Chips";
-import { allReviews } from "@/api/reviews";
-import type { Review as IReview } from "@/api/reviews";
-import { textStarsForGrade } from "@/utils/textStarsForGrade";
-import { images, getStillImagePath, getStills } from "@/api/stills";
+import Layout from "src/layouts/Layout.astro";
+import {
+  Review,
+  StillImageConfig,
+  PosterImageConfig,
+  ChipAvatarImageConfig,
+} from "src/components/Review";
+import { allReviews } from "src/api/reviews";
+import type { Review as IReview } from "src/api/reviews";
+import { textStarsForGrade } from "src/utils/textStarsForGrade";
+import { images, getStillImagePath, getStills } from "src/api/stills";
 import { getImage } from "astro:assets";
-import { getFluidWidthPosters } from "@/api/posters";
-import type { PosterImageData } from "@/api/posters";
-import type { StillImageData } from "@/api/stills";
-import type { AvatarImageData } from "@/api/avatars";
-import { getAvatars } from "@/api/avatars";
-import { StillListItemImageConfig } from "@/components/StillListItem";
+import { getFluidWidthPosters } from "src/api/posters";
+import type { PosterImageData } from "src/api/posters";
+import type { StillImageData } from "src/api/stills";
+import type { AvatarImageData } from "src/api/avatars";
+import { getAvatars } from "src/api/avatars";
+import { StillListItemImageConfig } from "src/components/StillListItem";
 
 export async function getStaticPaths() {
   const { reviews } = await allReviews();

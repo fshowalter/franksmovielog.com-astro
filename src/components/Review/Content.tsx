@@ -1,7 +1,7 @@
-import { Grade } from "@/components/Grade";
-import { LongFormText } from "@/components/LongFormText";
+import { Grade } from "src/components/Grade";
+import { LongFormText } from "src/components/LongFormText";
 import { twMerge } from "tailwind-merge";
-import type { Review } from "@/api/reviews";
+import type { Review } from "src/api/reviews";
 
 const dateFormat = new Intl.DateTimeFormat("en-US", {
   weekday: "short",

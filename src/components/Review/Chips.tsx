@@ -1,6 +1,6 @@
-import type { AvatarImageData } from "@/api/avatars";
-import type { Review } from "@/api/reviews";
-import { Avatar } from "@/components/Avatar";
+import type { AvatarImageData } from "src/api/avatars";
+import type { Review } from "src/api/reviews";
+import { Avatar } from "src/components/Avatar";
 
 export const ChipAvatarImageConfig = {
   width: 40,

@@ -1,8 +1,8 @@
-import { ListItemTitle } from "@/components/ListItemTitle";
-import { StatHeading } from "@/components/StatHeading";
+import { ListItemTitle } from "./ListItemTitle";
+import { StatHeading } from "./StatHeading";
 import { twMerge } from "tailwind-merge";
 import { Poster } from "./Poster";
-import type { PosterImageData } from "@/api/posters";
+import type { PosterImageData } from "src/api/posters";
 
 export const MostWatchedMoviesPosterConfig = {
   width: 200,

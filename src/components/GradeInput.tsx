@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { SelectInput } from "@/components/SelectInput";
+import { SelectInput } from "./SelectInput";
 
 const options = [
   <option key={13} value={13}>

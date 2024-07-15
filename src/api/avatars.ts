@@ -1,4 +1,4 @@
-import { allCastAndCrew } from "@/api/castAndCrew";
+import { allCastAndCrew } from "src/api/castAndCrew";
 import { join } from "node:path";
 import { getImage } from "astro:assets";
 

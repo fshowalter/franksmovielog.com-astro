@@ -1,20 +1,20 @@
-import type { Review } from "@/api/reviews";
+import type { Review } from "src/api/reviews";
 import { Content } from "./Content";
 import { Credits } from "./Credits";
 import { Header } from "./Header";
 import { MoreReviews } from "./MoreReviews";
 import { StructuredData } from "./StructuredData";
 import { ViewingHistory } from "./ViewingHistory";
-import type { StillImageData } from "@/api/stills";
-import type { PosterImageData } from "@/api/posters";
-import { Still } from "@/components/Still";
+import type { StillImageData } from "src/api/stills";
+import type { PosterImageData } from "src/api/posters";
+import { Still } from "src/components/Still";
 import type { HeaderReviewData } from "./Header";
 import type { ContentReviewData } from "./Content";
 import type { ViewingHistoryReviewData } from "./ViewingHistory";
 import type { CreditsReviewData } from "./Credits";
 import type { ChipsReviewData } from "./Chips";
 import { Chips } from "./Chips";
-import type { AvatarImageData } from "@/api/avatars";
+import type { AvatarImageData } from "src/api/avatars";
 import type { MoreReviewsReviewData } from "./MoreReviews";
 import type { StructuredDataReviewData } from "./StructuredData";
 

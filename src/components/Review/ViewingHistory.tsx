@@ -1,4 +1,4 @@
-import type { Review } from "@/api/reviews";
+import type { Review } from "src/api/reviews";
 import { ViewingHistoryListItem } from "./ViewingHistoryListItem";
 
 export interface ViewingHistoryReviewData extends Pick<Review, "viewings"> {}

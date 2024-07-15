@@ -1,9 +1,9 @@
-import type { PosterImageData } from "@/api/posters";
-import { ListItem } from "@/components/ListItem";
-import { ListItemMediumAndVenue } from "@/components/ListItemMediumAndVenue";
-import { ListItemPoster } from "@/components/ListItemPoster";
-import { ListItemTitle } from "@/components/ListItemTitle";
-import { StatHeading } from "@/components/StatHeading";
+import type { PosterImageData } from "src/api/posters";
+import { ListItem } from "./ListItem";
+import { ListItemMediumAndVenue } from "./ListItemMediumAndVenue";
+import { ListItemPoster } from "./ListItemPoster";
+import { ListItemTitle } from "./ListItemTitle";
+import { StatHeading } from "./StatHeading";
 
 interface ViewingListItemData {
   sequence: number;

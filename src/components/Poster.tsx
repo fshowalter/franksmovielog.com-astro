@@ -1,4 +1,4 @@
-import type { PosterImageData } from "@/api/posters";
+import type { PosterImageData } from "src/api/posters";
 
 interface PosterProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   title: string;

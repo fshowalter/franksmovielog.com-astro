@@ -1,9 +1,8 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import { Home } from "@/components/Home/Home";
-import { allReviews } from "@/api/reviews";
-import { getStills } from "@/api/stills";
-import { StillImageConfig } from "@/components/Home/";
+import Layout from "src/layouts/Layout.astro";
+import { Home, StillImageConfig } from "src/components/Home";
+import { allReviews } from "src/api/reviews";
+import { getStills } from "src/api/stills";
 
 const { reviews } = await allReviews();
 

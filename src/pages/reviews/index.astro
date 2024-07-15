@@ -1,10 +1,10 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import { Reviews } from "@/components/Reviews/Reviews.tsx";
-import { allReviews } from "@/api/reviews";
-import { getFixedWidthPosters } from "@/api/posters";
-import type { ListItemReviewData } from "@/components/Reviews/List";
-import { ListItemPosterImageConfig } from "@/components/ListItemPoster";
+import Layout from "src/layouts/Layout.astro";
+import { Reviews } from "src/components/Reviews";
+import { allReviews } from "src/api/reviews";
+import { getFixedWidthPosters } from "src/api/posters";
+import type { ListItemReviewData } from "src/components/Reviews";
+import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 
 const { reviews, distinctGenres, distinctReleaseYears, distinctReviewYears } =
   await allReviews();

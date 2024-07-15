@@ -1,8 +1,8 @@
-import { toSentence } from "@/utils";
+import { toSentence } from "src/utils";
 import { twMerge } from "tailwind-merge";
-import type { Review } from "@/api/reviews";
-import { Poster } from "@/components/Poster";
-import type { ImageData } from "@/api/posters";
+import type { Review } from "src/api/reviews";
+import { Poster } from "src/components/Poster";
+import type { PosterImageData } from "src/api/posters";
 
 export const PosterImageConfig = {
   width: 248,
@@ -34,7 +34,7 @@ export function Credits({
   review: CreditsReviewData;
   className?: string;
   children: React.ReactNode;
-  posterImageData: ImageData;
+  posterImageData: PosterImageData;
 }): JSX.Element {
   return (
     <aside
@@ -50,7 +50,6 @@ export function Credits({
       </header>
       <div className="mx-auto block tablet:float-left tablet:mr-gutter tablet:max-w-1/2">
         <Poster
-          slug={review.slug}
           title={review.title}
           year={review.year}
           className="poster-border mx-auto mb-4 mt-0 max-w-poster rounded-lg tablet:mx-0"

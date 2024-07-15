@@ -4,9 +4,7 @@ import { allReviewsMarkdown } from "./data/reviewsMarkdown";
 import type { MarkdownReview } from "./data/reviewsMarkdown";
 import type { MarkdownViewing } from "./data/viewingsMarkdown";
 import { allViewingsMarkdown } from "./data/viewingsMarkdown";
-import type { Root, Node } from "mdast";
 import rehypeRaw from "rehype-raw";
-import type { Processor } from "unified";
 import remarkRehype from "remark-rehype";
 import remarkGfm from "remark-gfm";
 import smartypants from "remark-smartypants";
@@ -20,6 +18,7 @@ import {
   EXCERPT_SEPARATOR,
 } from "./utils/markdown/trimToExcerpt";
 import strip from "strip-markdown";
+import { getHtml } from "./utils/markdown/getHtml";
 
 export interface ReviewViewing extends MarkdownViewing {
   venueNotes: string | null;
@@ -44,40 +43,7 @@ export interface Reviews {
 let cache: Reviews;
 
 function getMastProcessor() {
-  return remark().use(remarkGfm).use(removeFootnotes).use(smartypants);
-}
-
-function processorToHtml(
-  processor: Processor<Root, Node, Node, Root, string>,
-  content: string,
-) {
-  return processor
-    .use(remarkRehype, { allowDangerousHtml: true })
-    .use(rehypeRaw)
-    .use(rehypeStringify)
-    .processSync(content)
-    .toString();
-}
-
-function getHtml(
-  content: string | null,
-  reviewedTitles: { imdbId: string; slug: string }[],
-) {
-  if (!content) {
-    return null;
-  }
-
-  const html = remark()
-    .use(remarkGfm)
-    .use(removeFootnotes)
-    .use(smartypants)
-    .use(remarkRehype, { allowDangerousHtml: true })
-    .use(rehypeRaw)
-    .use(rehypeStringify)
-    .processSync(content)
-    .toString();
-
-  return linkReviewedTitles(html, reviewedTitles);
+  return remark().use(remarkGfm).use(smartypants);
 }
 
 function getHtmlAsSpan(
@@ -88,9 +54,7 @@ function getHtmlAsSpan(
     return null;
   }
 
-  const html = remark()
-    .use(remarkGfm)
-    .use(smartypants)
+  const html = getMastProcessor()
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
     .use(rootAsSpan)
@@ -106,10 +70,15 @@ function getExcerptHtml(
   slug: string,
   reviewedTitles: { imdbId: string; slug: string }[],
 ) {
-  let excerptHtml = processorToHtml(
-    getMastProcessor().use(trimToExcerpt),
-    content,
-  );
+  let excerptHtml = getMastProcessor()
+    .use(removeFootnotes)
+    .use(trimToExcerpt)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    .use(rootAsSpan)
+    .use(rehypeStringify)
+    .processSync(content)
+    .toString();
 
   const hasExcerptBreak = content.includes(EXCERPT_SEPARATOR);
 
@@ -126,6 +95,7 @@ function getExcerptHtml(
 
 function getExcerptPlainText(content: string) {
   return getMastProcessor()
+    .use(removeFootnotes)
     .use(trimToExcerpt)
     .use(strip)
     .processSync(content)

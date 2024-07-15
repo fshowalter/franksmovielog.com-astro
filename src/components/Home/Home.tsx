@@ -1,6 +1,6 @@
 import { HomeListItem } from "./HomeListItem";
 import type { HomeListItemReviewData } from "./HomeListItem";
-import type { StillImageData } from "@/api/stills";
+import type { StillImageData } from "src/api/stills";
 
 export function Home({
   reviews,

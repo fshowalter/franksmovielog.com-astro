@@ -1,20 +1,20 @@
-import { PageTitle } from "@/components/PageTitle";
-import { DecadeDistribution } from "@/components/DecadeDistribution";
-import { MediaDistribution } from "@/components/MediaDistribution";
-import { MostWatchedMovies } from "@/components/MostWatchedMovies";
-import { MostWatchedDirectors } from "@/components/MostWatchedDirectors";
-import { MostWatchedPerformers } from "@/components/MostWatchedPerformers";
-import { MostWatchedWriters } from "@/components/MostWatchedWriters";
-import { StatsNavigation } from "@/components/StatsNavigation";
+import { PageTitle } from "src/components/PageTitle";
+import { DecadeDistribution } from "src/components/DecadeDistribution";
+import { MediaDistribution } from "src/components/MediaDistribution";
+import { MostWatchedMovies } from "src/components/MostWatchedMovies";
+import { MostWatchedDirectors } from "src/components/MostWatchedDirectors";
+import { MostWatchedPerformers } from "src/components/MostWatchedPerformers";
+import { MostWatchedWriters } from "src/components/MostWatchedWriters";
+import { StatsNavigation } from "src/components/StatsNavigation";
 import { Callouts } from "./Callouts";
 import { GradeDistribution } from "./GradeDistribution";
 import type { CalloutsAlltimeStatsData } from "./Callouts";
 import type { GradeDistributionData } from "./GradeDistribution";
-import type { MostWatchedMoviesListItemData } from "@/components/MostWatchedMovies";
-import type { DecadeDistributionData } from "@/components/DecadeDistribution";
-import type { MediaDistributionData } from "@/components/MediaDistribution";
-import type { MostWatchedPeopleListItemData } from "@/components/MostWatchedPeople";
-import type { PosterImageData } from "@/api/posters";
+import type { MostWatchedMoviesListItemData } from "src/components/MostWatchedMovies";
+import type { DecadeDistributionData } from "src/components/DecadeDistribution";
+import type { MediaDistributionData } from "src/components/MediaDistribution";
+import type { MostWatchedPeopleListItemData } from "src/components/MostWatchedPeople";
+import type { PosterImageData } from "src/api/posters";
 
 interface AlltimeStatsData extends CalloutsAlltimeStatsData {
   gradeDistribution: readonly GradeDistributionData[];

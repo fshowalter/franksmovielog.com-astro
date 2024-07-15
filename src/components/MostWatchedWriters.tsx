@@ -1,4 +1,4 @@
-import type { PosterImageData } from "@/api/posters";
+import type { PosterImageData } from "src/api/posters";
 import { MostWatchedPeople } from "./MostWatchedPeople";
 import type { MostWatchedPeopleListItemData } from "./MostWatchedPeople";
 

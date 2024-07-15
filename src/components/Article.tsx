@@ -1,24 +1,31 @@
-import { LongFormText } from "@/components/LongFormText";
-import { PageTitle } from "@/components/PageTitle";
-import {
-  StillList,
-  StillListHeading,
-  StillListNav,
-} from "@/components/StillList";
-import type { StillListItemData } from "./StillList/StillListItem";
+import { LongFormText } from "./LongFormText";
+import { PageTitle } from "./PageTitle";
+import { StillList } from "./StillList";
+import { StillListHeading } from "./StillListHeading";
+import { StillListNav } from "./StillListNav";
+import type { StillListItemData } from "./StillListItem";
+import type { StillImageData } from "src/api/stills";
+
+export const StillImageConfig = {
+  width: 960,
+  height: 540,
+  sizes: "(min-width: 960px) 960px, 100vw",
+};
 
 export function Article({
-  slug,
   alt,
   title,
-  articleText,
+  content,
   moreReviewsData,
+  moreReviewsStills,
+  imageData,
 }: {
-  slug: string;
   alt: string;
-  articleText: string;
+  content: string | null;
   title: string;
+  imageData: StillImageData;
   moreReviewsData: StillListItemData[];
+  moreReviewsStills: Record<string, StillImageData>;
 }): JSX.Element {
   return (
     <main>
@@ -27,15 +34,18 @@ export function Article({
           {title}
         </PageTitle>
         <img
-          src={`/assets/stills/${slug}.png`}
-          width={960}
-          height={540}
+          {...imageData}
+          width={StillImageConfig.width}
+          height={StillImageConfig.height}
+          sizes={StillImageConfig.sizes}
+          loading="lazy"
+          decoding="async"
           alt={alt}
           className="mb-[5.33px]"
         />
         <div className="spacer-y-16" />
         <div className="px-pageMargin">
-          <LongFormText text={articleText} className="max-w-prose" />
+          <LongFormText text={content} className="max-w-prose" />
         </div>
         <div className="spacer-y-32" />
       </article>
@@ -47,7 +57,8 @@ export function Article({
             linkTarget={`/reviews/`}
           />
           <StillList
-            data={moreReviewsData}
+            stills={moreReviewsStills}
+            titles={moreReviewsData}
             seeAllLinkTarget="/reviews/"
             seeAllLinkText="Reviews"
           />

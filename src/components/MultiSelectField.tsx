@@ -1,4 +1,4 @@
-import { LabelText } from "@/components/LabelText";
+import { LabelText } from "src/components/LabelText";
 import Select from "react-select";
 import type { MultiValue } from "react-select";
 

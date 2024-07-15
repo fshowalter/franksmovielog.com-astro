@@ -1,4 +1,4 @@
-import type { StillImageData } from "@/api/stills";
+import type { StillImageData } from "src/api/stills";
 import { twMerge } from "tailwind-merge";
 
 interface StillProps extends React.ImgHTMLAttributes<HTMLImageElement> {
@@ -22,15 +22,16 @@ export function Still({
   height,
   loading = "lazy",
   decoding = "async",
-  className,
   ...rest
 }: StillProps): JSX.Element {
   return (
     <img
       {...imageData}
+      width={width}
+      height={height}
       alt={`A still from ${title} (${year})`}
-      className={twMerge("w-full", className)}
-      style={{ maxWidth: `${width}px` }}
+      loading={loading}
+      decoding={decoding}
       {...rest}
     />
   );

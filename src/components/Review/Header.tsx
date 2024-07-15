@@ -1,5 +1,5 @@
-import type { Review } from "@/api/reviews";
-import { PageTitle } from "@/components/PageTitle";
+import type { Review } from "src/api/reviews";
+import { PageTitle } from "src/components/PageTitle";
 import { twMerge } from "tailwind-merge";
 
 export interface HeaderReviewData

@@ -1,4 +1,4 @@
-import type { AvatarImageData } from "@/api/avatars";
+import type { AvatarImageData } from "src/api/avatars";
 
 interface AvatarProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   name: string;

@@ -1,10 +1,10 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import { AlltimeStats } from "@/components/AlltimeStats/AlltimeStats";
-import { alltimeStats } from "@/api/alltimeStats";
-import { getFluidWidthPosters, getFixedWidthPosters } from "@/api/posters";
-import { MostWatchedMoviesPosterConfig } from "@/components/MostWatchedMovies";
-import { ListItemPosterImageConfig } from "@/components/ListItemPoster";
+import Layout from "src/layouts/Layout.astro";
+import { AlltimeStats } from "src/components/AlltimeStats";
+import { alltimeStats } from "src/api/alltimeStats";
+import { getFluidWidthPosters, getFixedWidthPosters } from "src/api/posters";
+import { MostWatchedMoviesPosterConfig } from "src/components/MostWatchedMovies";
+import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 
 const { stats, distinctStatYears } = await alltimeStats();
 

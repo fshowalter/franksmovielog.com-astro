@@ -1,4 +1,4 @@
-import type { StillImageData } from "@/api/stills";
+import type { StillImageData } from "src/api/stills";
 import { StillListItem } from "./StillListItem";
 import type { StillListItemData } from "./StillListItem";
 

@@ -1,12 +1,12 @@
-import { BarGradient } from "@/components/BarGradient";
-import { StatHeading } from "@/components/StatHeading";
+import { BarGradient } from "./BarGradient";
+import { StatHeading } from "./StatHeading";
 import {
   Table,
   TableDataCell,
   TableHead,
   TableHeaderCell,
   TableRow,
-} from "@/components/StatsTable";
+} from "./StatsTable";
 
 export interface DecadeDistributionData {
   name: string;

@@ -1,4 +1,4 @@
-import { RenderedMarkdown } from "@/components/RenderedMarkdown";
+import { RenderedMarkdown } from "./RenderedMarkdown";
 import { twMerge } from "tailwind-merge";
 
 export function LongFormText({
