@@ -21,7 +21,6 @@ import { StillListItemImageConfig } from "src/components/StillListItem";
 export async function getStaticPaths() {
   const { reviews } = await allReviews();
   const stills = await getStills(StillImageConfig);
-  const posters = await getFluidWidthPosters(PosterImageConfig);
   const avatars = await getAvatars(ChipAvatarImageConfig);
   const stillListStills = await getStills(StillListItemImageConfig);
 
@@ -51,7 +50,6 @@ export async function getStaticPaths() {
           review: review,
           seoImageSrc: seoImageSrc,
           stillImageData: stills[review.slug],
-          posterImageData: posters[review.slug],
           avatars: avatars,
           stillListStills: stillListStills,
         },
@@ -69,14 +67,11 @@ interface Props {
   stillListStills: Record<string, StillImageData>;
 }
 
-const {
-  review,
-  seoImageSrc,
-  stillImageData,
-  posterImageData,
-  avatars,
-  stillListStills,
-} = Astro.props;
+const { review, seoImageSrc, stillImageData, avatars, stillListStills } =
+  Astro.props;
+
+const posters = await getFluidWidthPosters(PosterImageConfig);
+const posterImageData = posters[review.slug]!;
 ---
 
 <Layout
