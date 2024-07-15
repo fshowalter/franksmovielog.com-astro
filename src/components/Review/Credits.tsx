@@ -48,7 +48,7 @@ export function Credits({
         {review.title}{" "}
         <span className="text-sm font-light text-subtle">({review.year})</span>
       </header>
-      <div className="poster-border mb-4 h-full mt-0 max-w-poster tablet:mx-0 mx-auto block w-full tablet:float-left tablet:mr-gutter desktop:mr-0">
+      <div className="poster-border mb-4 h-full mt-0 max-w-poster tablet:mx-0 mx-auto block w-full tablet:float-left tablet:mr-gutter">
         <Poster
           title={review.title}
           year={review.year}
