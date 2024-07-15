@@ -29,20 +29,23 @@ export function ListItemPoster({
           height={ListItemPosterImageConfig.height}
           loading="lazy"
           decoding="async"
+          className="aspect-[0.66666667]"
         />
       </a>
     );
   }
 
   return (
-    <img
-      {...imageData}
-      alt="An unreviewed title."
-      className="safari-border-radius-fix min-w-14 max-w-14 shrink-0 overflow-hidden rounded-lg shadow-all"
-      width={ListItemPosterImageConfig.width}
-      height={ListItemPosterImageConfig.height}
-      loading="lazy"
-      decoding="async"
-    />
+    <div className="safari-border-radius-fix min-w-14 max-w-14 shrink-0 overflow-hidden rounded-lg shadow-all">
+      <img
+        {...imageData}
+        alt="An unreviewed title."
+        width={ListItemPosterImageConfig.width}
+        height={ListItemPosterImageConfig.height}
+        loading="lazy"
+        decoding="async"
+        className="aspect-[0.66666667]"
+      />
+    </div>
   );
 }

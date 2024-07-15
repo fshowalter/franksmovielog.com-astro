@@ -107,7 +107,7 @@ function FluidListItemPoster({
       <a
         href={`/reviews/${title.slug}/`}
         className={twMerge(
-          "safari-border-radius-fix min-w-12 max-w-12 overflow-hidden rounded-lg shadow-all tablet:max-w-poster",
+          "safari-border-radius-fix min-w-12 w-full max-w-12 overflow-hidden rounded-lg shadow-all tablet:max-w-poster",
           className,
         )}
       >
@@ -120,7 +120,6 @@ function FluidListItemPoster({
           sizes={MostWatchedMoviesPosterConfig.sizes}
           loading="lazy"
           decoding="async"
-          className="h-auto"
         />
       </a>
     );

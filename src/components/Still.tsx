@@ -1,4 +1,5 @@
 import type { StillImageData } from "src/api/stills";
+import { twMerge } from "tailwind-merge";
 
 interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {
   title: string;
@@ -21,6 +22,7 @@ export function Still({
   height,
   loading = "lazy",
   decoding = "async",
+  className,
   ...rest
 }: Props): JSX.Element {
   return (
@@ -32,6 +34,7 @@ export function Still({
       loading={loading}
       decoding={decoding}
       {...rest}
+      className={twMerge("aspect-[1.77777778]", className)}
     />
   );
 }

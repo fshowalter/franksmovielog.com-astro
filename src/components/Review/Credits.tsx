@@ -48,15 +48,15 @@ export function Credits({
         {review.title}{" "}
         <span className="text-sm font-light text-subtle">({review.year})</span>
       </header>
-      <div className="mx-auto block tablet:float-left tablet:mr-gutter tablet:max-w-1/2">
+      <div className="poster-border mb-4 h-full mt-0 max-w-poster tablet:mx-0 mx-auto block w-full tablet:float-left tablet:mr-gutter desktop:mr-0">
         <Poster
           title={review.title}
           year={review.year}
-          className="poster-border mx-auto mb-4 mt-0 max-w-poster rounded-lg tablet:mx-0"
           width={PosterImageConfig.width}
           height={PosterImageConfig.height}
           sizes={PosterImageConfig.sizes}
           loading="lazy"
+          className="h-auto rounded-xl"
           decoding="async"
           imageData={posterImageData}
         />
