@@ -1,7 +1,6 @@
 import type { StillImageData } from "src/api/stills";
-import { twMerge } from "tailwind-merge";
 
-interface StillProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {
   title: string;
   year: string | number;
   imageData: StillImageData;
@@ -23,7 +22,7 @@ export function Still({
   loading = "lazy",
   decoding = "async",
   ...rest
-}: StillProps): JSX.Element {
+}: Props): JSX.Element {
   return (
     <img
       {...imageData}
