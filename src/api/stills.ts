@@ -28,14 +28,13 @@ export async function getStills({
   const key = width;
 
   if (key in cache) {
-    console.log("cache");
-    console.log(Object.keys(cache));
     return cache[key]!;
   }
 
   const imageMap: Record<string, StillImageData> = {};
 
   Object.keys(images).forEach(async (image) => {
+    console.log(image);
     const stillFile = await images[image]();
 
     const optimizedImage = await getImage({
