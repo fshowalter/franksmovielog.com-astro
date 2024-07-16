@@ -1,13 +1,13 @@
 import {
-  FilterableState,
   buildGroupItems,
   collator,
   filterTools,
   sortNumber,
   sortString,
-} from "@/utils";
+} from "src/utils";
+import type { FilterableState } from "src/utils";
 
-import type { OverratedTitle } from "./Overrated";
+import type { ListItemOverratedData } from "./List";
 
 const SHOW_COUNT_DEFAULT = 100;
 
@@ -22,10 +22,10 @@ export type Sort =
 const groupItems = buildGroupItems(groupForItem);
 const { updateFilter } = filterTools(sortItems, groupItems);
 
-function sortItems(items: OverratedTitle[], sortOrder: Sort) {
+function sortItems(items: ListItemOverratedData[], sortOrder: Sort) {
   const sortMap: Record<
     Sort,
-    (a: OverratedTitle, b: OverratedTitle) => number
+    (a: ListItemOverratedData, b: ListItemOverratedData) => number
   > = {
     "release-date-desc": (a, b) =>
       sortString(a.releaseSequence, b.releaseSequence) * -1,
@@ -41,7 +41,7 @@ function sortItems(items: OverratedTitle[], sortOrder: Sort) {
   return items.sort(comparer);
 }
 
-function groupForItem(item: OverratedTitle, sortValue: Sort): string {
+function groupForItem(item: ListItemOverratedData, sortValue: Sort): string {
   switch (sortValue) {
     case "release-date-asc":
     case "release-date-desc": {
@@ -66,16 +66,16 @@ function groupForItem(item: OverratedTitle, sortValue: Sort): string {
 }
 
 type State = FilterableState<
-  OverratedTitle,
+  ListItemOverratedData,
   Sort,
-  Map<string, OverratedTitle[]>
+  Map<string, ListItemOverratedData[]>
 >;
 
 export function initState({
   items,
   sort,
 }: {
-  items: OverratedTitle[];
+  items: ListItemOverratedData[];
   sort: Sort;
 }): State {
   return {

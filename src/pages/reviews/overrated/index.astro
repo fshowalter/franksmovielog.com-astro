@@ -1,21 +1,21 @@
 ---
 import Layout from "src/layouts/Layout.astro";
-import { allUnderseenGems } from "src/api/underseenGems";
+import { allOverratedDisappintments } from "src/api/overratedDisappointments";
 import { getFixedWidthPosters } from "src/api/posters";
-import type { ListItemUnderseenGemData } from "src/components/Underseen";
+import type { ListItemOverratedData } from "src/components/Overrated";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
-import { Underseen } from "src/components/Underseen";
+import { Overrated } from "src/components/Overrated";
 
-const { underseenGems, distinctGenres, distinctReleaseYears } =
-  await allUnderseenGems();
+const { overratedDisappintments, distinctGenres, distinctReleaseYears } =
+  await allOverratedDisappintments();
 const posters = await getFixedWidthPosters(ListItemPosterImageConfig);
 
-underseenGems.sort((a, b) =>
+overratedDisappintments.sort((a, b) =>
   b.releaseSequence.localeCompare(a.releaseSequence)
 );
 
-const narrowedReviews = underseenGems.map((review) => {
-  const listItemData: ListItemUnderseenGemData = {
+const narrowedReviews = overratedDisappintments.map((review) => {
+  const listItemData: ListItemOverratedData = {
     imdbId: review.imdbId,
     title: review.title,
     year: review.year,
@@ -32,15 +32,15 @@ const narrowedReviews = underseenGems.map((review) => {
 ---
 
 <Layout
-  title="Underseen Gems"
-  description="Four and five star movies with a below average number of votes on the IMDb."
+  title="Overrated Disappointments"
+  description="One and two star movies with an above-average IMDb rating and vote count."
 >
-  <Underseen
+  <Overrated
     client:load
     initialSort="release-date-desc"
     distinctReleaseYears={distinctReleaseYears}
     distinctGenres={distinctGenres}
     posters={posters}
-    underseenGems={narrowedReviews}
+    movies={narrowedReviews}
   />
 </Layout>

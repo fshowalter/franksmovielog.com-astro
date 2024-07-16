@@ -1,9 +1,10 @@
-import { DebouncedInput } from "@/components/DebouncedInput";
-import { SelectField } from "@/components/SelectField";
-import { YearInput } from "@/components/YearInput";
-import { Action, ActionType } from "./Overrated.reducer";
-import { MultiSelectField } from "@/components/MultiSelectField";
+import { DebouncedInput } from "src/components/DebouncedInput";
+import { SelectField } from "src/components/SelectField";
+import { YearInput } from "src/components/YearInput";
+import { ActionType } from "./Overrated.reducer";
+import { MultiSelectField } from "src/components/MultiSelectField";
 import type { Sort } from "./Overrated.reducer";
+import type { Action } from "./Overrated.reducer";
 
 export function Filters({
   dispatch,

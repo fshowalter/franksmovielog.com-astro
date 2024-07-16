@@ -21,17 +21,25 @@ const OverratedDisappointmentsJsonSchema = z.object({
   releaseSequence: z.string(),
 });
 
-type OverratedDisappointmentsJson = z.infer<
+export type OverratedDisappointmentsJson = z.infer<
   typeof OverratedDisappointmentsJsonSchema
 >;
 
-export async function overratedDisappointmentsJson(): Promise<
+let cache: OverratedDisappointmentsJson[];
+
+export async function allOverratedDisappointmentsJson(): Promise<
   OverratedDisappointmentsJson[]
 > {
+  if (cache) {
+    return cache;
+  }
+
   const json = await fs.readFile(overratedDisappointmentsJsonFile, "utf8");
   const data = JSON.parse(json) as unknown[];
 
-  return data.map((item) => {
+  cache = data.map((item) => {
     return OverratedDisappointmentsJsonSchema.parse(item);
   });
+
+  return cache;
 }

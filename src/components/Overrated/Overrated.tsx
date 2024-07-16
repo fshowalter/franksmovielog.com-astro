@@ -1,41 +1,34 @@
 "use client";
 
 import { useReducer } from "react";
-import { ListWithFiltersLayout } from "@/components/ListWithFiltersLayout";
+import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
 import { Filters } from "./Filters";
 import { Header } from "./Header";
 import { List } from "./List";
-import { Sort, initState, reducer } from "./Overrated.reducer";
-
-export interface OverratedTitle {
-  releaseSequence: string;
-  title: string;
-  year: string;
-  sortTitle: string;
-  slug: string;
-  grade: string;
-  gradeValue: number;
-  imdbId: string;
-  genres: string[];
-}
+import { initState, reducer } from "./Overrated.reducer";
+import type { ListItemOverratedData } from "./List";
+import type { PosterImageData } from "src/api/posters";
+import type { Sort } from "./Overrated.reducer";
 
 export interface OverratedProps {
-  titles: readonly OverratedTitle[];
+  movies: readonly ListItemOverratedData[];
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
   initialSort: Sort;
+  posters: Record<string, PosterImageData>;
 }
 
 export function Overrated({
-  titles,
+  movies,
   distinctGenres,
   distinctReleaseYears,
   initialSort,
+  posters,
 }: OverratedProps): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
-      items: [...titles],
+      items: [...movies],
       sort: initialSort,
     },
     initState,
@@ -54,6 +47,7 @@ export function Overrated({
       }
       list={
         <List
+          posters={posters}
           dispatch={dispatch}
           groupedItems={state.groupedItems}
           visibleCount={state.showCount}

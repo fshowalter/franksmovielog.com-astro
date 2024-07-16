@@ -1,22 +1,40 @@
-import { Grade } from "@/components/Grade";
-import { ListItem } from "@/components/ListItem";
-import { ListItemGenres } from "@/components/ListItemGenres";
-import { ListItemPoster } from "@/components/ListItemPoster";
-import { ListItemTitle } from "@/components/ListItemTitle";
-import { GroupedList } from "@/components/ListWithFiltersLayout";
-import { Action, ActionType } from "./Overrated.reducer";
-import type { OverratedTitle } from "./Overrated";
+import { Grade } from "src/components/Grade";
+import { ListItem } from "src/components/ListItem";
+import { ListItemGenres } from "src/components/ListItemGenres";
+import { ListItemPoster } from "src/components/ListItemPoster";
+import { ListItemTitle } from "src/components/ListItemTitle";
+import { GroupedList } from "src/components/GroupedList";
+import { ActionType } from "./Overrated.reducer";
+import type { Action } from "./Overrated.reducer";
+import type { PosterImageData } from "src/api/posters";
+import type { OverratedDisappointment } from "src/api/overratedDisappointments";
+
+export interface ListItemOverratedData
+  extends Pick<
+    OverratedDisappointment,
+    | "releaseSequence"
+    | "title"
+    | "year"
+    | "sortTitle"
+    | "slug"
+    | "genres"
+    | "grade"
+    | "gradeValue"
+    | "imdbId"
+  > {}
 
 export function List({
   groupedItems,
   totalCount,
   visibleCount,
+  posters,
   dispatch,
 }: {
-  groupedItems: Map<string, OverratedTitle[]>;
+  groupedItems: Map<string, ListItemOverratedData[]>;
   totalCount: number;
   visibleCount: number;
   dispatch: React.Dispatch<Action>;
+  posters: Record<string, PosterImageData>;
 }) {
   return (
     <GroupedList
@@ -26,28 +44,45 @@ export function List({
       totalCount={totalCount}
       onShowMore={() => dispatch({ type: ActionType.SHOW_MORE })}
     >
-      {(item) => <UnderseenGemsListItem item={item} key={item.imdbId} />}
+      {(movie) => (
+        <UnderseenGemsListItem
+          movie={movie}
+          key={movie.imdbId}
+          imageData={posters[movie.slug]!}
+        />
+      )}
     </GroupedList>
   );
 }
 
 function UnderseenGemsListItem({
-  item,
+  movie,
+  imageData,
 }: {
-  item: OverratedTitle;
+  movie: ListItemOverratedData;
+  imageData: PosterImageData;
 }): JSX.Element {
   return (
     <ListItem className="items-center">
-      <ListItemPoster slug={item.slug} title={item.title} year={item.year} />
+      <ListItemPoster
+        slug={movie.slug}
+        title={movie.title}
+        year={movie.year}
+        imageData={imageData}
+      />
       <div className="grow pr-gutter tablet:w-full desktop:pr-4">
         <div>
-          <ListItemTitle title={item.title} year={item.year} slug={item.slug} />
+          <ListItemTitle
+            title={movie.title}
+            year={movie.year}
+            slug={movie.slug}
+          />
           <div className="spacer-y-1" />
           <div className="py-px">
-            <Grade grade={item.grade} height={18} />
+            <Grade grade={movie.grade} height={18} />
           </div>
           <div className="spacer-y-2" />
-          <ListItemGenres genres={item.genres} />
+          <ListItemGenres genres={movie.genres} />
           <div className="spacer-y-2" />
         </div>
       </div>

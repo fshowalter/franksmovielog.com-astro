@@ -1,11 +1,10 @@
-import Link from "next/link";
 import { PageTitle } from "../PageTitle";
 
 export function Header(): JSX.Element {
   return (
     <>
       <div className="text-center">
-        <Link href="/reviews/">Reviews</Link>
+        <a href="/reviews/">Reviews</a>
       </div>
       <PageTitle className="text-center desktop:max-w-[26rem]">
         Overrated Disappointments
