@@ -1,33 +1,40 @@
-import { Grade } from "@/components/Grade";
-import { ListItem } from "@/components/ListItem";
-import { ListItemGenres } from "@/components/ListItemGenres";
-import { ListItemPoster } from "@/components/ListItemPoster";
-import { ListItemTitle } from "@/components/ListItemTitle";
-import { GroupedList } from "@/components/ListWithFiltersLayout";
-import { Action, ActionType } from "./Underseen.reducer";
+import { Grade } from "src/components/Grade";
+import { ListItem } from "src/components/ListItem";
+import { ListItemGenres } from "src/components/ListItemGenres";
+import { ListItemPoster } from "src/components/ListItemPoster";
+import { ListItemTitle } from "src/components/ListItemTitle";
+import { GroupedList } from "src/components/GroupedList";
+import { ActionType } from "./Underseen.reducer";
+import type { Action } from "./Underseen.reducer";
+import type { PosterImageData } from "src/api/posters";
+import type { UnderseenGem } from "src/api/underseenGems";
 
-export interface ListItemData {
-  releaseSequence: string;
-  title: string;
-  year: string;
-  sortTitle: string;
-  slug: string;
-  grade: string;
-  gradeValue: number;
-  imdbId: string;
-  genres: string[];
-}
+export interface ListItemUnderseenGemData
+  extends Pick<
+    UnderseenGem,
+    | "releaseSequence"
+    | "title"
+    | "year"
+    | "sortTitle"
+    | "slug"
+    | "grade"
+    | "gradeValue"
+    | "imdbId"
+    | "genres"
+  > {}
 
 export function List({
   groupedItems,
   totalCount,
   visibleCount,
   dispatch,
+  posters,
 }: {
-  groupedItems: Map<string, ListItemData[]>;
+  groupedItems: Map<string, ListItemUnderseenGemData[]>;
   totalCount: number;
   visibleCount: number;
   dispatch: React.Dispatch<Action>;
+  posters: Record<string, PosterImageData>;
 }) {
   return (
     <GroupedList
@@ -37,24 +44,45 @@ export function List({
       totalCount={totalCount}
       onShowMore={() => dispatch({ type: ActionType.SHOW_MORE })}
     >
-      {(item) => <UnderseenGemsListItem data={item} key={item.imdbId} />}
+      {(movie) => (
+        <UnderseenGemsListItem
+          movie={movie}
+          key={movie.imdbId}
+          imageData={posters[movie.slug]!}
+        />
+      )}
     </GroupedList>
   );
 }
 
-function UnderseenGemsListItem({ data }: { data: ListItemData }): JSX.Element {
+function UnderseenGemsListItem({
+  movie,
+  imageData,
+}: {
+  movie: ListItemUnderseenGemData;
+  imageData: PosterImageData;
+}): JSX.Element {
   return (
     <ListItem className="items-center">
-      <ListItemPoster slug={data.slug} title={data.title} year={data.year} />
+      <ListItemPoster
+        slug={movie.slug}
+        title={movie.title}
+        year={movie.year}
+        imageData={imageData}
+      />
       <div className="grow pr-gutter tablet:w-full desktop:pr-4">
         <div>
-          <ListItemTitle title={data.title} year={data.year} slug={data.slug} />
+          <ListItemTitle
+            title={movie.title}
+            year={movie.year}
+            slug={movie.slug}
+          />
           <div className="spacer-y-1" />
           <div className="py-px">
-            <Grade grade={data.grade} height={18} />
+            <Grade grade={movie.grade} height={18} />
           </div>
           <div className="spacer-y-2" />
-          <ListItemGenres genres={data.genres} />
+          <ListItemGenres genres={movie.genres} />
           <div className="spacer-y-2" />
         </div>
       </div>

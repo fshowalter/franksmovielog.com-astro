@@ -26,23 +26,21 @@ export async function allViewings(): Promise<Viewings> {
   const distinctMedia = new Set<string>();
   const distinctVenues = new Set<string>();
 
-  const viewings = await Promise.all(
-    viewingsJson.map((title) => {
-      title.genres.forEach((genre) => distinctGenres.add(genre));
-      distinctReleaseYears.add(title.year);
-      distinctViewingYears.add(title.viewingYear);
-      if (title.medium) {
-        distinctMedia.add(title.medium);
-      }
-      if (title.venue) {
-        distinctVenues.add(title.venue);
-      }
+  const viewings = viewingsJson.map((title) => {
+    title.genres.forEach((genre) => distinctGenres.add(genre));
+    distinctReleaseYears.add(title.year);
+    distinctViewingYears.add(title.viewingYear);
+    if (title.medium) {
+      distinctMedia.add(title.medium);
+    }
+    if (title.venue) {
+      distinctVenues.add(title.venue);
+    }
 
-      return {
-        ...title,
-      };
-    }),
-  );
+    return {
+      ...title,
+    };
+  });
 
   cache = {
     viewings: viewings,

@@ -1,31 +1,34 @@
 "use client";
 
 import { useReducer } from "react";
-import { ListWithFiltersLayout } from "@/components/ListWithFiltersLayout";
+import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
 import { Filters } from "./Filters";
 import { Header } from "./Header";
 import { List } from "./List";
 import { initState, reducer } from "./Underseen.reducer";
 import type { Sort } from "./Underseen.reducer";
-import type { ListItemData } from "./List";
+import type { ListItemUnderseenGemData } from "./List";
+import type { PosterImageData } from "src/api/posters";
 
 export interface UnderseenProps {
-  items: readonly ListItemData[];
+  underseenGems: readonly ListItemUnderseenGemData[];
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
   initialSort: Sort;
+  posters: Record<string, PosterImageData>;
 }
 
 export function Underseen({
-  items,
+  underseenGems,
   distinctGenres,
   distinctReleaseYears,
   initialSort,
+  posters,
 }: UnderseenProps): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
-      items: [...items],
+      items: [...underseenGems],
       sort: initialSort,
     },
     initState,
@@ -45,6 +48,7 @@ export function Underseen({
       list={
         <List
           dispatch={dispatch}
+          posters={posters}
           groupedItems={state.groupedItems}
           visibleCount={state.showCount}
           totalCount={state.filteredItems.length}

@@ -25,11 +25,19 @@ const ViewingJsonSchema = z.object({
 
 export type ViewingJson = z.infer<typeof ViewingJsonSchema>;
 
+let cache: ViewingJson[];
+
 export async function allViewingsJson(): Promise<ViewingJson[]> {
+  if (cache) {
+    return cache;
+  }
+
   const json = await fs.readFile(viewingsJsonFile, "utf8");
   const data = JSON.parse(json) as unknown[];
 
-  return data.map((item) => {
+  cache = data.map((item) => {
     return ViewingJsonSchema.parse(item);
   });
+
+  return cache;
 }

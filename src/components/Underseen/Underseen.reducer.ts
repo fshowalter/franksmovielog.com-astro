@@ -1,13 +1,13 @@
 import {
-  FilterableState,
   buildGroupItems,
   collator,
   filterTools,
   sortNumber,
   sortString,
-} from "@/utils";
+} from "src/utils";
+import type { FilterableState } from "src/utils";
 
-import type { ListItemData } from "./List";
+import type { ListItemUnderseenGemData } from "./List";
 
 const SHOW_COUNT_DEFAULT = 100;
 
@@ -22,8 +22,11 @@ export type Sort =
 const groupItems = buildGroupItems(groupForItem);
 const { updateFilter } = filterTools(sortItems, groupItems);
 
-function sortItems(items: ListItemData[], sortOrder: Sort) {
-  const sortMap: Record<Sort, (a: ListItemData, b: ListItemData) => number> = {
+function sortItems(items: ListItemUnderseenGemData[], sortOrder: Sort) {
+  const sortMap: Record<
+    Sort,
+    (a: ListItemUnderseenGemData, b: ListItemUnderseenGemData) => number
+  > = {
     "release-date-desc": (a, b) =>
       sortString(a.releaseSequence, b.releaseSequence) * -1,
     "release-date-asc": (a, b) =>
@@ -38,7 +41,7 @@ function sortItems(items: ListItemData[], sortOrder: Sort) {
   return items.sort(comparer);
 }
 
-function groupForItem(item: ListItemData, sortValue: Sort): string {
+function groupForItem(item: ListItemUnderseenGemData, sortValue: Sort): string {
   switch (sortValue) {
     case "release-date-asc":
     case "release-date-desc": {
@@ -62,13 +65,17 @@ function groupForItem(item: ListItemData, sortValue: Sort): string {
   }
 }
 
-type State = FilterableState<ListItemData, Sort, Map<string, ListItemData[]>>;
+type State = FilterableState<
+  ListItemUnderseenGemData,
+  Sort,
+  Map<string, ListItemUnderseenGemData[]>
+>;
 
 export function initState({
   items,
   sort,
 }: {
-  items: ListItemData[];
+  items: ListItemUnderseenGemData[];
   sort: Sort;
 }): State {
   return {

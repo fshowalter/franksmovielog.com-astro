@@ -1,11 +1,10 @@
-import Link from "next/link";
-import { PageTitle } from "@/components/PageTitle";
+import { PageTitle } from "src/components/PageTitle";
 
 export function Header(): JSX.Element {
   return (
     <>
       <div className="text-center">
-        <Link href="/reviews/">Reviews</Link>
+        <a href="/reviews/">Reviews</a>
       </div>
       <PageTitle className="text-center">Underseen Gems</PageTitle>
       <div className="spacer-y-2" />
