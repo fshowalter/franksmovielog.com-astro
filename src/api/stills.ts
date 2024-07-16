@@ -34,7 +34,6 @@ export async function getStills({
   const imageMap: Record<string, StillImageData> = {};
 
   Object.keys(images).forEach(async (image) => {
-    console.log(image);
     const stillFile = await images[image]();
 
     const optimizedImage = await getImage({
@@ -45,6 +44,8 @@ export async function getStills({
       widths: [0.25, 0.5, 1, 2].map((w) => w * width),
       quality: 80,
     });
+
+    console.log(basename(image, extname(image)));
 
     imageMap[basename(image, extname(image))] = {
       srcSet: optimizedImage.srcSet.attribute,
