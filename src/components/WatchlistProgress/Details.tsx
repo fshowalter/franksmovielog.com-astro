@@ -1,16 +1,16 @@
-import { BarGradient } from "@/components/BarGradient";
-import { StatHeading } from "@/components/StatHeading";
+import { BarGradient } from "src/components/BarGradient";
+import { StatHeading } from "src/components/StatHeading";
 import {
   Table,
   TableDataCell,
   TableHead,
   TableHeaderCell,
   TableRow,
-} from "@/components/StatsTable";
+} from "src/components/StatsTable";
 
-type EntityType = "director" | "writer" | "performer" | "collection";
+type ValueType = "director" | "writer" | "performer" | "collection";
 
-export interface DetailData {
+export interface DetailValue {
   name: string;
   reviewCount: number;
   titleCount: number;
@@ -19,12 +19,12 @@ export interface DetailData {
 
 export function Details({
   label,
-  entityType,
-  data,
+  valueType,
+  values,
 }: {
   label: string;
-  entityType: EntityType;
-  data: readonly DetailData[];
+  valueType: ValueType;
+  values: DetailValue[];
 }) {
   return (
     <section>
@@ -38,27 +38,27 @@ export function Details({
           </tr>
         </TableHead>
         <tbody>
-          {data.map((entity) => {
+          {values.map((value) => {
             return (
-              <TableRow key={entity.name}>
+              <TableRow key={value.name}>
                 <TableDataCell align="left">
-                  <EntityName entity={entity} entityType={entityType} />
+                  <Name value={value} valueType={valueType} />
                 </TableDataCell>
                 <TableDataCell hideOnSmallScreens align="fill">
                   <BarGradient
-                    value={entity.reviewCount}
-                    maxValue={entity.titleCount}
+                    value={value.reviewCount}
+                    maxValue={value.titleCount}
                   />
                 </TableDataCell>
                 <TableDataCell
                   align="right"
                   className={
-                    entity.reviewCount === entity.titleCount
+                    value.reviewCount === value.titleCount
                       ? "text-progress"
                       : "text-subtle"
                   }
                 >
-                  {entity.reviewCount}/{entity.titleCount}
+                  {value.reviewCount}/{value.titleCount}
                 </TableDataCell>
               </TableRow>
             );
@@ -69,22 +69,22 @@ export function Details({
   );
 }
 
-function EntityName({
-  entity,
-  entityType,
+function Name({
+  value,
+  valueType,
 }: {
-  entityType: EntityType;
-  entity: DetailData;
+  valueType: ValueType;
+  value: DetailValue;
 }) {
   let linkTarget;
 
-  if (entityType === "collection") {
-    linkTarget = `/collections/${entity.slug}`;
+  if (valueType === "collection") {
+    linkTarget = `/collections/${value.slug}`;
   } else {
-    linkTarget = `/cast-and-crew/${entity.slug}`;
+    linkTarget = `/cast-and-crew/${value.slug}`;
   }
 
-  if (entity.slug) return <a href={linkTarget}>{entity.name}</a>;
+  if (value.slug) return <a href={linkTarget}>{value.name}</a>;
 
-  return <span className="text-subtle">{entity.name}</span>;
+  return <span className="text-subtle">{value.name}</span>;
 }

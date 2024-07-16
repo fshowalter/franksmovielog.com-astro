@@ -1,4 +1,4 @@
-import { PageTitle } from "..//PageTitle";
+import { PageTitle } from "src/components/PageTitle";
 
 export function Header(): JSX.Element {
   return (

@@ -1,53 +1,62 @@
 import { Callouts } from "./Callouts";
 import { Header } from "./Header";
 import { Details } from "./Details";
-import type { DetailData } from "./Details";
-import type { CalloutsData } from "./Callouts";
+import type { WatchlistProgress } from "src/api/watchlistProgress";
+import type { Props as CalloutsProps } from "./Callouts";
 
-interface WatchlistProgressData extends CalloutsData {
-  directorDetails: DetailData[];
-  performerDetails: DetailData[];
-  writerDetails: DetailData[];
-  collectionDetails: DetailData[];
+interface Props {
+  progress: Pick<
+    WatchlistProgress,
+    | "collectionDetails"
+    | "directorDetails"
+    | "writerDetails"
+    | "performerDetails"
+  > &
+    CalloutsProps;
 }
 
-export interface WatchlistProgressProps {
-  data: WatchlistProgressData;
-}
-
-export function WatchlistProgress({
-  data,
-}: WatchlistProgressProps): JSX.Element {
+export function WatchlistProgress({ progress }: Props): JSX.Element {
   return (
     <main className="flex flex-col items-center">
       <Header />
       <div className="spacer-y-8" />
-      <Callouts data={data} />
+      <Callouts
+        total={progress.total}
+        reviewed={progress.reviewed}
+        writerReviewed={progress.writerReviewed}
+        writerTotal={progress.writerTotal}
+        directorReviewed={progress.directorReviewed}
+        directorTotal={progress.directorTotal}
+        performerReviewed={progress.performerReviewed}
+        performerTotal={progress.performerTotal}
+        collectionReviewed={progress.collectionReviewed}
+        collectionTotal={progress.collectionTotal}
+      />
       <div className="spacer-y-8" />
       <div className="flex w-full max-w-[960px] flex-col items-stretch tablet:px-gutter desktop:px-pageMargin">
         <div className="spacer-y-8" />
         <Details
           label="Director Progress"
-          entityType="director"
-          data={data.directorDetails}
+          valueType="director"
+          values={progress.directorDetails}
         />
         <div className="spacer-y-16" />
         <Details
           label="Performer Progress"
-          entityType="performer"
-          data={data.performerDetails}
+          valueType="performer"
+          values={progress.performerDetails}
         />
         <div className="spacer-y-16" />
         <Details
           label="Writer Progress"
-          entityType="writer"
-          data={data.writerDetails}
+          valueType="writer"
+          values={progress.writerDetails}
         />
         <div className="spacer-y-16" />
         <Details
           label="Collection Progress"
-          entityType="collection"
-          data={data.collectionDetails}
+          valueType="collection"
+          values={progress.collectionDetails}
         />
         <div className="spacer-y-16" />
       </div>

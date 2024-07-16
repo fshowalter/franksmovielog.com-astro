@@ -1,17 +1,20 @@
+import type { WatchlistProgress } from "src/api/watchlistProgress";
 import { ProgressRing } from "./ProgressRing";
 
-export interface CalloutsData {
-  reviewed: number;
-  total: number;
-  directorTotal: number;
-  directorReviewed: number;
-  performerTotal: number;
-  performerReviewed: number;
-  writerTotal: number;
-  writerReviewed: number;
-  collectionTotal: number;
-  collectionReviewed: number;
-}
+export interface Props
+  extends Pick<
+    WatchlistProgress,
+    | "reviewed"
+    | "total"
+    | "directorTotal"
+    | "directorReviewed"
+    | "performerTotal"
+    | "performerReviewed"
+    | "writerReviewed"
+    | "writerTotal"
+    | "collectionReviewed"
+    | "collectionTotal"
+  > {}
 
 function Callout({
   total,
@@ -45,22 +48,29 @@ function Callout({
   );
 }
 
-export function Callouts({ data }: { data: CalloutsData }): JSX.Element {
+export function Callouts({
+  reviewed,
+  total,
+  directorTotal,
+  directorReviewed,
+  performerReviewed,
+  performerTotal,
+  writerReviewed,
+  writerTotal,
+  collectionReviewed,
+  collectionTotal,
+}: Props): JSX.Element {
   return (
     <section className="flex flex-wrap justify-center gap-x-8">
       <div className="flex min-w-full flex-col items-center tablet:min-w-0">
         <div className="spacer-y-8" />
-        <Callout
-          total={data.total}
-          reviewed={data.reviewed}
-          label="Total Progress"
-        />
+        <Callout total={total} reviewed={reviewed} label="Total Progress" />
       </div>
       <div>
         <div className="spacer-y-8" />
         <Callout
-          total={data.directorTotal}
-          reviewed={data.directorReviewed}
+          total={directorTotal}
+          reviewed={directorReviewed}
           label="Director"
           subLabel="Titles"
         />
@@ -68,8 +78,8 @@ export function Callouts({ data }: { data: CalloutsData }): JSX.Element {
       <div>
         <div className="spacer-y-8" />
         <Callout
-          total={data.performerTotal}
-          reviewed={data.performerReviewed}
+          total={performerTotal}
+          reviewed={performerReviewed}
           label="Performer"
           subLabel="Titles"
         />
@@ -77,8 +87,8 @@ export function Callouts({ data }: { data: CalloutsData }): JSX.Element {
       <div>
         <div className="spacer-y-8" />
         <Callout
-          total={data.writerTotal}
-          reviewed={data.writerReviewed}
+          total={writerTotal}
+          reviewed={writerReviewed}
           label="Writer"
           subLabel="Titles"
         />
@@ -86,8 +96,8 @@ export function Callouts({ data }: { data: CalloutsData }): JSX.Element {
       <div>
         <div className="spacer-y-8" />
         <Callout
-          total={data.collectionTotal}
-          reviewed={data.collectionReviewed}
+          total={collectionTotal}
+          reviewed={collectionReviewed}
           label="Collection"
           subLabel="Titles"
         />

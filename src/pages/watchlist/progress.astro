@@ -1,0 +1,14 @@
+---
+import Layout from "src/layouts/Layout.astro";
+import { WatchlistProgress } from "src/components/WatchlistProgress";
+import { watchlistProgress } from "src/api/watchlistProgress";
+
+const progress = await watchlistProgress();
+---
+
+<Layout
+  title="Watchlist Progress"
+  description="My progress working through my movie review bucketlist."
+>
+  <WatchlistProgress progress={progress} />
+</Layout>
