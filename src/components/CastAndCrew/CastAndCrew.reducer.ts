@@ -1,7 +1,7 @@
-import { filterCollection, sortNumber, sortString } from "../../utils";
-import type { CastAndCrewListItemData } from "./List";
+import { filterValues, sortNumber, sortString } from "../../utils";
+import type { CastAndCrewValue } from "./List";
 
-export enum ActionType {
+export enum Actions {
   FILTER_NAME = "FILTER_NAME",
   FILTER_CREDIT_KIND = "FILTER_CREDIT_KIND",
   SORT = "SORT",
@@ -15,13 +15,13 @@ export type Sort =
   | "review-count-asc"
   | "review-count-desc";
 
-function sortEntities(
-  entities: CastAndCrewListItemData[],
+function sortValues(
+  values: CastAndCrewValue[],
   sortOrder: Sort,
-): CastAndCrewListItemData[] {
+): CastAndCrewValue[] {
   const sortMap: Record<
     Sort,
-    (a: CastAndCrewListItemData, b: CastAndCrewListItemData) => number
+    (a: CastAndCrewValue, b: CastAndCrewValue) => number
   > = {
     "name-asc": (a, b) => sortString(a.name, b.name),
     "name-desc": (a, b) => sortString(a.name, b.name) * -1,
@@ -34,69 +34,64 @@ function sortEntities(
 
   const comparer = sortMap[sortOrder];
 
-  return entities.sort(comparer);
+  return values.sort(comparer);
 }
 
 interface State {
-  allEntities: CastAndCrewListItemData[];
-  filteredEntities: CastAndCrewListItemData[];
-  filters: Record<string, (entity: CastAndCrewListItemData) => boolean>;
+  allValues: CastAndCrewValue[];
+  filteredValues: CastAndCrewValue[];
+  filters: Record<string, (value: CastAndCrewValue) => boolean>;
   sortValue: Sort;
 }
 
 export function initState({
-  entities,
-  sort,
+  values,
+  initialSort,
 }: {
-  entities: readonly CastAndCrewListItemData[];
-  sort: Sort;
+  values: readonly CastAndCrewValue[];
+  initialSort: Sort;
 }): State {
   return {
-    allEntities: [...entities],
-    filteredEntities: [...entities],
+    allValues: [...values],
+    filteredValues: [...values],
     filters: {},
-    sortValue: sort,
+    sortValue: initialSort,
   };
 }
 
 interface FilterNameAction {
-  type: ActionType.FILTER_NAME;
+  type: Actions.FILTER_NAME;
   value: string;
 }
 
 interface FilterCreditKindAction {
-  type: ActionType.FILTER_CREDIT_KIND;
+  type: Actions.FILTER_CREDIT_KIND;
   value: string;
 }
 
 interface SortAction {
-  type: ActionType.SORT;
+  type: Actions.SORT;
   value: Sort;
 }
 
-export type Action = FilterNameAction | FilterCreditKindAction | SortAction;
+export type ActionType = FilterNameAction | FilterCreditKindAction | SortAction;
 
-/**
- * Applies the given action to the given state, returning a new State object.
- * @param state The current state.
- * @param action The action to apply.
- */
-export function reducer(state: State, action: Action): State {
+export function reducer(state: State, action: ActionType): State {
   let filters;
-  let filteredEntities;
+  let filteredValues;
 
   switch (action.type) {
-    case ActionType.FILTER_NAME: {
+    case Actions.FILTER_NAME: {
       const regex = new RegExp(action.value, "i");
       filters = {
         ...state.filters,
-        name: (person: CastAndCrewListItemData) => {
+        name: (person: CastAndCrewValue) => {
           return regex.test(person.name);
         },
       };
-      filteredEntities = sortEntities(
-        filterCollection<CastAndCrewListItemData>({
-          collection: state.allEntities,
+      filteredValues = sortValues(
+        filterValues<CastAndCrewValue>({
+          values: state.allValues,
           filters,
         }),
         state.sortValue,
@@ -104,10 +99,10 @@ export function reducer(state: State, action: Action): State {
       return {
         ...state,
         filters,
-        filteredEntities,
+        filteredValues,
       };
     }
-    case ActionType.FILTER_CREDIT_KIND: {
+    case Actions.FILTER_CREDIT_KIND: {
       if (action.value === "All") {
         filters = {
           ...state.filters,
@@ -117,14 +112,14 @@ export function reducer(state: State, action: Action): State {
       } else {
         filters = {
           ...state.filters,
-          credits: (item: CastAndCrewListItemData) => {
+          credits: (item: CastAndCrewValue) => {
             return item.creditedAs.includes(action.value);
           },
         };
       }
-      filteredEntities = sortEntities(
-        filterCollection<CastAndCrewListItemData>({
-          collection: state.allEntities,
+      filteredValues = sortValues(
+        filterValues<CastAndCrewValue>({
+          values: state.allValues,
           filters,
         }),
         state.sortValue,
@@ -132,15 +127,15 @@ export function reducer(state: State, action: Action): State {
       return {
         ...state,
         filters,
-        filteredEntities,
+        filteredValues,
       };
     }
-    case ActionType.SORT: {
-      filteredEntities = sortEntities(state.filteredEntities, action.value);
+    case Actions.SORT: {
+      filteredValues = sortValues(state.filteredValues, action.value);
       return {
         ...state,
         sortValue: action.value,
-        filteredEntities,
+        filteredValues,
       };
     }
     // no default

@@ -1,0 +1,39 @@
+---
+import Layout from "src/layouts/Layout.astro";
+import {
+  type CastAndCrewValue,
+  CastAndCrew,
+  AvatarImageConfig,
+} from "src/components/CastAndCrew";
+import { allCastAndCrew } from "src/api/castAndCrew";
+import { getAvatars } from "src/api/avatars";
+
+const castAndCrew = await allCastAndCrew();
+const avatars = await getAvatars(AvatarImageConfig);
+
+castAndCrew.sort((a, b) => a.name.localeCompare(b.name));
+
+const narrowedValues = castAndCrew.map((member) => {
+  const castAndCrewValue: CastAndCrewValue = {
+    name: member.name,
+    slug: member.slug,
+    reviewCount: member.reviewCount,
+    totalCount: member.totalCount,
+    creditedAs: member.creditedAs,
+  };
+
+  return castAndCrewValue;
+});
+---
+
+<Layout
+  title="Cast and Crew"
+  description="A sortable and filterable list of select cast and crew members of reviewed movies."
+>
+  <CastAndCrew
+    client:load
+    initialSort="name-asc"
+    avatars={avatars}
+    values={narrowedValues}
+  />
+</Layout>

@@ -1,34 +1,45 @@
-import { CreditedAs } from "@/components/CreditedAs";
-import Image from "next/image";
-import Link from "next/link";
-import { ListItem } from "@/components/ListItem";
-import { ListItemCounts } from "@/components/ListItemCounts";
-import { ListInfo } from "@/components/ListWithFiltersLayout/ListInfo";
+import { CreditedAs } from "src/components/CreditedAs";
+import { ListItem } from "src/components/ListItem";
+import { ListItemCounts } from "src/components/ListItemCounts";
+import { ListInfo } from "src/components/ListInfo";
+import type { CastAndCrewMember } from "src/api/castAndCrew";
+import type { AvatarImageData } from "src/api/avatars";
+import { Avatar } from "src/components/Avatar";
 
-export interface CastAndCrewListItemData {
-  name: string;
-  slug: string | null;
-  totalCount: number;
-  reviewCount: number;
-  creditedAs: string[];
-  avatar: string | null;
-}
+export const AvatarImageConfig = {
+  width: 64,
+  height: 64,
+};
+
+export interface CastAndCrewValue
+  extends Pick<
+    CastAndCrewMember,
+    "name" | "slug" | "totalCount" | "reviewCount" | "creditedAs"
+  > {}
 
 export function List({
-  data,
+  values,
   totalCount,
   visibleCount,
+  avatars,
 }: {
-  data: readonly CastAndCrewListItemData[];
+  values: readonly CastAndCrewValue[];
   totalCount: number;
   visibleCount: number;
+  avatars: Record<string, AvatarImageData>;
 }): JSX.Element {
   return (
     <>
       <ListInfo totalCount={totalCount} visibleCount={visibleCount} />
       <ol data-testid="list">
-        {data.map((member) => {
-          return <MemberListItem key={member.name} data={member} />;
+        {values.map((value) => {
+          return (
+            <MemberListItem
+              key={value.name}
+              value={value}
+              imageData={avatars[value.slug]}
+            />
+          );
         })}
       </ol>
       <div className="spacer-y-8" />
@@ -37,38 +48,43 @@ export function List({
 }
 
 function MemberListItem({
-  data,
+  value,
+  imageData,
 }: {
-  data: CastAndCrewListItemData;
+  value: CastAndCrewValue;
+  imageData: AvatarImageData | undefined;
 }): JSX.Element {
   return (
     <ListItem className="items-center">
-      <Avatar data={data} />
-      <Name data={data} />
-      <ListItemCounts current={data.reviewCount} total={data.totalCount} />
+      <MemberAvatar value={value} imageData={imageData} />
+      <Name value={value} />
+      <ListItemCounts current={value.reviewCount} total={value.totalCount} />
     </ListItem>
   );
 }
 
-function Avatar({ data }: { data: CastAndCrewListItemData }) {
-  if (data.avatar) {
-    return (
-      <Link
-        href={`/cast-and-crew/${data.slug}/`}
-        className="safari-border-radius-fix w-16 max-w-16 overflow-hidden rounded-[50%] shadow-all"
-      >
-        <Image
-          src={data.avatar}
-          alt={`An image of ${data.name}`}
-          width={64}
-          height={64}
-        />
-      </Link>
-    );
-  }
+function MemberAvatar({
+  value,
+  imageData,
+}: {
+  value: CastAndCrewValue;
+  imageData: AvatarImageData | undefined;
+}) {
+  let image;
 
-  return (
-    <div className="w-16 max-w-16">
+  if (imageData) {
+    image = (
+      <Avatar
+        name={value.name}
+        imageData={imageData}
+        width={AvatarImageConfig.width}
+        height={AvatarImageConfig.height}
+        loading="lazy"
+        decoding="async"
+      />
+    );
+  } else {
+    image = (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 16 16"
@@ -81,18 +97,31 @@ function Avatar({ data }: { data: CastAndCrewListItemData }) {
           fillRule="evenodd"
         />
       </svg>
-    </div>
-  );
+    );
+  }
+
+  if (value.slug) {
+    return (
+      <a
+        href={`/cast-and-crew/${value.slug}/`}
+        className="safari-border-radius-fix w-16 max-w-16 overflow-hidden rounded-[50%] shadow-all"
+      >
+        {image}
+      </a>
+    );
+  }
+
+  return <div className="w-16 max-w-16">{image}</div>;
 }
 
-function Name({ data }: { data: CastAndCrewListItemData }) {
+function Name({ value }: { value: CastAndCrewValue }) {
   return (
     <div>
-      <Link href={`/cast-and-crew/${data.slug}/`} className="text-md">
-        <div className="leading-normal">{data.name}</div>
-      </Link>
+      <a href={`/cast-and-crew/${value.slug}/`} className="text-md">
+        <div className="leading-normal">{value.name}</div>
+      </a>
       <div className="spacer-y-1" />
-      <CreditedAs creditedAs={data.creditedAs} />
+      <CreditedAs creditedAs={value.creditedAs} />
     </div>
   );
 }

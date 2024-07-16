@@ -90,3 +90,17 @@ export function filterCollection<T>({
     });
   });
 }
+
+export function filterValues<T>({
+  values,
+  filters,
+}: {
+  values: readonly T[];
+  filters: Record<string, (arg0: T) => boolean>;
+}): T[] {
+  return values.filter((item) => {
+    return Object.values(filters).every((filter) => {
+      return filter(item);
+    });
+  });
+}

@@ -1,28 +1,28 @@
-"use client";
-
 import { useReducer } from "react";
 import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
 import { initState, reducer } from "./CastAndCrew.reducer";
 import { Filters } from "./Filters";
 import { Header } from "./Header";
-import { List } from "./List";
-import type { CastAndCrewListItemData } from "./List";
+import { List, type CastAndCrewValue } from "./List";
 import type { Sort } from "./CastAndCrew.reducer";
+import type { AvatarImageData } from "src/api/avatars";
 
 export interface CastAndCrewProps {
-  data: CastAndCrewListItemData[];
+  values: CastAndCrewValue[];
   initialSort: Sort;
+  avatars: Record<string, AvatarImageData>;
 }
 
 export function CastAndCrew({
-  data,
+  values,
   initialSort,
+  avatars,
 }: CastAndCrewProps): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
-      entities: data,
-      sort: initialSort,
+      values,
+      initialSort,
     },
     initState,
   );
@@ -33,9 +33,10 @@ export function CastAndCrew({
       filters={<Filters dispatch={dispatch} sortValue={state.sortValue} />}
       list={
         <List
-          data={state.filteredEntities}
-          totalCount={state.filteredEntities.length}
-          visibleCount={state.filteredEntities.length}
+          avatars={avatars}
+          values={state.filteredValues}
+          totalCount={state.filteredValues.length}
+          visibleCount={state.filteredValues.length}
         />
       }
     />
