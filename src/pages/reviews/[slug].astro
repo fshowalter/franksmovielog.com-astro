@@ -12,17 +12,11 @@ import { textStarsForGrade } from "src/utils/textStarsForGrade";
 import { images, getStillImagePath, getStills } from "src/api/stills";
 import { getImage } from "astro:assets";
 import { getFluidWidthPosters } from "src/api/posters";
-import type { PosterImageData } from "src/api/posters";
-import type { StillImageData } from "src/api/stills";
-import type { AvatarImageData } from "src/api/avatars";
 import { getAvatars } from "src/api/avatars";
 import { StillListItemImageConfig } from "src/components/StillListItem";
 
 export async function getStaticPaths() {
   const { reviews } = await allReviews();
-  const stills = await getStills(StillImageConfig);
-  const avatars = await getAvatars(ChipAvatarImageConfig);
-  const stillListStills = await getStills(StillListItemImageConfig);
 
   return await Promise.all(
     reviews.map(async (review) => {
@@ -49,9 +43,6 @@ export async function getStaticPaths() {
         props: {
           review: review,
           seoImageSrc: seoImageSrc,
-          stillImageData: stills[review.slug],
-          avatars: avatars,
-          stillListStills: stillListStills,
         },
       };
     })
@@ -61,14 +52,15 @@ export async function getStaticPaths() {
 interface Props {
   review: IReview;
   seoImageSrc: string;
-  posterImageData: PosterImageData;
-  stillImageData: StillImageData;
-  avatars: Record<string, AvatarImageData>;
-  stillListStills: Record<string, StillImageData>;
 }
 
-const { review, seoImageSrc, stillImageData, avatars, stillListStills } =
-  Astro.props;
+const { review, seoImageSrc } = Astro.props;
+
+const stills = await getStills(StillImageConfig);
+const stillImageData = stills[review.slug]!;
+const avatars = await getAvatars(ChipAvatarImageConfig);
+
+const stillListStills = await getStills(StillListItemImageConfig);
 
 const posters = await getFluidWidthPosters(PosterImageConfig);
 const posterImageData = posters[review.slug]!;
