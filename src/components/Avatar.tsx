@@ -13,10 +13,6 @@ interface AvatarProps extends React.ImgHTMLAttributes<HTMLImageElement> {
 export function Avatar({
   name,
   imageData,
-  width,
-  height,
-  loading = "lazy",
-  decoding = "async",
   className,
   ...rest
 }: AvatarProps): JSX.Element {

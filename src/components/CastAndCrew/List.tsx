@@ -70,35 +70,16 @@ function MemberAvatar({
   value: CastAndCrewValue;
   imageData: AvatarImageData | undefined;
 }) {
-  let image;
-
-  if (imageData) {
-    image = (
-      <Avatar
-        name={value.name}
-        imageData={imageData}
-        width={AvatarImageConfig.width}
-        height={AvatarImageConfig.height}
-        loading="lazy"
-        decoding="async"
-      />
-    );
-  } else {
-    image = (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 16 16"
-        fill="var(--bg-stripe)"
-        width="100%"
-      >
-        <path
-          clipRule="evenodd"
-          d="M16 8A8 8 0 110 8a8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zM8 9a5 5 0 00-4.546 2.916A5.986 5.986 0 008 14a5.986 5.986 0 004.546-2.084A5 5 0 008 9z"
-          fillRule="evenodd"
-        />
-      </svg>
-    );
-  }
+  const avatar = (
+    <Avatar
+      name={value.name}
+      imageData={imageData}
+      width={AvatarImageConfig.width}
+      height={AvatarImageConfig.height}
+      loading="lazy"
+      decoding="async"
+    />
+  );
 
   if (value.slug) {
     return (
@@ -106,12 +87,12 @@ function MemberAvatar({
         href={`/cast-and-crew/${value.slug}/`}
         className="safari-border-radius-fix w-16 max-w-16 overflow-hidden rounded-[50%] shadow-all"
       >
-        {image}
+        {avatar}
       </a>
     );
   }
 
-  return <div className="w-16 max-w-16">{image}</div>;
+  return <div className="w-16 max-w-16">{avatar}</div>;
 }
 
 function Name({ value }: { value: CastAndCrewValue }) {
