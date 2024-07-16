@@ -49,6 +49,8 @@ export async function getStills({
       srcSet: optimizedImage.srcSet.attribute,
       src: optimizedImage.src,
     };
+
+    console.log(Object.keys(imageMap));
   });
 
   cache[key] = imageMap;
