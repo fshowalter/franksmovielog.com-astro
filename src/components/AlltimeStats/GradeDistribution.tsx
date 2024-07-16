@@ -1,3 +1,4 @@
+import type { AlltimeStats } from "src/api/alltimeStats";
 import { BarGradient } from "src/components/BarGradient";
 import { StatHeading } from "src/components/StatHeading";
 import {
@@ -8,19 +9,14 @@ import {
   TableRow,
 } from "src/components/StatsTable";
 
-export interface GradeDistributionData {
-  name: string;
-  count: number;
-}
-
 export function GradeDistribution({
-  data,
+  values,
 }: {
-  data: readonly GradeDistributionData[];
+  values: Pick<AlltimeStats["gradeDistribution"][0], "name" | "count">[];
 }): JSX.Element | null {
-  const maxBar = data.reduce((acc, distribution) => {
-    const value = distribution.count;
-    return acc > value ? acc : value;
+  const maxBar = values.reduce((acc, value) => {
+    const count = value.count;
+    return acc > count ? acc : count;
   }, 0);
 
   return (
@@ -35,16 +31,14 @@ export function GradeDistribution({
           </tr>
         </TableHead>
         <tbody>
-          {data.map((distribution) => {
+          {values.map((value) => {
             return (
-              <TableRow key={distribution.name}>
-                <TableDataCell align="left">{distribution.name}</TableDataCell>
+              <TableRow key={value.name}>
+                <TableDataCell align="left">{value.name}</TableDataCell>
                 <TableDataCell align="fill">
-                  <BarGradient value={distribution.count} maxValue={maxBar} />
+                  <BarGradient value={value.count} maxValue={maxBar} />
                 </TableDataCell>
-                <TableDataCell align="right">
-                  {distribution.count}
-                </TableDataCell>
+                <TableDataCell align="right">{value.count}</TableDataCell>
               </TableRow>
             );
           })}

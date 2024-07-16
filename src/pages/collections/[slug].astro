@@ -1,0 +1,47 @@
+---
+import Layout from "src/layouts/Layout.astro";
+import { getFixedWidthPosters } from "src/api/posters";
+import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
+import { allCastAndCrew } from "src/api/castAndCrew";
+import { CastAndCrewMember } from "src/components/CastAndCrewMember";
+import { getAvatars } from "src/api/avatars";
+
+export async function getStaticPaths() {
+  const { castAndCrew, distinctReleaseYears } = await allCastAndCrew();
+
+  return castAndCrew.map((member) => {
+    return {
+      params: {
+        slug: member.slug,
+      },
+      props: {
+        member,
+        distinctReleaseYears,
+      },
+    };
+  });
+}
+
+const { member, distinctReleaseYears } = Astro.props;
+
+member.titles.sort((a, b) =>
+  a.releaseSequence.localeCompare(b.releaseSequence)
+);
+
+const posters = await getFixedWidthPosters(ListItemPosterImageConfig);
+const avatars = await getAvatars(ListItemPosterImageConfig);
+const avatarImageData = avatars[member.slug];
+---
+
+<Layout
+  title={member.name}
+  description={`A sortable and filterable list of reviews of ${member.name} movies.`}
+>
+  <CastAndCrewMember
+    value={member}
+    distinctReleaseYears={distinctReleaseYears}
+    posters={posters}
+    avatarImageData={avatarImageData}
+    initialSort="release-date-desc"
+  />
+</Layout>

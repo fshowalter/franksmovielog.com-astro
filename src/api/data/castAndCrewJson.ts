@@ -60,9 +60,7 @@ async function parseAllCastAndCrewJson() {
 
 export type CastAndCrewMemberJson = z.infer<typeof CastAndCrewJsonSchema>;
 
-export default async function allCastAndCrewJson(): Promise<
-  CastAndCrewMemberJson[]
-> {
+export async function allCastAndCrewJson(): Promise<CastAndCrewMemberJson[]> {
   if (cache) {
     return cache;
   }

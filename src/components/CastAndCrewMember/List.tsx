@@ -1,65 +1,103 @@
-import { CreditedAs } from "@/components/CreditedAs";
-import { Grade } from "@/components/Grade";
-import { ListItem } from "@/components/ListItem";
-import { ListItemPoster } from "@/components/ListItemPoster";
-import { ListItemTitle } from "@/components/ListItemTitle";
-import { GroupedList } from "@/components/ListWithFiltersLayout";
-import { WatchlistTitleSlug } from "@/components/WatchlistTitleSlug";
-import { Action, ActionType } from "./CastAndCrewMember.reducer";
-import type { CastAndCrewMemberTitle } from "./CastAndCrewMember";
+import { CreditedAs } from "src/components/CreditedAs";
+import { Grade } from "src/components/Grade";
+import { ListItem } from "src/components/ListItem";
+import { ListItemPoster } from "src/components/ListItemPoster";
+import { ListItemTitle } from "src/components/ListItemTitle";
+import { GroupedList } from "src/components/GroupedList";
+import { WatchlistTitleSlug } from "src/components/WatchlistTitleSlug";
+import { Actions, type ActionType } from "./CastAndCrewMember.reducer";
+import type { CastAndCrewMember } from "src/api/castAndCrew";
+import type { PosterImageData } from "src/api/posters";
+
+export interface ListItemValue
+  extends Pick<
+    CastAndCrewMember["titles"][0],
+    | "imdbId"
+    | "title"
+    | "year"
+    | "grade"
+    | "gradeValue"
+    | "slug"
+    | "sortTitle"
+    | "releaseSequence"
+    | "creditedAs"
+    | "watchlistDirectorNames"
+    | "watchlistPerformerNames"
+    | "watchlistWriterNames"
+    | "collectionNames"
+  > {}
 
 export function List({
-  groupedItems,
+  groupedValues,
   dispatch,
   totalCount,
   visibleCount,
+  posters,
 }: {
-  groupedItems: Map<string, CastAndCrewMemberTitle[]>;
-  dispatch: React.Dispatch<Action>;
+  groupedValues: Map<string, ListItemValue[]>;
+  dispatch: React.Dispatch<ActionType>;
   totalCount: number;
   visibleCount: number;
+  posters: Record<string, PosterImageData>;
 }) {
   return (
     <GroupedList
       data-testid="poster-list"
-      groupedItems={groupedItems}
+      groupedValues={groupedValues}
       visibleCount={visibleCount}
       totalCount={totalCount}
-      onShowMore={() => dispatch({ type: ActionType.SHOW_MORE })}
+      onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
     >
-      {(item) => {
-        return <CastAndCrewMemberTitleItem item={item} key={item.imdbId} />;
+      {(value) => {
+        return (
+          <TitleListItem
+            value={value}
+            key={value.imdbId}
+            imageData={posters[value.slug || "default"]}
+          />
+        );
       }}
     </GroupedList>
   );
 }
 
-function CastAndCrewMemberTitleItem({
-  item,
+function TitleListItem({
+  value,
+  imageData,
 }: {
-  item: CastAndCrewMemberTitle;
+  value: ListItemValue;
+  imageData: PosterImageData;
 }): JSX.Element {
   return (
     <ListItem className="items-center">
-      <ListItemPoster slug={item.slug} title={item.title} year={item.year} />
+      <ListItemPoster
+        slug={value.slug}
+        title={value.title}
+        year={value.year}
+        imageData={imageData}
+      />
       <div className="grow pr-gutter tablet:w-full desktop:pr-4">
         <div>
-          <CreditedAs creditedAs={item.creditedAs} />
+          <CreditedAs creditedAs={value.creditedAs} />
           <div className="spacer-y-2" />
-          <ListItemTitle title={item.title} year={item.year} slug={item.slug} />
+          <ListItemTitle
+            title={value.title}
+            year={value.year}
+            slug={value.slug}
+          />
           <div className="spacer-y-2" />
-          {item.grade && (
+          {value.grade && (
             <div className="py-px">
-              <Grade grade={item.grade} height={18} />
+              <Grade grade={value.grade} height={18} />
             </div>
           )}
-          {!item.grade && (
+          {!value.grade && (
             <>
               <WatchlistTitleSlug
-                directorNames={item.watchlistDirectorNames}
-                performerNames={item.watchlistPerformerNames}
-                writerNames={item.watchlistWriterNames}
-                collectionNames={item.collectionNames}
+                directorNames={value.watchlistDirectorNames}
+                performerNames={value.watchlistPerformerNames}
+                writerNames={value.watchlistWriterNames}
+                collectionNames={value.collectionNames}
               />
             </>
           )}

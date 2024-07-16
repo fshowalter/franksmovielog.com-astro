@@ -1,9 +1,13 @@
-import { capitalize } from "@/utils";
-import { Button } from "@/components/Button";
-import { DebouncedInput } from "@/components/DebouncedInput";
-import { SelectField } from "@/components/SelectField";
-import { YearInput } from "@/components/YearInput";
-import { Action, ActionType, Sort } from "./CastAndCrewMember.reducer";
+import { capitalize } from "src/utils";
+import { Button } from "src/components/Button";
+import { DebouncedInput } from "src/components/DebouncedInput";
+import { SelectField } from "src/components/SelectField";
+import { YearInput } from "src/components/YearInput";
+import {
+  Actions,
+  type ActionType,
+  type Sort,
+} from "./CastAndCrewMember.reducer";
 
 export function Filters({
   dispatch,
@@ -12,7 +16,7 @@ export function Filters({
   sortValue,
   creditedAs,
 }: {
-  dispatch: React.Dispatch<Action>;
+  dispatch: React.Dispatch<ActionType>;
   hideReviewed: boolean;
   distinctReleaseYears: readonly string[];
   creditedAs: readonly string[];
@@ -21,7 +25,7 @@ export function Filters({
   return (
     <>
       <div className="flex basis-full flex-col items-center justify-end">
-        <Button onClick={() => dispatch({ type: ActionType.TOGGLE_REVIEWED })}>
+        <Button onClick={() => dispatch({ type: Actions.TOGGLE_REVIEWED })}>
           {hideReviewed ? "Show Reviewed" : "Hide Reviewed"}
         </Button>
       </div>
@@ -31,7 +35,7 @@ export function Filters({
           label="Credits"
           onChange={(e) =>
             dispatch({
-              type: ActionType.FILTER_CREDIT_KIND,
+              type: Actions.FILTER_CREDIT_KIND,
               value: e.target.value,
             })
           }
@@ -50,7 +54,7 @@ export function Filters({
         label="Title"
         placeholder="Enter all or part of a title"
         onInputChange={(value) =>
-          dispatch({ type: ActionType.FILTER_TITLE, value })
+          dispatch({ type: Actions.FILTER_TITLE, value })
         }
       />
 
@@ -58,7 +62,7 @@ export function Filters({
         label="Release Year"
         years={distinctReleaseYears}
         onYearChange={(values) =>
-          dispatch({ type: ActionType.FILTER_RELEASE_YEAR, values })
+          dispatch({ type: Actions.FILTER_RELEASE_YEAR, values })
         }
       />
       <SelectField
@@ -67,7 +71,7 @@ export function Filters({
         label="Order By"
         onChange={(e) =>
           dispatch({
-            type: ActionType.SORT,
+            type: Actions.SORT,
             value: e.target.value as Sort,
           })
         }

@@ -1,5 +1,5 @@
 import { filterValues, sortNumber, sortString } from "../../utils";
-import type { CastAndCrewValue } from "./List";
+import type { ListItemValue } from "./List";
 
 export enum Actions {
   FILTER_NAME = "FILTER_NAME",
@@ -15,22 +15,17 @@ export type Sort =
   | "review-count-asc"
   | "review-count-desc";
 
-function sortValues(
-  values: CastAndCrewValue[],
-  sortOrder: Sort,
-): CastAndCrewValue[] {
-  const sortMap: Record<
-    Sort,
-    (a: CastAndCrewValue, b: CastAndCrewValue) => number
-  > = {
-    "name-asc": (a, b) => sortString(a.name, b.name),
-    "name-desc": (a, b) => sortString(a.name, b.name) * -1,
-    "title-count-asc": (a, b) => sortNumber(a.totalCount, b.totalCount),
-    "title-count-desc": (a, b) => sortNumber(a.totalCount, b.totalCount) * -1,
-    "review-count-asc": (a, b) => sortNumber(a.reviewCount, b.reviewCount),
-    "review-count-desc": (a, b) =>
-      sortNumber(a.reviewCount, b.reviewCount) * -1,
-  };
+function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
+  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
+    {
+      "name-asc": (a, b) => sortString(a.name, b.name),
+      "name-desc": (a, b) => sortString(a.name, b.name) * -1,
+      "title-count-asc": (a, b) => sortNumber(a.totalCount, b.totalCount),
+      "title-count-desc": (a, b) => sortNumber(a.totalCount, b.totalCount) * -1,
+      "review-count-asc": (a, b) => sortNumber(a.reviewCount, b.reviewCount),
+      "review-count-desc": (a, b) =>
+        sortNumber(a.reviewCount, b.reviewCount) * -1,
+    };
 
   const comparer = sortMap[sortOrder];
 
@@ -38,9 +33,9 @@ function sortValues(
 }
 
 interface State {
-  allValues: CastAndCrewValue[];
-  filteredValues: CastAndCrewValue[];
-  filters: Record<string, (value: CastAndCrewValue) => boolean>;
+  allValues: ListItemValue[];
+  filteredValues: ListItemValue[];
+  filters: Record<string, (value: ListItemValue) => boolean>;
   sortValue: Sort;
 }
 
@@ -48,7 +43,7 @@ export function initState({
   values,
   initialSort,
 }: {
-  values: readonly CastAndCrewValue[];
+  values: readonly ListItemValue[];
   initialSort: Sort;
 }): State {
   return {
@@ -85,12 +80,12 @@ export function reducer(state: State, action: ActionType): State {
       const regex = new RegExp(action.value, "i");
       filters = {
         ...state.filters,
-        name: (person: CastAndCrewValue) => {
-          return regex.test(person.name);
+        name: (value: ListItemValue) => {
+          return regex.test(value.name);
         },
       };
       filteredValues = sortValues(
-        filterValues<CastAndCrewValue>({
+        filterValues<ListItemValue>({
           values: state.allValues,
           filters,
         }),
@@ -112,13 +107,13 @@ export function reducer(state: State, action: ActionType): State {
       } else {
         filters = {
           ...state.filters,
-          credits: (item: CastAndCrewValue) => {
-            return item.creditedAs.includes(action.value);
+          credits: (value: ListItemValue) => {
+            return value.creditedAs.includes(action.value);
           },
         };
       }
       filteredValues = sortValues(
-        filterValues<CastAndCrewValue>({
+        filterValues<ListItemValue>({
           values: state.allValues,
           filters,
         }),

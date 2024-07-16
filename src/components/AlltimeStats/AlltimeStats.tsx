@@ -8,26 +8,24 @@ import { MostWatchedWriters } from "src/components/MostWatchedWriters";
 import { StatsNavigation } from "src/components/StatsNavigation";
 import { Callouts } from "./Callouts";
 import { GradeDistribution } from "./GradeDistribution";
-import type { CalloutsAlltimeStatsData } from "./Callouts";
-import type { GradeDistributionData } from "./GradeDistribution";
-import type { MostWatchedMoviesListItemData } from "src/components/MostWatchedMovies";
-import type { DecadeDistributionData } from "src/components/DecadeDistribution";
-import type { MediaDistributionData } from "src/components/MediaDistribution";
-import type { MostWatchedPeopleListItemData } from "src/components/MostWatchedPeople";
 import type { PosterImageData } from "src/api/posters";
-
-interface AlltimeStatsData extends CalloutsAlltimeStatsData {
-  gradeDistribution: readonly GradeDistributionData[];
-  mostWatchedTitles: readonly MostWatchedMoviesListItemData[];
-  decadeDistribution: readonly DecadeDistributionData[];
-  mediaDistribution: readonly MediaDistributionData[];
-  mostWatchedDirectors: readonly MostWatchedPeopleListItemData[];
-  mostWatchedPerformers: readonly MostWatchedPeopleListItemData[];
-  mostWatchedWriters: readonly MostWatchedPeopleListItemData[];
-}
+import type { AlltimeStats } from "src/api/alltimeStats";
 
 export interface AlltimeStatsProps {
-  stats: AlltimeStatsData;
+  stats: Pick<
+    AlltimeStats,
+    | "decadeDistribution"
+    | "gradeDistribution"
+    | "mediaDistribution"
+    | "mostWatchedDirectors"
+    | "mostWatchedPerformers"
+    | "mostWatchedTitles"
+    | "mostWatchedWriters"
+    | "reviewCount"
+    | "titleCount"
+    | "viewingCount"
+    | "watchlistTitlesReviewedCount"
+  >;
   mostWatchedMoviesPosters: Record<string, PosterImageData>;
   mostWatchedPeoplePosters: Record<string, PosterImageData>;
   distinctStatYears: readonly string[];
@@ -58,7 +56,12 @@ export function AlltimeStats({
         </div>
         <div>
           <div className="spacer-y-8" />
-          <Callouts stats={stats} />
+          <Callouts
+            titleCount={stats.titleCount}
+            viewingCount={stats.viewingCount}
+            reviewCount={stats.reviewCount}
+            watchlistTitlesReviewedCount={stats.watchlistTitlesReviewedCount}
+          />
         </div>
       </header>
       <div className="flex w-full max-w-[960px] flex-col items-stretch gap-y-8 py-8 tablet:px-gutter desktop:px-pageMargin">
@@ -68,7 +71,7 @@ export function AlltimeStats({
         />
         <DecadeDistribution data={stats.decadeDistribution} />
         <MediaDistribution data={stats.mediaDistribution} />
-        <GradeDistribution data={stats.gradeDistribution} />
+        <GradeDistribution values={stats.gradeDistribution} />
         <MostWatchedDirectors
           people={stats.mostWatchedDirectors}
           posters={mostWatchedPeoplePosters}

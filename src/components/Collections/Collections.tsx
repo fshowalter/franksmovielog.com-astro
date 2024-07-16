@@ -1,35 +1,30 @@
 "use client";
 
 import { useReducer } from "react";
-import { ListWithFiltersLayout } from "@/components/ListWithFiltersLayout";
+import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
 import { initState, reducer } from "./Collections.reducer";
 import { Filters } from "./Filters";
 import { Header } from "./Header";
-import { List } from "./List";
+import { List, type ListItemValue } from "./List";
 import type { Sort } from "./Collections.reducer";
-
-export interface Collection {
-  name: string;
-  slug: string;
-  titleCount: number;
-  reviewCount: number;
-  avatar: string | null;
-}
+import type { AvatarImageData } from "src/api/avatars";
 
 export interface CollectionsProps {
-  collections: readonly Collection[];
+  values: readonly ListItemValue[];
   initialSort: Sort;
+  avatars: Record<string, AvatarImageData>;
 }
 
 export function Collections({
-  collections,
+  values,
   initialSort,
+  avatars,
 }: CollectionsProps): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
-      entities: collections,
-      sort: initialSort,
+      values,
+      initialSort,
     },
     initState,
   );
@@ -40,9 +35,10 @@ export function Collections({
       filters={<Filters dispatch={dispatch} sortValue={state.sortValue} />}
       list={
         <List
-          entities={state.filteredEntities}
-          totalCount={state.filteredEntities.length}
-          visibleCount={state.filteredEntities.length}
+          values={state.filteredValues}
+          totalCount={state.filteredValues.length}
+          visibleCount={state.filteredValues.length}
+          avatars={avatars}
         />
       }
     />

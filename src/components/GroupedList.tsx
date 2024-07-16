@@ -2,14 +2,14 @@ import { ListInfo } from "./ListInfo";
 import { ShowMoreButton } from "./ShowMoreButton";
 
 export function GroupedList<T>({
-  groupedItems,
+  groupedValues,
   visibleCount,
   totalCount,
   onShowMore,
   children,
   className,
 }: {
-  groupedItems: Map<string, Iterable<T>>;
+  groupedValues: Map<string, Iterable<T>>;
   visibleCount: number;
   totalCount: number;
   onShowMore: () => void;
@@ -21,12 +21,12 @@ export function GroupedList<T>({
       <ListInfo visibleCount={visibleCount} totalCount={totalCount} />
 
       <ol className={className}>
-        {[...groupedItems].map((groupedItem, index) => {
-          const [group, groupItems] = groupedItem;
+        {[...groupedValues].map((groupedValue, index) => {
+          const [group, groupValues] = groupedValue;
 
           return (
             <GroupingListItem groupText={group} key={group} zIndex={index + 1}>
-              <ol>{[...groupItems].map(children)}</ol>
+              <ol>{[...groupValues].map(children)}</ol>
             </GroupingListItem>
           );
         })}

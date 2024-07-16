@@ -1,4 +1,4 @@
-import { promises as fs, existsSync } from "node:fs";
+import { promises as fs } from "node:fs";
 import { z } from "zod";
 import { join } from "path";
 
@@ -29,7 +29,7 @@ const CollectionJsonSchema = z.object({
   titles: z.array(TitleSchema),
 });
 
-let allCollectionsJson: CollectionJson[];
+let cache: CollectionJson[];
 
 async function parseAllCollectionsJson() {
   const dirents = await fs.readdir(collectionsJsonDirectory, {
@@ -46,36 +46,19 @@ async function parseAllCollectionsJson() {
         );
 
         const json = JSON.parse(fileContents) as unknown;
-        const collection = CollectionJsonSchema.parse(json);
-
-        const avatar = existsSync(
-          join(
-            process.cwd(),
-            "public",
-            "assets",
-            "avatars",
-            `${collection.slug}.png`,
-          ),
-        )
-          ? `/assets/avatars/${collection.slug}.png`
-          : null;
-
-        return {
-          ...collection,
-          avatar,
-        };
+        return CollectionJsonSchema.parse(json);
       }),
   );
 }
 
-type CollectionJson = z.infer<typeof CollectionJsonSchema> & {
-  avatar: string | null;
-};
+export type CollectionJson = z.infer<typeof CollectionJsonSchema>;
 
-export default async function castAndCrewJson(): Promise<CollectionJson[]> {
-  if (!allCollectionsJson) {
-    allCollectionsJson = await parseAllCollectionsJson();
+export async function allCollectionsJson(): Promise<CollectionJson[]> {
+  if (cache) {
+    return cache;
   }
 
-  return allCollectionsJson;
+  cache = await parseAllCollectionsJson();
+
+  return cache;
 }

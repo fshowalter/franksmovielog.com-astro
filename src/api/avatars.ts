@@ -1,5 +1,4 @@
-import { allCastAndCrew } from "src/api/castAndCrew";
-import { join } from "node:path";
+import { basename, extname } from "node:path";
 import { getImage } from "astro:assets";
 
 export interface AvatarImageData {
@@ -12,7 +11,6 @@ export interface Props {
   height: number;
 }
 
-const castAndCrew = await allCastAndCrew();
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/content/assets/avatars/*.png",
 );
@@ -32,26 +30,22 @@ export async function getAvatars({
   const imageMap: Record<string, AvatarImageData> = {};
 
   await Promise.all(
-    castAndCrew.map(async (member) => {
-      const imagePath = `/${join("content", "assets", "avatars")}/${member.slug}.png`;
+    Object.keys(images).map(async (image) => {
+      const avatarFile = await images[image]();
 
-      if (images[imagePath]) {
-        const avatarFile = await images[imagePath]();
+      const optimizedImage = await getImage({
+        src: avatarFile.default,
+        width: width,
+        height: height,
+        format: "avif",
+        densities: [1, 2],
+        quality: 80,
+      });
 
-        const optimizedImage = await getImage({
-          src: avatarFile.default,
-          width: width,
-          height: height,
-          format: "avif",
-          densities: [1, 2],
-          quality: 80,
-        });
-
-        imageMap[member.slug] = {
-          srcSet: optimizedImage.srcSet.attribute,
-          src: optimizedImage.src,
-        };
-      }
+      imageMap[basename(image, extname(image))] = {
+        srcSet: optimizedImage.srcSet.attribute,
+        src: optimizedImage.src,
+      };
     }),
   );
 

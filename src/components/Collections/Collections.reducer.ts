@@ -1,7 +1,7 @@
-import { filterCollection, sortNumber, sortString } from "@/utils";
-import type { Collection } from "./Collections";
+import { filterValues, sortNumber, sortString } from "src/utils";
+import type { ListItemValue } from "./List";
 
-export enum ActionType {
+export enum Actions {
   FILTER_NAME = "FILTER_NAME",
   SORT = "SORT",
 }
@@ -14,77 +14,73 @@ export type Sort =
   | "review-count-asc"
   | "review-count-desc";
 
-function sortEntities(entities: Collection[], sortOrder: Sort): Collection[] {
-  const sortMap: Record<Sort, (a: Collection, b: Collection) => number> = {
-    "name-asc": (a, b) => sortString(a.name, b.name),
-    "name-desc": (a, b) => sortString(a.name, b.name) * -1,
-    "title-count-asc": (a, b) => sortNumber(a.titleCount, b.titleCount),
-    "title-count-desc": (a, b) => sortNumber(a.titleCount, b.titleCount) * -1,
-    "review-count-asc": (a, b) => sortNumber(a.reviewCount, b.reviewCount),
-    "review-count-desc": (a, b) =>
-      sortNumber(a.reviewCount, b.reviewCount) * -1,
-  };
+function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
+  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
+    {
+      "name-asc": (a, b) => sortString(a.name, b.name),
+      "name-desc": (a, b) => sortString(a.name, b.name) * -1,
+      "title-count-asc": (a, b) => sortNumber(a.titleCount, b.titleCount),
+      "title-count-desc": (a, b) => sortNumber(a.titleCount, b.titleCount) * -1,
+      "review-count-asc": (a, b) => sortNumber(a.reviewCount, b.reviewCount),
+      "review-count-desc": (a, b) =>
+        sortNumber(a.reviewCount, b.reviewCount) * -1,
+    };
 
   const comparer = sortMap[sortOrder];
 
-  return entities.sort(comparer);
+  return values.sort(comparer);
 }
 
 interface State {
-  allEntities: Collection[];
-  filteredEntities: Collection[];
-  filters: Record<string, (entity: Collection) => boolean>;
+  allValues: ListItemValue[];
+  filteredValues: ListItemValue[];
+  filters: Record<string, (entity: ListItemValue) => boolean>;
   sortValue: Sort;
 }
 
 export function initState({
-  entities,
-  sort,
+  values,
+  initialSort,
 }: {
-  entities: readonly Collection[];
-  sort: Sort;
+  values: readonly ListItemValue[];
+  initialSort: Sort;
 }): State {
   return {
-    allEntities: [...entities],
-    filteredEntities: [...entities],
+    allValues: [...values],
+    filteredValues: [...values],
     filters: {},
-    sortValue: sort,
+    sortValue: initialSort,
   };
 }
 
 interface FilterNameAction {
-  type: ActionType.FILTER_NAME;
+  type: Actions.FILTER_NAME;
   value: string;
 }
 
 interface SortAction {
-  type: ActionType.SORT;
+  type: Actions.SORT;
   value: Sort;
 }
 
-export type Action = FilterNameAction | SortAction;
+export type ActionType = FilterNameAction | SortAction;
 
-/**
- * Applies the given action to the given state, returning a new State object.
- * @param state The current state.
- * @param action The action to apply.
- */
-export function reducer(state: State, action: Action): State {
+export function reducer(state: State, action: ActionType): State {
   let filters;
-  let filteredEntities;
+  let filteredValues;
 
   switch (action.type) {
-    case ActionType.FILTER_NAME: {
+    case Actions.FILTER_NAME: {
       const regex = new RegExp(action.value, "i");
       filters = {
         ...state.filters,
-        name: (person: Collection) => {
+        name: (person: ListItemValue) => {
           return regex.test(person.name);
         },
       };
-      filteredEntities = sortEntities(
-        filterCollection<Collection>({
-          collection: state.allEntities,
+      filteredValues = sortValues(
+        filterValues<ListItemValue>({
+          values: state.allValues,
           filters,
         }),
         state.sortValue,
@@ -92,15 +88,15 @@ export function reducer(state: State, action: Action): State {
       return {
         ...state,
         filters,
-        filteredEntities,
+        filteredValues,
       };
     }
-    case ActionType.SORT: {
-      filteredEntities = sortEntities(state.filteredEntities, action.value);
+    case Actions.SORT: {
+      filteredValues = sortValues(state.filteredValues, action.value);
       return {
         ...state,
         sortValue: action.value,
-        filteredEntities,
+        filteredValues,
       };
     }
     // no default

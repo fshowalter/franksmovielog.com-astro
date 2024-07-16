@@ -1,13 +1,13 @@
 import {
-  FilterableState,
-  buildGroupItems,
+  type FilterableState,
+  buildGroupValues,
   collator,
   filterTools,
   sortNumber,
   sortString,
-} from "@/utils";
+} from "src/utils";
 
-import type { CastAndCrewMemberTitle } from "./CastAndCrewMember";
+import type { ListItemValue } from "./List";
 
 export type Sort =
   | "release-date-desc"
@@ -18,82 +18,79 @@ export type Sort =
 
 const SHOW_COUNT_DEFAULT = 100;
 
-const groupItems = buildGroupItems(groupForItem);
+const groupValues = buildGroupValues(groupForValue);
 const { updateFilter, applyFilters, clearFilter } = filterTools(
   sortItems,
-  groupItems,
+  groupValues,
 );
 
-function sortItems(items: CastAndCrewMemberTitle[], sortOrder: Sort) {
-  const sortMap: Record<
-    Sort,
-    (a: CastAndCrewMemberTitle, b: CastAndCrewMemberTitle) => number
-  > = {
-    "release-date-desc": (a, b) =>
-      sortString(a.releaseSequence, b.releaseSequence) * -1,
-    "release-date-asc": (a, b) =>
-      sortString(a.releaseSequence, b.releaseSequence),
-    title: (a, b) => collator.compare(a.sortTitle, b.sortTitle),
-    "grade-asc": (a, b) => sortNumber(a.gradeValue ?? 50, b.gradeValue ?? 50),
-    "grade-desc": (a, b) =>
-      sortNumber(a.gradeValue ?? -1, b.gradeValue ?? -1) * -1,
-  };
+function sortItems(items: ListItemValue[], sortOrder: Sort) {
+  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
+    {
+      "release-date-desc": (a, b) =>
+        sortString(a.releaseSequence, b.releaseSequence) * -1,
+      "release-date-asc": (a, b) =>
+        sortString(a.releaseSequence, b.releaseSequence),
+      title: (a, b) => collator.compare(a.sortTitle, b.sortTitle),
+      "grade-asc": (a, b) => sortNumber(a.gradeValue ?? 50, b.gradeValue ?? 50),
+      "grade-desc": (a, b) =>
+        sortNumber(a.gradeValue ?? -1, b.gradeValue ?? -1) * -1,
+    };
 
   const comparer = sortMap[sortOrder];
   return items.sort(comparer);
 }
 
-function groupForItem(item: CastAndCrewMemberTitle, sortValue: Sort): string {
+function groupForValue(value: ListItemValue, sortValue: Sort): string {
   switch (sortValue) {
     case "release-date-asc":
     case "release-date-desc": {
-      return item.year.toString();
+      return value.year;
     }
     case "grade-asc":
     case "grade-desc": {
-      return item.grade ?? "Unrated";
+      return value.grade ?? "Unrated";
     }
     case "title": {
-      const letter = item.sortTitle.substring(0, 1);
+      const letter = value.sortTitle.substring(0, 1);
 
       if (letter.toLowerCase() == letter.toUpperCase()) {
         return "#";
       }
 
-      return item.sortTitle.substring(0, 1).toLocaleUpperCase();
+      return value.sortTitle.substring(0, 1).toLocaleUpperCase();
     }
     // no default
   }
 }
 
 interface State
-  extends FilterableState<
-    CastAndCrewMemberTitle,
-    Sort,
-    Map<string, CastAndCrewMemberTitle[]>
-  > {
+  extends FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>> {
   hideReviewed: boolean;
 }
 
 export function initState({
-  items,
-  sort,
+  values,
+  initialSort,
 }: {
-  items: CastAndCrewMemberTitle[];
-  sort: Sort;
+  values: ListItemValue[];
+  initialSort: Sort;
 }): State {
   return {
-    allItems: items,
-    filteredItems: items,
+    allValues: values,
+    filteredValues: values,
     filters: {},
-    groupedItems: groupItems(items.slice(0, SHOW_COUNT_DEFAULT), sort),
+    groupedValues: groupValues(
+      values.slice(0, SHOW_COUNT_DEFAULT),
+      initialSort,
+    ),
     showCount: SHOW_COUNT_DEFAULT,
-    sortValue: sort,
+    sortValue: initialSort,
     hideReviewed: false,
   };
 }
 
-export enum ActionType {
+export enum Actions {
   FILTER_TITLE = "FILTER_TITLE",
   FILTER_RELEASE_YEAR = "FILTER_RELEASE_YEAR",
   SORT = "SORT",
@@ -103,34 +100,34 @@ export enum ActionType {
 }
 
 interface FilterTitleAction {
-  type: ActionType.FILTER_TITLE;
+  type: Actions.FILTER_TITLE;
   value: string;
 }
 
 interface FilterCreditKindAction {
-  type: ActionType.FILTER_CREDIT_KIND;
+  type: Actions.FILTER_CREDIT_KIND;
   value: string;
 }
 
 interface FilterReleaseYearAction {
-  type: ActionType.FILTER_RELEASE_YEAR;
+  type: Actions.FILTER_RELEASE_YEAR;
   values: [string, string];
 }
 
 interface SortAction {
-  type: ActionType.SORT;
+  type: Actions.SORT;
   value: Sort;
 }
 
 interface ShowMoreAction {
-  type: ActionType.SHOW_MORE;
+  type: Actions.SHOW_MORE;
 }
 
 interface ToggleReviewedAction {
-  type: ActionType.TOGGLE_REVIEWED;
+  type: Actions.TOGGLE_REVIEWED;
 }
 
-export type Action =
+export type ActionType =
   | FilterTitleAction
   | FilterReleaseYearAction
   | FilterCreditKindAction
@@ -143,62 +140,62 @@ export type Action =
  * @param state The current state.
  * @param action The action to apply.
  */
-export function reducer(state: State, action: Action): State {
-  let filteredItems;
-  let groupedItems;
+export function reducer(state: State, action: ActionType): State {
+  let filteredValues;
+  let groupedValues;
   let filters;
 
   switch (action.type) {
-    case ActionType.FILTER_TITLE: {
+    case Actions.FILTER_TITLE: {
       const regex = new RegExp(action.value, "i");
-      return updateFilter(state, "title", (item) => {
-        return regex.test(item.title);
+      return updateFilter(state, "title", (value) => {
+        return regex.test(value.title);
       });
     }
-    case ActionType.FILTER_RELEASE_YEAR: {
-      return updateFilter(state, "releaseYear", (item) => {
-        const releaseYear = item.year;
+    case Actions.FILTER_RELEASE_YEAR: {
+      return updateFilter(state, "releaseYear", (value) => {
+        const releaseYear = value.year;
         return (
           releaseYear >= action.values[0] && releaseYear <= action.values[1]
         );
       });
     }
-    case ActionType.FILTER_CREDIT_KIND: {
+    case Actions.FILTER_CREDIT_KIND: {
       return (
         clearFilter(action.value, state, "credits") ??
-        updateFilter(state, "credits", (item) => {
-          return item.creditedAs.includes(action.value);
+        updateFilter(state, "credits", (value) => {
+          return value.creditedAs.includes(action.value);
         })
       );
     }
-    case ActionType.SORT: {
-      filteredItems = sortItems(state.filteredItems, action.value);
-      groupedItems = groupItems(
-        filteredItems.slice(0, state.showCount),
+    case Actions.SORT: {
+      filteredValues = sortItems(state.filteredValues, action.value);
+      groupedValues = groupValues(
+        filteredValues.slice(0, state.showCount),
         action.value,
       );
       return {
         ...state,
         sortValue: action.value,
-        filteredItems,
-        groupedItems,
+        filteredValues,
+        groupedValues,
       };
     }
-    case ActionType.SHOW_MORE: {
+    case Actions.SHOW_MORE: {
       const showCount = state.showCount + SHOW_COUNT_DEFAULT;
 
-      groupedItems = groupItems(
-        state.filteredItems.slice(0, showCount),
+      groupedValues = groupValues(
+        state.filteredValues.slice(0, showCount),
         state.sortValue,
       );
 
       return {
         ...state,
-        groupedItems,
+        groupedValues,
         showCount,
       };
     }
-    case ActionType.TOGGLE_REVIEWED: {
+    case Actions.TOGGLE_REVIEWED: {
       if (state.hideReviewed) {
         filters = {
           ...state.filters,
@@ -207,8 +204,8 @@ export function reducer(state: State, action: Action): State {
       } else {
         filters = {
           ...state.filters,
-          reviewed: (item: CastAndCrewMemberTitle) => {
-            return item.slug === null;
+          reviewed: (value: ListItemValue) => {
+            return value.slug === null;
           },
         };
       }

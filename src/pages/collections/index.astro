@@ -1,22 +1,21 @@
 ---
 import Layout from "src/layouts/Layout.astro";
-import { type ListItemValue, CastAndCrew } from "src/components/CastAndCrew";
-import { allCastAndCrew } from "src/api/castAndCrew";
+import { type ListItemValue, Collections } from "src/components/Collections";
+import { allCollections } from "src/api/collections";
 import { getAvatars } from "src/api/avatars";
 import { ListItemAvatarImageConfig } from "src/components/ListItemAvatar";
 
-const { castAndCrew } = await allCastAndCrew();
+const { collections } = await allCollections();
 const avatars = await getAvatars(ListItemAvatarImageConfig);
 
-castAndCrew.sort((a, b) => a.name.localeCompare(b.name));
+collections.sort((a, b) => a.name.localeCompare(b.name));
 
-const listItemValues = castAndCrew.map((member) => {
+const listItemValues = collections.map((member) => {
   const listItemValue: ListItemValue = {
     name: member.name,
     slug: member.slug,
     reviewCount: member.reviewCount,
-    totalCount: member.totalCount,
-    creditedAs: member.creditedAs,
+    titleCount: member.titleCount,
   };
 
   return listItemValue;
@@ -24,10 +23,10 @@ const listItemValues = castAndCrew.map((member) => {
 ---
 
 <Layout
-  title="Cast and Crew"
-  description="A sortable and filterable list of select cast and crew members of reviewed movies."
+  title="Collections"
+  description="A sortable and filterable list of movie collections."
 >
-  <CastAndCrew
+  <Collections
     client:load
     initialSort="name-asc"
     avatars={avatars}
