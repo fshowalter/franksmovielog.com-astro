@@ -1,39 +1,47 @@
-import { PageTitle } from "@/components/PageTitle";
+import { PageTitle } from "src/components/PageTitle";
 import {
   DecadeDistribution,
+  type DecadeDistributionData,
+} from "src/components/DecadeDistribution";
+import {
   MediaDistribution,
+  type MediaDistributionData,
+} from "src/components/MediaDistribution";
+import {
   MostWatchedMovies,
-} from "@/components/";
-import { MostWatchedDirectors } from "@/components/MostWatchedDirectors";
-import { MostWatchedPerformers } from "@/components/MostWatchedPerformers";
-import { MostWatchedWriters } from "@/components/MostWatchedWriters";
-import { StatsNavigation } from "@/components/StatsNavigation";
-import { Callouts } from "./Callouts";
-import type { CalloutsData } from "./Callouts";
-import type { DecadeDistributionData } from "@/components/DecadeDistribution";
-import type { MediaDistributionData } from "@/components/MediaDistribution";
-import type { MostWatchedMovieListItemData } from "@/components/MostWatchedMovies";
-import type { MostWatchedPersonListItemData } from "@/components/MostWatchedPeople";
+  type MostWatchedMoviesListItemData,
+} from "src/components/MostWatchedMovies";
+import { MostWatchedDirectors } from "src/components/MostWatchedDirectors";
+import { MostWatchedPerformers } from "src/components/MostWatchedPerformers";
+import { MostWatchedWriters } from "src/components/MostWatchedWriters";
+import { StatsNavigation } from "src/components/StatsNavigation";
+import { Callouts, type CalloutsData } from "./Callouts";
+import type { MostWatchedPeopleListItemData } from "src/components/MostWatchedPeople";
+import type { PosterImageData } from "src/api/posters";
 
 interface YearStatsData extends CalloutsData {
   decadeDistribution: readonly DecadeDistributionData[];
   mediaDistribution: readonly MediaDistributionData[];
-  mostWatchedTitles: readonly MostWatchedMovieListItemData[];
-  mostWatchedDirectors: readonly MostWatchedPersonListItemData[];
-  mostWatchedWriters: readonly MostWatchedPersonListItemData[];
-  mostWatchedPerformers: readonly MostWatchedPersonListItemData[];
+  mostWatchedTitles: readonly MostWatchedMoviesListItemData[];
+  mostWatchedDirectors: readonly MostWatchedPeopleListItemData[];
+  mostWatchedWriters: readonly MostWatchedPeopleListItemData[];
+  mostWatchedPerformers: readonly MostWatchedPeopleListItemData[];
 }
 
 export interface YearStatsProps {
   year: string;
-  data: YearStatsData;
-  statYears: readonly string[];
+  stats: YearStatsData;
+  distinctStatYears: readonly string[];
+  mostWatchedMoviesPosters: Record<string, PosterImageData>;
+  mostWatchedPeoplePosters: Record<string, PosterImageData>;
 }
 
 export function YearStats({
   year,
-  data,
-  statYears,
+  stats,
+  distinctStatYears,
+  mostWatchedMoviesPosters,
+  mostWatchedPeoplePosters,
 }: YearStatsProps): JSX.Element {
   return (
     <main className="flex flex-col items-center">
@@ -41,7 +49,7 @@ export function YearStats({
         <div className="flex flex-col items-center">
           <PageTitle className="pt-6 desktop:pt-8">{`${year} Stats`}</PageTitle>
           <p className="text-subtle">
-            {[...statYears].reverse()[1] === year
+            {[...distinctStatYears].reverse()[1] === year
               ? "A year in progress..."
               : "A Year in Review"}
           </p>
@@ -55,21 +63,33 @@ export function YearStats({
 
               return `/viewings/stats/${year}/`;
             }}
-            years={statYears}
+            years={distinctStatYears}
           />
         </div>
         <div>
           <div className="spacer-y-8" />
-          <Callouts data={data} />
+          <Callouts data={stats} />
         </div>
       </header>
       <div className="flex w-full max-w-[960px] flex-col items-stretch gap-y-8 py-8 tablet:px-gutter desktop:px-pageMargin">
-        <MostWatchedMovies data={data.mostWatchedTitles} />
-        <DecadeDistribution data={data.decadeDistribution} />
-        <MediaDistribution data={data.mediaDistribution} />
-        <MostWatchedDirectors data={data.mostWatchedDirectors} />
-        <MostWatchedPerformers data={data.mostWatchedPerformers} />
-        <MostWatchedWriters data={data.mostWatchedWriters} />
+        <MostWatchedMovies
+          posters={mostWatchedMoviesPosters}
+          titles={stats.mostWatchedTitles}
+        />
+        <DecadeDistribution data={stats.decadeDistribution} />
+        <MediaDistribution data={stats.mediaDistribution} />
+        <MostWatchedDirectors
+          posters={mostWatchedPeoplePosters}
+          people={stats.mostWatchedDirectors}
+        />
+        <MostWatchedPerformers
+          posters={mostWatchedPeoplePosters}
+          people={stats.mostWatchedPerformers}
+        />
+        <MostWatchedWriters
+          posters={mostWatchedPeoplePosters}
+          people={stats.mostWatchedWriters}
+        />
       </div>
     </main>
   );

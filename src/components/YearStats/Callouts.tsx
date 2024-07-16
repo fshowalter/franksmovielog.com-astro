@@ -1,4 +1,4 @@
-import { StatsCallout } from "@/components/Stats";
+import { StatsCallout } from "src/components/StatsCallout";
 
 export interface CalloutsData {
   titleCount: number;

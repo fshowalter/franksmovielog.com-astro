@@ -54,7 +54,7 @@ const YearStatsJsonSchema = z.object({
   mostWatchedWriters: z.array(MostWatchedPersonSchema),
 });
 
-type YearStatsJson = z.infer<typeof YearStatsJsonSchema>;
+export type YearStatsJson = z.infer<typeof YearStatsJsonSchema>;
 
 let cache: YearStatsJson[];
 
@@ -78,7 +78,7 @@ async function parseAllYearStatsJson() {
   );
 }
 
-export async function yearStatsJson(): Promise<YearStatsJson[]> {
+export async function allYearStatsJson(): Promise<YearStatsJson[]> {
   if (cache) {
     return cache;
   }
