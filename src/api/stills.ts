@@ -28,6 +28,8 @@ export async function getStills({
   const key = width;
 
   if (key in cache) {
+    console.log("cache");
+    console.log(Object.keys(cache));
     return cache[key]!;
   }
 
