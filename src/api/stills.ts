@@ -52,7 +52,7 @@ export async function getStills({
   });
 
   cache[key] = imageMap;
-  console.log(Object.keys(cache));
+  console.log(Object.keys(imageMap));
 
   return imageMap;
 }
