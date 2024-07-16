@@ -9,7 +9,7 @@ const watchlistTitlesJsonFile = join(
   "watchlist-titles.json",
 );
 
-const WatchlistTitlesJsonSchema = z.object({
+const WatchlistTitleJsonSchema = z.object({
   imdbId: z.string(),
   title: z.string(),
   year: z.string(),
@@ -22,15 +22,21 @@ const WatchlistTitlesJsonSchema = z.object({
   collectionNames: z.array(z.string()),
 });
 
-type WatchlistTitlesJson = z.infer<typeof WatchlistTitlesJsonSchema>;
+let cache: WatchlistTitleJson[];
 
-export default async function getWatchlistTitlesJsonData(): Promise<
-  WatchlistTitlesJson[]
-> {
+export type WatchlistTitleJson = z.infer<typeof WatchlistTitleJsonSchema>;
+
+export async function allWatchlistTitlesJson(): Promise<WatchlistTitleJson[]> {
+  if (cache) {
+    return cache;
+  }
+
   const json = await fs.readFile(watchlistTitlesJsonFile, "utf8");
   const data = JSON.parse(json) as unknown[];
 
-  return data.map((title) => {
-    return WatchlistTitlesJsonSchema.parse(title);
+  cache = data.map((title) => {
+    return WatchlistTitleJsonSchema.parse(title);
   });
+
+  return cache;
 }

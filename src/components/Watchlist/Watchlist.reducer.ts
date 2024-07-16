@@ -1,70 +1,79 @@
-import { buildGroupItems, collator, filterTools, sortString } from "@/utils";
-import type { ListItemData } from "./List";
-import type { FilterableState } from "@/utils";
+import {
+  buildGroupValues,
+  collator,
+  filterTools,
+  sortString,
+  type FilterableState,
+} from "src/utils";
+import type { ListItemValue } from "./List";
 
 export type Sort = "release-date-desc" | "release-date-asc" | "title";
 
 const SHOW_COUNT_DEFAULT = 100;
 
-const groupItems = buildGroupItems(groupForItem);
-const { updateFilter, applyFilters } = filterTools(sortItems, groupItems);
+const groupValues = buildGroupValues(groupForValue);
+const { updateFilter, applyFilters } = filterTools(sortValues, groupValues);
 
-function sortItems(items: ListItemData[], sortOrder: Sort) {
-  const sortMap: Record<Sort, (a: ListItemData, b: ListItemData) => number> = {
-    "release-date-desc": (a, b) =>
-      sortString(a.releaseSequence, b.releaseSequence) * -1,
-    "release-date-asc": (a, b) =>
-      sortString(a.releaseSequence, b.releaseSequence),
-    title: (a, b) => collator.compare(a.sortTitle, b.sortTitle),
-  };
+function sortValues(items: ListItemValue[], sortOrder: Sort) {
+  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
+    {
+      "release-date-desc": (a, b) =>
+        sortString(a.releaseSequence, b.releaseSequence) * -1,
+      "release-date-asc": (a, b) =>
+        sortString(a.releaseSequence, b.releaseSequence),
+      title: (a, b) => collator.compare(a.sortTitle, b.sortTitle),
+    };
 
   const comparer = sortMap[sortOrder];
   return items.sort(comparer);
 }
 
-function groupForItem(item: ListItemData, sortValue: Sort): string {
+function groupForValue(value: ListItemValue, sortValue: Sort): string {
   switch (sortValue) {
     case "release-date-asc":
     case "release-date-desc": {
-      return item.year.toString();
+      return value.year;
     }
     case "title": {
-      const letter = item.sortTitle.substring(0, 1);
+      const letter = value.sortTitle.substring(0, 1);
 
       if (letter.toLowerCase() == letter.toUpperCase()) {
         return "#";
       }
 
-      return item.sortTitle.substring(0, 1).toLocaleUpperCase();
+      return value.sortTitle.substring(0, 1).toLocaleUpperCase();
     }
     // no default
   }
 }
 
 interface State
-  extends FilterableState<ListItemData, Sort, Map<string, ListItemData[]>> {
+  extends FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>> {
   hideReviewed: boolean;
 }
 
 export function initState({
-  items,
-  sort,
+  values,
+  initialSort,
 }: {
-  items: ListItemData[];
-  sort: Sort;
+  values: ListItemValue[];
+  initialSort: Sort;
 }): State {
   return {
-    allItems: items,
-    filteredItems: items,
+    allValues: values,
+    filteredValues: values,
     filters: {},
-    groupedItems: groupItems(items.slice(0, SHOW_COUNT_DEFAULT), sort),
+    groupedValues: groupValues(
+      values.slice(0, SHOW_COUNT_DEFAULT),
+      initialSort,
+    ),
     showCount: SHOW_COUNT_DEFAULT,
-    sortValue: sort,
+    sortValue: initialSort,
     hideReviewed: false,
   };
 }
 
-export enum ActionType {
+export enum Actions {
   FILTER_TITLE = "FILTER_TITLE",
   FILTER_RELEASE_YEAR = "FILTER_RELEASE_YEAR",
   FILTER_DIRECTOR = "FILTER_DIRECTOR",
@@ -76,45 +85,45 @@ export enum ActionType {
 }
 
 interface FilterTitleAction {
-  type: ActionType.FILTER_TITLE;
+  type: Actions.FILTER_TITLE;
   value: string;
 }
 
 interface FilterCollectionAction {
-  type: ActionType.FILTER_COLLECTION;
+  type: Actions.FILTER_COLLECTION;
   value: string;
 }
 
 interface FilterDirectorAction {
-  type: ActionType.FILTER_DIRECTOR;
+  type: Actions.FILTER_DIRECTOR;
   value: string;
 }
 
 interface FilterPerformerAction {
-  type: ActionType.FILTER_PERFORMER;
+  type: Actions.FILTER_PERFORMER;
   value: string;
 }
 
 interface FilterWriterAction {
-  type: ActionType.FILTER_WRITER;
+  type: Actions.FILTER_WRITER;
   value: string;
 }
 
 interface FilterReleaseYearAction {
-  type: ActionType.FILTER_RELEASE_YEAR;
+  type: Actions.FILTER_RELEASE_YEAR;
   values: [string, string];
 }
 
 interface SortAction {
-  type: ActionType.SORT;
+  type: Actions.SORT;
   value: Sort;
 }
 
 interface ShowMoreAction {
-  type: ActionType.SHOW_MORE;
+  type: Actions.SHOW_MORE;
 }
 
-export type Action =
+export type ActionType =
   | FilterTitleAction
   | FilterDirectorAction
   | FilterPerformerAction
@@ -142,86 +151,81 @@ function clearFilter(
   return applyFilters(filters, currentState);
 }
 
-/**
- * Applies the given action to the given state, returning a new State object.
- * @param state The current state.
- * @param action The action to apply.
- */
-export function reducer(state: State, action: Action): State {
-  let filteredItems;
-  let groupedItems;
+export function reducer(state: State, action: ActionType): State {
+  let filteredValues;
+  let groupedValues;
 
   switch (action.type) {
-    case ActionType.FILTER_TITLE: {
+    case Actions.FILTER_TITLE: {
       const regex = new RegExp(action.value, "i");
-      return updateFilter(state, "title", (item) => {
-        return regex.test(item.title);
+      return updateFilter(state, "title", (value) => {
+        return regex.test(value.title);
       });
     }
-    case ActionType.FILTER_DIRECTOR: {
+    case Actions.FILTER_DIRECTOR: {
       return (
         clearFilter(action.value, state, "director") ??
-        updateFilter(state, "director", (item) => {
-          return item.directorNames.includes(action.value);
+        updateFilter(state, "director", (value) => {
+          return value.directorNames.includes(action.value);
         })
       );
     }
-    case ActionType.FILTER_PERFORMER: {
+    case Actions.FILTER_PERFORMER: {
       return (
         clearFilter(action.value, state, "performer") ??
-        updateFilter(state, "performer", (item) => {
-          return item.performerNames.includes(action.value);
+        updateFilter(state, "performer", (value) => {
+          return value.performerNames.includes(action.value);
         })
       );
     }
-    case ActionType.FILTER_WRITER: {
+    case Actions.FILTER_WRITER: {
       return (
         clearFilter(action.value, state, "writer") ??
-        updateFilter(state, "writer", (item) => {
-          return item.writerNames.includes(action.value);
+        updateFilter(state, "writer", (value) => {
+          return value.writerNames.includes(action.value);
         })
       );
     }
-    case ActionType.FILTER_COLLECTION: {
+    case Actions.FILTER_COLLECTION: {
       return (
         clearFilter(action.value, state, "collection") ??
-        updateFilter(state, "collection", (item) => {
-          return item.collectionNames.includes(action.value);
+        updateFilter(state, "collection", (value) => {
+          return value.collectionNames.includes(action.value);
         })
       );
     }
-    case ActionType.FILTER_RELEASE_YEAR: {
-      return updateFilter(state, "releaseYear", (item) => {
-        const releaseYear = item.year;
+    case Actions.FILTER_RELEASE_YEAR: {
+      return updateFilter(state, "releaseYear", (value) => {
+        const releaseYear = value.year;
         return (
           releaseYear >= action.values[0] && releaseYear <= action.values[1]
         );
       });
     }
-    case ActionType.SORT: {
-      filteredItems = sortItems(state.filteredItems, action.value);
-      groupedItems = groupItems(
-        filteredItems.slice(0, state.showCount),
+    case Actions.SORT: {
+      filteredValues = sortValues(state.filteredValues, action.value);
+      groupedValues = groupValues(
+        filteredValues.slice(0, state.showCount),
         action.value,
       );
       return {
         ...state,
         sortValue: action.value,
-        filteredItems,
-        groupedItems,
+        filteredValues,
+        groupedValues,
       };
     }
-    case ActionType.SHOW_MORE: {
+    case Actions.SHOW_MORE: {
       const showCount = state.showCount + SHOW_COUNT_DEFAULT;
 
-      groupedItems = groupItems(
-        state.filteredItems.slice(0, showCount),
+      groupedValues = groupValues(
+        state.filteredValues.slice(0, showCount),
         state.sortValue,
       );
 
       return {
         ...state,
-        groupedItems,
+        groupedValues,
         showCount,
       };
     }

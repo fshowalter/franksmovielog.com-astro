@@ -1,70 +1,90 @@
-import { ListItem } from "@/components/ListItem";
-import { ListItemPoster } from "@/components/ListItemPoster";
-import { ListItemTitle } from "@/components/ListItemTitle";
-import { GroupedList } from "@/components/GroupedList";
-import SvgIcon from "@/components/SvgIcon";
-import { WatchlistTitleSlug } from "@/components/WatchlistTitleSlug";
-import { ActionType } from "./Watchlist.reducer";
-import type { Action } from "./Watchlist.reducer";
+import { ListItem } from "src/components/ListItem";
+import { ListItemPoster } from "src/components/ListItemPoster";
+import { ListItemTitle } from "src/components/ListItemTitle";
+import { GroupedList } from "src/components/GroupedList";
+import SvgIcon from "src/components/SvgIcon";
+import { WatchlistTitleSlug } from "src/components/WatchlistTitleSlug";
+import { Actions, type ActionType } from "./Watchlist.reducer";
+import type { WatchlistTitle } from "src/api/watchlistTitles";
+import type { PosterImageData } from "src/api/posters";
 
-export interface ListItemData {
-  imdbId: string;
-  title: string;
-  year: string;
-  releaseSequence: string;
-  sortTitle: string;
-  directorNames: string[];
-  performerNames: string[];
-  writerNames: string[];
-  collectionNames: string[];
-  viewed: boolean;
-}
+export interface ListItemValue
+  extends Pick<
+    WatchlistTitle,
+    | "imdbId"
+    | "title"
+    | "year"
+    | "releaseSequence"
+    | "sortTitle"
+    | "directorNames"
+    | "performerNames"
+    | "writerNames"
+    | "collectionNames"
+    | "viewed"
+  > {}
 
 export function List({
-  groupedItems,
+  groupedValues,
   dispatch,
   totalCount,
   visibleCount,
+  defaultPosterImageData,
 }: {
-  groupedItems: Map<string, ListItemData[]>;
-  dispatch: React.Dispatch<Action>;
+  groupedValues: Map<string, ListItemValue[]>;
+  dispatch: React.Dispatch<ActionType>;
   totalCount: number;
   visibleCount: number;
+  defaultPosterImageData: PosterImageData;
 }) {
   return (
     <GroupedList
-      data-testid="poster-list"
-      groupedItems={groupedItems}
+      groupedValues={groupedValues}
       visibleCount={visibleCount}
       totalCount={totalCount}
-      onShowMore={() => dispatch({ type: ActionType.SHOW_MORE })}
+      onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
     >
-      {(item) => {
-        return <WatchlistTitle data={item} key={item.imdbId} />;
+      {(value) => {
+        return (
+          <WatchlistTitle
+            value={value}
+            key={value.imdbId}
+            defaultPosterImageData={defaultPosterImageData}
+          />
+        );
       }}
     </GroupedList>
   );
 }
 
-function WatchlistTitle({ data }: { data: ListItemData }): JSX.Element {
+function WatchlistTitle({
+  value,
+  defaultPosterImageData,
+}: {
+  value: ListItemValue;
+  defaultPosterImageData: PosterImageData;
+}): JSX.Element {
   return (
     <ListItem className="items-center">
-      <ListItemPoster title={data.title} year={data.year} />
+      <ListItemPoster
+        title={value.title}
+        year={value.year}
+        imageData={defaultPosterImageData}
+      />
       <div className="flex-1 pr-gutter tablet:w-full desktop:pr-4">
         <div>
-          <ListItemTitle title={data.title} year={data.year} />
+          <ListItemTitle title={value.title} year={value.year} />
           <div className="spacer-y-3" />
           <WatchlistTitleSlug
-            directorNames={data.directorNames}
-            performerNames={data.performerNames}
-            writerNames={data.writerNames}
-            collectionNames={data.collectionNames}
+            directorNames={value.directorNames}
+            performerNames={value.performerNames}
+            writerNames={value.writerNames}
+            collectionNames={value.collectionNames}
           />
           <div className="spacer-y-2" />
         </div>
       </div>
       <div className="pr-gutter desktop:pr-4">
-        {data.viewed && (
+        {value.viewed && (
           <SvgIcon className="block h-6 min-w-6 text-subtle">
             <svg
               xmlns="http://www.w3.org/2000/svg"

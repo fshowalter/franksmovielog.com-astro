@@ -3,7 +3,7 @@ import { allViewingsJson } from "./data/viewingsJson";
 
 export interface Viewing extends ViewingJson {}
 
-export interface Viewings {
+interface Viewings {
   viewings: Viewing[];
   distinctReleaseYears: string[];
   distinctGenres: string[];

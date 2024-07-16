@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { PageTitle } from "@/components/PageTitle";
+import { PageTitle } from "src/components/PageTitle";
 
 export function Header({ titleCount }: { titleCount: number }): JSX.Element {
   return (
@@ -16,7 +15,7 @@ export function Header({ titleCount }: { titleCount: number }): JSX.Element {
       </p>
       <div className="spacer-y-4" />
       <p className="text-subtle">
-        Track my <Link href="/watchlist/progress/">progress</Link>.
+        Track my <a href="/watchlist/progress/">progress</a>.
       </p>
     </>
   );

@@ -1,45 +1,44 @@
-"use client";
-
 import { useReducer } from "react";
 import { ListWithFiltersLayout } from "../ListWithFiltersLayout";
 import { Filters } from "./Filters";
 import { Header } from "./Header";
-import { List } from "./List";
-import { initState, reducer } from "./Watchlist.reducer";
-import type { ListItemData } from "./List";
-import type { Sort } from "./Watchlist.reducer";
+import { List, type ListItemValue } from "./List";
+import { initState, reducer, type Sort } from "./Watchlist.reducer";
+import type { PosterImageData } from "src/api/posters";
 
 export interface WatchlistProps {
-  data: readonly ListItemData[];
+  values: ListItemValue[];
   initialSort: Sort;
-  distinctDirectors: readonly string[];
-  distinctPerformers: readonly string[];
-  distinctWriters: readonly string[];
-  distinctCollections: readonly string[];
-  distinctReleaseYears: readonly string[];
+  distinctDirectors: string[];
+  distinctPerformers: string[];
+  distinctWriters: string[];
+  distinctCollections: string[];
+  distinctReleaseYears: string[];
+  defaultPosterImageData: PosterImageData;
 }
 
 export function Watchlist({
-  data,
+  values,
   initialSort,
   distinctDirectors,
   distinctPerformers,
   distinctWriters,
   distinctCollections,
   distinctReleaseYears,
+  defaultPosterImageData,
 }: WatchlistProps): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
-      items: [...data],
-      sort: initialSort,
+      values,
+      initialSort,
     },
     initState,
   );
 
   return (
     <ListWithFiltersLayout
-      header={<Header titleCount={data.length} />}
+      header={<Header titleCount={values.length} />}
       filters={
         <Filters
           sortValue={state.sortValue}
@@ -53,10 +52,11 @@ export function Watchlist({
       }
       list={
         <List
-          groupedItems={state.groupedItems}
+          groupedValues={state.groupedValues}
           visibleCount={state.showCount}
-          totalCount={state.filteredItems.length}
+          totalCount={state.filteredValues.length}
           dispatch={dispatch}
+          defaultPosterImageData={defaultPosterImageData}
         />
       }
     />

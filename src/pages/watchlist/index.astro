@@ -1,0 +1,37 @@
+---
+import Layout from "src/layouts/Layout.astro";
+import { Watchlist } from "src/components/Watchlist";
+import { allWatchlistTitles } from "src/api/watchlistTitles";
+import { getFixedWidthPosters } from "src/api/posters";
+import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
+
+const {
+  watchlistTitles,
+  distinctCollections,
+  distinctDirectors,
+  distinctPerformers,
+  distinctReleaseYears,
+  distinctWriters,
+} = await allWatchlistTitles();
+
+const posters = await getFixedWidthPosters(ListItemPosterImageConfig);
+const defaultPosterImageData = posters["default"];
+
+watchlistTitles.sort((a, b) =>
+  a.releaseSequence.localeCompare(b.releaseSequence)
+);
+---
+
+<Layout title="Watchlist" description="My movie review bucketlist.">
+  <Watchlist
+    client:load
+    initialSort="release-date-asc"
+    values={watchlistTitles}
+    distinctCollections={distinctCollections}
+    distinctDirectors={distinctDirectors}
+    distinctReleaseYears={distinctReleaseYears}
+    distinctPerformers={distinctPerformers}
+    distinctWriters={distinctWriters}
+    defaultPosterImageData={defaultPosterImageData}
+  />
+</Layout>
