@@ -45,8 +45,6 @@ export async function getStills({
       quality: 80,
     });
 
-    console.log(basename(image, extname(image)));
-
     imageMap[basename(image, extname(image))] = {
       srcSet: optimizedImage.srcSet.attribute,
       src: optimizedImage.src,
@@ -54,6 +52,7 @@ export async function getStills({
   });
 
   cache[key] = imageMap;
+  console.log(Object.keys(cache));
 
   return imageMap;
 }
