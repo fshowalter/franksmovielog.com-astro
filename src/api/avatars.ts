@@ -31,27 +31,29 @@ export async function getAvatars({
 
   const imageMap: Record<string, AvatarImageData> = {};
 
-  castAndCrew.forEach(async (member) => {
-    const imagePath = `/${join("content", "assets", "avatars")}/${member.slug}.png`;
+  await Promise.all(
+    castAndCrew.map(async (member) => {
+      const imagePath = `/${join("content", "assets", "avatars")}/${member.slug}.png`;
 
-    if (images[imagePath]) {
-      const avatarFile = await images[imagePath]();
+      if (images[imagePath]) {
+        const avatarFile = await images[imagePath]();
 
-      const optimizedImage = await getImage({
-        src: avatarFile.default,
-        width: width,
-        height: height,
-        format: "avif",
-        densities: [1, 2],
-        quality: 80,
-      });
+        const optimizedImage = await getImage({
+          src: avatarFile.default,
+          width: width,
+          height: height,
+          format: "avif",
+          densities: [1, 2],
+          quality: 80,
+        });
 
-      imageMap[member.slug] = {
-        srcSet: optimizedImage.srcSet.attribute,
-        src: optimizedImage.src,
-      };
-    }
-  });
+        imageMap[member.slug] = {
+          srcSet: optimizedImage.srcSet.attribute,
+          src: optimizedImage.src,
+        };
+      }
+    }),
+  );
 
   cache[key] = imageMap;
 

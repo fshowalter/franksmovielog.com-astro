@@ -33,28 +33,27 @@ export async function getStills({
 
   const imageMap: Record<string, StillImageData> = {};
 
-  Object.keys(images).forEach(async (image) => {
-    const stillFile = await images[image]();
+  await Promise.all(
+    Object.keys(images).map(async (image) => {
+      const stillFile = await images[image]();
 
-    const optimizedImage = await getImage({
-      src: stillFile.default,
-      width: width,
-      height: height,
-      format: "avif",
-      widths: [0.25, 0.5, 1, 2].map((w) => w * width),
-      quality: 80,
-    });
+      const optimizedImage = await getImage({
+        src: stillFile.default,
+        width: width,
+        height: height,
+        format: "avif",
+        widths: [0.25, 0.5, 1, 2].map((w) => w * width),
+        quality: 80,
+      });
 
-    imageMap[basename(image, extname(image))] = {
-      srcSet: optimizedImage.srcSet.attribute,
-      src: optimizedImage.src,
-    };
-
-    console.log(Object.keys(imageMap));
-  });
+      imageMap[basename(image, extname(image))] = {
+        srcSet: optimizedImage.srcSet.attribute,
+        src: optimizedImage.src,
+      };
+    }),
+  );
 
   cache[key] = imageMap;
-  console.log(Object.keys(imageMap));
 
   return imageMap;
 }

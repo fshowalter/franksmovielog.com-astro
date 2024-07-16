@@ -30,23 +30,25 @@ export async function getFluidWidthPosters({
 
   const imageMap: Record<string, PosterImageData> = {};
 
-  Object.keys(images).forEach(async (image) => {
-    const poasterFile = await images[image]!();
+  await Promise.all(
+    Object.keys(images).map(async (image) => {
+      const poasterFile = await images[image]!();
 
-    const optimizedImage = await getImage({
-      src: poasterFile.default,
-      width: width,
-      height: height,
-      format: "avif",
-      widths: [0.25, 0.5, 1, 2].map((w) => w * width),
-      quality: 80,
-    });
+      const optimizedImage = await getImage({
+        src: poasterFile.default,
+        width: width,
+        height: height,
+        format: "avif",
+        widths: [0.25, 0.5, 1, 2].map((w) => w * width),
+        quality: 80,
+      });
 
-    imageMap[basename(image, extname(image))] = {
-      srcSet: optimizedImage.srcSet.attribute,
-      src: optimizedImage.src,
-    };
-  });
+      imageMap[basename(image, extname(image))] = {
+        srcSet: optimizedImage.srcSet.attribute,
+        src: optimizedImage.src,
+      };
+    }),
+  );
 
   fluidWidthCache[key] = imageMap;
 
@@ -65,23 +67,25 @@ export async function getFixedWidthPosters({
 
   const imageMap: Record<string, PosterImageData> = {};
 
-  Object.keys(images).forEach(async (image) => {
-    const poasterFile = await images[image]!();
+  await Promise.all(
+    Object.keys(images).map(async (image) => {
+      const poasterFile = await images[image]!();
 
-    const optimizedImage = await getImage({
-      src: poasterFile.default,
-      width: width,
-      height: height,
-      format: "avif",
-      densities: [1, 2],
-      quality: 80,
-    });
+      const optimizedImage = await getImage({
+        src: poasterFile.default,
+        width: width,
+        height: height,
+        format: "avif",
+        densities: [1, 2],
+        quality: 80,
+      });
 
-    imageMap[basename(image, extname(image))] = {
-      srcSet: optimizedImage.srcSet.attribute,
-      src: optimizedImage.src,
-    };
-  });
+      imageMap[basename(image, extname(image))] = {
+        srcSet: optimizedImage.srcSet.attribute,
+        src: optimizedImage.src,
+      };
+    }),
+  );
 
   fixedWidthCache[key] = imageMap;
 
