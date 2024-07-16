@@ -1,48 +1,85 @@
-import { Grade } from "@/components/Grade";
-import { ListItem } from "@/components/ListItem";
-import { ListItemPoster } from "@/components/ListItemPoster";
-import { ListItemTitle } from "@/components/ListItemTitle";
-import { GroupedList } from "@/components/ListWithFiltersLayout";
-import { Action, ActionType } from "./Collection.reducer";
-import type { CollectionTitle } from "./Collection";
+import { Grade } from "src/components/Grade";
+import { ListItem } from "src/components/ListItem";
+import { ListItemPoster } from "src/components/ListItemPoster";
+import { ListItemTitle } from "src/components/ListItemTitle";
+import { GroupedList } from "src/components/GroupedList";
+import { Actions, type ActionType } from "./Collection.reducer";
+import type { Collection } from "src/api/collections";
+import type { PosterImageData } from "src/api/posters";
+
+export interface ListItemValue
+  extends Pick<
+    Collection["titles"][0],
+    | "imdbId"
+    | "title"
+    | "year"
+    | "grade"
+    | "gradeValue"
+    | "slug"
+    | "sortTitle"
+    | "releaseSequence"
+  > {}
 
 export function List({
-  groupedItems,
+  groupedValues,
   dispatch,
   totalCount,
   visibleCount,
+  posters,
 }: {
-  groupedItems: Map<string, CollectionTitle[]>;
-  dispatch: React.Dispatch<Action>;
+  groupedValues: Map<string, ListItemValue[]>;
+  dispatch: React.Dispatch<ActionType>;
   totalCount: number;
   visibleCount: number;
+  posters: Record<string, PosterImageData>;
 }) {
   return (
     <GroupedList
       data-testid="poster-list"
-      groupedItems={groupedItems}
+      groupedValues={groupedValues}
       visibleCount={visibleCount}
       totalCount={totalCount}
-      onShowMore={() => dispatch({ type: ActionType.SHOW_MORE })}
+      onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
     >
-      {(item) => {
-        return <CollectionTitleItem item={item} key={item.imdbId} />;
+      {(value) => {
+        return (
+          <CollectionListItem
+            value={value}
+            key={value.imdbId}
+            imageData={posters[value.slug || "default"]}
+          />
+        );
       }}
     </GroupedList>
   );
 }
 
-function CollectionTitleItem({ item }: { item: CollectionTitle }): JSX.Element {
+function CollectionListItem({
+  value,
+  imageData,
+}: {
+  value: ListItemValue;
+  imageData: PosterImageData;
+}): JSX.Element {
   return (
     <ListItem className="items-center">
-      <ListItemPoster slug={item.slug} title={item.title} year={item.year} />
+      <ListItemPoster
+        slug={value.slug}
+        title={value.title}
+        imageData={imageData}
+        year={value.year}
+      />
       <div className="grow pr-gutter tablet:w-full desktop:pr-4">
         <div>
-          <ListItemTitle title={item.title} year={item.year} slug={item.slug} />
+          <ListItemTitle
+            title={value.title}
+            year={value.year}
+            slug={value.slug}
+          />
           <div className="spacer-y-2" />
-          {item.grade && (
+          {value.grade && (
             <div className="py-px">
-              <Grade grade={item.grade} height={18} />
+              <Grade grade={value.grade} height={18} />
             </div>
           )}
           <div className="spacer-y-2" />

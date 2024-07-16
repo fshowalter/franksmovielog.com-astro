@@ -3,9 +3,11 @@ import Layout from "src/layouts/Layout.astro";
 import { getFixedWidthPosters } from "src/api/posters";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 import { allCastAndCrew } from "src/api/castAndCrew";
-import { CastAndCrewMember } from "src/components/CastAndCrewMember";
+import {
+  CastAndCrewMember,
+  AvatarImageConfig,
+} from "src/components/CastAndCrewMember";
 import { getAvatars } from "src/api/avatars";
-import { AvatarImageConfig } from "src/components/CastAndCrewMember";
 
 export async function getStaticPaths() {
   const { castAndCrew, distinctReleaseYears } = await allCastAndCrew();
@@ -39,10 +41,11 @@ const avatarImageData = avatars[member.slug];
   description={`A sortable and filterable list of reviews of ${member.name} movies.`}
 >
   <CastAndCrewMember
+    client:load
     value={member}
     distinctReleaseYears={distinctReleaseYears}
     posters={posters}
     avatarImageData={avatarImageData}
-    initialSort="release-date-desc"
+    initialSort="release-date-asc"
   />
 </Layout>
