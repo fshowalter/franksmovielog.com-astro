@@ -34,7 +34,7 @@ export async function getStills({
   const imageMap: Record<string, StillImageData> = {};
 
   Object.keys(images).forEach(async (image) => {
-    const stillFile = await images[image]!();
+    const stillFile = await images[image]();
 
     const optimizedImage = await getImage({
       src: stillFile.default,
