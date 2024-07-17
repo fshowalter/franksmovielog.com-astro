@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">41.17% </span>
+                <span class="strong">88.23% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/17</span>
+                <span class='fraction'>15/17</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">83.33% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>5/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
-                <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">41.17% </span>
+                <span class="strong">88.23% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/17</span>
+                <span class='fraction'>15/17</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -84,24 +84,24 @@
 <a name='L19'></a><a href='#L19'>19</a>
 <a name='L20'></a><a href='#L20'>20</a>
 <a name='L21'></a><a href='#L21'>21</a>
-<a name='L22'></a><a href='#L22'>22</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L22'></a><a href='#L22'>22</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1841x</span>
+<span class="cline-any cline-yes">1841x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3749x</span>
+<span class="cline-any cline-yes">3692x</span>
+<span class="cline-any cline-yes">3692x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">57x</span>
+<span class="cline-any cline-yes">57x</span>
+<span class="cline-any cline-yes">57x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -111,18 +111,18 @@
   numeric: true,
 });
 &nbsp;
-export <span class="fstat-no" title="function not covered" >function sortNumber(a: number, b: number): number {</span>
-<span class="cstat-no" title="statement not covered" >  return a - b;</span>
-<span class="cstat-no" title="statement not covered" >}</span>
+export function sortNumber(a: number, b: number): number {
+  return a - b;
+}
 &nbsp;
-export <span class="fstat-no" title="function not covered" >function sortString(a: string, b: string): number {</span>
-<span class="cstat-no" title="statement not covered" >  if (a &gt; b) {</span>
-<span class="cstat-no" title="statement not covered" >    return 1;</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+export function sortString(a: string, b: string): number {
+  if (a &gt; b) {
+    return 1;
+  }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (a &lt; b) {</span>
-<span class="cstat-no" title="statement not covered" >    return -1;</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
+  if (a &lt; b) {
+    return -1;
+<span class="branch-0 cbranch-no" title="branch not covered" >  }</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  return 0;</span>
 <span class="cstat-no" title="statement not covered" >}</span>
@@ -133,7 +133,7 @@ export <span class="fstat-no" title="function not covered" >function sortString(
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-07-17T15:37:28.360Z
+                at 2024-07-17T16:45:29.257Z
             </div>
         <script src="../prettify.js"></script>
         <script>

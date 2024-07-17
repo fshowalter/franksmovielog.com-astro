@@ -8,6 +8,7 @@ export function GroupedList<T>({
   onShowMore,
   children,
   className,
+  ...rest
 }: {
   groupedValues: Map<string, Iterable<T>>;
   visibleCount: number;
@@ -20,7 +21,7 @@ export function GroupedList<T>({
     <>
       <ListInfo visibleCount={visibleCount} totalCount={totalCount} />
 
-      <ol className={className}>
+      <ol className={className} {...rest}>
         {[...groupedValues].map((groupedValue, index) => {
           const [group, groupValues] = groupedValue;
 

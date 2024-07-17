@@ -1,16 +1,10 @@
 ---
 import Layout from "src/layouts/Layout.astro";
-import { getFixedWidthPosters } from "src/api/posters";
-import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 import { allCastAndCrew } from "src/api/castAndCrew";
-import {
-  CastAndCrewMember,
-  AvatarImageConfig,
-} from "src/components/CastAndCrewMember";
-import { getAvatars } from "src/api/avatars";
+import { CastAndCrewMember, getData } from "src/components/CastAndCrewMember";
 
 export async function getStaticPaths() {
-  const { castAndCrew, distinctReleaseYears } = await allCastAndCrew();
+  const { castAndCrew } = await allCastAndCrew();
 
   return castAndCrew.map((member) => {
     return {
@@ -18,34 +12,19 @@ export async function getStaticPaths() {
         slug: member.slug,
       },
       props: {
-        member,
-        distinctReleaseYears,
+        slug: member.slug,
       },
     };
   });
 }
 
-const { member, distinctReleaseYears } = Astro.props;
-
-member.titles.sort((a, b) =>
-  a.releaseSequence.localeCompare(b.releaseSequence)
-);
-
-const posters = await getFixedWidthPosters(ListItemPosterImageConfig);
-const avatars = await getAvatars(AvatarImageConfig);
-const avatarImageData = avatars[member.slug];
+const { slug } = Astro.props;
+const props = await getData(slug);
 ---
 
 <Layout
-  title={member.name}
-  description={`A sortable and filterable list of reviews of ${member.name} movies.`}
+  title={props.value.name}
+  description={`A sortable and filterable list of reviews of ${props.value.name} movies.`}
 >
-  <CastAndCrewMember
-    client:load
-    value={member}
-    distinctReleaseYears={distinctReleaseYears}
-    posters={posters}
-    avatarImageData={avatarImageData}
-    initialSort="release-date-asc"
-  />
+  <CastAndCrewMember client:load {...props} />
 </Layout>

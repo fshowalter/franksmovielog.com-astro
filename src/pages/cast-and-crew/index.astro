@@ -1,36 +1,13 @@
 ---
 import Layout from "src/layouts/Layout.astro";
-import { type ListItemValue, CastAndCrew } from "src/components/CastAndCrew";
-import { allCastAndCrew } from "src/api/castAndCrew";
-import { getAvatars } from "src/api/avatars";
-import { ListItemAvatarImageConfig } from "src/components/ListItemAvatar";
+import { CastAndCrew, getData } from "src/components/CastAndCrew";
 
-const { castAndCrew } = await allCastAndCrew();
-const avatars = await getAvatars(ListItemAvatarImageConfig);
-
-castAndCrew.sort((a, b) => a.name.localeCompare(b.name));
-
-const listItemValues = castAndCrew.map((member) => {
-  const listItemValue: ListItemValue = {
-    name: member.name,
-    slug: member.slug,
-    reviewCount: member.reviewCount,
-    totalCount: member.totalCount,
-    creditedAs: member.creditedAs,
-  };
-
-  return listItemValue;
-});
+const props = await getData();
 ---
 
 <Layout
   title="Cast and Crew"
   description="A sortable and filterable list of select cast and crew members of reviewed movies."
 >
-  <CastAndCrew
-    client:load
-    initialSort="name-asc"
-    avatars={avatars}
-    values={listItemValues}
-  />
+  <CastAndCrew client:load {...props} />
 </Layout>
