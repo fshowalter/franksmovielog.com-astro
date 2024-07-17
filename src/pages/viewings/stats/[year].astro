@@ -16,13 +16,13 @@ export async function getStaticPaths() {
       },
       props: {
         year: year,
-        statYears,
       },
     };
   });
 }
 
-const { year, statYears } = Astro.props;
+const { year } = Astro.props;
+const statYears = await allStatYears();
 
 const stats = await statsForYear(year);
 

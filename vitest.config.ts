@@ -5,5 +5,8 @@ export default getViteConfig({
   test: {
     // Vitest configuration options
     setupFiles: ["setupTests.ts"],
+    coverage: {
+      include: ["src/**"],
+    },
   },
 });

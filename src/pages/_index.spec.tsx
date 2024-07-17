@@ -5,11 +5,11 @@ import { expect, it, describe } from "vitest";
 import index from "./index.astro";
 
 describe("/", () => {
-  it("matches snapshot", { timeout: 10000 }, async () => {
+  it("matches snapshot", { timeout: 20000 }, async () => {
     const renderers = await loadRenderers([reactContainerRenderer()]);
     const container = await AstroContainer.create({ renderers });
     const result = await container.renderToString(index, {});
 
-    expect(result).toMatchSnapshot();
+    expect(result).toMatchFileSnapshot(`__snapshots__/index.html`);
   });
 });

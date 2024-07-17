@@ -20,22 +20,6 @@ export async function getStaticPaths() {
 
   return await Promise.all(
     reviews.map(async (review) => {
-      let seoImageSrc = null;
-      const imagePath = getStillImagePath(review.slug);
-      if (imagePath in images) {
-        const stillFile = await images[imagePath]!();
-
-        const optimizedImage = await getImage({
-          src: stillFile.default,
-          width: 1200,
-          height: 675,
-          format: "jpeg",
-          quality: 80,
-        });
-
-        seoImageSrc = optimizedImage.src;
-      }
-
       return {
         params: {
           slug: review.slug,
@@ -51,10 +35,22 @@ export async function getStaticPaths() {
 
 interface Props {
   review: IReview;
-  seoImageSrc: string;
 }
 
-const { review, seoImageSrc } = Astro.props;
+const { review } = Astro.props;
+
+const imagePath = getStillImagePath(review.slug);
+const stillFile = await images[imagePath]!();
+
+const optimizedImage = await getImage({
+  src: stillFile.default,
+  width: 1200,
+  height: 675,
+  format: "jpeg",
+  quality: 80,
+});
+
+const seoImageSrc = optimizedImage.src;
 
 const stills = await getStills(StillImageConfig);
 const stillImageData = stills[review.slug]!;
