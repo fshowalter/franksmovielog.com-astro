@@ -1,10 +1,8 @@
 import { promises as fs } from "node:fs";
 import { z } from "zod";
-import { join } from "path";
+import { getContentPath } from "./utils/getContentPath";
 
-const overratedDisappointmentsJsonFile = join(
-  process.cwd(),
-  "content",
+const overratedDisappointmentsJsonFile = getContentPath(
   "data",
   "overrated-disappointments.json",
 );

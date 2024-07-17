@@ -1,13 +1,9 @@
 import { promises as fs } from "node:fs";
 import { z } from "zod";
 import { join } from "path";
+import { getContentPath } from "./utils/getContentPath";
 
-const watchlistTitlesJsonFile = join(
-  process.cwd(),
-  "content",
-  "data",
-  "watchlist-titles.json",
-);
+const watchlistTitlesJsonFile = getContentPath("data", "watchlist-titles.json");
 
 const WatchlistTitleJsonSchema = z.object({
   imdbId: z.string(),

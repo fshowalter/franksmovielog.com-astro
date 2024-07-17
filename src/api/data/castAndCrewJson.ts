@@ -1,13 +1,8 @@
 import { promises as fs } from "node:fs";
 import { z } from "zod";
-import { join } from "path";
+import { getContentPath } from "./utils/getContentPath";
 
-const castAndCrewJsonDirectory = join(
-  process.cwd(),
-  "content",
-  "data",
-  "cast-and-crew",
-);
+const castAndCrewJsonDirectory = getContentPath("data", "cast-and-crew");
 
 const TitleSchema = z.object({
   creditedAs: z.array(z.string()),

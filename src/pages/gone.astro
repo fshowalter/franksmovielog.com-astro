@@ -1,0 +1,36 @@
+---
+import Layout from "src/layouts/Layout.astro";
+import { Article, StillImageConfig } from "src/components/Article";
+import { getPage } from "src/api/pages";
+import { getStills } from "src/api/stills";
+import { allReviews } from "src/api/reviews";
+import { StillListItemImageConfig } from "src/components/StillListItem";
+
+const { title, content } = await getPage("gone");
+
+const { reviews } = await allReviews();
+
+reviews.sort((a, b) => b.sequence.localeCompare(a.sequence));
+
+const recentReviews = reviews.slice(0, 4);
+
+const stills = await getStills(StillImageConfig);
+const stillImageData = stills["gone"]!;
+
+const stillListStills = await getStills(StillListItemImageConfig);
+---
+
+<Layout
+  title="410: Gone"
+  description="Forget it, Jake. It's Chinatown."
+  article
+>
+  <Article
+    title={title}
+    alt="Forget it, Jake. It's Chinatown."
+    content={content}
+    moreReviewsStills={stillListStills}
+    imageData={stillImageData}
+    moreReviewsData={recentReviews}
+  />
+</Layout>

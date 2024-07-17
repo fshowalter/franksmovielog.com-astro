@@ -1,13 +1,9 @@
 import { promises as fs } from "node:fs";
 import { z } from "zod";
 import { join } from "path";
+import { getContentPath } from "./utils/getContentPath";
 
-const underseenGemsJsonFile = join(
-  process.cwd(),
-  "content",
-  "data",
-  "underseen-gems.json",
-);
+const underseenGemsJsonFile = getContentPath("data", "underseen-gems.json");
 
 const UnderseenGemsJsonSchema = z.object({
   imdbId: z.string(),

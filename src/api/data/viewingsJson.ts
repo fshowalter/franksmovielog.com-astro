@@ -1,13 +1,8 @@
 import { promises as fs } from "node:fs";
 import { z } from "zod";
-import { join } from "path";
+import { getContentPath } from "./utils/getContentPath";
 
-const viewingsJsonFile = join(
-  process.cwd(),
-  "content",
-  "data",
-  "viewings.json",
-);
+const viewingsJsonFile = getContentPath("data", "viewings.json");
 
 const ViewingJsonSchema = z.object({
   sequence: z.number(),

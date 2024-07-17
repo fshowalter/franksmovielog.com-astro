@@ -1,13 +1,8 @@
 import { promises as fs } from "node:fs";
 import { z } from "zod";
-import { join } from "path";
+import { getContentPath } from "./utils/getContentPath";
 
-const collectionsJsonDirectory = join(
-  process.cwd(),
-  "content",
-  "data",
-  "collections",
-);
+const collectionsJsonDirectory = getContentPath("data", "collections");
 
 const TitleSchema = z.object({
   imdbId: z.string(),

@@ -1,0 +1,725 @@
+{
+  "year": "2024",
+  "newTitleCount": 38,
+  "viewingCount": 55,
+  "titleCount": 54,
+  "mediaDistribution": [
+    {
+      "name": "Blu-ray",
+      "count": 25
+    },
+    {
+      "name": "4k UHD Blu-ray",
+      "count": 11
+    },
+    {
+      "name": "iTunes",
+      "count": 5
+    },
+    {
+      "name": "DVD",
+      "count": 3
+    },
+    {
+      "name": "WEBRip",
+      "count": 1
+    },
+    {
+      "name": "35mm",
+      "count": 1
+    }
+  ],
+  "decadeDistribution": [
+    {
+      "name": "1930s",
+      "count": 1
+    },
+    {
+      "name": "1940s",
+      "count": 1
+    },
+    {
+      "name": "1960s",
+      "count": 7
+    },
+    {
+      "name": "1970s",
+      "count": 10
+    },
+    {
+      "name": "1980s",
+      "count": 16
+    },
+    {
+      "name": "1990s",
+      "count": 7
+    },
+    {
+      "name": "2000s",
+      "count": 3
+    },
+    {
+      "name": "2010s",
+      "count": 3
+    },
+    {
+      "name": "2020s",
+      "count": 7
+    }
+  ],
+  "mostWatchedTitles": [
+    {
+      "title": "Night Train to Terror",
+      "imdbId": "tt0087798",
+      "year": "1985",
+      "count": 2,
+      "slug": "night-train-to-terror-1985"
+    }
+  ],
+  "mostWatchedDirectors": [
+    {
+      "name": "Sergio Leone",
+      "count": 3,
+      "slug": "sergio-leone",
+      "viewings": [
+        {
+          "sequence": 1600,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "A Fistful of Dollars",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1964"
+        },
+        {
+          "sequence": 1601,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "For a Few Dollars More",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1965"
+        },
+        {
+          "sequence": 1602,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "The Good, the Bad and the Ugly",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1966"
+        }
+      ]
+    },
+    {
+      "name": "John Carr",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1556,
+          "date": "2024-01-04",
+          "slug": "night-train-to-terror-1985",
+          "title": "Night Train to Terror",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1985"
+        },
+        {
+          "sequence": 1586,
+          "date": "2024-04-27",
+          "slug": "night-train-to-terror-1985",
+          "title": "Night Train to Terror",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "1985"
+        }
+      ]
+    },
+    {
+      "name": "Phillip Marshak",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1556,
+          "date": "2024-01-04",
+          "slug": "night-train-to-terror-1985",
+          "title": "Night Train to Terror",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1985"
+        },
+        {
+          "sequence": 1586,
+          "date": "2024-04-27",
+          "slug": "night-train-to-terror-1985",
+          "title": "Night Train to Terror",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "1985"
+        }
+      ]
+    },
+    {
+      "name": "Tom McGowan",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1556,
+          "date": "2024-01-04",
+          "slug": "night-train-to-terror-1985",
+          "title": "Night Train to Terror",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1985"
+        },
+        {
+          "sequence": 1586,
+          "date": "2024-04-27",
+          "slug": "night-train-to-terror-1985",
+          "title": "Night Train to Terror",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "1985"
+        }
+      ]
+    },
+    {
+      "name": "Jay Schlossberg-Cohen",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1556,
+          "date": "2024-01-04",
+          "slug": "night-train-to-terror-1985",
+          "title": "Night Train to Terror",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1985"
+        },
+        {
+          "sequence": 1586,
+          "date": "2024-04-27",
+          "slug": "night-train-to-terror-1985",
+          "title": "Night Train to Terror",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "1985"
+        }
+      ]
+    },
+    {
+      "name": "Gregg G. Tallas",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1556,
+          "date": "2024-01-04",
+          "slug": "night-train-to-terror-1985",
+          "title": "Night Train to Terror",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1985"
+        },
+        {
+          "sequence": 1586,
+          "date": "2024-04-27",
+          "slug": "night-train-to-terror-1985",
+          "title": "Night Train to Terror",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "1985"
+        }
+      ]
+    },
+    {
+      "name": "John Ford",
+      "count": 2,
+      "slug": "john-ford",
+      "viewings": [
+        {
+          "sequence": 1576,
+          "date": "2024-03-12",
+          "slug": null,
+          "title": "Stagecoach",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1939"
+        },
+        {
+          "sequence": 1577,
+          "date": "2024-03-12",
+          "slug": null,
+          "title": "The Man Who Shot Liberty Valance",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1962"
+        }
+      ]
+    },
+    {
+      "name": "Corey Yuen",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1584,
+          "date": "2024-04-24",
+          "slug": "ninja-in-the-dragons-den-1982",
+          "title": "Ninja in the Dragon's Den",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1982"
+        },
+        {
+          "sequence": 1604,
+          "date": "2024-06-20",
+          "slug": null,
+          "title": "Righting Wrongs",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1986"
+        }
+      ]
+    }
+  ],
+  "mostWatchedPerformers": [
+    {
+      "name": "Faith Clift",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1556,
+          "date": "2024-01-04",
+          "slug": "night-train-to-terror-1985",
+          "title": "Night Train to Terror",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1985"
+        },
+        {
+          "sequence": 1586,
+          "date": "2024-04-27",
+          "slug": "night-train-to-terror-1985",
+          "title": "Night Train to Terror",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "1985"
+        },
+        {
+          "sequence": 1587,
+          "date": "2024-04-27",
+          "slug": "horror-express-1972",
+          "title": "Horror Express",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "1972"
+        }
+      ]
+    },
+    {
+      "name": "Warwick Davis",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1559,
+          "date": "2024-01-15",
+          "slug": "leprechaun-2-1994",
+          "title": "Leprechaun 2",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1994"
+        },
+        {
+          "sequence": 1564,
+          "date": "2024-01-27",
+          "slug": "leprechaun-4-in-space-1996",
+          "title": "Leprechaun 4: In Space",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1996"
+        },
+        {
+          "sequence": 1572,
+          "date": "2024-02-23",
+          "slug": "leprechaun-6-back-2-tha-hood-2003",
+          "title": "Leprechaun 6: Back 2 Tha Hood",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "2003"
+        }
+      ]
+    },
+    {
+      "name": "Lee Van Cleef",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1577,
+          "date": "2024-03-12",
+          "slug": null,
+          "title": "The Man Who Shot Liberty Valance",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1962"
+        },
+        {
+          "sequence": 1601,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "For a Few Dollars More",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1965"
+        },
+        {
+          "sequence": 1602,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "The Good, the Bad and the Ugly",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1966"
+        }
+      ]
+    },
+    {
+      "name": "Nicolas Cage",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1582,
+          "date": "2024-04-13",
+          "slug": "mandy-2018",
+          "title": "Mandy",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "2018"
+        },
+        {
+          "sequence": 1595,
+          "date": "2024-06-06",
+          "slug": null,
+          "title": "Red Rock West",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1993"
+        },
+        {
+          "sequence": 1607,
+          "date": "2024-06-24",
+          "slug": null,
+          "title": "Vampire's Kiss",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "1988"
+        }
+      ]
+    },
+    {
+      "name": "Clint Eastwood",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1600,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "A Fistful of Dollars",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1964"
+        },
+        {
+          "sequence": 1601,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "For a Few Dollars More",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1965"
+        },
+        {
+          "sequence": 1602,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "The Good, the Bad and the Ugly",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1966"
+        }
+      ]
+    },
+    {
+      "name": "Benito Stefanelli",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1600,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "A Fistful of Dollars",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1964"
+        },
+        {
+          "sequence": 1601,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "For a Few Dollars More",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1965"
+        },
+        {
+          "sequence": 1602,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "The Good, the Bad and the Ugly",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1966"
+        }
+      ]
+    },
+    {
+      "name": "Mario Brega",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1600,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "A Fistful of Dollars",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1964"
+        },
+        {
+          "sequence": 1601,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "For a Few Dollars More",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1965"
+        },
+        {
+          "sequence": 1602,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "The Good, the Bad and the Ugly",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1966"
+        }
+      ]
+    },
+    {
+      "name": "Aldo Sambrell",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1600,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "A Fistful of Dollars",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1964"
+        },
+        {
+          "sequence": 1601,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "For a Few Dollars More",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1965"
+        },
+        {
+          "sequence": 1602,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "The Good, the Bad and the Ugly",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1966"
+        }
+      ]
+    },
+    {
+      "name": "Barbara Wyler",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1556,
+          "date": "2024-01-04",
+          "slug": "night-train-to-terror-1985",
+          "title": "Night Train to Terror",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1985"
+        },
+        {
+          "sequence": 1586,
+          "date": "2024-04-27",
+          "slug": "night-train-to-terror-1985",
+          "title": "Night Train to Terror",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "1985"
+        }
+      ]
+    },
+    {
+      "name": "Jamie Scoggin",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1556,
+          "date": "2024-01-04",
+          "slug": "night-train-to-terror-1985",
+          "title": "Night Train to Terror",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1985"
+        },
+        {
+          "sequence": 1586,
+          "date": "2024-04-27",
+          "slug": "night-train-to-terror-1985",
+          "title": "Night Train to Terror",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "1985"
+        }
+      ]
+    }
+  ],
+  "mostWatchedWriters": [
+    {
+      "name": "Sergio Leone",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1600,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "A Fistful of Dollars",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1964"
+        },
+        {
+          "sequence": 1601,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "For a Few Dollars More",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1965"
+        },
+        {
+          "sequence": 1602,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "The Good, the Bad and the Ugly",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1966"
+        }
+      ]
+    },
+    {
+      "name": "Philip Yordan",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1556,
+          "date": "2024-01-04",
+          "slug": "night-train-to-terror-1985",
+          "title": "Night Train to Terror",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1985"
+        },
+        {
+          "sequence": 1586,
+          "date": "2024-04-27",
+          "slug": "night-train-to-terror-1985",
+          "title": "Night Train to Terror",
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "year": "1985"
+        }
+      ]
+    },
+    {
+      "name": "Sheridan Le Fanu",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1592,
+          "date": "2024-05-23",
+          "slug": null,
+          "title": "Alucarda",
+          "medium": "DVD",
+          "venue": null,
+          "year": "1977"
+        },
+        {
+          "sequence": 1593,
+          "date": "2024-06-01",
+          "slug": null,
+          "title": "The Blood Spattered Bride",
+          "medium": "Blu-ray",
+          "venue": null,
+          "year": "1972"
+        }
+      ]
+    },
+    {
+      "name": "Luciano Vincenzoni",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "sequence": 1601,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "For a Few Dollars More",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1965"
+        },
+        {
+          "sequence": 1602,
+          "date": "2024-06-16",
+          "slug": null,
+          "title": "The Good, the Bad and the Ugly",
+          "medium": "4k UHD Blu-ray",
+          "venue": null,
+          "year": "1966"
+        }
+      ]
+    }
+  ]
+}

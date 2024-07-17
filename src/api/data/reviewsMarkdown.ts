@@ -1,9 +1,9 @@
 import { promises as fs } from "node:fs";
 import matter from "gray-matter";
-import { join } from "path";
 import { z } from "zod";
+import { getContentPath } from "./utils/getContentPath";
 
-const reviewsMarkdownDirectory = join(process.cwd(), "content", "reviews");
+const reviewsMarkdownDirectory = getContentPath("reviews");
 
 export interface MarkdownReview {
   slug: string;

@@ -1,10 +1,9 @@
 import { promises as fs } from "node:fs";
 import { z } from "zod";
 import { join } from "path";
+import { getContentPath } from "./utils/getContentPath";
 
-const watchlistProgressJsonFile = join(
-  process.cwd(),
-  "content",
+const watchlistProgressJsonFile = getContentPath(
   "data",
   "watchlist-progress.json",
 );

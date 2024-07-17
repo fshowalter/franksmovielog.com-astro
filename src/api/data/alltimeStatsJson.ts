@@ -1,13 +1,8 @@
 import { promises as fs } from "node:fs";
 import { z } from "zod";
-import { join } from "path";
+import { getContentPath } from "./utils/getContentPath";
 
-const alltimeStatsFile = join(
-  process.cwd(),
-  "content",
-  "data",
-  "all-time-stats.json",
-);
+const alltimeStatsFile = getContentPath("data", "all-time-stats.json");
 
 const Distribution = z.object({
   name: z.string(),

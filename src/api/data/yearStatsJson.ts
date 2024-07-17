@@ -1,13 +1,9 @@
 import { promises as fs } from "node:fs";
 import { z } from "zod";
 import { join } from "path";
+import { getContentPath } from "./utils/getContentPath";
 
-const yearStatsJsonDirectory = join(
-  process.cwd(),
-  "content",
-  "data",
-  "year-stats",
-);
+const yearStatsJsonDirectory = getContentPath("data", "year-stats");
 
 const Distribution = z.object({
   name: z.string(),

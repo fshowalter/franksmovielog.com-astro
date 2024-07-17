@@ -1,9 +1,9 @@
 import { promises as fs } from "node:fs";
 import matter from "gray-matter";
-import { join } from "path";
 import { z } from "zod";
+import { getContentPath } from "./utils/getContentPath";
 
-const viewingsMarkdownDirectory = join(process.cwd(), "content", "viewings");
+const viewingsMarkdownDirectory = getContentPath("viewings");
 
 const DataSchema = z.object({
   imdbId: z.string(),

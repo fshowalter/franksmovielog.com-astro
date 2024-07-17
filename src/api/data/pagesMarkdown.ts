@@ -8,8 +8,9 @@ import remarkGfm from "remark-gfm";
 import smartypants from "remark-smartypants";
 import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
+import { getContentPath } from "./utils/getContentPath";
 
-const pagesMarkdownDirectory = join(process.cwd(), "content", "pages");
+const pagesMarkdownDirectory = getContentPath("pages");
 
 function getHtml(content: string) {
   return remark()
