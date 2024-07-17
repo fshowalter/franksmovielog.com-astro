@@ -14,10 +14,6 @@ const gradeMap: Record<string, string> = {
   F: "&#9733;",
 };
 
-export function textStarsForGrade(grade?: string | null) {
-  if (grade && grade in gradeMap) {
-    return gradeMap[grade];
-  }
-
-  return "";
+export function textStarsForGrade(grade: string) {
+  return gradeMap[grade];
 }

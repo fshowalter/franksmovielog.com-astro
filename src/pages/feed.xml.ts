@@ -29,7 +29,7 @@ export async function GET(context: APIContext) {
     description: "Reviews of current, cult, classic, and forgotten films.",
     // Pull in your project "site" from the endpoint context
     // https://docs.astro.build/en/reference/api-reference/#contextsite
-    site: context.site!,
+    site: "https://www.franksmovielog.com",
     // Array of `<item>`s in output xml
     // See "Generating items" section for examples using content collections and glob imports
     items: await Promise.all(
@@ -50,7 +50,7 @@ export async function GET(context: APIContext) {
         return {
           title: `${item.title} (${item.year})`,
           pubDate: item.date,
-          link: `${context.site}/reviews/${item.slug}/`,
+          link: `https://www.franksmovielog.com/reviews/${item.slug}/`,
           content: `<img src="${
             still
           }" alt="A still from ${item.title}">${addMetaToExcerpt(

@@ -4,11 +4,11 @@ import { CastAndCrew } from "./CastAndCrew";
 import { getData } from "./getData";
 import { expect, it, describe } from "vitest";
 
+const props = await getData();
+
 describe("CastAndCrew", () => {
   it("can filter by name", async () => {
     expect.hasAssertions();
-
-    const props = await getData();
 
     render(<CastAndCrew {...props} />);
 
@@ -24,8 +24,6 @@ describe("CastAndCrew", () => {
   it("can sort by name desc", async () => {
     expect.hasAssertions();
 
-    const props = await getData();
-
     render(<CastAndCrew {...props} />);
 
     await userEvent.selectOptions(
@@ -38,8 +36,6 @@ describe("CastAndCrew", () => {
 
   it("can sort by name asc", async () => {
     expect.hasAssertions();
-
-    const props = await getData();
 
     render(<CastAndCrew {...props} />);
 
@@ -54,8 +50,6 @@ describe("CastAndCrew", () => {
   it("can sort by title count desc", async () => {
     expect.hasAssertions();
 
-    const props = await getData();
-
     render(<CastAndCrew {...props} />);
 
     await userEvent.selectOptions(
@@ -68,8 +62,6 @@ describe("CastAndCrew", () => {
 
   it("can sort by title count asc", async () => {
     expect.hasAssertions();
-
-    const props = await getData();
 
     render(<CastAndCrew {...props} />);
 
@@ -84,8 +76,6 @@ describe("CastAndCrew", () => {
   it("can sort by review count desc", async () => {
     expect.hasAssertions();
 
-    const props = await getData();
-
     render(<CastAndCrew {...props} />);
 
     await userEvent.selectOptions(
@@ -98,8 +88,6 @@ describe("CastAndCrew", () => {
 
   it("can sort by review count asc", async () => {
     expect.hasAssertions();
-
-    const props = await getData();
 
     render(<CastAndCrew {...props} />);
 
@@ -114,8 +102,6 @@ describe("CastAndCrew", () => {
   it("can filter directors", async () => {
     expect.hasAssertions();
 
-    const props = await getData();
-
     render(<CastAndCrew {...props} />);
 
     await userEvent.selectOptions(screen.getByLabelText("Credits"), "Director");
@@ -125,8 +111,6 @@ describe("CastAndCrew", () => {
 
   it("can filter directors then show all", async () => {
     expect.hasAssertions();
-
-    const props = await getData();
 
     render(<CastAndCrew {...props} />);
 
@@ -139,8 +123,6 @@ describe("CastAndCrew", () => {
   it("can filter writers", async () => {
     expect.hasAssertions();
 
-    const props = await getData();
-
     render(<CastAndCrew {...props} />);
 
     await userEvent.selectOptions(screen.getByLabelText("Credits"), "Writer");
@@ -150,8 +132,6 @@ describe("CastAndCrew", () => {
 
   it("can filter writers then show all", async () => {
     expect.hasAssertions();
-
-    const props = await getData();
 
     render(<CastAndCrew {...props} />);
 
@@ -163,8 +143,6 @@ describe("CastAndCrew", () => {
 
   it("can filter performers", async () => {
     expect.hasAssertions();
-
-    const props = await getData();
 
     render(<CastAndCrew {...props} />);
 
@@ -178,8 +156,6 @@ describe("CastAndCrew", () => {
 
   it("can filter performers then show all", async () => {
     expect.hasAssertions();
-
-    const props = await getData();
 
     render(<CastAndCrew {...props} />);
 

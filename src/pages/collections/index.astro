@@ -1,35 +1,13 @@
 ---
 import Layout from "src/layouts/Layout.astro";
-import { type ListItemValue, Collections } from "src/components/Collections";
-import { allCollections } from "src/api/collections";
-import { getAvatars } from "src/api/avatars";
-import { ListItemAvatarImageConfig } from "src/components/ListItemAvatar";
+import { Collections, getData } from "src/components/Collections";
 
-const { collections } = await allCollections();
-const avatars = await getAvatars(ListItemAvatarImageConfig);
-
-collections.sort((a, b) => a.name.localeCompare(b.name));
-
-const listItemValues = collections.map((member) => {
-  const listItemValue: ListItemValue = {
-    name: member.name,
-    slug: member.slug,
-    reviewCount: member.reviewCount,
-    titleCount: member.titleCount,
-  };
-
-  return listItemValue;
-});
+const props = await getData();
 ---
 
 <Layout
   title="Collections"
   description="A sortable and filterable list of movie collections."
 >
-  <Collections
-    client:load
-    initialSort="name-asc"
-    avatars={avatars}
-    values={listItemValues}
-  />
+  <Collections client:load {...props} />
 </Layout>
