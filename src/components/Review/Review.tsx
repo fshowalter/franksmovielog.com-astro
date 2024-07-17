@@ -24,7 +24,7 @@ export const StillImageConfig = {
   sizes: "(min-width: 960px) 960px, 100vw",
 };
 
-interface ReviewData
+interface ReviewValue
   extends Pick<Review, "title" | "year" | "slug">,
     HeaderReviewData,
     ContentReviewData,
@@ -35,7 +35,7 @@ interface ReviewData
     StructuredDataReviewData {}
 
 export interface Props {
-  review: ReviewData;
+  review: ReviewValue;
   stillImageData: StillImageData;
   posterImageData: PosterImageData;
   avatars: Record<string, AvatarImageData>;

@@ -1,8 +1,8 @@
 ---
 import Layout from "src/layouts/Layout.astro";
-import { AlltimeStats, getData } from "src/components/AlltimeStats";
+import { AlltimeStats, getProps } from "src/components/AlltimeStats";
 
-const props = await getData();
+const props = await getProps();
 ---
 
 <Layout

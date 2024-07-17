@@ -1,8 +1,8 @@
 ---
 import Layout from "src/layouts/Layout.astro";
-import { CastAndCrew, getData } from "src/components/CastAndCrew";
+import { CastAndCrew, getProps } from "src/components/CastAndCrew";
 
-const props = await getData();
+const props = await getProps();
 ---
 
 <Layout

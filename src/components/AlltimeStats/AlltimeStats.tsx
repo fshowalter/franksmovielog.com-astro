@@ -11,7 +11,7 @@ import { GradeDistribution } from "./GradeDistribution";
 import type { PosterImageData } from "src/api/posters";
 import type { AlltimeStats } from "src/api/alltimeStats";
 
-export interface AlltimeStatsProps {
+export interface Props {
   stats: Pick<
     AlltimeStats,
     | "decadeDistribution"
@@ -36,7 +36,7 @@ export function AlltimeStats({
   distinctStatYears,
   mostWatchedMoviesPosters,
   mostWatchedPeoplePosters,
-}: AlltimeStatsProps): JSX.Element {
+}: Props): JSX.Element {
   return (
     <main className="flex flex-col items-center">
       <header className="flex flex-col flex-wrap justify-between px-pageMargin">

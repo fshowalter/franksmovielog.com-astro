@@ -1,2 +1,2 @@
 export { AlltimeStats } from "./AlltimeStats";
-export { getData } from "./getData";
+export { getProps } from "./getProps";

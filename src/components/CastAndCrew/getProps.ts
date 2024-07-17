@@ -1,23 +1,17 @@
 import { type ListItemValue } from "./List";
 import { allCastAndCrew } from "src/api/castAndCrew";
-import { getAvatars, type AvatarImageData } from "src/api/avatars";
+import { getAvatars } from "src/api/avatars";
 import { ListItemAvatarImageConfig } from "src/components/ListItemAvatar";
-import type { Sort } from "./CastAndCrew.reducer";
+import type { Props } from "./CastAndCrew";
 
-interface Data {
-  values: ListItemValue[];
-  avatars: Record<string, AvatarImageData>;
-  initialSort: Sort;
-}
-
-export async function getData(): Promise<Data> {
+export async function getProps(): Promise<Props> {
   const { castAndCrew } = await allCastAndCrew();
   const avatars = await getAvatars(ListItemAvatarImageConfig);
 
   castAndCrew.sort((a, b) => a.name.localeCompare(b.name));
 
-  const listItemValues = castAndCrew.map((member) => {
-    const listItemValue: ListItemValue = {
+  const values = castAndCrew.map((member) => {
+    const value: ListItemValue = {
       name: member.name,
       slug: member.slug,
       reviewCount: member.reviewCount,
@@ -25,8 +19,8 @@ export async function getData(): Promise<Data> {
       creditedAs: member.creditedAs,
     };
 
-    return listItemValue;
+    return value;
   });
 
-  return { values: listItemValues, avatars, initialSort: "name-asc" };
+  return { values, avatars, initialSort: "name-asc" };
 }
