@@ -1,4 +1,4 @@
-import { type ListItemValue } from "src/components/CastAndCrew";
+import { type ListItemValue } from "./List";
 import { allCastAndCrew } from "src/api/castAndCrew";
 import { getAvatars, type AvatarImageData } from "src/api/avatars";
 import { ListItemAvatarImageConfig } from "src/components/ListItemAvatar";

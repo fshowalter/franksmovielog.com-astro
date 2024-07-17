@@ -1,46 +1,13 @@
 ---
 import Layout from "src/layouts/Layout.astro";
-import { allOverratedDisappintments } from "src/api/overratedDisappointments";
-import { getFixedWidthPosters } from "src/api/posters";
-import type { ListItemOverratedData } from "src/components/Overrated";
-import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
-import { Overrated } from "src/components/Overrated";
+import { Overrated, getData } from "src/components/Overrated";
 
-const { overratedDisappintments, distinctGenres, distinctReleaseYears } =
-  await allOverratedDisappintments();
-const posters = await getFixedWidthPosters(ListItemPosterImageConfig);
-
-overratedDisappintments.sort((a, b) =>
-  b.releaseSequence.localeCompare(a.releaseSequence)
-);
-
-const narrowedReviews = overratedDisappintments.map((review) => {
-  const listItemData: ListItemOverratedData = {
-    imdbId: review.imdbId,
-    title: review.title,
-    year: review.year,
-    slug: review.slug,
-    genres: review.genres,
-    grade: review.grade,
-    releaseSequence: review.releaseSequence,
-    gradeValue: review.gradeValue,
-    sortTitle: review.sortTitle,
-  };
-
-  return listItemData;
-});
+const props = await getData();
 ---
 
 <Layout
   title="Overrated Disappointments"
   description="One and two star movies with an above-average IMDb rating and vote count."
 >
-  <Overrated
-    client:load
-    initialSort="release-date-desc"
-    distinctReleaseYears={distinctReleaseYears}
-    distinctGenres={distinctGenres}
-    posters={posters}
-    movies={narrowedReviews}
-  />
+  <Overrated client:load {...props} />
 </Layout>

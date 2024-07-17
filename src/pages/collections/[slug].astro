@@ -1,13 +1,11 @@
 ---
 import Layout from "src/layouts/Layout.astro";
-import { getFixedWidthPosters } from "src/api/posters";
-import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
-import { getAvatars } from "src/api/avatars";
 import { allCollections } from "src/api/collections";
-import { Collection, AvatarImageConfig } from "src/components/Collection";
+import { Collection } from "src/components/Collection";
+import { getData } from "src/components/Collection/getData";
 
 export async function getStaticPaths() {
-  const { collections, distinctReleaseYears } = await allCollections();
+  const { collections } = await allCollections();
 
   return collections.map((collection) => {
     return {
@@ -15,34 +13,20 @@ export async function getStaticPaths() {
         slug: collection.slug,
       },
       props: {
-        collection,
-        distinctReleaseYears,
+        slug: collection.slug,
       },
     };
   });
 }
 
-const { collection, distinctReleaseYears } = Astro.props;
+const { slug } = Astro.props;
 
-collection.titles.sort((a, b) =>
-  a.releaseSequence.localeCompare(b.releaseSequence)
-);
-
-const posters = await getFixedWidthPosters(ListItemPosterImageConfig);
-const avatars = await getAvatars(AvatarImageConfig);
-const avatarImageData = avatars[collection.slug];
+const props = await getData(slug);
 ---
 
 <Layout
-  title={collection.name}
-  description={`A sortable and filterable list of reviews of movies in the ${collection.name} collection.`}
+  title={props.value.name}
+  description={`A sortable and filterable list of reviews of movies in the ${props.value.name} collection.`}
 >
-  <Collection
-    client:load
-    value={collection}
-    distinctReleaseYears={distinctReleaseYears}
-    posters={posters}
-    avatarImageData={avatarImageData}
-    initialSort="release-date-asc"
-  />
+  <Collection client:load {...props} />
 </Layout>

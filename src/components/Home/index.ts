@@ -1,2 +1,2 @@
 export { Home } from "./Home";
-export { StillImageConfig } from "./HomeListItem";
+export { getData } from "./getData";

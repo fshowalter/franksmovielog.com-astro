@@ -1,21 +1,13 @@
 ---
 import Layout from "src/layouts/Layout.astro";
-import { Home, StillImageConfig } from "src/components/Home";
-import { allReviews } from "src/api/reviews";
-import { getStills } from "src/api/stills";
+import { Home, getData } from "src/components/Home";
 
-const { reviews } = await allReviews();
-
-reviews.sort((a, b) => b.sequence.localeCompare(a.sequence));
-
-const homePageReviews = reviews.slice(0, 10);
-
-const stills = await getStills(StillImageConfig);
+const props = await getData();
 ---
 
 <Layout
   title="Frank's Movie Log"
   description="Reviews of current, cult, classic, and forgotten films."
 >
-  <Home reviews={homePageReviews} stills={stills} />
+  <Home {...props} />
 </Layout>

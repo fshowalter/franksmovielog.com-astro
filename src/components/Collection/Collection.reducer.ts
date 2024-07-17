@@ -38,24 +38,24 @@ function sortValues(values: ListItemValue[], sortOrder: Sort) {
   return values.sort(comparer);
 }
 
-function groupForValue(item: ListItemValue, sortValue: Sort): string {
+function groupForValue(value: ListItemValue, sortValue: Sort): string {
   switch (sortValue) {
     case "release-date-asc":
     case "release-date-desc": {
-      return item.year.toString();
+      return value.year.toString();
     }
     case "grade-asc":
     case "grade-desc": {
-      return item.grade ?? "Unrated";
+      return value.grade ?? "Unrated";
     }
     case "title": {
-      const letter = item.sortTitle.substring(0, 1);
+      const letter = value.sortTitle.substring(0, 1);
 
       if (letter.toLowerCase() == letter.toUpperCase()) {
         return "#";
       }
 
-      return item.sortTitle.substring(0, 1).toLocaleUpperCase();
+      return value.sortTitle.substring(0, 1).toLocaleUpperCase();
     }
     // no default
   }

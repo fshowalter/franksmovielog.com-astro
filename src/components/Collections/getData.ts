@@ -1,4 +1,4 @@
-import { type ListItemValue } from "src/components/Collections";
+import { type ListItemValue } from "./List";
 import { allCollections } from "src/api/collections";
 import { getAvatars, type AvatarImageData } from "src/api/avatars";
 import { ListItemAvatarImageConfig } from "src/components/ListItemAvatar";

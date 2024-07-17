@@ -4,12 +4,11 @@ import { ListItemGenres } from "src/components/ListItemGenres";
 import { ListItemPoster } from "src/components/ListItemPoster";
 import { ListItemTitle } from "src/components/ListItemTitle";
 import { GroupedList } from "src/components/GroupedList";
-import { ActionType } from "./Overrated.reducer";
-import type { Action } from "./Overrated.reducer";
+import { Actions, type ActionType } from "./Overrated.reducer";
 import type { PosterImageData } from "src/api/posters";
 import type { OverratedDisappointment } from "src/api/overratedDisappointments";
 
-export interface ListItemOverratedData
+export interface ListItemValue
   extends Pick<
     OverratedDisappointment,
     | "releaseSequence"
@@ -24,31 +23,31 @@ export interface ListItemOverratedData
   > {}
 
 export function List({
-  groupedItems,
+  groupedValues,
   totalCount,
   visibleCount,
   posters,
   dispatch,
 }: {
-  groupedItems: Map<string, ListItemOverratedData[]>;
+  groupedValues: Map<string, ListItemValue[]>;
   totalCount: number;
   visibleCount: number;
-  dispatch: React.Dispatch<Action>;
+  dispatch: React.Dispatch<ActionType>;
   posters: Record<string, PosterImageData>;
 }) {
   return (
     <GroupedList
-      data-testid="poster-list"
-      groupedItems={groupedItems}
+      data-testid="list"
+      groupedValues={groupedValues}
       visibleCount={visibleCount}
       totalCount={totalCount}
-      onShowMore={() => dispatch({ type: ActionType.SHOW_MORE })}
+      onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
     >
-      {(movie) => (
+      {(value) => (
         <UnderseenGemsListItem
-          movie={movie}
-          key={movie.imdbId}
-          imageData={posters[movie.slug]!}
+          value={value}
+          key={value.imdbId}
+          imageData={posters[value.slug]!}
         />
       )}
     </GroupedList>
@@ -56,33 +55,33 @@ export function List({
 }
 
 function UnderseenGemsListItem({
-  movie,
+  value,
   imageData,
 }: {
-  movie: ListItemOverratedData;
+  value: ListItemValue;
   imageData: PosterImageData;
 }): JSX.Element {
   return (
     <ListItem className="items-center">
       <ListItemPoster
-        slug={movie.slug}
-        title={movie.title}
-        year={movie.year}
+        slug={value.slug}
+        title={value.title}
+        year={value.year}
         imageData={imageData}
       />
       <div className="grow pr-gutter tablet:w-full desktop:pr-4">
         <div>
           <ListItemTitle
-            title={movie.title}
-            year={movie.year}
-            slug={movie.slug}
+            title={value.title}
+            year={value.year}
+            slug={value.slug}
           />
           <div className="spacer-y-1" />
           <div className="py-px">
-            <Grade grade={movie.grade} height={18} />
+            <Grade grade={value.grade} height={18} />
           </div>
           <div className="spacer-y-2" />
-          <ListItemGenres genres={movie.genres} />
+          <ListItemGenres genres={value.genres} />
           <div className="spacer-y-2" />
         </div>
       </div>

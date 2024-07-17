@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`/collections > can filter by name 1`] = `
+exports[`Collections > can filter by name 1`] = `
 <ol
   data-testid="list"
 >
@@ -42,7 +42,7 @@ exports[`/collections > can filter by name 1`] = `
 </ol>
 `;
 
-exports[`/collections > can sort by name asc 1`] = `
+exports[`Collections > can sort by name asc 1`] = `
 <ol
   data-testid="list"
 >
@@ -399,7 +399,7 @@ exports[`/collections > can sort by name asc 1`] = `
 </ol>
 `;
 
-exports[`/collections > can sort by name desc 1`] = `
+exports[`Collections > can sort by name desc 1`] = `
 <ol
   data-testid="list"
 >
@@ -756,7 +756,7 @@ exports[`/collections > can sort by name desc 1`] = `
 </ol>
 `;
 
-exports[`/collections > can sort by review count asc 1`] = `
+exports[`Collections > can sort by review count asc 1`] = `
 <ol
   data-testid="list"
 >
@@ -1113,7 +1113,7 @@ exports[`/collections > can sort by review count asc 1`] = `
 </ol>
 `;
 
-exports[`/collections > can sort by review count desc 1`] = `
+exports[`Collections > can sort by review count desc 1`] = `
 <ol
   data-testid="list"
 >
@@ -1470,7 +1470,7 @@ exports[`/collections > can sort by review count desc 1`] = `
 </ol>
 `;
 
-exports[`/collections > can sort by title count asc 1`] = `
+exports[`Collections > can sort by title count asc 1`] = `
 <ol
   data-testid="list"
 >
@@ -1827,7 +1827,7 @@ exports[`/collections > can sort by title count asc 1`] = `
 </ol>
 `;
 
-exports[`/collections > can sort by title count desc 1`] = `
+exports[`Collections > can sort by title count desc 1`] = `
 <ol
   data-testid="list"
 >

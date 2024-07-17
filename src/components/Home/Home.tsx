@@ -1,24 +1,24 @@
 import { HomeListItem } from "./HomeListItem";
-import type { HomeListItemReviewData } from "./HomeListItem";
+import type { ListItemValue } from "./HomeListItem";
 import type { StillImageData } from "src/api/stills";
 
 export function Home({
-  reviews,
+  values,
   stills,
 }: {
-  reviews: HomeListItemReviewData[];
+  values: ListItemValue[];
   stills: Record<string, StillImageData>;
 }): JSX.Element {
   return (
     <main>
       <ol className="flex flex-col">
-        {reviews.map((review, index) => {
+        {values.map((value, index) => {
           return (
             <HomeListItem
-              key={review.sequence}
-              review={review}
+              key={value.sequence}
+              value={value}
               eagerLoadImage={index === 0}
-              stillImageData={stills[review.slug]}
+              stillImageData={stills[value.slug]}
             />
           );
         })}

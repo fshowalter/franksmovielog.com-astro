@@ -34,7 +34,7 @@ function sortValues(values: ListItemValue[], sortOrder: Sort): ListItemValue[] {
 interface State {
   allValues: ListItemValue[];
   filteredValues: ListItemValue[];
-  filters: Record<string, (entity: ListItemValue) => boolean>;
+  filters: Record<string, (value: ListItemValue) => boolean>;
   sortValue: Sort;
 }
 

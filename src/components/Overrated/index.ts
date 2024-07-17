@@ -1,2 +1,2 @@
 export { Overrated } from "./Overrated";
-export type { ListItemOverratedData } from "./List";
+export { getData } from "./getData";

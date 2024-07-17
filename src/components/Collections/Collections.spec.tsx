@@ -5,7 +5,7 @@ import { getData } from "./getData";
 
 const props = await getData();
 
-describe("/collections", () => {
+describe("Collections", () => {
   it("can filter by name", async () => {
     expect.hasAssertions();
 
