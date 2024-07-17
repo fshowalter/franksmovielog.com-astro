@@ -1,31 +1,13 @@
 ---
 import Layout from "src/layouts/Layout.astro";
-import { AlltimeStats } from "src/components/AlltimeStats";
-import { alltimeStats } from "src/api/alltimeStats";
-import { getFluidWidthPosters, getFixedWidthPosters } from "src/api/posters";
-import { MostWatchedMoviesPosterConfig } from "src/components/MostWatchedMovies";
-import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
-import { allStatYears } from "src/api/yearStats";
+import { AlltimeStats, getData } from "src/components/AlltimeStats";
 
-const stats = await alltimeStats();
-const distinctStatYears = await allStatYears();
-
-const mostWatchedPeoplePosters = await getFixedWidthPosters(
-  ListItemPosterImageConfig
-);
-const mostWatchedMoviePosters = await getFluidWidthPosters(
-  MostWatchedMoviesPosterConfig
-);
+const props = await getData();
 ---
 
 <Layout
   title="All-Time Stats"
   description="My most-watched titles, performers, directors, writers and other stats."
 >
-  <AlltimeStats
-    stats={stats}
-    distinctStatYears={distinctStatYears}
-    mostWatchedMoviesPosters={mostWatchedMoviePosters}
-    mostWatchedPeoplePosters={mostWatchedPeoplePosters}
-  />
+  <AlltimeStats {...props} />
 </Layout>

@@ -1,7 +1,6 @@
 import { act, render, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { CastAndCrew } from "./CastAndCrew";
-import { getData } from "./getData";
+import { CastAndCrew, getData } from "./";
 import { expect, it, describe } from "vitest";
 
 const props = await getData();

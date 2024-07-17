@@ -24,10 +24,12 @@ const MoreTitleSchema = z.object({
   genres: z.array(z.string()),
 });
 
+const CreditKindSchema = z.enum(["writer", "director", "performer"]);
+
 const MoreCastAndCrewMemberSchema = z.object({
   name: z.string(),
   slug: z.string(),
-  creditKind: z.string(),
+  creditKind: CreditKindSchema,
   titles: z.array(MoreTitleSchema),
 });
 

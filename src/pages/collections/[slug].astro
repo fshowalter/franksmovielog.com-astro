@@ -1,8 +1,7 @@
 ---
 import Layout from "src/layouts/Layout.astro";
 import { allCollections } from "src/api/collections";
-import { Collection } from "src/components/Collection";
-import { getData } from "src/components/Collection/getData";
+import { Collection, getData } from "src/components/Collection";
 
 export async function getStaticPaths() {
   const { collections } = await allCollections();

@@ -58,7 +58,9 @@ export function MoreReviews({
   );
 }
 
-function leadTextForCreditKind(creditKind: string): string {
+function leadTextForCreditKind(
+  creditKind: "director" | "performer" | "writer",
+): string {
   switch (creditKind) {
     case "director": {
       return "More directed by";
@@ -69,9 +71,7 @@ function leadTextForCreditKind(creditKind: string): string {
     case "writer": {
       return "More written by";
     }
-    default: {
-      throw new Error(`Unknown credit kind ${creditKind}`);
-    }
+    // no-default
   }
 }
 

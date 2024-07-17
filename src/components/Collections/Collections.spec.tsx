@@ -1,7 +1,6 @@
 import { act, render, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { Collections } from "./Collections";
-import { getData } from "./getData";
+import { Collections, getData } from "./";
 
 const props = await getData();
 

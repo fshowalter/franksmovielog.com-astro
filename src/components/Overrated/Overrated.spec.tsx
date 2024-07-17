@@ -1,8 +1,7 @@
 import { act, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { select } from "react-select-event";
-import { Overrated } from "./Overrated";
-import { getData } from "./getData";
+import { Overrated, getData } from "./";
 
 const props = await getData();
 
