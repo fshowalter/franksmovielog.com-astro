@@ -59,7 +59,7 @@ jobs:
         run: npm ci
 
       - name: type-check
-        run: npm check
+        run: npm run check
 
   test:
     runs-on: ubuntu-latest
