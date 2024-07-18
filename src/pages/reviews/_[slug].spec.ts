@@ -3,7 +3,7 @@ import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 import { loadRenderers } from "astro:container";
 import { allReviews } from "src/api/reviews";
-import { normalizeDevImageSrcs } from "src/utils";
+import { normalizeSnapshot } from "src/utils";
 import { describe, it } from "vitest";
 
 import Review from "./[slug].astro";
@@ -24,7 +24,7 @@ describe("/reviews/:slug", () => {
         },
       );
 
-      void expect(normalizeDevImageSrcs(result)).toMatchFileSnapshot(
+      void expect(normalizeSnapshot(result)).toMatchFileSnapshot(
         `__snapshots__/${review.slug}.html`,
       );
     },

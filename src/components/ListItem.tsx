@@ -1,4 +1,4 @@
-import { twMerge } from "tailwind-merge";
+import { twJoin } from "tailwind-merge";
 
 export function ListItem({
   children,
@@ -9,7 +9,7 @@ export function ListItem({
 }) {
   return (
     <li
-      className={twMerge(
+      className={twJoin(
         "tablet:gap-x-6 even:bg-subtle px-gutter tablet:px-6 flex flex-row gap-x-4 py-4",
         className,
       )}

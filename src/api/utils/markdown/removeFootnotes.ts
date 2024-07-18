@@ -1,5 +1,5 @@
 import type { Node, Parent } from "mdast";
-import { CONTINUE,SKIP, visit } from "unist-util-visit";
+import { CONTINUE, SKIP, visit } from "unist-util-visit";
 
 export function removeFootnotes() {
   return (tree: Node) => {
