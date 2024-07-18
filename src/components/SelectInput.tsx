@@ -18,7 +18,7 @@ export function SelectInput({
       value={value}
       onChange={onChange}
       className={twMerge(
-        "select-background-image shadow-all w-full appearance-none rounded-sm border-none bg-subtle py-2 pl-4 pr-8 text-base leading-6 text-subtle",
+        "select-background-image w-full appearance-none rounded-sm border-none bg-subtle py-2 pl-4 pr-8 text-base leading-6 text-subtle shadow-all",
         className,
       )}
     >

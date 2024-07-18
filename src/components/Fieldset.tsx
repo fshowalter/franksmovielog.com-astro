@@ -12,7 +12,7 @@ export function Fieldset({
   return (
     <fieldset
       className={twJoin(
-        "border-all text-subtle px-gutter rounded-md pb-8 pt-6",
+        "border-all rounded-md px-gutter pb-8 pt-6 text-subtle",
         className,
       )}
     >
