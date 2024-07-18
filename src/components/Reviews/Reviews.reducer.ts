@@ -1,13 +1,13 @@
 import type { FilterableState } from "src/utils";
 import {
-  buildGroupItems,
+  buildGroupValues,
   collator,
   filterTools,
   sortNumber,
   sortString,
 } from "src/utils";
 
-import type { ListItemReviewData } from "./List";
+import type { ListItemValue } from "./List";
 
 const SHOW_COUNT_DEFAULT = 100;
 
@@ -21,82 +21,79 @@ export type Sort =
   | "grade-asc"
   | "grade-desc";
 
-const groupItems = buildGroupItems(groupForItem);
-const { updateFilter } = filterTools(sortItems, groupItems);
+const groupValues = buildGroupValues(groupForValue);
+const { updateFilter } = filterTools(sortValues, groupValues);
 
-function sortItems(items: ListItemReviewData[], sortOrder: Sort) {
-  const sortMap: Record<
-    Sort,
-    (a: ListItemReviewData, b: ListItemReviewData) => number
-  > = {
-    "release-date-desc": (a, b) =>
-      sortString(a.releaseSequence, b.releaseSequence) * -1,
-    "release-date-asc": (a, b) =>
-      sortString(a.releaseSequence, b.releaseSequence),
-    "review-date-desc": (a, b) => sortString(a.reviewDate, b.reviewDate) * -1,
-    "review-date-asc": (a, b) => sortString(a.reviewDate, b.reviewDate),
-    "title-asc": (a, b) => collator.compare(a.sortTitle, b.sortTitle),
-    "title-desc": (a, b) => collator.compare(a.sortTitle, b.sortTitle) * -1,
-    "grade-asc": (a, b) => sortNumber(a.gradeValue, b.gradeValue),
-    "grade-desc": (a, b) => sortNumber(a.gradeValue, b.gradeValue) * -1,
-  };
+function sortValues(values: ListItemValue[], sortOrder: Sort) {
+  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
+    {
+      "release-date-desc": (a, b) =>
+        sortString(a.releaseSequence, b.releaseSequence) * -1,
+      "release-date-asc": (a, b) =>
+        sortString(a.releaseSequence, b.releaseSequence),
+      "review-date-desc": (a, b) => sortString(a.reviewDate, b.reviewDate) * -1,
+      "review-date-asc": (a, b) => sortString(a.reviewDate, b.reviewDate),
+      "title-asc": (a, b) => collator.compare(a.sortTitle, b.sortTitle),
+      "title-desc": (a, b) => collator.compare(a.sortTitle, b.sortTitle) * -1,
+      "grade-asc": (a, b) => sortNumber(a.gradeValue, b.gradeValue),
+      "grade-desc": (a, b) => sortNumber(a.gradeValue, b.gradeValue) * -1,
+    };
 
   const comparer = sortMap[sortOrder];
-  return items.sort(comparer);
+  return values.sort(comparer);
 }
 
-function groupForItem(item: ListItemReviewData, sortValue: Sort): string {
+function groupForValue(value: ListItemValue, sortValue: Sort): string {
   switch (sortValue) {
     case "release-date-asc":
     case "release-date-desc": {
-      return item.year;
+      return value.year;
     }
     case "review-date-asc":
     case "review-date-desc": {
-      return `${item.reviewMonth} ${item.reviewYear}`;
+      return `${value.reviewMonth} ${value.reviewYear}`;
     }
     case "grade-asc":
     case "grade-desc": {
-      return item.grade;
+      return value.grade;
     }
     case "title-asc":
     case "title-desc": {
-      const letter = item.sortTitle.substring(0, 1);
+      const letter = value.sortTitle.substring(0, 1);
 
       if (letter.toLowerCase() == letter.toUpperCase()) {
         return "#";
       }
 
-      return item.sortTitle.substring(0, 1).toLocaleUpperCase();
+      return value.sortTitle.substring(0, 1).toLocaleUpperCase();
     }
     // no default
   }
 }
 
-type State = FilterableState<
-  ListItemReviewData,
-  Sort,
-  Map<string, ListItemReviewData[]>
->;
+type State = FilterableState<ListItemValue, Sort, Map<string, ListItemValue[]>>;
 
 export function initState({
-  items,
-  sort,
+  values,
+  initialSort,
 }: {
-  items: ListItemReviewData[];
-  sort: Sort;
+  values: ListItemValue[];
+  initialSort: Sort;
 }): State {
   return {
-    allItems: items,
-    filteredItems: items,
-    groupedItems: groupItems(items.slice(0, SHOW_COUNT_DEFAULT), sort),
+    allValues: values,
+    filteredValues: values,
+    groupedValues: groupValues(
+      values.slice(0, SHOW_COUNT_DEFAULT),
+      initialSort,
+    ),
     filters: {},
     showCount: SHOW_COUNT_DEFAULT,
-    sortValue: sort,
+    sortValue: initialSort,
   };
 }
 
-export enum ActionType {
+export enum Actions {
   FILTER_TITLE = "FILTER_TITLE",
   FILTER_GRADE = "FILTER_GRADE",
   FILTER_GENRES = "FILTER_GENRES",
@@ -107,40 +104,40 @@ export enum ActionType {
 }
 
 interface FilterTitleAction {
-  type: ActionType.FILTER_TITLE;
+  type: Actions.FILTER_TITLE;
   value: string;
 }
 
 interface FilterGenresAction {
-  type: ActionType.FILTER_GENRES;
+  type: Actions.FILTER_GENRES;
   values: string[];
 }
 
 interface FilterGradeAction {
-  type: ActionType.FILTER_GRADE;
+  type: Actions.FILTER_GRADE;
   values: [number, number];
 }
 
 interface FilterReleaseYearAction {
-  type: ActionType.FILTER_RELEASE_YEAR;
+  type: Actions.FILTER_RELEASE_YEAR;
   values: [string, string];
 }
 
 interface FilterReviewYearAction {
-  type: ActionType.FILTER_REVIEW_YEAR;
+  type: Actions.FILTER_REVIEW_YEAR;
   values: [string, string];
 }
 
 interface SortAction {
-  type: ActionType.SORT;
+  type: Actions.SORT;
   value: Sort;
 }
 
 interface ShowMoreAction {
-  type: ActionType.SHOW_MORE;
+  type: Actions.SHOW_MORE;
 }
 
-export type Action =
+export type ActionType =
   | FilterTitleAction
   | FilterReleaseYearAction
   | FilterReviewYearAction
@@ -154,66 +151,66 @@ export type Action =
  * @param state The current state.
  * @param action The action to apply.
  */
-export function reducer(state: State, action: Action): State {
-  let filteredItems;
-  let groupedItems;
+export function reducer(state: State, action: ActionType): State {
+  let filteredValues;
+  let groupedValues;
 
   switch (action.type) {
-    case ActionType.FILTER_TITLE: {
+    case Actions.FILTER_TITLE: {
       const regex = new RegExp(action.value, "i");
-      return updateFilter(state, "title", (item) => {
-        return regex.test(item.title);
+      return updateFilter(state, "title", (value) => {
+        return regex.test(value.title);
       });
     }
-    case ActionType.FILTER_RELEASE_YEAR: {
-      return updateFilter(state, "releaseYear", (item) => {
-        const releaseYear = item.year;
+    case Actions.FILTER_RELEASE_YEAR: {
+      return updateFilter(state, "releaseYear", (value) => {
+        const releaseYear = value.year;
         return (
           releaseYear >= action.values[0] && releaseYear <= action.values[1]
         );
       });
     }
-    case ActionType.FILTER_GENRES: {
-      return updateFilter(state, "genres", (item) => {
-        return action.values.every((genre) => item.genres.includes(genre));
+    case Actions.FILTER_GENRES: {
+      return updateFilter(state, "genres", (value) => {
+        return action.values.every((genre) => value.genres.includes(genre));
       });
     }
-    case ActionType.FILTER_REVIEW_YEAR: {
-      return updateFilter(state, "reviewYear", (item) => {
-        const reviewYear = item.reviewYear;
+    case Actions.FILTER_REVIEW_YEAR: {
+      return updateFilter(state, "reviewYear", (value) => {
+        const reviewYear = value.reviewYear;
         return reviewYear >= action.values[0] && reviewYear <= action.values[1];
       });
     }
-    case ActionType.FILTER_GRADE: {
-      return updateFilter(state, "grade", (item) => {
-        const gradeValue = item.gradeValue;
+    case Actions.FILTER_GRADE: {
+      return updateFilter(state, "grade", (value) => {
+        const gradeValue = value.gradeValue;
         return gradeValue >= action.values[0] && gradeValue <= action.values[1];
       });
     }
-    case ActionType.SORT: {
-      filteredItems = sortItems(state.filteredItems, action.value);
-      groupedItems = groupItems(
-        filteredItems.slice(0, state.showCount),
+    case Actions.SORT: {
+      filteredValues = sortValues(state.filteredValues, action.value);
+      groupedValues = groupValues(
+        filteredValues.slice(0, state.showCount),
         action.value,
       );
       return {
         ...state,
         sortValue: action.value,
-        filteredItems,
-        groupedItems,
+        filteredValues,
+        groupedValues,
       };
     }
-    case ActionType.SHOW_MORE: {
+    case Actions.SHOW_MORE: {
       const showCount = state.showCount + SHOW_COUNT_DEFAULT;
 
-      groupedItems = groupItems(
-        state.filteredItems.slice(0, showCount),
+      groupedValues = groupValues(
+        state.filteredValues.slice(0, showCount),
         state.sortValue,
       );
 
       return {
         ...state,
-        groupedItems,
+        groupedValues,
         showCount,
       };
     }

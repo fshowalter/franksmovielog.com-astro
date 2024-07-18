@@ -7,10 +7,10 @@ import { ListItemGenres } from "src/components/ListItemGenres";
 import { ListItemPoster } from "src/components/ListItemPoster";
 import { ListItemTitle } from "src/components/ListItemTitle";
 
-import type { Action } from "./Reviews.reducer";
-import { ActionType } from "./Reviews.reducer";
+import type { ActionType } from "./Reviews.reducer";
+import { Actions } from "./Reviews.reducer";
 
-export interface ListItemReviewData
+export interface ListItemValue
   extends Pick<
     Review,
     | "imdbId"
@@ -29,65 +29,65 @@ export interface ListItemReviewData
 }
 
 export function List({
-  groupedItems,
+  groupedValues,
   totalCount,
   visibleCount,
   dispatch,
   posters,
 }: {
-  groupedItems: Map<string, ListItemReviewData[]>;
+  groupedValues: Map<string, ListItemValue[]>;
   totalCount: number;
   visibleCount: number;
-  dispatch: React.Dispatch<Action>;
+  dispatch: React.Dispatch<ActionType>;
   posters: Record<string, PosterImageData>;
 }) {
   return (
     <GroupedList
       data-testid="poster-list"
-      groupedItems={groupedItems}
+      groupedValues={groupedValues}
       visibleCount={visibleCount}
       totalCount={totalCount}
-      onShowMore={() => dispatch({ type: ActionType.SHOW_MORE })}
+      onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
     >
-      {(review) => (
-        <ReviewListItem
-          review={review}
-          key={review.imdbId}
-          imageData={posters[review.slug]!}
+      {(value) => (
+        <ReviewsListItem
+          value={value}
+          key={value.imdbId}
+          imageData={posters[value.slug]}
         />
       )}
     </GroupedList>
   );
 }
 
-function ReviewListItem({
-  review,
+function ReviewsListItem({
+  value,
   imageData,
 }: {
-  review: ListItemReviewData;
+  value: ListItemValue;
   imageData: PosterImageData;
 }): JSX.Element {
   return (
     <ListItem className="items-center">
       <ListItemPoster
-        slug={review.slug}
-        title={review.title}
-        year={review.year}
+        slug={value.slug}
+        title={value.title}
+        year={value.year}
         imageData={imageData}
       />
       <div className="grow pr-gutter tablet:w-full desktop:pr-4">
         <div>
           <ListItemTitle
-            title={review.title}
-            year={review.year}
-            slug={review.slug}
+            title={value.title}
+            year={value.year}
+            slug={value.slug}
           />
           <div className="spacer-y-1" />
           <div className="py-px">
-            <Grade grade={review.grade} height={18} />
+            <Grade grade={value.grade} height={18} />
           </div>
           <div className="spacer-y-2" />
-          <ListItemGenres genres={review.genres} />
+          <ListItemGenres genres={value.genres} />
           <div className="spacer-y-2" />
         </div>
       </div>

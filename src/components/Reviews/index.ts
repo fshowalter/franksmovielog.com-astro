@@ -1,2 +1,2 @@
-export type { ListItemReviewData } from "./List";
+export { getProps } from "./getProps";
 export { Reviews } from "./Reviews";

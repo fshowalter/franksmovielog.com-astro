@@ -1,18 +1,16 @@
-"use client";
-
 import { useReducer } from "react";
 import type { PosterImageData } from "src/api/posters";
 import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
 
 import { Filters } from "./Filters";
 import { Header } from "./Header";
-import type { ListItemReviewData } from "./List";
+import type { ListItemValue } from "./List";
 import { List } from "./List";
 import type { Sort } from "./Reviews.reducer";
 import { initState, reducer } from "./Reviews.reducer";
 
-export interface ReviewsProps {
-  reviews: ListItemReviewData[];
+export interface Props {
+  values: ListItemValue[];
   initialSort: Sort;
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
@@ -21,25 +19,25 @@ export interface ReviewsProps {
 }
 
 export function Reviews({
-  reviews,
+  values,
   initialSort,
   distinctGenres,
   distinctReleaseYears,
   distinctReviewYears,
   posters,
-}: ReviewsProps): JSX.Element {
+}: Props): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
-      items: [...reviews],
-      sort: initialSort,
+      values,
+      initialSort,
     },
     initState,
   );
 
   return (
     <ListWithFiltersLayout
-      header={<Header reviewCount={reviews.length} />}
+      header={<Header reviewCount={values.length} />}
       filters={
         <Filters
           dispatch={dispatch}
@@ -52,9 +50,9 @@ export function Reviews({
       list={
         <List
           dispatch={dispatch}
-          groupedItems={state.groupedItems}
+          groupedValues={state.groupedValues}
           visibleCount={state.showCount}
-          totalCount={state.filteredItems.length}
+          totalCount={state.filteredValues.length}
           posters={posters}
         />
       }

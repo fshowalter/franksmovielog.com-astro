@@ -1,54 +1,13 @@
 ---
-import { getFixedWidthPosters } from "src/api/posters";
-import { allReviews } from "src/api/reviews";
-import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
-import type { ListItemReviewData } from "src/components/Reviews";
-import { Reviews } from "src/components/Reviews";
+import { getProps, Reviews } from "src/components/Reviews";
 import Layout from "src/layouts/Layout.astro";
 
-const { reviews, distinctGenres, distinctReleaseYears, distinctReviewYears } =
-  await allReviews();
-const posters = await getFixedWidthPosters(ListItemPosterImageConfig);
-
-reviews.sort((a, b) => a.sortTitle.localeCompare(b.sortTitle));
-
-const narrowedReviews = reviews.map((review) => {
-  const listItemReviewData: ListItemReviewData = {
-    reviewDate: review.date.toISOString(),
-    reviewMonth: review.date.toLocaleDateString("en-US", {
-      timeZone: "UTC",
-      month: "long",
-    }),
-    reviewYear: review.date.toLocaleDateString("en-US", {
-      timeZone: "UTC",
-      year: "numeric",
-    }),
-    imdbId: review.imdbId,
-    title: review.title,
-    year: review.year,
-    slug: review.slug,
-    genres: review.genres,
-    grade: review.grade,
-    releaseSequence: review.releaseSequence,
-    gradeValue: review.gradeValue,
-    sortTitle: review.sortTitle,
-  };
-
-  return listItemReviewData;
-});
+const props = await getProps();
 ---
 
 <Layout
   title="Reviews"
   description="A sortable and filterable list of every movie I've reviewed since 2012."
 >
-  <Reviews
-    client:load
-    initialSort="title-asc"
-    distinctReleaseYears={distinctReleaseYears}
-    distinctReviewYears={distinctReviewYears}
-    distinctGenres={distinctGenres}
-    posters={posters}
-    reviews={narrowedReviews}
-  />
+  <Reviews client:load {...props} />
 </Layout>
