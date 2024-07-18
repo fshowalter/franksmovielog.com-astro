@@ -11,6 +11,7 @@ export default tsEslint.config(
   {
     ignores: ["dist/", ".astro/"],
   },
+  eslint.configs.recommended,
   {
     plugins: {
       "simple-import-sort": simpleImportSort,
@@ -20,12 +21,10 @@ export default tsEslint.config(
       "simple-import-sort/exports": "error",
     },
   },
-  ...eslintPluginAstro.configs["flat/recommended"], // In CommonJS, the `flat/` prefix is required.
-  eslint.configs.recommended,
+  ...eslintPluginAstro.configs.recommended,
   {
     files: ["**/*.ts", "**/*.tsx"],
     extends: [
-      eslint.configs.recommended,
       ...tsEslint.configs.recommendedTypeChecked,
     ],
     languageOptions: {
@@ -34,6 +33,13 @@ export default tsEslint.config(
         tsconfigRootDir: import.meta.dirname,
       },
     },
+    rules: {
+      "@typescript-eslint/array-type": "error",
+      "@typescript-eslint/consistent-type-imports": "error",
+    },
+  },
+  {
+    files: ["**/*.tsx"],
     plugins: {
       react: fixupPluginRules({ rules: react.rules }),
     },
@@ -43,8 +49,6 @@ export default tsEslint.config(
       },
     },
     rules: {
-      "@typescript-eslint/array-type": "error",
-      "@typescript-eslint/consistent-type-imports": "error",
       ...react.configs.recommended.rules,
       "react/react-in-jsx-scope": "off",
     },
@@ -61,14 +65,12 @@ export default tsEslint.config(
   {
     files: ["src/components/**/?(*.)+(spec|test).[jt]s?(x)"],
     plugins: {
-      vitest,
       "testing-library": fixupPluginRules({
         rules: testingLibrary.rules,
       }),
     },
     rules: {
       ...testingLibrary.configs.react.rules,
-      ...vitest.configs.recommended.rules,
     },
   },
 );

@@ -1,5 +1,5 @@
 import { alltimeStats } from "src/api/alltimeStats";
-import { getFixedWidthPosters,getFluidWidthPosters } from "src/api/posters";
+import { getFixedWidthPosters, getFluidWidthPosters } from "src/api/posters";
 import { allStatYears } from "src/api/yearStats";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 import { MostWatchedMoviesPosterConfig } from "src/components/MostWatchedMovies";
