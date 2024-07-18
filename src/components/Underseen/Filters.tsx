@@ -4,8 +4,8 @@ import { SelectField } from "src/components/SelectField";
 import { YearInput } from "src/components/YearInput";
 
 import type { Sort } from "./Underseen.reducer";
-import type { Action } from "./Underseen.reducer";
-import { ActionType } from "./Underseen.reducer";
+import type { ActionType } from "./Underseen.reducer";
+import { Actions } from "./Underseen.reducer";
 
 export function Filters({
   dispatch,
@@ -13,7 +13,7 @@ export function Filters({
   distinctReleaseYears,
   distinctGenres,
 }: {
-  dispatch: React.Dispatch<Action>;
+  dispatch: React.Dispatch<ActionType>;
   sortValue: Sort;
   distinctReleaseYears: readonly string[];
   distinctGenres: readonly string[];
@@ -24,21 +24,21 @@ export function Filters({
         label="Title"
         placeholder="Enter all or part of a title"
         onInputChange={(value) =>
-          dispatch({ type: ActionType.FILTER_TITLE, value })
+          dispatch({ type: Actions.FILTER_TITLE, value })
         }
       />
       <YearInput
         label="Release Year"
         years={distinctReleaseYears}
         onYearChange={(values) =>
-          dispatch({ type: ActionType.FILTER_RELEASE_YEAR, values })
+          dispatch({ type: Actions.FILTER_RELEASE_YEAR, values })
         }
       />
       <MultiSelectField
         label="Genres"
         onChange={(e) =>
           dispatch({
-            type: ActionType.FILTER_GENRES,
+            type: Actions.FILTER_GENRES,
             values: e.map((selection) => selection.value),
           })
         }
@@ -49,7 +49,7 @@ export function Filters({
         label="Order By"
         onChange={(e) =>
           dispatch({
-            type: ActionType.SORT,
+            type: Actions.SORT,
             value: e.target.value as Sort,
           })
         }

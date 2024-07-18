@@ -34,7 +34,7 @@ export async function GET() {
     items: await Promise.all(
       rssItems.map(async (item) => {
         const imagePath = getStillImagePath(item.slug);
-        const stillFile = await images[imagePath]!();
+        const stillFile = await images[imagePath]();
 
         const optimizedImage = await getImage({
           src: stillFile.default,

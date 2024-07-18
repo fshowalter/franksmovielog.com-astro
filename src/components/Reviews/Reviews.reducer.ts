@@ -146,11 +146,6 @@ export type ActionType =
   | SortAction
   | ShowMoreAction;
 
-/**
- * Applies the given action to the given state, returning a new State object.
- * @param state The current state.
- * @param action The action to apply.
- */
 export function reducer(state: State, action: ActionType): State {
   let filteredValues;
   let groupedValues;

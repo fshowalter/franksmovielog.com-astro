@@ -48,7 +48,7 @@ export function List({
         <UnderseenGemsListItem
           value={value}
           key={value.imdbId}
-          imageData={posters[value.slug]!}
+          imageData={posters[value.slug]}
         />
       )}
     </GroupedList>

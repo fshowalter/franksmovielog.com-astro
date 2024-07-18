@@ -6,7 +6,7 @@ import { getProps, Reviews } from "./";
 
 const props = await getProps();
 
-describe("/reviews", () => {
+describe("Reviews", () => {
   it("renders", () => {
     const { asFragment } = render(<Reviews {...props} />);
 
@@ -23,7 +23,7 @@ describe("/reviews", () => {
       await new Promise((r) => setTimeout(r, 500));
     });
 
-    expect(screen.getByTestId("poster-list")).toMatchSnapshot();
+    expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
   it("can sort by review date with newest first", async () => {
@@ -36,7 +36,7 @@ describe("/reviews", () => {
       "Review Date (Newest First)",
     );
 
-    expect(screen.getByTestId("poster-list")).toMatchSnapshot();
+    expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
   it("can sort by review date with oldest first", async () => {
@@ -49,7 +49,7 @@ describe("/reviews", () => {
       "Review Date (Oldest First)",
     );
 
-    expect(screen.getByTestId("poster-list")).toMatchSnapshot();
+    expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
   it("can sort by title A → Z", async () => {
@@ -62,7 +62,7 @@ describe("/reviews", () => {
       "Title (A → Z)",
     );
 
-    expect(screen.getByTestId("poster-list")).toMatchSnapshot();
+    expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
   it("can sort by title Z → A", async () => {
@@ -75,7 +75,7 @@ describe("/reviews", () => {
       "Title (Z → A)",
     );
 
-    expect(screen.getByTestId("poster-list")).toMatchSnapshot();
+    expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
   it("can sort by release date with oldest first", async () => {
@@ -88,7 +88,7 @@ describe("/reviews", () => {
       "Release Date (Oldest First)",
     );
 
-    expect(screen.getByTestId("poster-list")).toMatchSnapshot();
+    expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
   it("can sort by release date with newest first", async () => {
@@ -101,7 +101,7 @@ describe("/reviews", () => {
       "Release Date (Newest First)",
     );
 
-    expect(screen.getByTestId("poster-list")).toMatchSnapshot();
+    expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
   it("can sort by grade with best first", async () => {
@@ -114,7 +114,7 @@ describe("/reviews", () => {
       "Grade (Best First)",
     );
 
-    expect(screen.getByTestId("poster-list")).toMatchSnapshot();
+    expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
   it("can sort by grade with worst first", async () => {
@@ -127,7 +127,7 @@ describe("/reviews", () => {
       "Grade (Worst First)",
     );
 
-    expect(screen.getByTestId("poster-list")).toMatchSnapshot();
+    expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
   it("can filter by release year", async () => {
@@ -142,7 +142,7 @@ describe("/reviews", () => {
     await userEvent.selectOptions(fromInput, "1973");
     await userEvent.selectOptions(toInput, "2021");
 
-    expect(screen.getByTestId("poster-list")).toMatchSnapshot();
+    expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
   it("can filter by release year reversed", async () => {
@@ -159,7 +159,7 @@ describe("/reviews", () => {
     await userEvent.selectOptions(fromInput, "2009");
     await userEvent.selectOptions(toInput, "1972");
 
-    expect(screen.getByTestId("poster-list")).toMatchSnapshot();
+    expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
   it("can filter by review year", async () => {
@@ -174,7 +174,7 @@ describe("/reviews", () => {
     await userEvent.selectOptions(fromInput, "2015");
     await userEvent.selectOptions(toInput, "2020");
 
-    expect(screen.getByTestId("poster-list")).toMatchSnapshot();
+    expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
   it("can filter by review year reversed", async () => {
@@ -191,7 +191,7 @@ describe("/reviews", () => {
     await userEvent.selectOptions(fromInput, "2017");
     await userEvent.selectOptions(toInput, "2015");
 
-    expect(screen.getByTestId("poster-list")).toMatchSnapshot();
+    expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
   it("can filter by grade", async () => {
@@ -206,7 +206,7 @@ describe("/reviews", () => {
     await userEvent.selectOptions(fromInput, "B-");
     await userEvent.selectOptions(toInput, "A+");
 
-    expect(screen.getByTestId("poster-list")).toMatchSnapshot();
+    expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
   it("can filter by genres", async () => {
@@ -217,7 +217,7 @@ describe("/reviews", () => {
 
     await select(selectElement, ["Horror", "Comedy"]);
 
-    expect(screen.getByTestId("poster-list")).toMatchSnapshot();
+    expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
   it("can filter by grade reversed", async () => {
@@ -234,7 +234,7 @@ describe("/reviews", () => {
     await userEvent.selectOptions(fromInput, "A-");
     await userEvent.selectOptions(toInput, "B-");
 
-    expect(screen.getByTestId("poster-list")).toMatchSnapshot();
+    expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
   it("can show more titles", async () => {
@@ -244,6 +244,6 @@ describe("/reviews", () => {
 
     await userEvent.click(screen.getByText("Show More..."));
 
-    expect(screen.getByTestId("poster-list")).toMatchSnapshot();
+    expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 });
