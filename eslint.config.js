@@ -8,7 +8,6 @@ import testingLibrary from "eslint-plugin-testing-library";
 import vitest from "eslint-plugin-vitest";
 import tsEslint from "typescript-eslint";
 
-
 export default tsEslint.config(
   {
     ignores: ["dist/", ".astro/"],
@@ -26,9 +25,7 @@ export default tsEslint.config(
   ...eslintPluginAstro.configs.recommended,
   {
     files: ["**/*.ts", "**/*.tsx"],
-    extends: [
-      ...tsEslint.configs.recommendedTypeChecked,
-    ],
+    extends: [...tsEslint.configs.recommendedTypeChecked],
     languageOptions: {
       parserOptions: {
         project: true,
@@ -42,9 +39,7 @@ export default tsEslint.config(
   },
   {
     files: ["**/*.tsx"],
-    extends: [
-    ...tailwind.configs["flat/recommended"],
-    ],
+    extends: [...tailwind.configs["flat/recommended"]],
     plugins: {
       react: fixupPluginRules({ rules: react.rules }),
     },

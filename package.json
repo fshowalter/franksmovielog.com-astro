@@ -1,19 +1,21 @@
 {
-  "name": "franksmovielog-com-astro",
+  "name": "franksmovielog-com-v2",
   "type": "module",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
+    "astro": "astro",
     "build": "astro build",
     "check": "astro check",
+    "dev": "astro dev",
+    "format:check": "prettier . --check",
+    "format:fix": "prettier . --write",
+    "lint": "eslint  .",
     "preview": "astro preview",
-    "astro": "astro",
-    "test": "vitest run src",
-    "test:watch": "vitest src",
+    "start": "astro dev",
     "test:coverage": "vitest run src --coverage.all true --coverage",
     "test:update": "vitest -u run src",
-    "lint": "eslint  ."
+    "test:watch": "vitest src",
+    "test": "vitest run src"
   },
   "dependencies": {
     "@astrojs/check": "^0.8.1",
