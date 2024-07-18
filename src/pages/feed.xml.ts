@@ -2,6 +2,7 @@ import rss from "@astrojs/rss";
 import { getImage } from "astro:assets";
 import { allReviews, type Review } from "src/api/reviews";
 import { getStillImagePath, images } from "src/api/stills";
+import { normalizeSources } from "src/utils";
 import { textStarsForGrade } from "src/utils/textStarsForGrade";
 
 function addMetaToExcerpt(excerpt: string, review: Review) {
@@ -44,7 +45,7 @@ export async function GET() {
           quality: 80,
         });
 
-        const still = optimizedImage.src;
+        const still = normalizeSources(optimizedImage.src);
 
         return {
           title: `${item.title} (${item.year})`,
