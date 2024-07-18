@@ -1,6 +1,6 @@
 export * from "./buildGroupValues";
 export * from "./capitalize";
 export * from "./filterTools";
-export * from "./normalizeDevImageSrcs";
+export * from "./normalizeSnapshot";
 export * from "./sortTools";
 export * from "./toSentence";
