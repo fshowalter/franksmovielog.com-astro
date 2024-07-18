@@ -1,36 +1,17 @@
 ---
-import { getPage } from "src/api/pages";
-import { allReviews } from "src/api/reviews";
-import { getStills } from "src/api/stills";
-import { Article, StillImageConfig } from "src/components/Article";
-import { StillListItemImageConfig } from "src/components/StillListItem";
+import { Article, getProps } from "src/components/Article";
 import Layout from "src/layouts/Layout.astro";
 
-const { title, content } = await getPage("how-i-grade");
-
-const { reviews } = await allReviews();
-
-reviews.sort((a, b) => b.sequence.localeCompare(a.sequence));
-
-const recentReviews = reviews.slice(0, 4);
-
-const stills = await getStills(StillImageConfig);
-const stillImageData = stills["how-i-grade"]!;
-
-const stillListStills = await getStills(StillListItemImageConfig);
+const props = await getProps({
+  slug: "how-i-grade",
+  alt: "Empty cinema seats.",
+});
 ---
 
 <Layout
-  title={title}
+  title={props.title}
   description="The criteria I use to rate movies on this site."
   article
 >
-  <Article
-    title={title}
-    alt="Empty cinema seats."
-    content={content}
-    moreReviewsStills={stillListStills}
-    imageData={stillImageData}
-    moreReviewsData={recentReviews}
-  />
+  <Article {...props} />
 </Layout>

@@ -1,11 +1,11 @@
 import type { StillImageData } from "src/api/stills";
 
-import { LongFormText } from "./LongFormText";
-import { PageTitle } from "./PageTitle";
-import { StillList } from "./StillList";
-import { StillListHeading } from "./StillListHeading";
-import type { StillListItemData } from "./StillListItem";
-import { StillListNav } from "./StillListNav";
+import { LongFormText } from "../LongFormText";
+import { PageTitle } from "../PageTitle";
+import { StillList } from "../StillList";
+import { StillListHeading } from "../StillListHeading";
+import type { StillListItemData } from "../StillListItem";
+import { StillListNav } from "../StillListNav";
 
 export const StillImageConfig = {
   width: 960,
@@ -13,21 +13,23 @@ export const StillImageConfig = {
   sizes: "(min-width: 960px) 960px, 100vw",
 };
 
-export function Article({
-  alt,
-  title,
-  content,
-  moreReviewsData,
-  moreReviewsStills,
-  imageData,
-}: {
+export interface Props {
   alt: string;
   content: string | null;
   title: string;
   imageData: StillImageData;
-  moreReviewsData: StillListItemData[];
+  moreReviewsValues: StillListItemData[];
   moreReviewsStills: Record<string, StillImageData>;
-}): JSX.Element {
+}
+
+export function Article({
+  alt,
+  title,
+  content,
+  moreReviewsValues,
+  moreReviewsStills,
+  imageData,
+}: Props): JSX.Element {
   return (
     <main>
       <article className="flex flex-col items-center">
@@ -59,7 +61,7 @@ export function Article({
           />
           <StillList
             stills={moreReviewsStills}
-            titles={moreReviewsData}
+            titles={moreReviewsValues}
             seeAllLinkTarget="/reviews/"
             seeAllLinkText="Reviews"
           />

@@ -1,32 +1,13 @@
 ---
-import { getPage } from "src/api/pages";
-import { allReviews } from "src/api/reviews";
-import { getStills } from "src/api/stills";
-import { Article, StillImageConfig } from "src/components/Article";
-import { StillListItemImageConfig } from "src/components/StillListItem";
+import { Article, getProps } from "src/components/Article";
 import Layout from "src/layouts/Layout.astro";
 
-const { title, content } = await getPage("not-found");
-
-const { reviews } = await allReviews();
-
-reviews.sort((a, b) => b.sequence.localeCompare(a.sequence));
-
-const recentReviews = reviews.slice(0, 4);
-
-const stills = await getStills(StillImageConfig);
-const stillImageData = stills["not-found"]!;
-
-const stillListStills = await getStills(StillListItemImageConfig);
+const props = await getProps({
+  slug: "not-found",
+  alt: "Dick Laurent is dead.",
+});
 ---
 
 <Layout title="404: Not Found" description="Dick Laurent is dead." article>
-  <Article
-    title={title}
-    alt="Dick Laurent is dead."
-    content={content}
-    moreReviewsStills={stillListStills}
-    imageData={stillImageData}
-    moreReviewsData={recentReviews}
-  />
+  <Article {...props} />
 </Layout>

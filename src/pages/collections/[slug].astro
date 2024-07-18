@@ -18,6 +18,10 @@ export async function getStaticPaths() {
   });
 }
 
+interface Props {
+  slug: string;
+}
+
 const { slug } = Astro.props;
 
 const props = await getProps(slug);

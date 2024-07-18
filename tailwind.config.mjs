@@ -84,6 +84,11 @@ export default {
     plugin(function ({ matchUtilities, theme }) {
       matchUtilities(
         {
+          /**
+           *
+           * @param {string} value
+           * @returns
+           */
           "spacer-y": (value) => {
             return {
               height: value,

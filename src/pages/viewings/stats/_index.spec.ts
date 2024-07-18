@@ -1,16 +1,20 @@
 import { getContainerRenderer as reactContainerRenderer } from "@astrojs/react";
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 import { loadRenderers } from "astro:container";
-import { describe,expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 
-import index from "./index.astro";
+import Index from "./index.astro";
 
 describe("/viewings/stats", () => {
   it("matches snapshot", { timeout: 10000 }, async () => {
     const renderers = await loadRenderers([reactContainerRenderer()]);
     const container = await AstroContainer.create({ renderers });
-    const result = await container.renderToString(index, {});
+    const result = await container.renderToString(
+      Index as AstroComponentFactory,
+      {},
+    );
 
-    expect(result).toMatchFileSnapshot(`__snapshots__/index.html`);
+    void expect(result).toMatchFileSnapshot(`__snapshots__/index.html`);
   });
 });

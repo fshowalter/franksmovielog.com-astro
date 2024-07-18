@@ -3,13 +3,12 @@ import type { StillImageData } from "src/api/stills";
 import type { ListItemValue } from "./HomeListItem";
 import { HomeListItem } from "./HomeListItem";
 
-export function Home({
-  values,
-  stills,
-}: {
+export interface Props {
   values: ListItemValue[];
   stills: Record<string, StillImageData>;
-}): JSX.Element {
+}
+
+export function Home({ values, stills }: Props): JSX.Element {
   return (
     <main>
       <ol className="flex flex-col">

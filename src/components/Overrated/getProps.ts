@@ -1,19 +1,11 @@
 import { allOverratedDisappintments } from "src/api/overratedDisappointments";
-import { getFixedWidthPosters, type PosterImageData } from "src/api/posters";
+import { getFixedWidthPosters } from "src/api/posters";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 
 import type { ListItemValue } from "./List";
-import type { Sort } from "./Overrated.reducer";
+import type { Props } from "./Overrated";
 
-interface Data {
-  values: ListItemValue[];
-  initialSort: Sort;
-  distinctReleaseYears: string[];
-  distinctGenres: string[];
-  posters: Record<string, PosterImageData>;
-}
-
-export async function getData(): Promise<Data> {
+export async function getProps(): Promise<Props> {
   const { overratedDisappintments, distinctGenres, distinctReleaseYears } =
     await allOverratedDisappintments();
   const posters = await getFixedWidthPosters(ListItemPosterImageConfig);

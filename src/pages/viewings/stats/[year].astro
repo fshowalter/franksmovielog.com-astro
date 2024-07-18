@@ -1,6 +1,6 @@
 ---
-import { getFixedWidthPosters,getFluidWidthPosters } from "src/api/posters";
-import { allStatYears,statsForYear } from "src/api/yearStats";
+import { getFixedWidthPosters, getFluidWidthPosters } from "src/api/posters";
+import { allStatYears, statsForYear } from "src/api/yearStats";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 import { MostWatchedMoviesPosterConfig } from "src/components/MostWatchedMovies";
 import { YearStats } from "src/components/YearStats";
@@ -19,6 +19,10 @@ export async function getStaticPaths() {
       },
     };
   });
+}
+
+interface Props {
+  year: string;
 }
 
 const { year } = Astro.props;

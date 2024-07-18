@@ -1,8 +1,8 @@
 ---
-import { getData,Home } from "src/components/Home";
+import { getProps, Home } from "src/components/Home";
 import Layout from "src/layouts/Layout.astro";
 
-const props = await getData();
+const props = await getProps();
 ---
 
 <Layout

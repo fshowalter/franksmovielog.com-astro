@@ -14,6 +14,6 @@ describe("/feed.xml", () => {
 
     const result = await response.text();
 
-    expect(result).toMatchFileSnapshot(`__snapshots__/feed.xml`);
+    void expect(result).toMatchFileSnapshot(`__snapshots__/feed.xml`);
   });
 });

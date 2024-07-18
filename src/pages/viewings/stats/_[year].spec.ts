@@ -1,10 +1,11 @@
 import { getContainerRenderer as reactContainerRenderer } from "@astrojs/react";
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 import { loadRenderers } from "astro:container";
 import { allStatYears } from "src/api/yearStats";
-import { describe,expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 
-import index from "./[year].astro";
+import YearStats from "./[year].astro";
 
 const statYears = await allStatYears();
 
@@ -15,11 +16,14 @@ describe("/viewings/stats/:year", () => {
     async (year) => {
       const renderers = await loadRenderers([reactContainerRenderer()]);
       const container = await AstroContainer.create({ renderers });
-      const result = await container.renderToString(index, {
-        props: { year: year },
-      });
+      const result = await container.renderToString(
+        YearStats as AstroComponentFactory,
+        {
+          props: { year: year },
+        },
+      );
 
-      expect(result).toMatchFileSnapshot(`__snapshots__/${year}.html`);
+      void expect(result).toMatchFileSnapshot(`__snapshots__/${year}.html`);
     },
   );
 });

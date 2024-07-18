@@ -11,7 +11,7 @@
     "astro": "astro",
     "test": "vitest src",
     "coverage": "vitest src --coverage",
-    "lint": "eslint --print-config ."
+    "lint": "eslint  ."
   },
   "dependencies": {
     "@astrojs/check": "^0.8.1",
@@ -47,6 +47,7 @@
     "eslint-plugin-react": "^7.34.4",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-testing-library": "^6.2.2",
+    "eslint-plugin-vitest": "^0.5.4",
     "jsdom": "^24.1.0",
     "prettier": "^3.3.2",
     "prettier-plugin-astro": "^0.14.0",
