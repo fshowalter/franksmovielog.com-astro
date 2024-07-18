@@ -1,6 +1,7 @@
 import { basename, extname } from "node:path";
 
 import { getImage } from "astro:assets";
+import { normalizeSources } from "src/utils";
 
 export interface AvatarImageData {
   src: string;
@@ -44,8 +45,8 @@ export async function getAvatars({
       });
 
       imageMap[basename(image, extname(image))] = {
-        srcSet: optimizedImage.srcSet.attribute,
-        src: optimizedImage.src,
+        srcSet: normalizeSources(optimizedImage.srcSet.attribute),
+        src: normalizeSources(optimizedImage.src),
       };
     }),
   );

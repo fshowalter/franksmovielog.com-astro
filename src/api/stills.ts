@@ -1,6 +1,7 @@
 import { basename, extname, join } from "node:path";
 
 import { getImage } from "astro:assets";
+import { normalizeSources } from "src/utils";
 
 export interface StillImageData {
   src: string;
@@ -48,8 +49,8 @@ export async function getStills({
       });
 
       imageMap[basename(image, extname(image))] = {
-        srcSet: optimizedImage.srcSet.attribute,
-        src: optimizedImage.src,
+        srcSet: normalizeSources(optimizedImage.srcSet.attribute),
+        src: normalizeSources(optimizedImage.src),
       };
     }),
   );

@@ -1,6 +1,7 @@
 import { basename, extname } from "node:path";
 
 import { getImage } from "astro:assets";
+import { normalizeSources } from "src/utils";
 
 export interface PosterImageData {
   src: string;
@@ -82,8 +83,8 @@ export async function getFixedWidthPosters({
       });
 
       imageMap[basename(image, extname(image))] = {
-        srcSet: optimizedImage.srcSet.attribute,
-        src: optimizedImage.src,
+        srcSet: normalizeSources(optimizedImage.srcSet.attribute),
+        src: normalizeSources(optimizedImage.src),
       };
     }),
   );

@@ -16,8 +16,8 @@ exports[`Collections > can filter by name 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -58,8 +58,8 @@ exports[`Collections > can sort by name asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -93,8 +93,8 @@ exports[`Collections > can sort by name asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -128,8 +128,8 @@ exports[`Collections > can sort by name asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -163,8 +163,8 @@ exports[`Collections > can sort by name asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -198,8 +198,8 @@ exports[`Collections > can sort by name asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -233,8 +233,8 @@ exports[`Collections > can sort by name asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -268,8 +268,8 @@ exports[`Collections > can sort by name asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -303,8 +303,8 @@ exports[`Collections > can sort by name asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -338,8 +338,8 @@ exports[`Collections > can sort by name asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -373,8 +373,8 @@ exports[`Collections > can sort by name asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -415,8 +415,8 @@ exports[`Collections > can sort by name desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -450,8 +450,8 @@ exports[`Collections > can sort by name desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -485,8 +485,8 @@ exports[`Collections > can sort by name desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -520,8 +520,8 @@ exports[`Collections > can sort by name desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -555,8 +555,8 @@ exports[`Collections > can sort by name desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -590,8 +590,8 @@ exports[`Collections > can sort by name desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -625,8 +625,8 @@ exports[`Collections > can sort by name desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -660,8 +660,8 @@ exports[`Collections > can sort by name desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -695,8 +695,8 @@ exports[`Collections > can sort by name desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -730,8 +730,8 @@ exports[`Collections > can sort by name desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -772,8 +772,8 @@ exports[`Collections > can sort by review count asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -807,8 +807,8 @@ exports[`Collections > can sort by review count asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -842,8 +842,8 @@ exports[`Collections > can sort by review count asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -877,8 +877,8 @@ exports[`Collections > can sort by review count asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -912,8 +912,8 @@ exports[`Collections > can sort by review count asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -947,8 +947,8 @@ exports[`Collections > can sort by review count asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -982,8 +982,8 @@ exports[`Collections > can sort by review count asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1017,8 +1017,8 @@ exports[`Collections > can sort by review count asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1052,8 +1052,8 @@ exports[`Collections > can sort by review count asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1087,8 +1087,8 @@ exports[`Collections > can sort by review count asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1129,8 +1129,8 @@ exports[`Collections > can sort by review count desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1164,8 +1164,8 @@ exports[`Collections > can sort by review count desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1199,8 +1199,8 @@ exports[`Collections > can sort by review count desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1234,8 +1234,8 @@ exports[`Collections > can sort by review count desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1269,8 +1269,8 @@ exports[`Collections > can sort by review count desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1304,8 +1304,8 @@ exports[`Collections > can sort by review count desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1339,8 +1339,8 @@ exports[`Collections > can sort by review count desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1374,8 +1374,8 @@ exports[`Collections > can sort by review count desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1409,8 +1409,8 @@ exports[`Collections > can sort by review count desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1444,8 +1444,8 @@ exports[`Collections > can sort by review count desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1486,8 +1486,8 @@ exports[`Collections > can sort by title count asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1521,8 +1521,8 @@ exports[`Collections > can sort by title count asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1556,8 +1556,8 @@ exports[`Collections > can sort by title count asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1591,8 +1591,8 @@ exports[`Collections > can sort by title count asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1626,8 +1626,8 @@ exports[`Collections > can sort by title count asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1661,8 +1661,8 @@ exports[`Collections > can sort by title count asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1696,8 +1696,8 @@ exports[`Collections > can sort by title count asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1731,8 +1731,8 @@ exports[`Collections > can sort by title count asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1766,8 +1766,8 @@ exports[`Collections > can sort by title count asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1801,8 +1801,8 @@ exports[`Collections > can sort by title count asc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1843,8 +1843,8 @@ exports[`Collections > can sort by title count desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fshaw-brothers.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1878,8 +1878,8 @@ exports[`Collections > can sort by title count desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fhammer-films.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1913,8 +1913,8 @@ exports[`Collections > can sort by title count desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Funiversal-monsters.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1948,8 +1948,8 @@ exports[`Collections > can sort by title count desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fjames-bond.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -1983,8 +1983,8 @@ exports[`Collections > can sort by title count desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fhalloween.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -2018,8 +2018,8 @@ exports[`Collections > can sort by title count desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Ffriday-the-13th.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -2053,8 +2053,8 @@ exports[`Collections > can sort by title count desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fsaw.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -2088,8 +2088,8 @@ exports[`Collections > can sort by title count desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fchilds-play.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -2123,8 +2123,8 @@ exports[`Collections > can sort by title count desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fphantasm.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
@@ -2158,8 +2158,8 @@ exports[`Collections > can sort by title count desc 1`] = `
         decoding="async"
         height="64"
         loading="lazy"
-        src="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
-        srcset="/_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com-astro%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
+        src="/_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&h=64&q=80&f=avif"
+        srcset="/_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=64&q=80&f=avif 1x, /_image?/content%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&w=128&q=80&f=avif 2x"
         width="64"
       />
     </a>
