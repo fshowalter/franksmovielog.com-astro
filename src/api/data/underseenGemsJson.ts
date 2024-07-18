@@ -18,21 +18,13 @@ const UnderseenGemsJsonSchema = z.object({
   releaseSequence: z.string(),
 });
 
-let cache: UnderseenGemsJson[];
-
 export type UnderseenGemsJson = z.infer<typeof UnderseenGemsJsonSchema>;
 
 export async function allUnderseenGemsJson(): Promise<UnderseenGemsJson[]> {
-  if (cache) {
-    return cache;
-  }
-
   const json = await fs.readFile(underseenGemsJsonFile, "utf8");
   const data = JSON.parse(json) as unknown[];
 
-  cache = data.map((item) => {
+  return data.map((item) => {
     return UnderseenGemsJsonSchema.parse(item);
   });
-
-  return cache;
 }

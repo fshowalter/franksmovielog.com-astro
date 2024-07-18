@@ -33,8 +33,6 @@ const CastAndCrewJsonSchema = z.object({
   titles: z.array(TitleSchema),
 });
 
-let cache: CastAndCrewMemberJson[];
-
 async function parseAllCastAndCrewJson() {
   const dirents = await fs.readdir(castAndCrewJsonDirectory, {
     withFileTypes: true,
@@ -58,11 +56,5 @@ async function parseAllCastAndCrewJson() {
 export type CastAndCrewMemberJson = z.infer<typeof CastAndCrewJsonSchema>;
 
 export async function allCastAndCrewJson(): Promise<CastAndCrewMemberJson[]> {
-  if (cache) {
-    return cache;
-  }
-
-  cache = await parseAllCastAndCrewJson();
-
-  return cache;
+  return await parseAllCastAndCrewJson();
 }

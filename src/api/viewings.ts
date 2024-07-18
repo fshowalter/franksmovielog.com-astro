@@ -12,13 +12,7 @@ interface Viewings {
   distinctVenues: string[];
 }
 
-let cache: Viewings;
-
 export async function allViewings(): Promise<Viewings> {
-  if (cache) {
-    return cache;
-  }
-
   const viewingsJson = await allViewingsJson();
   const distinctViewingYears = new Set<string>();
   const distinctReleaseYears = new Set<string>();
@@ -42,7 +36,7 @@ export async function allViewings(): Promise<Viewings> {
     };
   });
 
-  cache = {
+  return {
     viewings: viewings,
     distinctGenres: Array.from(distinctGenres).toSorted(),
     distinctReleaseYears: Array.from(distinctReleaseYears).toSorted(),
@@ -50,6 +44,4 @@ export async function allViewings(): Promise<Viewings> {
     distinctVenues: Array.from(distinctVenues).toSorted(),
     distinctMedia: Array.from(distinctMedia).toSorted(),
   };
-
-  return cache;
 }

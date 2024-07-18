@@ -14,13 +14,7 @@ interface WatchlistTitles {
   distinctReleaseYears: string[];
 }
 
-let cache: WatchlistTitles;
-
 export async function allWatchlistTitles(): Promise<WatchlistTitles> {
-  if (cache) {
-    return cache;
-  }
-
   const watchlistTitlesJson = await allWatchlistTitlesJson();
   const distinctDirectors = new Set<string>();
   const distinctPerformers = new Set<string>();
@@ -40,7 +34,7 @@ export async function allWatchlistTitles(): Promise<WatchlistTitles> {
     };
   });
 
-  cache = {
+  return {
     watchlistTitles,
     distinctDirectors: Array.from(distinctDirectors).toSorted(),
     distinctPerformers: Array.from(distinctPerformers).toSorted(),
@@ -48,6 +42,4 @@ export async function allWatchlistTitles(): Promise<WatchlistTitles> {
     distinctCollections: Array.from(distinctCollections).toSorted(),
     distinctReleaseYears: Array.from(distinctReleaseYears).toSorted(),
   };
-
-  return cache;
 }

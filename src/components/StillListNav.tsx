@@ -1,6 +1,6 @@
 export function StillListNav({ children }: { children: React.ReactNode }) {
   return (
-    <nav className="tablet:w-auto relative flex w-full flex-col items-center">
+    <nav className="relative flex w-full flex-col items-center tablet:w-auto">
       {children}
     </nav>
   );

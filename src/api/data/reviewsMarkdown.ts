@@ -22,8 +22,6 @@ const DataSchema = z.object({
   slug: z.string(),
 });
 
-let cache: MarkdownReview[];
-
 async function parseAllReviewsMarkdown(): Promise<MarkdownReview[]> {
   const dirents = await fs.readdir(reviewsMarkdownDirectory, {
     withFileTypes: true,
@@ -53,9 +51,5 @@ async function parseAllReviewsMarkdown(): Promise<MarkdownReview[]> {
 }
 
 export async function allReviewsMarkdown(): Promise<MarkdownReview[]> {
-  if (!cache) {
-    cache = await parseAllReviewsMarkdown();
-  }
-
-  return cache;
+  return await parseAllReviewsMarkdown();
 }

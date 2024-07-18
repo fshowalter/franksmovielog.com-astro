@@ -9,13 +9,7 @@ export interface UnderseenGems {
   distinctGenres: string[];
 }
 
-let cache: UnderseenGems;
-
 export async function allUnderseenGems(): Promise<UnderseenGems> {
-  if (cache) {
-    return cache;
-  }
-
   const underseenGemsJson = await allUnderseenGemsJson();
   const distinctReleaseYears = new Set<string>();
   const distinctGenres = new Set<string>();
@@ -29,11 +23,9 @@ export async function allUnderseenGems(): Promise<UnderseenGems> {
     };
   });
 
-  cache = {
+  return {
     underseenGems: underseenGems,
     distinctGenres: Array.from(distinctGenres).toSorted(),
     distinctReleaseYears: Array.from(distinctReleaseYears).toSorted(),
   };
-
-  return cache;
 }

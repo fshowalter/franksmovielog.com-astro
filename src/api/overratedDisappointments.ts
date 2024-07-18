@@ -9,13 +9,7 @@ export interface OverratedDisappointments {
   distinctGenres: string[];
 }
 
-let cache: OverratedDisappointments;
-
 export async function allOverratedDisappintments(): Promise<OverratedDisappointments> {
-  if (cache) {
-    return cache;
-  }
-
   const overratedJson = await allOverratedDisappointmentsJson();
   const distinctReleaseYears = new Set<string>();
   const distinctGenres = new Set<string>();
@@ -29,11 +23,9 @@ export async function allOverratedDisappintments(): Promise<OverratedDisappointm
     };
   });
 
-  cache = {
+  return {
     overratedDisappintments: overratedDisappintments,
     distinctGenres: Array.from(distinctGenres).toSorted(),
     distinctReleaseYears: Array.from(distinctReleaseYears).toSorted(),
   };
-
-  return cache;
 }

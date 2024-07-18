@@ -43,6 +43,7 @@ export function List({
       visibleCount={visibleCount}
       totalCount={totalCount}
       onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
+      data-testid="list"
     >
       {(value) => {
         return (

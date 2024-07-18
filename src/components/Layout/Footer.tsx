@@ -4,10 +4,10 @@ export function Footer({ currentPath }: { currentPath: string }): JSX.Element {
   return (
     <footer
       className={
-        "px-pageMargin bg-notcomingsoon text-inverse flex flex-col items-center gap-y-6 py-8"
+        "flex flex-col items-center gap-y-6 bg-notcomingsoon px-pageMargin py-8 text-inverse"
       }
     >
-      <ul className="tablet:gap-x-6 text-inverse max:w-auto flex w-full flex-wrap justify-center gap-x-4 gap-y-2">
+      <ul className="flex w-full flex-wrap justify-center gap-x-4 gap-y-2 text-inverse tablet:gap-x-6 max:w-auto">
         <NavListItems
           activeClassName="text-inverse"
           currentPath={currentPath}

@@ -13,10 +13,6 @@ export interface CastAndCrewMember extends CastAndCrewMemberJson {}
 let cache: CastAndCrew;
 
 export async function allCastAndCrew(): Promise<CastAndCrew> {
-  if (cache) {
-    return cache;
-  }
-
   const castAndCrewJson = await allCastAndCrewJson();
   const releaseYears = new Set<string>();
 

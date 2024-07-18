@@ -19,21 +19,13 @@ const WatchlistTitleJsonSchema = z.object({
   collectionNames: z.array(z.string()),
 });
 
-let cache: WatchlistTitleJson[];
-
 export type WatchlistTitleJson = z.infer<typeof WatchlistTitleJsonSchema>;
 
 export async function allWatchlistTitlesJson(): Promise<WatchlistTitleJson[]> {
-  if (cache) {
-    return cache;
-  }
-
   const json = await fs.readFile(watchlistTitlesJsonFile, "utf8");
   const data = JSON.parse(json) as unknown[];
 
-  cache = data.map((title) => {
+  return data.map((title) => {
     return WatchlistTitleJsonSchema.parse(title);
   });
-
-  return cache;
 }

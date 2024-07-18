@@ -66,8 +66,6 @@ const ReviewedTitleJsonSchema = z.object({
 
 export type ReviewedTitleJson = z.infer<typeof ReviewedTitleJsonSchema>;
 
-let cache: ReviewedTitleJson[];
-
 async function parseAllReviewedTitlesJson() {
   const json = await fs.readFile(reviewedTitlesJsonFile, "utf8");
   const data = JSON.parse(json) as unknown[];
@@ -78,11 +76,5 @@ async function parseAllReviewedTitlesJson() {
 }
 
 export async function allReviewedTitlesJson(): Promise<ReviewedTitleJson[]> {
-  if (cache) {
-    return cache;
-  }
-
-  cache = await parseAllReviewedTitlesJson();
-
-  return cache;
+  return await parseAllReviewedTitlesJson();
 }

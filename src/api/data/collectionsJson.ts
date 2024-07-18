@@ -26,8 +26,6 @@ const CollectionJsonSchema = z.object({
   titles: z.array(TitleSchema),
 });
 
-let cache: CollectionJson[];
-
 async function parseAllCollectionsJson() {
   const dirents = await fs.readdir(collectionsJsonDirectory, {
     withFileTypes: true,
@@ -51,11 +49,5 @@ async function parseAllCollectionsJson() {
 export type CollectionJson = z.infer<typeof CollectionJsonSchema>;
 
 export async function allCollectionsJson(): Promise<CollectionJson[]> {
-  if (cache) {
-    return cache;
-  }
-
-  cache = await parseAllCollectionsJson();
-
-  return cache;
+  return await parseAllCollectionsJson();
 }

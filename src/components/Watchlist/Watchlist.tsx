@@ -7,7 +7,7 @@ import { Header } from "./Header";
 import { List, type ListItemValue } from "./List";
 import { initState, reducer, type Sort } from "./Watchlist.reducer";
 
-export interface WatchlistProps {
+export interface Props {
   values: ListItemValue[];
   initialSort: Sort;
   distinctDirectors: string[];
@@ -27,7 +27,7 @@ export function Watchlist({
   distinctCollections,
   distinctReleaseYears,
   defaultPosterImageData,
-}: WatchlistProps): JSX.Element {
+}: Props): JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {

@@ -14,16 +14,16 @@ export function SiteSearchForm() {
           name="q"
           id="search"
           placeholder="Search..."
-          className="bg-subtle text-default min-w-0 grow border-0 px-4 py-2 text-base font-light leading-6"
+          className="min-w-0 grow border-0 bg-subtle px-4 py-2 text-base font-light leading-6 text-default"
         />
         <input type="hidden" name="q" value="site:www.franksmovielog.com" />
         <button
           type="submit"
           value="Search"
           aria-label="Search"
-          className="bg-subtle border-default border-0 border-l px-3 py-1"
+          className="border-0 border-l border-default bg-subtle px-3 py-1"
         >
-          <svg className="fill-subtle size-4" viewBox="0 0 16 16">
+          <svg className="size-4 fill-subtle" viewBox="0 0 16 16">
             <path
               fillRule="evenodd"
               d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z"

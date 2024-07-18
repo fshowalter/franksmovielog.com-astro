@@ -66,7 +66,7 @@ function Chip({
           imageData={imageData}
           loading="lazy"
           decoding="async"
-          className="rounded-[50%] mr-[1ch] block size-10"
+          className="mr-[1ch] block size-10 rounded-[50%]"
         />
         {name}
       </a>

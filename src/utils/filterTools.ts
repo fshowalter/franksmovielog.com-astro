@@ -77,20 +77,6 @@ function buildApplyFilters<T, S, G>(
   };
 }
 
-export function filterCollection<T>({
-  collection,
-  filters,
-}: {
-  collection: readonly T[];
-  filters: Record<string, (arg0: T) => boolean>;
-}): T[] {
-  return collection.filter((item) => {
-    return Object.values(filters).every((filter) => {
-      return filter(item);
-    });
-  });
-}
-
 export function filterValues<T>({
   values,
   filters,

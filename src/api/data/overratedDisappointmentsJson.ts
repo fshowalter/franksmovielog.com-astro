@@ -25,21 +25,13 @@ export type OverratedDisappointmentsJson = z.infer<
   typeof OverratedDisappointmentsJsonSchema
 >;
 
-let cache: OverratedDisappointmentsJson[];
-
 export async function allOverratedDisappointmentsJson(): Promise<
   OverratedDisappointmentsJson[]
 > {
-  if (cache) {
-    return cache;
-  }
-
   const json = await fs.readFile(overratedDisappointmentsJsonFile, "utf8");
   const data = JSON.parse(json) as unknown[];
 
-  cache = data.map((item) => {
+  return data.map((item) => {
     return OverratedDisappointmentsJsonSchema.parse(item);
   });
-
-  return cache;
 }

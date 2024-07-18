@@ -6,7 +6,7 @@ const cache: Record<string, YearStats> = {};
 const statYears = new Set<string>();
 
 export async function allStatYears() {
-  if (statYears.values.length > 0) {
+  if (statYears.size > 0) {
     return Array.from(statYears).toSorted();
   }
 

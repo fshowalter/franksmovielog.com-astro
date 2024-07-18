@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 
 import { SelectInput } from "./SelectInput";
@@ -80,12 +78,12 @@ export function GradeInput({
 
   return (
     <fieldset>
-      <legend className="text-subtle tracking-0.5px h-6 text-left text-sm font-bold">
+      <legend className="h-6 text-left text-sm font-bold tracking-0.5px text-subtle">
         {label}
       </legend>
       <div className="flex flex-wrap items-baseline">
         <label className="flex flex-1 items-center gap-x-[.5ch]">
-          <span className="tracking-0.5px min-w-10 text-left text-sm">
+          <span className="min-w-10 text-left text-sm tracking-0.5px">
             From
           </span>
           <SelectInput
@@ -96,7 +94,7 @@ export function GradeInput({
           </SelectInput>
         </label>
         <label className="flex flex-1 items-center">
-          <span className="tracking-0.5px min-w-10 text-center text-sm">
+          <span className="min-w-10 text-center text-sm tracking-0.5px">
             to
           </span>
           <SelectInput

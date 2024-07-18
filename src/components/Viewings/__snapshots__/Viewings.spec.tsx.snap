@@ -101045,10 +101045,10 @@ exports[`Viewings > renders 1`] = `
     class="flex flex-col items-center"
   >
     <main
-      class="desktop:flex-row desktop:px-pageMargin desktop:max-w-full flex w-full max-w-prose flex-col items-stretch gap-x-24"
+      class="flex w-full max-w-prose flex-col items-stretch gap-x-24 desktop:max-w-full desktop:flex-row desktop:px-pageMargin"
     >
       <div
-        class="px-gutter desktop:px-0 basis-md flex flex-col items-center gap-y-8 pt-8"
+        class="flex basis-md flex-col items-center gap-y-8 px-gutter pt-8 desktop:px-0"
       >
         <div
           class="flex flex-col items-center"
@@ -101098,10 +101098,10 @@ exports[`Viewings > renders 1`] = `
           </p>
         </div>
         <fieldset
-          class="border-all text-subtle px-gutter rounded-md pb-8 pt-6 desktop:sticky desktop:top-[208px] max:top-[160px] desktop:self-start"
+          class="border-all text-subtle px-gutter rounded-md pb-8 pt-6 desktop:sticky desktop:top-[208px] desktop:self-start max:top-[160px]"
         >
           <legend
-            class="bg-default text-md px-ch text-center"
+            class="bg-default px-ch text-center text-md"
           >
             Filter & Sort
           </legend>
@@ -102654,10 +102654,10 @@ exports[`Viewings > renders 1`] = `
         class="flex grow flex-col"
       >
         <div
-          class="desktop:h-8 desktop:min-h-8 h-0 min-h-0"
+          class="h-0 min-h-0 desktop:h-8 desktop:min-h-8"
         />
         <div
-          class="text-subtle px-gutter bg-default desktop:top-[177px] max:top-[129px] sticky top-0 z-40 text-center leading-10"
+          class="sticky top-0 z-40 bg-default px-gutter text-center leading-10 text-subtle desktop:top-[177px] max:top-[129px]"
         >
           Showing 1-100 of 1,609
         </div>
@@ -110163,7 +110163,7 @@ exports[`Viewings > renders 1`] = `
             class="h-8 min-h-8"
           />
           <button
-            class="button px-pageMargin gap-x-4"
+            class="button gap-x-4 px-pageMargin"
           >
             <svg
               class="fill-accent"

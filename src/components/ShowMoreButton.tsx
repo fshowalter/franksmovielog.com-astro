@@ -4,7 +4,7 @@ export function ShowMoreButton({
   onClick: () => void;
 }): JSX.Element {
   return (
-    <button onClick={onClick} className="button px-pageMargin gap-x-4">
+    <button onClick={onClick} className="button gap-x-4 px-pageMargin">
       <svg
         width="24"
         height="24"

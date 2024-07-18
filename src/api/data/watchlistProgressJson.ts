@@ -35,17 +35,9 @@ const WatchlistProgressJsonSchema = z.object({
 
 export type WatchlistProgressJson = z.infer<typeof WatchlistProgressJsonSchema>;
 
-let cache: WatchlistProgressJson;
-
 export async function watchlistProgressJson(): Promise<WatchlistProgressJson> {
-  if (cache) {
-    return cache;
-  }
-
   const json = await fs.readFile(watchlistProgressJsonFile, "utf8");
   const data = JSON.parse(json) as unknown;
 
-  cache = WatchlistProgressJsonSchema.parse(data);
-
-  return cache;
+  return WatchlistProgressJsonSchema.parse(data);
 }

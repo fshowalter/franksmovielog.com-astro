@@ -28,8 +28,6 @@ export interface MarkdownViewing {
   viewingNotesRaw: string | null;
 }
 
-let cache: MarkdownViewing[];
-
 async function parseAllViewingsMarkdown() {
   const dirents = await fs.readdir(viewingsMarkdownDirectory, {
     withFileTypes: true,
@@ -64,9 +62,5 @@ async function parseAllViewingsMarkdown() {
 }
 
 export async function allViewingsMarkdown(): Promise<MarkdownViewing[]> {
-  if (!cache) {
-    cache = await parseAllViewingsMarkdown();
-  }
-
-  return cache;
+  return await parseAllViewingsMarkdown();
 }

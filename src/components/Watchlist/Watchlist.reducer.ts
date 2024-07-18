@@ -15,7 +15,7 @@ const SHOW_COUNT_DEFAULT = 100;
 const groupValues = buildGroupValues(groupForValue);
 const { updateFilter, applyFilters } = filterTools(sortValues, groupValues);
 
-function sortValues(items: ListItemValue[], sortOrder: Sort) {
+function sortValues(values: ListItemValue[], sortOrder: Sort) {
   const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
     {
       "release-date-desc": (a, b) =>
@@ -26,7 +26,7 @@ function sortValues(items: ListItemValue[], sortOrder: Sort) {
     };
 
   const comparer = sortMap[sortOrder];
-  return items.sort(comparer);
+  return values.sort(comparer);
 }
 
 function groupForValue(value: ListItemValue, sortValue: Sort): string {
