@@ -22,7 +22,7 @@ export default tseslint.config(
     },
   },
   eslint.configs.recommended,
-  ...tseslint.configs.recommended,
+  ...tseslint.configs.recommendedTypeChecked,
   ...eslintPluginAstro.configs["flat/recommended"], // In CommonJS, the `flat/` prefix is required.
   reactPluginRecommended,
   {
