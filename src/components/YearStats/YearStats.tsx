@@ -61,21 +61,21 @@ export function YearStats({
       <div className="flex w-full max-w-[960px] flex-col items-stretch gap-y-8 py-8 tablet:px-gutter desktop:px-pageMargin">
         <MostWatchedMovies
           posters={mostWatchedMoviesPosters}
-          titles={stats.mostWatchedTitles}
+          values={stats.mostWatchedTitles}
         />
-        <DecadeDistribution data={stats.decadeDistribution} />
-        <MediaDistribution data={stats.mediaDistribution} />
+        <DecadeDistribution values={stats.decadeDistribution} />
+        <MediaDistribution values={stats.mediaDistribution} />
         <MostWatchedDirectors
           posters={mostWatchedPeoplePosters}
-          people={stats.mostWatchedDirectors}
+          values={stats.mostWatchedDirectors}
         />
         <MostWatchedPerformers
           posters={mostWatchedPeoplePosters}
-          people={stats.mostWatchedPerformers}
+          values={stats.mostWatchedPerformers}
         />
         <MostWatchedWriters
           posters={mostWatchedPeoplePosters}
-          people={stats.mostWatchedWriters}
+          values={stats.mostWatchedWriters}
         />
       </div>
     </main>

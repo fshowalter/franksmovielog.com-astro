@@ -11,9 +11,9 @@ export function Callouts({
 }: Props): JSX.Element {
   return (
     <div className="flex flex-wrap justify-center gap-6 desktop:flex-nowrap">
-      <StatsCallout label="Viewings" stat={viewingCount} />
-      <StatsCallout label="Movies" stat={titleCount} />
-      <StatsCallout label="New Movies" stat={newTitleCount} />
+      <StatsCallout label="Viewings" value={viewingCount} />
+      <StatsCallout label="Movies" value={titleCount} />
+      <StatsCallout label="New Movies" value={newTitleCount} />
     </div>
   );
 }
