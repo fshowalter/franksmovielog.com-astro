@@ -4,7 +4,7 @@ import { LongFormText } from "../LongFormText";
 import { PageTitle } from "../PageTitle";
 import { StillList } from "../StillList";
 import { StillListHeading } from "../StillListHeading";
-import type { StillListItemData } from "../StillListItem";
+import type { StillListItemValue } from "../StillListItem";
 import { StillListNav } from "../StillListNav";
 
 export const StillImageConfig = {
@@ -18,7 +18,7 @@ export interface Props {
   content: string | null;
   title: string;
   imageData: StillImageData;
-  moreReviewsValues: StillListItemData[];
+  moreReviewsValues: StillListItemValue[];
   moreReviewsStills: Record<string, StillImageData>;
 }
 

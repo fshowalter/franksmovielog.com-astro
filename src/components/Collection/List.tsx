@@ -80,7 +80,7 @@ function CollectionListItem({
           <div className="spacer-y-2" />
           {value.grade && (
             <div className="py-px">
-              <Grade grade={value.grade} height={18} />
+              <Grade value={value.grade} height={18} />
             </div>
           )}
           <div className="spacer-y-2" />

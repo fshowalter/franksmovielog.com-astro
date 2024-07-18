@@ -6,7 +6,7 @@ import { ListItemPoster } from "./ListItemPoster";
 import { ListItemTitle } from "./ListItemTitle";
 import { StatHeading } from "./StatHeading";
 
-interface ViewingListItemValue {
+interface ViewingSubListItemValue {
   sequence: number;
   date: string;
   venue: string | null;
@@ -16,11 +16,11 @@ interface ViewingListItemValue {
   slug: string | null;
 }
 
-export interface MostWatchedPeopleListItemValue {
+export interface ListItemValue {
   name: string;
   slug: string | null;
   count: number;
-  viewings: ViewingListItemValue[];
+  viewings: ViewingSubListItemValue[];
 }
 
 export function MostWatchedPeople({
@@ -29,7 +29,7 @@ export function MostWatchedPeople({
   posters,
 }: {
   header: string;
-  values: readonly MostWatchedPeopleListItemValue[];
+  values: readonly ListItemValue[];
   posters: Record<string, PosterImageData>;
 }): JSX.Element | null {
   if (values.length == 0) {
@@ -85,11 +85,7 @@ export function MostWatchedPeople({
   );
 }
 
-function Name({
-  value,
-}: {
-  value: MostWatchedPeopleListItemValue;
-}): JSX.Element {
+function Name({ value }: { value: ListItemValue }): JSX.Element {
   if (value.slug) {
     return <a href={`/cast-and-crew/${value.slug}/`}>{value.name}</a>;
   }
@@ -101,7 +97,7 @@ function MostWatchedPersonViewingListItem({
   value,
   imageData,
 }: {
-  value: ViewingListItemValue;
+  value: ViewingSubListItemValue;
   imageData: PosterImageData;
 }) {
   return (

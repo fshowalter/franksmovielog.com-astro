@@ -23,7 +23,7 @@ export function Content({ grade, date, content, className }: Props) {
   return (
     <div className={twMerge("flex flex-col gap-y-8", className)}>
       <div className="flex flex-col items-center">
-        <Grade grade={grade} height={32} />
+        <Grade value={grade} height={32} />
         <div className="flex flex-col items-center tracking-0.5px text-subtle">
           <span>on</span> {formatDate(date)}
         </div>

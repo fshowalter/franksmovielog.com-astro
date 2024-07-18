@@ -69,7 +69,7 @@ function Name({ value }: { value: ListItemValue }) {
         <div className="leading-normal">{value.name}</div>
       </a>
       <div className="spacer-y-1" />
-      <CreditedAs creditedAs={value.creditedAs} />
+      <CreditedAs values={value.creditedAs} />
     </div>
   );
 }

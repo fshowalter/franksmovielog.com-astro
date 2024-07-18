@@ -84,10 +84,10 @@ function ReviewsListItem({
           />
           <div className="spacer-y-1" />
           <div className="py-px">
-            <Grade grade={value.grade} height={18} />
+            <Grade value={value.grade} height={18} />
           </div>
           <div className="spacer-y-2" />
-          <ListItemGenres genres={value.genres} />
+          <ListItemGenres values={value.genres} />
           <div className="spacer-y-2" />
         </div>
       </div>

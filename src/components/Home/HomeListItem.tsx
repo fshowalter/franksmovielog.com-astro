@@ -83,7 +83,7 @@ export function HomeListItem({
             </a>
           </h2>
           <div className="spacer-y-4" />
-          <Grade grade={value.grade} height={32} />
+          <Grade value={value.grade} height={32} />
           <div className="spacer-y-6" />
           <p className="text-base font-normal leading-normal tracking-0.25px text-subtle">
             Directed by {toSentence(value.directorNames)}. Starring{" "}

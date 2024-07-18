@@ -58,24 +58,24 @@ export function StillListItem({
         </a>
       </div>
       <div className="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-        <Grade grade={value.grade} height={16} />
+        <Grade value={value.grade} height={16} />
       </div>
       <div className="tablet:px-6">
-        <Genres genres={value.genres} />
+        <Genres values={value.genres} />
       </div>
     </li>
   );
 }
 
-function Genres({ genres }: { genres: readonly string[] }): JSX.Element | null {
+function Genres({ values }: { values: readonly string[] }): JSX.Element | null {
   return (
     <div className="text-sm leading-4 tracking-0.5px text-subtle">
-      {genres.map((genre, index) => {
+      {values.map((value, index) => {
         if (index === 0) {
-          return <span key={genre}>{genre}</span>;
+          return <span key={value}>{value}</span>;
         }
 
-        return <span key={genre}> | {genre}</span>;
+        return <span key={value}> | {value}</span>;
       })}
     </div>
   );

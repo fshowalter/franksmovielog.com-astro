@@ -67,22 +67,22 @@ export function AlltimeStats({
       </header>
       <div className="flex w-full max-w-[960px] flex-col items-stretch gap-y-8 py-8 tablet:px-gutter desktop:px-pageMargin">
         <MostWatchedMovies
-          titles={stats.mostWatchedTitles}
+          values={stats.mostWatchedTitles}
           posters={mostWatchedMoviesPosters}
         />
-        <DecadeDistribution data={stats.decadeDistribution} />
-        <MediaDistribution data={stats.mediaDistribution} />
+        <DecadeDistribution values={stats.decadeDistribution} />
+        <MediaDistribution values={stats.mediaDistribution} />
         <GradeDistribution values={stats.gradeDistribution} />
         <MostWatchedDirectors
-          people={stats.mostWatchedDirectors}
+          values={stats.mostWatchedDirectors}
           posters={mostWatchedPeoplePosters}
         />
         <MostWatchedPerformers
-          people={stats.mostWatchedPerformers}
+          values={stats.mostWatchedPerformers}
           posters={mostWatchedPeoplePosters}
         />
         <MostWatchedWriters
-          people={stats.mostWatchedWriters}
+          values={stats.mostWatchedWriters}
           posters={mostWatchedPeoplePosters}
         />
       </div>

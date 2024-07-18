@@ -79,7 +79,7 @@ function TitleListItem({
       />
       <div className="grow pr-gutter tablet:w-full desktop:pr-4">
         <div>
-          <CreditedAs creditedAs={value.creditedAs} />
+          <CreditedAs values={value.creditedAs} />
           <div className="spacer-y-2" />
           <ListItemTitle
             title={value.title}
@@ -89,7 +89,7 @@ function TitleListItem({
           <div className="spacer-y-2" />
           {value.grade && (
             <div className="py-px">
-              <Grade grade={value.grade} height={18} />
+              <Grade value={value.grade} height={18} />
             </div>
           )}
           {!value.grade && (
