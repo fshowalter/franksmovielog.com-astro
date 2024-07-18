@@ -1,16 +1,16 @@
 export function ListItemGenres({
-  genres,
+  values,
 }: {
-  genres: readonly string[];
+  values: readonly string[];
 }): JSX.Element | null {
   return (
     <div className="text-sm leading-4 tracking-0.5px text-subtle">
-      {genres.map((genre, index) => {
+      {values.map((value, index) => {
         if (index === 0) {
-          return <span key={genre}>{genre}</span>;
+          return <span key={value}>{value}</span>;
         }
 
-        return <span key={genre}> | {genre}</span>;
+        return <span key={value}> | {value}</span>;
       })}
     </div>
   );

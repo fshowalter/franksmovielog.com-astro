@@ -1,17 +1,19 @@
+import type { YearStats } from "src/api/yearStats";
 import { StatsCallout } from "src/components/StatsCallout";
 
-export interface CalloutsData {
-  titleCount: number;
-  viewingCount: number;
-  newTitleCount: number;
-}
+interface Props
+  extends Pick<YearStats, "titleCount" | "viewingCount" | "newTitleCount"> {}
 
-export function Callouts({ data }: { data: CalloutsData }): JSX.Element {
+export function Callouts({
+  titleCount,
+  viewingCount,
+  newTitleCount,
+}: Props): JSX.Element {
   return (
     <div className="flex flex-wrap justify-center gap-6 desktop:flex-nowrap">
-      <StatsCallout label="Viewings" stat={data.viewingCount} />
-      <StatsCallout label="Movies" stat={data.titleCount} />
-      <StatsCallout label="New Movies" stat={data.newTitleCount} />
+      <StatsCallout label="Viewings" stat={viewingCount} />
+      <StatsCallout label="Movies" stat={titleCount} />
+      <StatsCallout label="New Movies" stat={newTitleCount} />
     </div>
   );
 }

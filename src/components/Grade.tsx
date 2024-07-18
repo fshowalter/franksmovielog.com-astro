@@ -18,19 +18,19 @@ const gradeMap: Record<string, [string, string]> = {
 };
 
 export function Grade({
-  grade,
+  value,
   height,
   className,
 }: {
-  grade?: string | null;
+  value?: string | null;
   height: 32 | 18 | 16;
   className?: string;
 }): JSX.Element | null {
-  if (!grade) {
+  if (!value) {
     return null;
   }
 
-  const [src, alt] = gradeMap[grade];
+  const [src, alt] = gradeMap[value];
 
   const width = height * 5;
 
@@ -42,7 +42,7 @@ export function Grade({
       />
       <img
         src={src}
-        alt={`${grade}: ${alt}`}
+        alt={`${value}: ${alt}`}
         height={height}
         width={width}
         className={className}

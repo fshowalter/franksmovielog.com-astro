@@ -1,18 +1,18 @@
 import { capitalize } from "src/utils";
 
 export function CreditedAs({
-  creditedAs,
+  values,
 }: {
-  creditedAs: readonly string[];
+  values: readonly string[];
 }): JSX.Element | null {
   return (
     <div className="text-sm leading-4 tracking-0.5px text-subtle">
-      {creditedAs.map((credit, index) => {
+      {values.map((value, index) => {
         if (index === 0) {
-          return <span key={credit}>{capitalize(credit)}</span>;
+          return <span key={value}>{capitalize(value)}</span>;
         }
 
-        return <span key={credit}> | {capitalize(credit)}</span>;
+        return <span key={value}> | {capitalize(value)}</span>;
       })}
     </div>
   );

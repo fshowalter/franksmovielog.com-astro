@@ -1,5 +1,5 @@
 import React from "react";
-import { twMerge } from "tailwind-merge";
+import { twJoin } from "tailwind-merge";
 
 /**
  * Renders a search icon.
@@ -17,7 +17,7 @@ export default function SvgIcon({
       width="1em"
       height="1em"
       viewBox="0 0 16 16"
-      className={twMerge("h-auto w-[18px] fill-subtle", className)}
+      className={twJoin("h-auto w-[18px] fill-subtle", className)}
       xmlns="http://www.w3.org/2000/svg"
     >
       {children}

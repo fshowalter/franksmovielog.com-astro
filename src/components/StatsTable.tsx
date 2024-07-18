@@ -1,5 +1,5 @@
 import React from "react";
-import { twMerge } from "tailwind-merge";
+import { twJoin } from "tailwind-merge";
 
 export function Table({
   children,
@@ -64,9 +64,7 @@ export function TableDataCell({
 
   if (align === "fill") {
     return (
-      <td
-        className={twMerge("w-full py-0", className, hideOnSmallScreensClass)}
-      >
+      <td className={twJoin("w-full py-0", className, hideOnSmallScreensClass)}>
         {children}
       </td>
     );
@@ -75,7 +73,7 @@ export function TableDataCell({
   if (align === "left") {
     return (
       <td
-        className={twMerge(
+        className={twJoin(
           "px-gutter py-0 text-left",
           className,
           hideOnSmallScreensClass,
@@ -88,7 +86,7 @@ export function TableDataCell({
 
   return (
     <td
-      className={twMerge(
+      className={twJoin(
         "px-gutter py-0 text-right",
         className,
         hideOnSmallScreensClass,

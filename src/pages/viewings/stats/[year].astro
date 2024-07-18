@@ -1,9 +1,7 @@
 ---
-import { getFixedWidthPosters, getFluidWidthPosters } from "src/api/posters";
-import { allStatYears, statsForYear } from "src/api/yearStats";
-import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
-import { MostWatchedMoviesPosterConfig } from "src/components/MostWatchedMovies";
-import { YearStats } from "src/components/YearStats";
+import { allStatYears } from "src/api/yearStats";
+import { getProps } from "src/components/YearStats/getProps";
+import { YearStats } from "src/components/YearStats/YearStats";
 import Layout from "src/layouts/Layout.astro";
 
 export async function getStaticPaths() {
@@ -26,27 +24,13 @@ interface Props {
 }
 
 const { year } = Astro.props;
-const statYears = await allStatYears();
 
-const stats = await statsForYear(year);
-
-const mostWatchedPeoplePosters = await getFixedWidthPosters(
-  ListItemPosterImageConfig
-);
-const mostWatchedMoviePosters = await getFluidWidthPosters(
-  MostWatchedMoviesPosterConfig
-);
+const props = await getProps(year);
 ---
 
 <Layout
   title="All-Time Stats"
   description="My most-watched titles, performers, directors, writers and other stats."
 >
-  <YearStats
-    year={year}
-    stats={stats}
-    distinctStatYears={statYears}
-    mostWatchedMoviesPosters={mostWatchedMoviePosters}
-    mostWatchedPeoplePosters={mostWatchedPeoplePosters}
-  />
+  <YearStats {...props} />
 </Layout>

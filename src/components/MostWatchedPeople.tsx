@@ -6,7 +6,7 @@ import { ListItemPoster } from "./ListItemPoster";
 import { ListItemTitle } from "./ListItemTitle";
 import { StatHeading } from "./StatHeading";
 
-interface ViewingListItemData {
+interface ViewingListItemValue {
   sequence: number;
   date: string;
   venue: string | null;
@@ -16,23 +16,23 @@ interface ViewingListItemData {
   slug: string | null;
 }
 
-export interface MostWatchedPeopleListItemData {
+export interface MostWatchedPeopleListItemValue {
   name: string;
   slug: string | null;
   count: number;
-  viewings: ViewingListItemData[];
+  viewings: ViewingListItemValue[];
 }
 
 export function MostWatchedPeople({
-  people,
+  values,
   header,
   posters,
 }: {
   header: string;
-  people: readonly MostWatchedPeopleListItemData[];
+  values: readonly MostWatchedPeopleListItemValue[];
   posters: Record<string, PosterImageData>;
 }): JSX.Element | null {
-  if (people.length == 0) {
+  if (values.length == 0) {
     return null;
   }
 
@@ -44,19 +44,19 @@ export function MostWatchedPeople({
         <span className="text-right leading-10">Viewings</span>
       </header>
       <ol>
-        {people.map((person, index) => {
+        {values.map((value, index) => {
           return (
-            <li key={person.name} className="block">
+            <li key={value.name} className="block">
               <div
                 style={{ zIndex: 1 + index }}
                 className="sticky top-20 grid w-full grid-cols-[auto_1fr_calc(6ch_+_var(--gutter-width))] bg-stripe px-gutter leading-10 desktop:top-[calc(160px_+_5rem)] max:top-[calc(128px_+_5rem)]"
               >
                 <span className="leading-10">
-                  <Name data={person} />
+                  <Name value={value} />
                 </span>
                 <span className="leading-10">&nbsp;</span>
                 <span className="bg-stripe text-right leading-10">
-                  {person.count}
+                  {value.count}
                 </span>
               </div>
               <div className="col-start-1 col-end-4 leading-10">
@@ -65,12 +65,12 @@ export function MostWatchedPeople({
                     Details
                   </summary>
                   <ol className="tablet:px-gutter">
-                    {person.viewings.map((viewing) => {
+                    {value.viewings.map((viewing) => {
                       return (
                         <MostWatchedPersonViewingListItem
                           key={viewing.sequence}
-                          viewing={viewing}
-                          imageData={posters[viewing.slug || "default"]!}
+                          value={viewing}
+                          imageData={posters[viewing.slug || "default"]}
                         />
                       );
                     })}
@@ -85,47 +85,48 @@ export function MostWatchedPeople({
   );
 }
 
-function Name({ data }: { data: MostWatchedPeopleListItemData }): JSX.Element {
-  if (data.slug) {
-    return <a href={`/cast-and-crew/${data.slug}/`}>{data.name}</a>;
+function Name({
+  value,
+}: {
+  value: MostWatchedPeopleListItemValue;
+}): JSX.Element {
+  if (value.slug) {
+    return <a href={`/cast-and-crew/${value.slug}/`}>{value.name}</a>;
   }
 
-  return <>{data.name}</>;
+  return <>{value.name}</>;
 }
 
 function MostWatchedPersonViewingListItem({
-  viewing,
+  value,
   imageData,
 }: {
-  viewing: ViewingListItemData;
+  value: ViewingListItemValue;
   imageData: PosterImageData;
 }) {
   return (
     <ListItem className="items-center">
       <ListItemPoster
-        slug={viewing.slug}
-        title={viewing.title}
-        year={viewing.year}
+        slug={value.slug}
+        title={value.title}
+        year={value.year}
         imageData={imageData}
       />
       <div className="grow">
         <div>
           <ListItemTitle
-            title={viewing.title}
-            year={viewing.year}
-            slug={viewing.slug}
+            title={value.title}
+            year={value.year}
+            slug={value.slug}
           />
           <div className="spacer-y-1 tablet:spacer-y-2" />
         </div>
         <div className="flex flex-col text-sm font-light tracking-0.5px text-subtle">
           <div className="spacer-y-1 tablet:spacer-y-0" />
           <div>
-            {viewing.date}
+            {value.date}
             <div className="spacer-y-2" />
-            <ListItemMediumAndVenue
-              medium={viewing.medium}
-              venue={viewing.venue}
-            />
+            <ListItemMediumAndVenue medium={value.medium} venue={value.venue} />
           </div>
         </div>
         <div className="spacer-y-2" />

@@ -12,7 +12,7 @@ export const MostWatchedMoviesPosterConfig = {
     "(min-width: 510px) 33vw, (min-width: 633px) 25vw, (min-width: 784px) 20vw, (min-width: 936px) 16vw, 48px",
 };
 
-export interface MostWatchedMoviesListItemData {
+export interface MostWatchedMoviesListItemValue {
   imdbId: string;
   title: string;
   year: string;
@@ -21,13 +21,13 @@ export interface MostWatchedMoviesListItemData {
 }
 
 export function MostWatchedMovies({
-  titles,
+  values,
   posters,
 }: {
-  titles: readonly MostWatchedMoviesListItemData[];
+  values: readonly MostWatchedMoviesListItemValue[];
   posters: Record<string, PosterImageData>;
 }): JSX.Element | null {
-  if (titles.length === 0) {
+  if (values.length === 0) {
     return null;
   }
 
@@ -37,12 +37,12 @@ export function MostWatchedMovies({
       <div>
         <div className="tablet:spacer-y-4" />
         <List>
-          {titles.map((movie) => {
+          {values.map((value) => {
             return (
               <ListItem
-                title={movie}
-                key={movie.imdbId}
-                imageData={posters[movie.slug || "default"]!}
+                value={value}
+                key={value.imdbId}
+                imageData={posters[value.slug || "default"]}
               />
             );
           })}
@@ -62,16 +62,18 @@ function List({ children }: { children: React.ReactNode }): JSX.Element {
 }
 
 function ListItem({
-  title,
+  value,
   imageData,
 }: {
-  title: MostWatchedMoviesListItemData;
+  value: MostWatchedMoviesListItemValue;
   imageData: PosterImageData;
 }): JSX.Element {
   return (
     <li className="flex items-center gap-x-6 px-gutter py-4 even:bg-subtle tablet:flex-col tablet:p-0 tablet:even:bg-unset">
       <FluidListItemPoster
-        title={title}
+        title={value.title}
+        year={value.year}
+        slug={value.slug}
         imageData={imageData}
         className="shrink-0"
       />
@@ -79,14 +81,14 @@ function ListItem({
         <div className="tablet:hidden">
           <div className="tablet:spacer-y-1" />
           <ListItemTitle
-            title={title.title}
-            year={title.year}
-            slug={title.slug}
+            title={value.title}
+            year={value.year}
+            slug={value.slug}
           />
           <div className="spacer-y-1 tablet:spacer-y-2" />
         </div>
         <div className="flex justify-start text-base text-subtle tablet:justify-center">
-          <div>{title.count.toLocaleString()} times</div>
+          <div>{value.count.toLocaleString()} times</div>
         </div>
         <div className="spacer-y-1 tablet:spacer-y-0" />
       </div>
@@ -96,17 +98,21 @@ function ListItem({
 
 function FluidListItemPoster({
   title,
+  slug,
+  year,
   className,
   imageData,
 }: {
-  title: MostWatchedMoviesListItemData;
+  title: string;
+  slug: string | null;
+  year: string;
   className?: string;
   imageData: PosterImageData;
 }) {
-  if (title.slug) {
+  if (slug) {
     return (
       <a
-        href={`/reviews/${title.slug}/`}
+        href={`/reviews/${slug}/`}
         className={twMerge(
           "safari-border-radius-fix min-w-12 w-full max-w-12 overflow-hidden rounded-lg shadow-all tablet:max-w-poster",
           className,
@@ -114,8 +120,8 @@ function FluidListItemPoster({
       >
         <Poster
           imageData={imageData}
-          title={title.title}
-          year={title.year}
+          title={title}
+          year={year}
           width={MostWatchedMoviesPosterConfig.width}
           height={MostWatchedMoviesPosterConfig.height}
           sizes={MostWatchedMoviesPosterConfig.sizes}
@@ -135,15 +141,15 @@ function FluidListItemPoster({
     >
       <Poster
         imageData={imageData}
-        title={title.title}
-        year={title.year}
+        title={title}
+        year={year}
         width={MostWatchedMoviesPosterConfig.width}
         height={MostWatchedMoviesPosterConfig.height}
         sizes={MostWatchedMoviesPosterConfig.sizes}
         loading="lazy"
         decoding="async"
         className="h-auto"
-        alt={`${title.title} (${title.year})`}
+        alt={`${title} (${year})`}
       />
     </div>
   );

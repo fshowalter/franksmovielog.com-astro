@@ -1,18 +1,18 @@
 import type { PosterImageData } from "src/api/posters";
 
-import type { MostWatchedPeopleListItemData } from "./MostWatchedPeople";
+import type { MostWatchedPeopleListItemValue } from "./MostWatchedPeople";
 import { MostWatchedPeople } from "./MostWatchedPeople";
 
 export function MostWatchedWriters({
-  people,
+  values,
   posters,
 }: {
-  people: readonly MostWatchedPeopleListItemData[];
+  values: readonly MostWatchedPeopleListItemValue[];
   posters: Record<string, PosterImageData>;
 }): JSX.Element | null {
   return (
     <MostWatchedPeople
-      people={people}
+      values={values}
       posters={posters}
       header="Most Watched Writers"
     />
