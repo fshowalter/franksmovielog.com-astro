@@ -9,8 +9,9 @@
     "check": "astro check",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "vitest src",
-    "coverage": "vitest src --coverage",
+    "test": "vitest run src",
+    "test:watch": "vitest src",
+    "test:coverage": "vitest run src --coverage.all",
     "lint": "eslint  ."
   },
   "dependencies": {
