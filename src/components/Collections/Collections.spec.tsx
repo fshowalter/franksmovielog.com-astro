@@ -1,12 +1,13 @@
 import { act, render, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
+import { describe, it } from "vitest";
 
 import { Collections, getProps } from "./";
 
 const props = await getProps();
 
 describe("Collections", () => {
-  it("can filter by name", async () => {
+  it("can filter by name", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Collections {...props} />);
@@ -20,7 +21,7 @@ describe("Collections", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by name desc", async () => {
+  it("can sort by name desc", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Collections {...props} />);
@@ -33,7 +34,7 @@ describe("Collections", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by name asc", async () => {
+  it("can sort by name asc", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Collections {...props} />);
@@ -46,7 +47,7 @@ describe("Collections", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by title count desc", async () => {
+  it("can sort by title count desc", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Collections {...props} />);
@@ -59,7 +60,7 @@ describe("Collections", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by title count asc", async () => {
+  it("can sort by title count asc", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Collections {...props} />);
@@ -72,7 +73,7 @@ describe("Collections", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by review count desc", async () => {
+  it("can sort by review count desc", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Collections {...props} />);
@@ -85,7 +86,7 @@ describe("Collections", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by review count asc", async () => {
+  it("can sort by review count asc", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Collections {...props} />);

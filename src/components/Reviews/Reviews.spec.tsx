@@ -1,19 +1,20 @@
 import { act, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { select } from "react-select-event";
+import { describe, it } from "vitest";
 
 import { getProps, Reviews } from "./";
 
 const props = await getProps();
 
 describe("Reviews", () => {
-  it("renders", () => {
+  it("renders", ({ expect }) => {
     const { asFragment } = render(<Reviews {...props} />);
 
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("can filter by title", async () => {
+  it("can filter by title", async ({ expect }) => {
     expect.hasAssertions();
     render(<Reviews {...props} />);
 
@@ -26,7 +27,7 @@ describe("Reviews", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by review date with newest first", async () => {
+  it("can sort by review date with newest first", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Reviews {...props} />);
@@ -39,7 +40,7 @@ describe("Reviews", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by review date with oldest first", async () => {
+  it("can sort by review date with oldest first", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Reviews {...props} />);
@@ -52,7 +53,7 @@ describe("Reviews", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by title A → Z", async () => {
+  it("can sort by title A → Z", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Reviews {...props} />);
@@ -65,7 +66,7 @@ describe("Reviews", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by title Z → A", async () => {
+  it("can sort by title Z → A", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Reviews {...props} />);
@@ -78,7 +79,7 @@ describe("Reviews", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by release date with oldest first", async () => {
+  it("can sort by release date with oldest first", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Reviews {...props} />);
@@ -91,7 +92,7 @@ describe("Reviews", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by release date with newest first", async () => {
+  it("can sort by release date with newest first", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Reviews {...props} />);
@@ -104,7 +105,7 @@ describe("Reviews", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by grade with best first", async () => {
+  it("can sort by grade with best first", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Reviews {...props} />);
@@ -117,7 +118,7 @@ describe("Reviews", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by grade with worst first", async () => {
+  it("can sort by grade with worst first", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Reviews {...props} />);
@@ -130,7 +131,7 @@ describe("Reviews", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can filter by release year", async () => {
+  it("can filter by release year", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Reviews {...props} />);
@@ -145,7 +146,7 @@ describe("Reviews", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can filter by release year reversed", async () => {
+  it("can filter by release year reversed", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Reviews {...props} />);
@@ -162,7 +163,7 @@ describe("Reviews", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can filter by review year", async () => {
+  it("can filter by review year", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Reviews {...props} />);
@@ -177,7 +178,7 @@ describe("Reviews", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can filter by review year reversed", async () => {
+  it("can filter by review year reversed", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Reviews {...props} />);
@@ -194,7 +195,7 @@ describe("Reviews", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can filter by grade", async () => {
+  it("can filter by grade", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Reviews {...props} />);
@@ -209,7 +210,7 @@ describe("Reviews", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can filter by genres", async () => {
+  it("can filter by genres", async ({ expect }) => {
     expect.hasAssertions();
     render(<Reviews {...props} />);
 
@@ -220,7 +221,7 @@ describe("Reviews", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can filter by grade reversed", async () => {
+  it("can filter by grade reversed", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Reviews {...props} />);
@@ -237,7 +238,7 @@ describe("Reviews", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can show more titles", async () => {
+  it("can show more titles", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Reviews {...props} />);

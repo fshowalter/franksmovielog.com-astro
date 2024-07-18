@@ -1,18 +1,19 @@
 import { act, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
+import { describe, it } from "vitest";
 
 import { Collection, getProps } from "./";
 
 const props = await getProps("shaw-brothers");
 
 describe("Collection", () => {
-  it("renders", () => {
+  it("renders", ({ expect }) => {
     const { asFragment } = render(<Collection {...props} />);
 
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("can filter by title", async () => {
+  it("can filter by title", async ({ expect }) => {
     expect.hasAssertions();
     render(<Collection {...props} />);
 
@@ -25,7 +26,7 @@ describe("Collection", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by title", async () => {
+  it("can sort by title", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Collection {...props} />);
@@ -35,7 +36,7 @@ describe("Collection", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by release date with oldest first", async () => {
+  it("can sort by release date with oldest first", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Collection {...props} />);
@@ -48,7 +49,7 @@ describe("Collection", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by release date with newest first", async () => {
+  it("can sort by release date with newest first", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Collection {...props} />);
@@ -61,7 +62,7 @@ describe("Collection", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by grade with best first", async () => {
+  it("can sort by grade with best first", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Collection {...props} />);
@@ -74,7 +75,7 @@ describe("Collection", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by grade with worst first", async () => {
+  it("can sort by grade with worst first", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Collection {...props} />);
@@ -87,7 +88,7 @@ describe("Collection", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can filter by release year", async () => {
+  it("can filter by release year", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Collection {...props} />);
@@ -102,7 +103,7 @@ describe("Collection", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can hide reviewed titles", async () => {
+  it("can hide reviewed titles", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Collection {...props} />);
@@ -112,7 +113,7 @@ describe("Collection", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can show hidden reviewed titles", async () => {
+  it("can show hidden reviewed titles", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Collection {...props} />);
@@ -123,7 +124,7 @@ describe("Collection", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can show more titles", async () => {
+  it("can show more titles", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<Collection {...props} />);

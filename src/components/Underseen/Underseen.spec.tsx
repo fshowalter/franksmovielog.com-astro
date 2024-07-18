@@ -1,13 +1,14 @@
 import { act, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { select } from "react-select-event";
+import { describe, it } from "vitest";
 
 import { getProps, Underseen } from "./";
 
 const props = await getProps();
 
 describe("Underseen", () => {
-  it("renders", () => {
+  it("renders", ({ expect }) => {
     const { asFragment } = render(<Underseen {...props} />);
 
     expect(asFragment()).toMatchSnapshot();

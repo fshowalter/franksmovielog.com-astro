@@ -1,12 +1,13 @@
 import { act, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
+import { describe, it } from "vitest";
 
 import { CastAndCrewMember, getProps } from "./";
 
 const props = await getProps("burt-reynolds");
 
 describe("CastAndCrewMember", () => {
-  it("renders", () => {
+  it("renders", ({ expect }) => {
     expect.hasAssertions();
 
     const { asFragment } = render(<CastAndCrewMember {...props} />);
@@ -14,7 +15,7 @@ describe("CastAndCrewMember", () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("can filter by title", async () => {
+  it("can filter by title", async ({ expect }) => {
     expect.hasAssertions();
     render(<CastAndCrewMember {...props} />);
 
@@ -27,7 +28,7 @@ describe("CastAndCrewMember", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by title", async () => {
+  it("can sort by title", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrewMember {...props} />);
@@ -37,7 +38,7 @@ describe("CastAndCrewMember", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by release date with oldest first", async () => {
+  it("can sort by release date with oldest first", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrewMember {...props} />);
@@ -50,7 +51,7 @@ describe("CastAndCrewMember", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by release date with newest first", async () => {
+  it("can sort by release date with newest first", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrewMember {...props} />);
@@ -63,7 +64,7 @@ describe("CastAndCrewMember", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by grade with best first", async () => {
+  it("can sort by grade with best first", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrewMember {...props} />);
@@ -76,7 +77,7 @@ describe("CastAndCrewMember", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by grade with worst first", async () => {
+  it("can sort by grade with worst first", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrewMember {...props} />);
@@ -89,7 +90,7 @@ describe("CastAndCrewMember", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can filter by release year", async () => {
+  it("can filter by release year", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrewMember {...props} />);
@@ -104,7 +105,7 @@ describe("CastAndCrewMember", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can hide reviewed titles", async () => {
+  it("can hide reviewed titles", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrewMember {...props} />);
@@ -114,7 +115,7 @@ describe("CastAndCrewMember", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can show hidden reviewed titles", async () => {
+  it("can show hidden reviewed titles", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrewMember {...props} />);
@@ -125,7 +126,7 @@ describe("CastAndCrewMember", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can show director titles", async () => {
+  it("can show director titles", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrewMember {...props} />);
@@ -135,7 +136,7 @@ describe("CastAndCrewMember", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can show director titles then show all", async () => {
+  it("can show director titles then show all", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrewMember {...props} />);
@@ -146,7 +147,7 @@ describe("CastAndCrewMember", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can show writer titles", async () => {
+  it("can show writer titles", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrewMember {...props} />);
@@ -156,7 +157,7 @@ describe("CastAndCrewMember", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can show writer titles then show all", async () => {
+  it("can show writer titles then show all", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrewMember {...props} />);
@@ -167,7 +168,7 @@ describe("CastAndCrewMember", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can show performer titles", async () => {
+  it("can show performer titles", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrewMember {...props} />);
@@ -180,7 +181,7 @@ describe("CastAndCrewMember", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can show performer titles then show all", async () => {
+  it("can show performer titles then show all", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrewMember {...props} />);
@@ -194,7 +195,7 @@ describe("CastAndCrewMember", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can show more credits", async () => {
+  it("can show more credits", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrewMember {...props} />);

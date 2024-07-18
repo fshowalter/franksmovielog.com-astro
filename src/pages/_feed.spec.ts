@@ -1,10 +1,10 @@
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
-import { describe, expect, it } from "vitest";
+import { describe, it } from "vitest";
 
 import * as FeedEndpoint from "./feed.xml.ts";
 
 describe("/feed.xml", () => {
-  it("matches snapshot", { timeout: 20000 }, async () => {
+  it("matches snapshot", { timeout: 20000 }, async ({ expect }) => {
     const container = await AstroContainer.create();
 
     // @ts-expect-error astro signature is wrong

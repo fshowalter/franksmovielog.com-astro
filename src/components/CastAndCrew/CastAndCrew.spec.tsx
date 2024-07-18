@@ -1,13 +1,13 @@
 import { act, render, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { describe, expect, it } from "vitest";
+import { describe, it } from "vitest";
 
 import { CastAndCrew, getProps } from "./";
 
 const props = await getProps();
 
 describe("CastAndCrew", () => {
-  it("can filter by name", async () => {
+  it("can filter by name", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrew {...props} />);
@@ -21,7 +21,7 @@ describe("CastAndCrew", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by name desc", async () => {
+  it("can sort by name desc", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrew {...props} />);
@@ -34,7 +34,7 @@ describe("CastAndCrew", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by name asc", async () => {
+  it("can sort by name asc", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrew {...props} />);
@@ -47,7 +47,7 @@ describe("CastAndCrew", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by title count desc", async () => {
+  it("can sort by title count desc", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrew {...props} />);
@@ -60,7 +60,7 @@ describe("CastAndCrew", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by title count asc", async () => {
+  it("can sort by title count asc", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrew {...props} />);
@@ -73,7 +73,7 @@ describe("CastAndCrew", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by review count desc", async () => {
+  it("can sort by review count desc", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrew {...props} />);
@@ -86,7 +86,7 @@ describe("CastAndCrew", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can sort by review count asc", async () => {
+  it("can sort by review count asc", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrew {...props} />);
@@ -99,7 +99,7 @@ describe("CastAndCrew", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can filter directors", async () => {
+  it("can filter directors", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrew {...props} />);
@@ -109,7 +109,7 @@ describe("CastAndCrew", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can filter directors then show all", async () => {
+  it("can filter directors then show all", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrew {...props} />);
@@ -120,7 +120,7 @@ describe("CastAndCrew", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can filter writers", async () => {
+  it("can filter writers", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrew {...props} />);
@@ -130,7 +130,7 @@ describe("CastAndCrew", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can filter writers then show all", async () => {
+  it("can filter writers then show all", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrew {...props} />);
@@ -141,7 +141,7 @@ describe("CastAndCrew", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can filter performers", async () => {
+  it("can filter performers", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrew {...props} />);
@@ -154,7 +154,7 @@ describe("CastAndCrew", () => {
     expect(screen.getByTestId("list")).toMatchSnapshot();
   });
 
-  it("can filter performers then show all", async () => {
+  it("can filter performers then show all", async ({ expect }) => {
     expect.hasAssertions();
 
     render(<CastAndCrew {...props} />);
