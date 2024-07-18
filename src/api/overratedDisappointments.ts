@@ -3,7 +3,7 @@ import { allOverratedDisappointmentsJson } from "./data/overratedDisappointments
 
 export interface OverratedDisappointment extends OverratedDisappointmentsJson {}
 
-export interface OverratedDisappointments {
+interface OverratedDisappointments {
   overratedDisappintments: OverratedDisappointment[];
   distinctReleaseYears: string[];
   distinctGenres: string[];

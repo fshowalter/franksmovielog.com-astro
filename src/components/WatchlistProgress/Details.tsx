@@ -10,7 +10,7 @@ import {
 
 type ValueType = "director" | "writer" | "performer" | "collection";
 
-export interface DetailValue {
+interface Value {
   name: string;
   reviewCount: number;
   titleCount: number;
@@ -24,7 +24,7 @@ export function Details({
 }: {
   label: string;
   valueType: ValueType;
-  values: DetailValue[];
+  values: Value[];
 }) {
   return (
     <section>
@@ -69,13 +69,7 @@ export function Details({
   );
 }
 
-function Name({
-  value,
-  valueType,
-}: {
-  valueType: ValueType;
-  value: DetailValue;
-}) {
+function Name({ value, valueType }: { valueType: ValueType; value: Value }) {
   let linkTarget;
 
   if (valueType === "collection") {

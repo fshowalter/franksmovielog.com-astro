@@ -7,7 +7,7 @@ export interface PosterImageData {
   srcSet: string;
 }
 
-export interface Props {
+interface Props {
   width: number;
   height: number;
 }

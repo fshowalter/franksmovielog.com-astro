@@ -7,7 +7,7 @@ import { getContentPath } from "./utils/getContentPath";
 
 const pagesMarkdownDirectory = getContentPath("pages");
 
-export interface MarkdownPage {
+interface MarkdownPage {
   slug: string;
   title: string;
   rawContent: string;

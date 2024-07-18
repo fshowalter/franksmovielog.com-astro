@@ -12,7 +12,7 @@ export const MostWatchedMoviesPosterConfig = {
     "(min-width: 510px) 33vw, (min-width: 633px) 25vw, (min-width: 784px) 20vw, (min-width: 936px) 16vw, 48px",
 };
 
-export interface MostWatchedMoviesListItemValue {
+interface ListItemValue {
   imdbId: string;
   title: string;
   year: string;
@@ -24,7 +24,7 @@ export function MostWatchedMovies({
   values,
   posters,
 }: {
-  values: readonly MostWatchedMoviesListItemValue[];
+  values: readonly ListItemValue[];
   posters: Record<string, PosterImageData>;
 }): JSX.Element | null {
   if (values.length === 0) {
@@ -65,7 +65,7 @@ function ListItem({
   value,
   imageData,
 }: {
-  value: MostWatchedMoviesListItemValue;
+  value: ListItemValue;
   imageData: PosterImageData;
 }): JSX.Element {
   return (

@@ -21,7 +21,7 @@ import {
   trimToExcerpt,
 } from "./utils/markdown/trimToExcerpt";
 
-export interface ReviewViewing extends MarkdownViewing {
+interface ReviewViewing extends MarkdownViewing {
   venueNotes: string | null;
   mediumNotes: string | null;
   viewingNotes: string | null;
@@ -34,7 +34,7 @@ export interface Review extends ReviewedTitleJson, MarkdownReview {
   content: string | null;
 }
 
-export interface Reviews {
+interface Reviews {
   reviews: Review[];
   distinctReviewYears: string[];
   distinctReleaseYears: string[];

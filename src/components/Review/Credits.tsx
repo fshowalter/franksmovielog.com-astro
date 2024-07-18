@@ -10,7 +10,7 @@ export const PosterImageConfig = {
   sizes: "(min-width: 248px) 248px, 100vw",
 };
 
-export interface Props
+interface Props
   extends Pick<
     Review,
     | "title"

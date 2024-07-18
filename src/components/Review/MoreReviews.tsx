@@ -6,7 +6,7 @@ import type { StillListItemValue } from "src/components/StillListItem";
 import { StillListNav } from "src/components/StillListNav";
 import { twMerge } from "tailwind-merge";
 
-export interface Props
+interface Props
   extends Pick<Review, "moreCastAndCrew" | "moreCollections" | "moreReviews"> {
   className?: string;
   stillListStills: Record<string, StillImageData>;

@@ -1,7 +1,7 @@
 import type { AlltimeStats } from "src/api/alltimeStats";
 import { StatsCallout } from "src/components/StatsCallout";
 
-export interface Props
+interface Props
   extends Pick<
     AlltimeStats,
     | "titleCount"

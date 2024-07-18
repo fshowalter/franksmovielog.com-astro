@@ -3,7 +3,7 @@ import {
   type CollectionJson,
 } from "./data/collectionsJson";
 
-export interface Collections {
+interface Collections {
   collections: Collection[];
   distinctReleaseYears: string[];
 }
