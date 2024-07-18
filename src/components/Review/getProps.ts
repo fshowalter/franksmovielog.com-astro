@@ -4,6 +4,7 @@ import { getFluidWidthPosters } from "src/api/posters";
 import { allReviews } from "src/api/reviews";
 import { getStillImagePath, getStills, images } from "src/api/stills";
 import { StillListItemImageConfig } from "src/components/StillListItem";
+import { normalizeSources } from "src/utils";
 
 import { ChipAvatarImageConfig } from "./Chips";
 import { PosterImageConfig } from "./Credits";
@@ -27,7 +28,7 @@ export async function getProps(slug: string): Promise<Props> {
     quality: 80,
   });
 
-  const seoImageSrc = optimizedImage.src;
+  const seoImageSrc = normalizeSources(optimizedImage.src);
 
   const stills = await getStills(StillImageConfig);
   const stillImageData = stills[value.slug];
