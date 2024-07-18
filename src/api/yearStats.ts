@@ -2,7 +2,7 @@ import { allYearStatsJson, type YearStatsJson } from "./data/yearStatsJson";
 
 export interface YearStats extends YearStatsJson {}
 
-let cache: Record<string, YearStats> = {};
+const cache: Record<string, YearStats> = {};
 const statYears = new Set<string>();
 
 export async function allStatYears() {

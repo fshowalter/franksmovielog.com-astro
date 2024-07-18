@@ -1,7 +1,7 @@
 import {
-  type FilterableState,
   buildGroupValues,
   collator,
+  type FilterableState,
   filterTools,
   sortNumber,
   sortString,

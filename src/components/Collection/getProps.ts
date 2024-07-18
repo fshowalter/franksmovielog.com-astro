@@ -1,19 +1,12 @@
-import { getFixedWidthPosters, type PosterImageData } from "src/api/posters";
+import { getAvatars } from "src/api/avatars";
+import { allCollections } from "src/api/collections";
+import { getFixedWidthPosters } from "src/api/posters";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
-import { allCollections, type Collection } from "src/api/collections";
+
+import type { Props } from "./Collection";
 import { AvatarImageConfig } from "./Header";
-import { getAvatars, type AvatarImageData } from "src/api/avatars";
-import type { Sort } from "./Collection.reducer";
 
-interface Data {
-  value: Collection;
-  posters: Record<string, PosterImageData>;
-  avatarImageData: AvatarImageData;
-  distinctReleaseYears: string[];
-  initialSort: Sort;
-}
-
-export async function getData(slug: string): Promise<Data> {
+export async function getProps(slug: string): Promise<Props> {
   const { collections, distinctReleaseYears } = await allCollections();
 
   const member = collections.find((member) => {

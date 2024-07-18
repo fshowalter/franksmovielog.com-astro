@@ -1,6 +1,7 @@
 ---
-import { Layout as LayoutComponent } from "src/components/Layout";
 import "./base.css";
+
+import { Layout as LayoutComponent } from "src/components/Layout";
 
 interface Props {
   title: string;
@@ -34,19 +35,9 @@ const pathname = new URL(Astro.request.url).pathname;
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link
-      rel="icon"
-      href="/favicon.ico"
-      sizes="48x48"
-      <link
-      rel="icon"
-      href="/favicon.svg"
-      sizes="any"
-      type="image/svg+xml"
-      <link
-      rel="apple-touch-icon"
-      href="/apple-touch-icon.png"
-    />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />

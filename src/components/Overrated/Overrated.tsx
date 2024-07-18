@@ -1,12 +1,13 @@
 import { useReducer } from "react";
+import type { PosterImageData } from "src/api/posters";
 import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
+
 import { Filters } from "./Filters";
 import { Header } from "./Header";
-import { List } from "./List";
-import { initState, reducer } from "./Overrated.reducer";
 import type { ListItemValue } from "./List";
-import type { PosterImageData } from "src/api/posters";
+import { List } from "./List";
 import type { Sort } from "./Overrated.reducer";
+import { initState, reducer } from "./Overrated.reducer";
 
 export interface Props {
   values: ListItemValue[];

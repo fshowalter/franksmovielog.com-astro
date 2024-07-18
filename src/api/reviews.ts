@@ -1,24 +1,25 @@
-import { allReviewedTitlesJson } from "./data/reviewedTitlesJson";
-import type { ReviewedTitleJson } from "./data/reviewedTitlesJson";
-import { allReviewsMarkdown } from "./data/reviewsMarkdown";
-import type { MarkdownReview } from "./data/reviewsMarkdown";
-import type { MarkdownViewing } from "./data/viewingsMarkdown";
-import { allViewingsMarkdown } from "./data/viewingsMarkdown";
 import rehypeRaw from "rehype-raw";
-import remarkRehype from "remark-rehype";
-import remarkGfm from "remark-gfm";
-import smartypants from "remark-smartypants";
 import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
+import remarkGfm from "remark-gfm";
+import remarkRehype from "remark-rehype";
+import smartypants from "remark-smartypants";
+import strip from "strip-markdown";
+
+import type { ReviewedTitleJson } from "./data/reviewedTitlesJson";
+import { allReviewedTitlesJson } from "./data/reviewedTitlesJson";
+import type { MarkdownReview } from "./data/reviewsMarkdown";
+import { allReviewsMarkdown } from "./data/reviewsMarkdown";
+import type { MarkdownViewing } from "./data/viewingsMarkdown";
+import { allViewingsMarkdown } from "./data/viewingsMarkdown";
 import { linkReviewedTitles } from "./utils/linkReviewedTitles";
+import { getHtml } from "./utils/markdown/getHtml";
 import { removeFootnotes } from "./utils/markdown/removeFootnotes";
 import { rootAsSpan } from "./utils/markdown/rootAsSpan";
 import {
-  trimToExcerpt,
   EXCERPT_SEPARATOR,
+  trimToExcerpt,
 } from "./utils/markdown/trimToExcerpt";
-import strip from "strip-markdown";
-import { getHtml } from "./utils/markdown/getHtml";
 
 export interface ReviewViewing extends MarkdownViewing {
   venueNotes: string | null;

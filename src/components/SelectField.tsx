@@ -1,7 +1,8 @@
 import type { ChangeEvent } from "react";
+import { twMerge } from "tailwind-merge";
+
 import { LabelText } from "./LabelText";
 import { SelectInput } from "./SelectInput";
-import { twMerge } from "tailwind-merge";
 
 export function SelectField({
   label,

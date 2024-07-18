@@ -1,10 +1,10 @@
 ---
-import Layout from "src/layouts/Layout.astro";
-import { allUnderseenGems } from "src/api/underseenGems";
 import { getFixedWidthPosters } from "src/api/posters";
-import type { ListItemUnderseenGemData } from "src/components/Underseen";
+import { allUnderseenGems } from "src/api/underseenGems";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
+import type { ListItemUnderseenGemData } from "src/components/Underseen";
 import { Underseen } from "src/components/Underseen";
+import Layout from "src/layouts/Layout.astro";
 
 const { underseenGems, distinctGenres, distinctReleaseYears } =
   await allUnderseenGems();

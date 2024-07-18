@@ -1,10 +1,10 @@
 ---
-import Layout from "src/layouts/Layout.astro";
-import { Reviews } from "src/components/Reviews";
-import { allReviews } from "src/api/reviews";
 import { getFixedWidthPosters } from "src/api/posters";
-import type { ListItemReviewData } from "src/components/Reviews";
+import { allReviews } from "src/api/reviews";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
+import type { ListItemReviewData } from "src/components/Reviews";
+import { Reviews } from "src/components/Reviews";
+import Layout from "src/layouts/Layout.astro";
 
 const { reviews, distinctGenres, distinctReleaseYears, distinctReviewYears } =
   await allReviews();

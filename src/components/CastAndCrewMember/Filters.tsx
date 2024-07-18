@@ -1,8 +1,9 @@
-import { capitalize } from "src/utils";
 import { Button } from "src/components/Button";
 import { DebouncedInput } from "src/components/DebouncedInput";
 import { SelectField } from "src/components/SelectField";
 import { YearInput } from "src/components/YearInput";
+import { capitalize } from "src/utils";
+
 import {
   Actions,
   type ActionType,

@@ -1,4 +1,5 @@
 import { basename, extname } from "node:path";
+
 import { getImage } from "astro:assets";
 
 export interface PosterImageData {

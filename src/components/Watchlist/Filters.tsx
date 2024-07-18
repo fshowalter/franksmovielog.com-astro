@@ -2,6 +2,7 @@ import { DebouncedInput } from "src/components/DebouncedInput";
 import { SelectField } from "src/components/SelectField";
 import { SelectOptions } from "src/components/SelectOptions";
 import { YearInput } from "src/components/YearInput";
+
 import { Actions, type ActionType, type Sort } from "./Watchlist.reducer";
 
 export function Filters({

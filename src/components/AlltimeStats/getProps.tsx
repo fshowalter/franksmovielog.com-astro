@@ -1,8 +1,9 @@
 import { alltimeStats } from "src/api/alltimeStats";
-import { getFluidWidthPosters, getFixedWidthPosters } from "src/api/posters";
-import { MostWatchedMoviesPosterConfig } from "src/components/MostWatchedMovies";
-import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
+import { getFixedWidthPosters,getFluidWidthPosters } from "src/api/posters";
 import { allStatYears } from "src/api/yearStats";
+import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
+import { MostWatchedMoviesPosterConfig } from "src/components/MostWatchedMovies";
+
 import { type Props } from "./AlltimeStats";
 
 export async function getProps(): Promise<Props> {

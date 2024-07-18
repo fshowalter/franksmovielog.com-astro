@@ -1,11 +1,12 @@
+import type { Collection } from "src/api/collections";
+import type { PosterImageData } from "src/api/posters";
 import { Grade } from "src/components/Grade";
+import { GroupedList } from "src/components/GroupedList";
 import { ListItem } from "src/components/ListItem";
 import { ListItemPoster } from "src/components/ListItemPoster";
 import { ListItemTitle } from "src/components/ListItemTitle";
-import { GroupedList } from "src/components/GroupedList";
+
 import { Actions, type ActionType } from "./Collection.reducer";
-import type { Collection } from "src/api/collections";
-import type { PosterImageData } from "src/api/posters";
 
 export interface ListItemValue
   extends Pick<

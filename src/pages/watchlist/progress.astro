@@ -1,7 +1,7 @@
 ---
-import Layout from "src/layouts/Layout.astro";
-import { WatchlistProgress } from "src/components/WatchlistProgress";
 import { watchlistProgress } from "src/api/watchlistProgress";
+import { WatchlistProgress } from "src/components/WatchlistProgress";
+import Layout from "src/layouts/Layout.astro";
 
 const progress = await watchlistProgress();
 ---

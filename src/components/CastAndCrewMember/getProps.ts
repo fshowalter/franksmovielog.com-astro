@@ -1,19 +1,12 @@
-import { getFixedWidthPosters, type PosterImageData } from "src/api/posters";
+import { getAvatars } from "src/api/avatars";
+import { allCastAndCrew } from "src/api/castAndCrew";
+import { getFixedWidthPosters } from "src/api/posters";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
-import { allCastAndCrew, type CastAndCrewMember } from "src/api/castAndCrew";
+
+import type { Props } from "./CastAndCrewMember";
 import { AvatarImageConfig } from "./Header";
-import { getAvatars, type AvatarImageData } from "src/api/avatars";
-import type { Sort } from "./CastAndCrewMember.reducer";
 
-interface Data {
-  value: CastAndCrewMember;
-  posters: Record<string, PosterImageData>;
-  avatarImageData: AvatarImageData;
-  distinctReleaseYears: string[];
-  initialSort: Sort;
-}
-
-export async function getData(slug: string): Promise<Data> {
+export async function getProps(slug: string): Promise<Props> {
   const { castAndCrew, distinctReleaseYears } = await allCastAndCrew();
 
   const member = castAndCrew.find((member) => {

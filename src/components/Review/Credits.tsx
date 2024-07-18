@@ -1,8 +1,8 @@
-import { toSentence } from "src/utils";
-import { twMerge } from "tailwind-merge";
+import type { PosterImageData } from "src/api/posters";
 import type { Review } from "src/api/reviews";
 import { Poster } from "src/components/Poster";
-import type { PosterImageData } from "src/api/posters";
+import { toSentence } from "src/utils";
+import { twMerge } from "tailwind-merge";
 
 export const PosterImageConfig = {
   width: 248,

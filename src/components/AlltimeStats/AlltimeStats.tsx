@@ -1,15 +1,16 @@
-import { PageTitle } from "src/components/PageTitle";
+import type { AlltimeStats } from "src/api/alltimeStats";
+import type { PosterImageData } from "src/api/posters";
 import { DecadeDistribution } from "src/components/DecadeDistribution";
 import { MediaDistribution } from "src/components/MediaDistribution";
-import { MostWatchedMovies } from "src/components/MostWatchedMovies";
 import { MostWatchedDirectors } from "src/components/MostWatchedDirectors";
+import { MostWatchedMovies } from "src/components/MostWatchedMovies";
 import { MostWatchedPerformers } from "src/components/MostWatchedPerformers";
 import { MostWatchedWriters } from "src/components/MostWatchedWriters";
+import { PageTitle } from "src/components/PageTitle";
 import { StatsNavigation } from "src/components/StatsNavigation";
+
 import { Callouts } from "./Callouts";
 import { GradeDistribution } from "./GradeDistribution";
-import type { PosterImageData } from "src/api/posters";
-import type { AlltimeStats } from "src/api/alltimeStats";
 
 export interface Props {
   stats: Pick<

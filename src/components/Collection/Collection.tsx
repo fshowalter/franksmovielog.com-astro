@@ -1,14 +1,15 @@
 "use client";
 
 import { useReducer } from "react";
+import type { AvatarImageData } from "src/api/avatars";
+import type { Collection } from "src/api/collections";
+import type { PosterImageData } from "src/api/posters";
 import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
+
 import { initState, reducer, type Sort } from "./Collection.reducer";
 import { Filters } from "./Filters";
 import { Header } from "./Header";
 import { List } from "./List";
-import type { Collection } from "src/api/collections";
-import type { AvatarImageData } from "src/api/avatars";
-import type { PosterImageData } from "src/api/posters";
 
 export interface Props {
   value: Pick<

@@ -1,10 +1,11 @@
+import type { StillImageData } from "src/api/stills";
+
 import { LongFormText } from "./LongFormText";
 import { PageTitle } from "./PageTitle";
 import { StillList } from "./StillList";
 import { StillListHeading } from "./StillListHeading";
-import { StillListNav } from "./StillListNav";
 import type { StillListItemData } from "./StillListItem";
-import type { StillImageData } from "src/api/stills";
+import { StillListNav } from "./StillListNav";
 
 export const StillImageConfig = {
   width: 960,

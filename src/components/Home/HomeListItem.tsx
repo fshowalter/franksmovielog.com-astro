@@ -1,9 +1,9 @@
-import { toSentence } from "src/utils";
+import type { Review } from "src/api/reviews";
+import type { StillImageData } from "src/api/stills";
 import { Grade } from "src/components/Grade";
 import { RenderedMarkdown } from "src/components/RenderedMarkdown";
 import { Still } from "src/components/Still";
-import type { Review } from "src/api/reviews";
-import type { StillImageData } from "src/api/stills";
+import { toSentence } from "src/utils";
 
 export const StillImageConfig = {
   width: 512,

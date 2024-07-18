@@ -1,6 +1,6 @@
 import {
-  watchlistProgressJson,
   type WatchlistProgressJson,
+  watchlistProgressJson,
 } from "./data/watchlistProgressJson";
 
 export interface WatchlistProgress extends WatchlistProgressJson {}

@@ -1,14 +1,15 @@
 import { useReducer } from "react";
+import type { AvatarImageData } from "src/api/avatars";
+import type { CastAndCrewMember } from "src/api/castAndCrew";
+import type { PosterImageData } from "src/api/posters";
 import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
+
 import { initState, reducer, type Sort } from "./CastAndCrewMember.reducer";
 import { Filters } from "./Filters";
 import { Header } from "./Header";
 import { List } from "./List";
-import type { CastAndCrewMember } from "src/api/castAndCrew";
-import type { PosterImageData } from "src/api/posters";
-import type { AvatarImageData } from "src/api/avatars";
 
-interface Props {
+export interface Props {
   value: Pick<
     CastAndCrewMember,
     "name" | "reviewCount" | "totalCount" | "creditedAs" | "titles"

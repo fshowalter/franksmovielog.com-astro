@@ -1,6 +1,7 @@
-import { HomeListItem } from "./HomeListItem";
-import type { ListItemValue } from "./HomeListItem";
 import type { StillImageData } from "src/api/stills";
+
+import type { ListItemValue } from "./HomeListItem";
+import { HomeListItem } from "./HomeListItem";
 
 export function Home({
   values,

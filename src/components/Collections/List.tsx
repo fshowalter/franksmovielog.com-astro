@@ -1,9 +1,9 @@
-import { ListItem } from "src/components/ListItem";
-import { ListItemCounts } from "src/components/ListItemCounts";
-import { ListInfo } from "src/components/ListInfo";
-import type { Collection } from "src/api/collections";
 import type { AvatarImageData } from "src/api/avatars";
+import type { Collection } from "src/api/collections";
+import { ListInfo } from "src/components/ListInfo";
+import { ListItem } from "src/components/ListItem";
 import { ListItemAvatar } from "src/components/ListItemAvatar";
+import { ListItemCounts } from "src/components/ListItemCounts";
 
 export interface ListItemValue
   extends Pick<Collection, "name" | "slug" | "titleCount" | "reviewCount"> {}

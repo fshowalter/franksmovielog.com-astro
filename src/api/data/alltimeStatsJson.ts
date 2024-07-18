@@ -1,5 +1,7 @@
 import { promises as fs } from "node:fs";
+
 import { z } from "zod";
+
 import { getContentPath } from "./utils/getContentPath";
 
 const alltimeStatsFile = getContentPath("data", "all-time-stats.json");

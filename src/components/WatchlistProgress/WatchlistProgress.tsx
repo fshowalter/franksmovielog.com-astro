@@ -1,8 +1,9 @@
-import { Callouts } from "./Callouts";
-import { Header } from "./Header";
-import { Details } from "./Details";
 import type { WatchlistProgress } from "src/api/watchlistProgress";
+
 import type { Props as CalloutsProps } from "./Callouts";
+import { Callouts } from "./Callouts";
+import { Details } from "./Details";
+import { Header } from "./Header";
 
 interface Props {
   progress: Pick<

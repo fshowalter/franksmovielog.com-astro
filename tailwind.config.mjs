@@ -1,7 +1,7 @@
 const STILL_WIDTH = "960px";
 const PROSE_CONTENT_WIDTH = "36rem";
 const POSTER_WIDTH = "248px";
-const plugin = require("tailwindcss/plugin");
+import plugin from "tailwindcss/plugin";
 
 /** @type {import('tailwindcss').Config} */
 export default {

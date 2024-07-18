@@ -1,2 +1,2 @@
 export { CastAndCrewMember } from "./CastAndCrewMember";
-export { getData } from "./getData";
+export { getProps } from "./getProps";

@@ -1,7 +1,7 @@
 ---
-import Layout from "src/layouts/Layout.astro";
 import { allCollections } from "src/api/collections";
-import { Collection, getData } from "src/components/Collection";
+import { Collection, getProps } from "src/components/Collection";
+import Layout from "src/layouts/Layout.astro";
 
 export async function getStaticPaths() {
   const { collections } = await allCollections();
@@ -20,7 +20,7 @@ export async function getStaticPaths() {
 
 const { slug } = Astro.props;
 
-const props = await getData(slug);
+const props = await getProps(slug);
 ---
 
 <Layout

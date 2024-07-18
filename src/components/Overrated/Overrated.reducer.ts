@@ -1,3 +1,4 @@
+import type { FilterableState } from "src/utils";
 import {
   buildGroupValues,
   collator,
@@ -5,7 +6,6 @@ import {
   sortNumber,
   sortString,
 } from "src/utils";
-import type { FilterableState } from "src/utils";
 
 import type { ListItemValue } from "./List";
 

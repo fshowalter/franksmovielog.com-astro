@@ -28,6 +28,8 @@ export function Poster({
       alt={`A poster from ${title} (${year})`}
       {...rest}
       className={twMerge("aspect-[0.66666667]", className)}
+      loading={loading}
+      decoding={decoding}
     />
   );
 }

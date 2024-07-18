@@ -1,7 +1,8 @@
 import { allOverratedDisappintments } from "src/api/overratedDisappointments";
 import { getFixedWidthPosters, type PosterImageData } from "src/api/posters";
-import type { ListItemValue } from "./List";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
+
+import type { ListItemValue } from "./List";
 import type { Sort } from "./Overrated.reducer";
 
 interface Data {

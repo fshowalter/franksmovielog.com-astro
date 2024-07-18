@@ -1,22 +1,23 @@
-import type { Review } from "src/api/reviews";
-import { Content } from "./Content";
-import { Credits } from "./Credits";
-import { Header } from "./Header";
-import { MoreReviews } from "./MoreReviews";
-import { StructuredData } from "./StructuredData";
-import { ViewingHistory } from "./ViewingHistory";
-import type { StillImageData } from "src/api/stills";
+import type { AvatarImageData } from "src/api/avatars";
 import type { PosterImageData } from "src/api/posters";
+import type { Review } from "src/api/reviews";
+import type { StillImageData } from "src/api/stills";
 import { Still } from "src/components/Still";
-import type { HeaderReviewData } from "./Header";
-import type { ContentReviewData } from "./Content";
-import type { ViewingHistoryReviewData } from "./ViewingHistory";
-import type { CreditsReviewData } from "./Credits";
+
 import type { ChipsReviewData } from "./Chips";
 import { Chips } from "./Chips";
-import type { AvatarImageData } from "src/api/avatars";
+import type { ContentReviewData } from "./Content";
+import { Content } from "./Content";
+import type { CreditsReviewData } from "./Credits";
+import { Credits } from "./Credits";
+import type { HeaderReviewData } from "./Header";
+import { Header } from "./Header";
 import type { MoreReviewsReviewData } from "./MoreReviews";
+import { MoreReviews } from "./MoreReviews";
 import type { StructuredDataReviewData } from "./StructuredData";
+import { StructuredData } from "./StructuredData";
+import type { ViewingHistoryReviewData } from "./ViewingHistory";
+import { ViewingHistory } from "./ViewingHistory";
 
 export const StillImageConfig = {
   width: 960,

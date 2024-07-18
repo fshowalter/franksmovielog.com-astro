@@ -1,12 +1,13 @@
+import type { PosterImageData } from "src/api/posters";
+import type { Viewing } from "src/api/viewings";
+import { GroupedList } from "src/components/GroupedList";
 import { ListItem } from "src/components/ListItem";
 import { ListItemMediumAndVenue } from "src/components/ListItemMediumAndVenue";
 import { ListItemPoster } from "src/components/ListItemPoster";
 import { ListItemTitle } from "src/components/ListItemTitle";
-import { GroupedList } from "src/components/GroupedList";
-import { ActionType } from "./Viewings.reducer";
-import type { Viewing } from "src/api/viewings";
+
 import type { Action } from "./Viewings.reducer";
-import type { PosterImageData } from "src/api/posters";
+import { ActionType } from "./Viewings.reducer";
 
 export interface ListItemViewingData
   extends Pick<

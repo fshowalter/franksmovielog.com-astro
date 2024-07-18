@@ -1,9 +1,10 @@
 import { act, render, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { CastAndCrew, getData } from "./";
-import { expect, it, describe } from "vitest";
+import { describe,expect, it } from "vitest";
 
-const props = await getData();
+import { CastAndCrew, getProps } from "./";
+
+const props = await getProps();
 
 describe("CastAndCrew", () => {
   it("can filter by name", async () => {

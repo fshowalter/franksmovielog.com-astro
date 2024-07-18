@@ -1,9 +1,10 @@
+import { getContainerRenderer as reactContainerRenderer } from "@astrojs/react";
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import { loadRenderers } from "astro:container";
-import { getContainerRenderer as reactContainerRenderer } from "@astrojs/react";
-import { expect, it, describe } from "vitest";
-import index from "./[year].astro";
 import { allStatYears } from "src/api/yearStats";
+import { describe,expect, it } from "vitest";
+
+import index from "./[year].astro";
 
 const statYears = await allStatYears();
 

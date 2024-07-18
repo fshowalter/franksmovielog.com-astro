@@ -1,7 +1,8 @@
-import { StillImageConfig, type ListItemValue } from "./HomeListItem";
 import { allReviews } from "src/api/reviews";
-import { getStills } from "src/api/stills";
 import type { StillImageData } from "src/api/stills";
+import { getStills } from "src/api/stills";
+
+import { type ListItemValue,StillImageConfig } from "./HomeListItem";
 
 interface Data {
   values: ListItemValue[];

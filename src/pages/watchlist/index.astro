@@ -1,9 +1,9 @@
 ---
-import Layout from "src/layouts/Layout.astro";
-import { Watchlist } from "src/components/Watchlist";
-import { allWatchlistTitles } from "src/api/watchlistTitles";
 import { getFixedWidthPosters } from "src/api/posters";
+import { allWatchlistTitles } from "src/api/watchlistTitles";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
+import { Watchlist } from "src/components/Watchlist";
+import Layout from "src/layouts/Layout.astro";
 
 const {
   watchlistTitles,

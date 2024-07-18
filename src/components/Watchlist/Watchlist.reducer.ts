@@ -1,10 +1,11 @@
 import {
   buildGroupValues,
   collator,
+  type FilterableState,
   filterTools,
   sortString,
-  type FilterableState,
 } from "src/utils";
+
 import type { ListItemValue } from "./List";
 
 export type Sort = "release-date-desc" | "release-date-asc" | "title";

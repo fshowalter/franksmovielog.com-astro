@@ -1,9 +1,9 @@
 import rehypeRaw from "rehype-raw";
-import remarkRehype from "remark-rehype";
-import remarkGfm from "remark-gfm";
-import smartypants from "remark-smartypants";
 import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
+import remarkGfm from "remark-gfm";
+import remarkRehype from "remark-rehype";
+import smartypants from "remark-smartypants";
 import { linkReviewedTitles } from "src/api/utils/linkReviewedTitles";
 
 export function getHtml(

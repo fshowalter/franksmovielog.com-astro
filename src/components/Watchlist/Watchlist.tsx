@@ -1,10 +1,11 @@
 import { useReducer } from "react";
+import type { PosterImageData } from "src/api/posters";
+
 import { ListWithFiltersLayout } from "../ListWithFiltersLayout";
 import { Filters } from "./Filters";
 import { Header } from "./Header";
 import { List, type ListItemValue } from "./List";
 import { initState, reducer, type Sort } from "./Watchlist.reducer";
-import type { PosterImageData } from "src/api/posters";
 
 export interface WatchlistProps {
   values: ListItemValue[];

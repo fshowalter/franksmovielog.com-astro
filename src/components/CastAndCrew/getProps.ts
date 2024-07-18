@@ -1,8 +1,9 @@
-import { type ListItemValue } from "./List";
-import { allCastAndCrew } from "src/api/castAndCrew";
 import { getAvatars } from "src/api/avatars";
+import { allCastAndCrew } from "src/api/castAndCrew";
 import { ListItemAvatarImageConfig } from "src/components/ListItemAvatar";
+
 import type { Props } from "./CastAndCrew";
+import { type ListItemValue } from "./List";
 
 export async function getProps(): Promise<Props> {
   const { castAndCrew } = await allCastAndCrew();

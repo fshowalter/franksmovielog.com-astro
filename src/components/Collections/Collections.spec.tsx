@@ -1,8 +1,9 @@
 import { act, render, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { Collections, getData } from "./";
 
-const props = await getData();
+import { Collections, getProps } from "./";
+
+const props = await getProps();
 
 describe("Collections", () => {
   it("can filter by name", async () => {

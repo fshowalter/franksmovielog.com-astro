@@ -1,4 +1,5 @@
 import { basename, extname, join } from "node:path";
+
 import { getImage } from "astro:assets";
 
 export interface StillImageData {

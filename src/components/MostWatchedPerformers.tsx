@@ -1,6 +1,7 @@
 import type { PosterImageData } from "src/api/posters";
-import { MostWatchedPeople } from "./MostWatchedPeople";
+
 import type { MostWatchedPeopleListItemData } from "./MostWatchedPeople";
+import { MostWatchedPeople } from "./MostWatchedPeople";
 
 export function MostWatchedPerformers({
   people,

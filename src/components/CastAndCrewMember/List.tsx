@@ -1,13 +1,14 @@
+import type { CastAndCrewMember } from "src/api/castAndCrew";
+import type { PosterImageData } from "src/api/posters";
 import { CreditedAs } from "src/components/CreditedAs";
 import { Grade } from "src/components/Grade";
+import { GroupedList } from "src/components/GroupedList";
 import { ListItem } from "src/components/ListItem";
 import { ListItemPoster } from "src/components/ListItemPoster";
 import { ListItemTitle } from "src/components/ListItemTitle";
-import { GroupedList } from "src/components/GroupedList";
 import { WatchlistTitleSlug } from "src/components/WatchlistTitleSlug";
+
 import { Actions, type ActionType } from "./CastAndCrewMember.reducer";
-import type { CastAndCrewMember } from "src/api/castAndCrew";
-import type { PosterImageData } from "src/api/posters";
 
 export interface ListItemValue
   extends Pick<

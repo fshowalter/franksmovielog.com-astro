@@ -1,8 +1,9 @@
 import { act, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { Collection, getData } from "./";
 
-const props = await getData("shaw-brothers");
+import { Collection, getProps } from "./";
+
+const props = await getProps("shaw-brothers");
 
 describe("Collection", () => {
   it("renders", () => {

@@ -1,2 +1,2 @@
-export { Overrated } from "./Overrated";
 export { getData } from "./getData";
+export { Overrated } from "./Overrated";

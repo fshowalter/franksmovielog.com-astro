@@ -1,2 +1,2 @@
-export { Underseen } from "./Underseen";
 export type { ListItemUnderseenGemData } from "./List";
+export { Underseen } from "./Underseen";

@@ -1,13 +1,14 @@
+import type { PosterImageData } from "src/api/posters";
+import type { Review } from "src/api/reviews";
 import { Grade } from "src/components/Grade";
+import { GroupedList } from "src/components/GroupedList";
 import { ListItem } from "src/components/ListItem";
 import { ListItemGenres } from "src/components/ListItemGenres";
 import { ListItemPoster } from "src/components/ListItemPoster";
 import { ListItemTitle } from "src/components/ListItemTitle";
-import { GroupedList } from "src/components/GroupedList";
-import { ActionType } from "./Reviews.reducer";
-import type { Review } from "src/api/reviews";
+
 import type { Action } from "./Reviews.reducer";
-import type { PosterImageData } from "src/api/posters";
+import { ActionType } from "./Reviews.reducer";
 
 export interface ListItemReviewData
   extends Pick<

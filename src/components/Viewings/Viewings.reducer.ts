@@ -1,5 +1,6 @@
-import { filterTools, sortNumber } from "src/utils";
 import type { FilterableState } from "src/utils";
+import { filterTools, sortNumber } from "src/utils";
+
 import type { ListItemViewingData } from "./List";
 
 const SHOW_COUNT_DEFAULT = 100;

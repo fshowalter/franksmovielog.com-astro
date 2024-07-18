@@ -1,5 +1,6 @@
-import { PageTitle } from "src/components/PageTitle";
 import type { AvatarImageData } from "src/api/avatars";
+import { PageTitle } from "src/components/PageTitle";
+
 import { Avatar } from "../Avatar";
 
 export const AvatarImageConfig = {

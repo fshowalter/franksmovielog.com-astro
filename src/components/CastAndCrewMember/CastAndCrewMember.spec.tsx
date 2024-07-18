@@ -1,8 +1,9 @@
 import { act, render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
-import { CastAndCrewMember, getData } from "./";
 
-const props = await getData("burt-reynolds");
+import { CastAndCrewMember, getProps } from "./";
+
+const props = await getProps("burt-reynolds");
 
 describe("CastAndCrewMember", () => {
   it("renders", async () => {

@@ -1,5 +1,6 @@
-import SvgIcon from "./SvgIcon";
 import { twMerge } from "tailwind-merge";
+
+import SvgIcon from "./SvgIcon";
 /**
  * Renders a calendar icon.
  */

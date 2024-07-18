@@ -1,6 +1,8 @@
 import { promises as fs } from "node:fs";
+
 import matter from "gray-matter";
 import { z } from "zod";
+
 import { getContentPath } from "./utils/getContentPath";
 
 const reviewsMarkdownDirectory = getContentPath("reviews");

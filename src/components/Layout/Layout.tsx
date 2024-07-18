@@ -1,7 +1,7 @@
 /* eslint-env browser, node */
 
-import { Mast } from "./Mast";
 import { Footer } from "./Footer";
+import { Mast } from "./Mast";
 
 export function Layout({
   currentPath,

@@ -1,14 +1,15 @@
 "use client";
 
 import { useReducer } from "react";
+import type { PosterImageData } from "src/api/posters";
 import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
+
 import { Filters } from "./Filters";
 import { Header } from "./Header";
-import { List } from "./List";
-import { initState, reducer } from "./Underseen.reducer";
-import type { Sort } from "./Underseen.reducer";
 import type { ListItemUnderseenGemData } from "./List";
-import type { PosterImageData } from "src/api/posters";
+import { List } from "./List";
+import type { Sort } from "./Underseen.reducer";
+import { initState, reducer } from "./Underseen.reducer";
 
 export interface UnderseenProps {
   underseenGems: readonly ListItemUnderseenGemData[];

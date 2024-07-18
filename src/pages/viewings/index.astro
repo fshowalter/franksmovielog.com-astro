@@ -1,10 +1,10 @@
 ---
-import Layout from "src/layouts/Layout.astro";
-import { Viewings } from "src/components/Viewings";
 import { getFixedWidthPosters } from "src/api/posters";
-import type { ListItemViewingData } from "src/components/Viewings";
-import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 import { allViewings } from "src/api/viewings";
+import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
+import type { ListItemViewingData } from "src/components/Viewings";
+import { Viewings } from "src/components/Viewings";
+import Layout from "src/layouts/Layout.astro";
 
 const {
   viewings,

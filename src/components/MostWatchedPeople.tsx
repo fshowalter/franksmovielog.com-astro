@@ -1,4 +1,5 @@
 import type { PosterImageData } from "src/api/posters";
+
 import { ListItem } from "./ListItem";
 import { ListItemMediumAndVenue } from "./ListItemMediumAndVenue";
 import { ListItemPoster } from "./ListItemPoster";

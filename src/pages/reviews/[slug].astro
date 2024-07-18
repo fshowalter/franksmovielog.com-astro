@@ -1,19 +1,19 @@
 ---
-import Layout from "src/layouts/Layout.astro";
+import { getImage } from "astro:assets";
+import { getAvatars } from "src/api/avatars";
+import { getFluidWidthPosters } from "src/api/posters";
+import type { Review as IReview } from "src/api/reviews";
+import { allReviews } from "src/api/reviews";
+import { getStillImagePath, getStills,images } from "src/api/stills";
 import {
+  ChipAvatarImageConfig,
+  PosterImageConfig,
   Review,
   StillImageConfig,
-  PosterImageConfig,
-  ChipAvatarImageConfig,
 } from "src/components/Review";
-import { allReviews } from "src/api/reviews";
-import type { Review as IReview } from "src/api/reviews";
-import { textStarsForGrade } from "src/utils/textStarsForGrade";
-import { images, getStillImagePath, getStills } from "src/api/stills";
-import { getImage } from "astro:assets";
-import { getFluidWidthPosters } from "src/api/posters";
-import { getAvatars } from "src/api/avatars";
 import { StillListItemImageConfig } from "src/components/StillListItem";
+import Layout from "src/layouts/Layout.astro";
+import { textStarsForGrade } from "src/utils/textStarsForGrade";
 
 export async function getStaticPaths() {
   const { reviews } = await allReviews();

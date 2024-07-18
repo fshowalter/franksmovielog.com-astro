@@ -1,9 +1,8 @@
 import rss from "@astrojs/rss";
-import { textStarsForGrade } from "src/utils/textStarsForGrade";
+import { getImage } from "astro:assets";
 import { allReviews, type Review } from "src/api/reviews";
 import { getStillImagePath, images } from "src/api/stills";
-import { getImage } from "astro:assets";
-import type { APIContext } from "astro";
+import { textStarsForGrade } from "src/utils/textStarsForGrade";
 
 function addMetaToExcerpt(excerpt: string, review: Review) {
   const meta = `${textStarsForGrade(
@@ -15,7 +14,7 @@ function addMetaToExcerpt(excerpt: string, review: Review) {
   return `<p>${meta}</p>${excerpt}`;
 }
 
-export async function GET(context: APIContext) {
+export async function GET() {
   const { reviews } = await allReviews();
 
   reviews.sort((a, b) => b.sequence.localeCompare(a.sequence));

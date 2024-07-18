@@ -1,6 +1,7 @@
+import type { StillImageData } from "src/api/stills";
+
 import { Grade } from "./Grade";
 import { Still } from "./Still";
-import type { StillImageData } from "src/api/stills";
 
 export const StillListItemImageConfig = {
   width: 312,

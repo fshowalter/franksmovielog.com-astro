@@ -1,10 +1,10 @@
-import { CreditedAs } from "src/components/CreditedAs";
-import { ListItem } from "src/components/ListItem";
-import { ListItemCounts } from "src/components/ListItemCounts";
-import { ListInfo } from "src/components/ListInfo";
-import { ListItemAvatar } from "src/components/ListItemAvatar";
-import type { CastAndCrewMember } from "src/api/castAndCrew";
 import type { AvatarImageData } from "src/api/avatars";
+import type { CastAndCrewMember } from "src/api/castAndCrew";
+import { CreditedAs } from "src/components/CreditedAs";
+import { ListInfo } from "src/components/ListInfo";
+import { ListItem } from "src/components/ListItem";
+import { ListItemAvatar } from "src/components/ListItemAvatar";
+import { ListItemCounts } from "src/components/ListItemCounts";
 
 export interface ListItemValue
   extends Pick<

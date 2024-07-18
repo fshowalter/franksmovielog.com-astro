@@ -1,10 +1,10 @@
 ---
-import Layout from "src/layouts/Layout.astro";
-import { Article, StillImageConfig } from "src/components/Article";
 import { getPage } from "src/api/pages";
-import { getStills } from "src/api/stills";
 import { allReviews } from "src/api/reviews";
+import { getStills } from "src/api/stills";
+import { Article, StillImageConfig } from "src/components/Article";
 import { StillListItemImageConfig } from "src/components/StillListItem";
+import Layout from "src/layouts/Layout.astro";
 
 const { title, content } = await getPage("not-found");
 

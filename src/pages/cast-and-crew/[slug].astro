@@ -1,7 +1,7 @@
 ---
-import Layout from "src/layouts/Layout.astro";
 import { allCastAndCrew } from "src/api/castAndCrew";
-import { CastAndCrewMember, getData } from "src/components/CastAndCrewMember";
+import { CastAndCrewMember, getProps } from "src/components/CastAndCrewMember";
+import Layout from "src/layouts/Layout.astro";
 
 export async function getStaticPaths() {
   const { castAndCrew } = await allCastAndCrew();
@@ -19,7 +19,7 @@ export async function getStaticPaths() {
 }
 
 const { slug } = Astro.props;
-const props = await getData(slug);
+const props = await getProps(slug);
 ---
 
 <Layout

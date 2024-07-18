@@ -1,4 +1,5 @@
 import type { WatchlistProgress } from "src/api/watchlistProgress";
+
 import { ProgressRing } from "./ProgressRing";
 
 export interface Props

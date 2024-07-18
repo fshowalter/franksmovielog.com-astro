@@ -1,12 +1,13 @@
+import type { OverratedDisappointment } from "src/api/overratedDisappointments";
+import type { PosterImageData } from "src/api/posters";
 import { Grade } from "src/components/Grade";
+import { GroupedList } from "src/components/GroupedList";
 import { ListItem } from "src/components/ListItem";
 import { ListItemGenres } from "src/components/ListItemGenres";
 import { ListItemPoster } from "src/components/ListItemPoster";
 import { ListItemTitle } from "src/components/ListItemTitle";
-import { GroupedList } from "src/components/GroupedList";
+
 import { Actions, type ActionType } from "./Overrated.reducer";
-import type { PosterImageData } from "src/api/posters";
-import type { OverratedDisappointment } from "src/api/overratedDisappointments";
 
 export interface ListItemValue
   extends Pick<

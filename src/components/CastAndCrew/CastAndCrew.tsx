@@ -1,11 +1,12 @@
 import { useReducer } from "react";
+import type { AvatarImageData } from "src/api/avatars";
 import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
+
+import type { Sort } from "./CastAndCrew.reducer";
 import { initState, reducer } from "./CastAndCrew.reducer";
 import { Filters } from "./Filters";
 import { Header } from "./Header";
 import { List, type ListItemValue } from "./List";
-import type { Sort } from "./CastAndCrew.reducer";
-import type { AvatarImageData } from "src/api/avatars";
 
 export interface Props {
   values: ListItemValue[];

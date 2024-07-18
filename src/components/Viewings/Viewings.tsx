@@ -1,13 +1,13 @@
 import { useReducer } from "react";
-
+import type { PosterImageData } from "src/api/posters";
 import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
+
 import { Filters } from "./Filters";
 import { Header } from "./Header";
-import { List } from "./List";
-import { initState, reducer } from "./Viewings.reducer";
 import type { ListItemViewingData } from "./List";
+import { List } from "./List";
 import type { Sort } from "./Viewings.reducer";
-import type { PosterImageData } from "src/api/posters";
+import { initState, reducer } from "./Viewings.reducer";
 
 export interface ViewingsProps {
   viewings: readonly ListItemViewingData[];

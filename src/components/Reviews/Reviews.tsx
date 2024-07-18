@@ -1,14 +1,15 @@
 "use client";
 
 import { useReducer } from "react";
+import type { PosterImageData } from "src/api/posters";
 import { ListWithFiltersLayout } from "src/components/ListWithFiltersLayout";
+
 import { Filters } from "./Filters";
 import { Header } from "./Header";
-import { List } from "./List";
-import { initState, reducer } from "./Reviews.reducer";
 import type { ListItemReviewData } from "./List";
+import { List } from "./List";
 import type { Sort } from "./Reviews.reducer";
-import type { PosterImageData } from "src/api/posters";
+import { initState, reducer } from "./Reviews.reducer";
 
 export interface ReviewsProps {
   reviews: ListItemReviewData[];

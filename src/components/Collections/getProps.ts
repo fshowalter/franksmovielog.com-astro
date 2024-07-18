@@ -1,16 +1,11 @@
-import { type ListItemValue } from "./List";
+import { getAvatars } from "src/api/avatars";
 import { allCollections } from "src/api/collections";
-import { getAvatars, type AvatarImageData } from "src/api/avatars";
 import { ListItemAvatarImageConfig } from "src/components/ListItemAvatar";
-import type { Sort } from "./Collections.reducer";
 
-interface Data {
-  values: ListItemValue[];
-  avatars: Record<string, AvatarImageData>;
-  initialSort: Sort;
-}
+import type { Props } from "./Collections";
+import { type ListItemValue } from "./List";
 
-export async function getData(): Promise<Data> {
+export async function getProps(): Promise<Props> {
   const { collections } = await allCollections();
   const avatars = await getAvatars(ListItemAvatarImageConfig);
 

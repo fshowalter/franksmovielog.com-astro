@@ -1,13 +1,14 @@
 import { promises as fs } from "node:fs";
+
 import matter from "gray-matter";
-import { join } from "path";
-import { z } from "zod";
 import rehypeRaw from "rehype-raw";
-import remarkRehype from "remark-rehype";
-import remarkGfm from "remark-gfm";
-import smartypants from "remark-smartypants";
 import rehypeStringify from "rehype-stringify";
 import { remark } from "remark";
+import remarkGfm from "remark-gfm";
+import remarkRehype from "remark-rehype";
+import smartypants from "remark-smartypants";
+import { z } from "zod";
+
 import { getContentPath } from "./utils/getContentPath";
 
 const pagesMarkdownDirectory = getContentPath("pages");

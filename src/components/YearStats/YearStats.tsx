@@ -1,4 +1,4 @@
-import { PageTitle } from "src/components/PageTitle";
+import type { PosterImageData } from "src/api/posters";
 import {
   DecadeDistribution,
   type DecadeDistributionData,
@@ -7,17 +7,18 @@ import {
   MediaDistribution,
   type MediaDistributionData,
 } from "src/components/MediaDistribution";
+import { MostWatchedDirectors } from "src/components/MostWatchedDirectors";
 import {
   MostWatchedMovies,
   type MostWatchedMoviesListItemData,
 } from "src/components/MostWatchedMovies";
-import { MostWatchedDirectors } from "src/components/MostWatchedDirectors";
+import type { MostWatchedPeopleListItemData } from "src/components/MostWatchedPeople";
 import { MostWatchedPerformers } from "src/components/MostWatchedPerformers";
 import { MostWatchedWriters } from "src/components/MostWatchedWriters";
+import { PageTitle } from "src/components/PageTitle";
 import { StatsNavigation } from "src/components/StatsNavigation";
+
 import { Callouts, type CalloutsData } from "./Callouts";
-import type { MostWatchedPeopleListItemData } from "src/components/MostWatchedPeople";
-import type { PosterImageData } from "src/api/posters";
 
 interface YearStatsData extends CalloutsData {
   decadeDistribution: readonly DecadeDistributionData[];

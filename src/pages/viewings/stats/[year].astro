@@ -1,10 +1,10 @@
 ---
-import Layout from "src/layouts/Layout.astro";
-import { statsForYear, allStatYears } from "src/api/yearStats";
-import { getFluidWidthPosters, getFixedWidthPosters } from "src/api/posters";
-import { MostWatchedMoviesPosterConfig } from "src/components/MostWatchedMovies";
+import { getFixedWidthPosters,getFluidWidthPosters } from "src/api/posters";
+import { allStatYears,statsForYear } from "src/api/yearStats";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
+import { MostWatchedMoviesPosterConfig } from "src/components/MostWatchedMovies";
 import { YearStats } from "src/components/YearStats";
+import Layout from "src/layouts/Layout.astro";
 
 export async function getStaticPaths() {
   const statYears = await allStatYears();

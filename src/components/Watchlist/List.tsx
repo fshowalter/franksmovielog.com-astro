@@ -1,12 +1,13 @@
+import type { PosterImageData } from "src/api/posters";
+import type { WatchlistTitle } from "src/api/watchlistTitles";
+import { GroupedList } from "src/components/GroupedList";
 import { ListItem } from "src/components/ListItem";
 import { ListItemPoster } from "src/components/ListItemPoster";
 import { ListItemTitle } from "src/components/ListItemTitle";
-import { GroupedList } from "src/components/GroupedList";
 import SvgIcon from "src/components/SvgIcon";
 import { WatchlistTitleSlug } from "src/components/WatchlistTitleSlug";
+
 import { Actions, type ActionType } from "./Watchlist.reducer";
-import type { WatchlistTitle } from "src/api/watchlistTitles";
-import type { PosterImageData } from "src/api/posters";
 
 export interface ListItemValue
   extends Pick<
