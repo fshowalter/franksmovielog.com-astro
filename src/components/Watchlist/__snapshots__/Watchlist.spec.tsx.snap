@@ -218,7 +218,7 @@ exports[`/watchlist > can filter by collection 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -3024,7 +3024,7 @@ exports[`/watchlist > can filter by collection then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -3562,7 +3562,7 @@ exports[`/watchlist > can filter by collection then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -4122,7 +4122,7 @@ exports[`/watchlist > can filter by collection then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -4456,7 +4456,7 @@ exports[`/watchlist > can filter by collection then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -4586,7 +4586,7 @@ exports[`/watchlist > can filter by collection then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -5044,7 +5044,7 @@ exports[`/watchlist > can filter by collection then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -5327,7 +5327,7 @@ exports[`/watchlist > can filter by collection then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -5508,7 +5508,7 @@ exports[`/watchlist > can filter by collection then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -5587,7 +5587,7 @@ exports[`/watchlist > can filter by collection then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -5819,7 +5819,7 @@ exports[`/watchlist > can filter by collection then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -6255,7 +6255,7 @@ exports[`/watchlist > can filter by collection then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -6385,7 +6385,7 @@ exports[`/watchlist > can filter by collection then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -6894,7 +6894,7 @@ exports[`/watchlist > can filter by collection then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -6973,7 +6973,7 @@ exports[`/watchlist > can filter by collection then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -7154,7 +7154,7 @@ exports[`/watchlist > can filter by collection then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -7284,7 +7284,7 @@ exports[`/watchlist > can filter by collection then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -8034,7 +8034,7 @@ exports[`/watchlist > can filter by director 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -8332,7 +8332,7 @@ exports[`/watchlist > can filter by director 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -8506,7 +8506,7 @@ exports[`/watchlist > can filter by director 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -8731,7 +8731,7 @@ exports[`/watchlist > can filter by director 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -8832,7 +8832,7 @@ exports[`/watchlist > can filter by director 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -9108,7 +9108,7 @@ exports[`/watchlist > can filter by director 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -9428,7 +9428,7 @@ exports[`/watchlist > can filter by director 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -10848,7 +10848,7 @@ exports[`/watchlist > can filter by director then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -11386,7 +11386,7 @@ exports[`/watchlist > can filter by director then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -11946,7 +11946,7 @@ exports[`/watchlist > can filter by director then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -12280,7 +12280,7 @@ exports[`/watchlist > can filter by director then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -12410,7 +12410,7 @@ exports[`/watchlist > can filter by director then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -12868,7 +12868,7 @@ exports[`/watchlist > can filter by director then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -13151,7 +13151,7 @@ exports[`/watchlist > can filter by director then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -13332,7 +13332,7 @@ exports[`/watchlist > can filter by director then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -13411,7 +13411,7 @@ exports[`/watchlist > can filter by director then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -13643,7 +13643,7 @@ exports[`/watchlist > can filter by director then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -14079,7 +14079,7 @@ exports[`/watchlist > can filter by director then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -14209,7 +14209,7 @@ exports[`/watchlist > can filter by director then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -14718,7 +14718,7 @@ exports[`/watchlist > can filter by director then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -14797,7 +14797,7 @@ exports[`/watchlist > can filter by director then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -14978,7 +14978,7 @@ exports[`/watchlist > can filter by director then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -15108,7 +15108,7 @@ exports[`/watchlist > can filter by director then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -15572,7 +15572,7 @@ exports[`/watchlist > can filter by performer 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -16504,7 +16504,7 @@ exports[`/watchlist > can filter by performer 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -16583,7 +16583,7 @@ exports[`/watchlist > can filter by performer 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -17260,7 +17260,7 @@ exports[`/watchlist > can filter by performer 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -17514,7 +17514,7 @@ exports[`/watchlist > can filter by performer 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -22188,7 +22188,7 @@ exports[`/watchlist > can filter by performer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -22726,7 +22726,7 @@ exports[`/watchlist > can filter by performer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -23286,7 +23286,7 @@ exports[`/watchlist > can filter by performer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -23620,7 +23620,7 @@ exports[`/watchlist > can filter by performer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -23750,7 +23750,7 @@ exports[`/watchlist > can filter by performer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -24208,7 +24208,7 @@ exports[`/watchlist > can filter by performer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -24491,7 +24491,7 @@ exports[`/watchlist > can filter by performer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -24672,7 +24672,7 @@ exports[`/watchlist > can filter by performer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -24751,7 +24751,7 @@ exports[`/watchlist > can filter by performer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -24983,7 +24983,7 @@ exports[`/watchlist > can filter by performer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -25419,7 +25419,7 @@ exports[`/watchlist > can filter by performer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -25549,7 +25549,7 @@ exports[`/watchlist > can filter by performer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -26058,7 +26058,7 @@ exports[`/watchlist > can filter by performer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -26137,7 +26137,7 @@ exports[`/watchlist > can filter by performer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -26318,7 +26318,7 @@ exports[`/watchlist > can filter by performer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -26448,7 +26448,7 @@ exports[`/watchlist > can filter by performer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -27219,7 +27219,7 @@ exports[`/watchlist > can filter by release year 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -27808,7 +27808,7 @@ exports[`/watchlist > can filter by release year 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -28040,7 +28040,7 @@ exports[`/watchlist > can filter by release year 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -28272,7 +28272,7 @@ exports[`/watchlist > can filter by release year 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -28577,7 +28577,7 @@ exports[`/watchlist > can filter by release year 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -28809,7 +28809,7 @@ exports[`/watchlist > can filter by release year 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -29653,7 +29653,7 @@ exports[`/watchlist > can filter by release year 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -29936,7 +29936,7 @@ exports[`/watchlist > can filter by release year 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -30684,7 +30684,7 @@ exports[`/watchlist > can filter by writer 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -31106,7 +31106,7 @@ exports[`/watchlist > can filter by writer 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -31280,7 +31280,7 @@ exports[`/watchlist > can filter by writer 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -32700,7 +32700,7 @@ exports[`/watchlist > can filter by writer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -33238,7 +33238,7 @@ exports[`/watchlist > can filter by writer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -33798,7 +33798,7 @@ exports[`/watchlist > can filter by writer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -34132,7 +34132,7 @@ exports[`/watchlist > can filter by writer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -34262,7 +34262,7 @@ exports[`/watchlist > can filter by writer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -34720,7 +34720,7 @@ exports[`/watchlist > can filter by writer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -35003,7 +35003,7 @@ exports[`/watchlist > can filter by writer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -35184,7 +35184,7 @@ exports[`/watchlist > can filter by writer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -35263,7 +35263,7 @@ exports[`/watchlist > can filter by writer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -35495,7 +35495,7 @@ exports[`/watchlist > can filter by writer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -35931,7 +35931,7 @@ exports[`/watchlist > can filter by writer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -36061,7 +36061,7 @@ exports[`/watchlist > can filter by writer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -36570,7 +36570,7 @@ exports[`/watchlist > can filter by writer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -36649,7 +36649,7 @@ exports[`/watchlist > can filter by writer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -36830,7 +36830,7 @@ exports[`/watchlist > can filter by writer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -36960,7 +36960,7 @@ exports[`/watchlist > can filter by writer then show all 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -38839,7 +38839,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -39122,7 +39122,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -40112,7 +40112,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -41051,7 +41051,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -41130,7 +41130,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -41209,7 +41209,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -41536,7 +41536,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -42227,7 +42227,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -42328,7 +42328,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -42662,7 +42662,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -42792,7 +42792,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -43148,7 +43148,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -43227,7 +43227,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -43306,7 +43306,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -43487,7 +43487,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -43668,7 +43668,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -43747,7 +43747,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -43826,7 +43826,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -43905,7 +43905,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -45733,7 +45733,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -46016,7 +46016,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -46168,7 +46168,7 @@ exports[`/watchlist > can show more titles 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -50080,7 +50080,7 @@ exports[`/watchlist > can sort by release date with newest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -50363,7 +50363,7 @@ exports[`/watchlist > can sort by release date with newest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -51353,7 +51353,7 @@ exports[`/watchlist > can sort by release date with newest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -52292,7 +52292,7 @@ exports[`/watchlist > can sort by release date with newest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -52371,7 +52371,7 @@ exports[`/watchlist > can sort by release date with newest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -52450,7 +52450,7 @@ exports[`/watchlist > can sort by release date with newest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -52777,7 +52777,7 @@ exports[`/watchlist > can sort by release date with newest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -53468,7 +53468,7 @@ exports[`/watchlist > can sort by release date with newest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -53569,7 +53569,7 @@ exports[`/watchlist > can sort by release date with newest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -53903,7 +53903,7 @@ exports[`/watchlist > can sort by release date with newest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -55323,7 +55323,7 @@ exports[`/watchlist > can sort by release date with oldest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -55861,7 +55861,7 @@ exports[`/watchlist > can sort by release date with oldest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -56421,7 +56421,7 @@ exports[`/watchlist > can sort by release date with oldest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -56755,7 +56755,7 @@ exports[`/watchlist > can sort by release date with oldest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -56885,7 +56885,7 @@ exports[`/watchlist > can sort by release date with oldest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -57343,7 +57343,7 @@ exports[`/watchlist > can sort by release date with oldest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -57626,7 +57626,7 @@ exports[`/watchlist > can sort by release date with oldest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -57807,7 +57807,7 @@ exports[`/watchlist > can sort by release date with oldest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -57886,7 +57886,7 @@ exports[`/watchlist > can sort by release date with oldest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -58118,7 +58118,7 @@ exports[`/watchlist > can sort by release date with oldest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -58554,7 +58554,7 @@ exports[`/watchlist > can sort by release date with oldest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -58684,7 +58684,7 @@ exports[`/watchlist > can sort by release date with oldest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -59193,7 +59193,7 @@ exports[`/watchlist > can sort by release date with oldest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -59272,7 +59272,7 @@ exports[`/watchlist > can sort by release date with oldest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -59453,7 +59453,7 @@ exports[`/watchlist > can sort by release date with oldest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -59583,7 +59583,7 @@ exports[`/watchlist > can sort by release date with oldest first 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -61804,7 +61804,7 @@ exports[`/watchlist > can sort by title 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -63209,7 +63209,7 @@ exports[`/watchlist > can sort by title 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -63900,7 +63900,7 @@ exports[`/watchlist > can sort by title 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -64591,7 +64591,7 @@ exports[`/watchlist > can sort by title 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -64823,7 +64823,7 @@ exports[`/watchlist > can sort by title 1`] = `
           class="pr-gutter desktop:pr-4"
         >
           <svg
-            class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+            class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
             height="1em"
             viewBox="0 0 16 16"
             width="1em"
@@ -67861,7 +67861,7 @@ exports[`/watchlist > renders 1`] = `
                   class="pr-gutter desktop:pr-4"
                 >
                   <svg
-                    class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+                    class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
                     height="1em"
                     viewBox="0 0 16 16"
                     width="1em"
@@ -68369,7 +68369,7 @@ exports[`/watchlist > renders 1`] = `
                   class="pr-gutter desktop:pr-4"
                 >
                   <svg
-                    class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+                    class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
                     height="1em"
                     viewBox="0 0 16 16"
                     width="1em"
@@ -68947,7 +68947,7 @@ exports[`/watchlist > renders 1`] = `
                   class="pr-gutter desktop:pr-4"
                 >
                   <svg
-                    class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+                    class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
                     height="1em"
                     viewBox="0 0 16 16"
                     width="1em"
@@ -69263,7 +69263,7 @@ exports[`/watchlist > renders 1`] = `
                   class="pr-gutter desktop:pr-4"
                 >
                   <svg
-                    class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+                    class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
                     height="1em"
                     viewBox="0 0 16 16"
                     width="1em"
@@ -69387,7 +69387,7 @@ exports[`/watchlist > renders 1`] = `
                   class="pr-gutter desktop:pr-4"
                 >
                   <svg
-                    class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+                    class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
                     height="1em"
                     viewBox="0 0 16 16"
                     width="1em"
@@ -69821,7 +69821,7 @@ exports[`/watchlist > renders 1`] = `
                   class="pr-gutter desktop:pr-4"
                 >
                   <svg
-                    class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+                    class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
                     height="1em"
                     viewBox="0 0 16 16"
                     width="1em"
@@ -70089,7 +70089,7 @@ exports[`/watchlist > renders 1`] = `
                   class="pr-gutter desktop:pr-4"
                 >
                   <svg
-                    class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+                    class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
                     height="1em"
                     viewBox="0 0 16 16"
                     width="1em"
@@ -70261,7 +70261,7 @@ exports[`/watchlist > renders 1`] = `
                   class="pr-gutter desktop:pr-4"
                 >
                   <svg
-                    class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+                    class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
                     height="1em"
                     viewBox="0 0 16 16"
                     width="1em"
@@ -70337,7 +70337,7 @@ exports[`/watchlist > renders 1`] = `
                   class="pr-gutter desktop:pr-4"
                 >
                   <svg
-                    class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+                    class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
                     height="1em"
                     viewBox="0 0 16 16"
                     width="1em"
@@ -70557,7 +70557,7 @@ exports[`/watchlist > renders 1`] = `
                   class="pr-gutter desktop:pr-4"
                 >
                   <svg
-                    class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+                    class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
                     height="1em"
                     viewBox="0 0 16 16"
                     width="1em"
@@ -70969,7 +70969,7 @@ exports[`/watchlist > renders 1`] = `
                   class="pr-gutter desktop:pr-4"
                 >
                   <svg
-                    class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+                    class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
                     height="1em"
                     viewBox="0 0 16 16"
                     width="1em"
@@ -71093,7 +71093,7 @@ exports[`/watchlist > renders 1`] = `
                   class="pr-gutter desktop:pr-4"
                 >
                   <svg
-                    class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+                    class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
                     height="1em"
                     viewBox="0 0 16 16"
                     width="1em"
@@ -71623,7 +71623,7 @@ exports[`/watchlist > renders 1`] = `
                   class="pr-gutter desktop:pr-4"
                 >
                   <svg
-                    class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+                    class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
                     height="1em"
                     viewBox="0 0 16 16"
                     width="1em"
@@ -71699,7 +71699,7 @@ exports[`/watchlist > renders 1`] = `
                   class="pr-gutter desktop:pr-4"
                 >
                   <svg
-                    class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+                    class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
                     height="1em"
                     viewBox="0 0 16 16"
                     width="1em"
@@ -71871,7 +71871,7 @@ exports[`/watchlist > renders 1`] = `
                   class="pr-gutter desktop:pr-4"
                 >
                   <svg
-                    class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+                    class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
                     height="1em"
                     viewBox="0 0 16 16"
                     width="1em"
@@ -71995,7 +71995,7 @@ exports[`/watchlist > renders 1`] = `
                   class="pr-gutter desktop:pr-4"
                 >
                   <svg
-                    class="w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
+                    class="h-auto w-[18px] fill-subtle block h-6 min-w-6 text-subtle"
                     height="1em"
                     viewBox="0 0 16 16"
                     width="1em"
