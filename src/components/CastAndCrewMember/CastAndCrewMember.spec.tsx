@@ -6,7 +6,7 @@ import { CastAndCrewMember, getProps } from "./";
 const props = await getProps("burt-reynolds");
 
 describe("CastAndCrewMember", () => {
-  it("renders", async () => {
+  it("renders", () => {
     expect.hasAssertions();
 
     const { asFragment } = render(<CastAndCrewMember {...props} />);

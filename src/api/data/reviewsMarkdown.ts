@@ -19,6 +19,7 @@ const DataSchema = z.object({
   date: z.date(),
   grade: z.string(),
   imdb_id: z.string(),
+  slug: z.string(),
 });
 
 let cache: MarkdownReview[];
@@ -41,7 +42,7 @@ async function parseAllReviewsMarkdown(): Promise<MarkdownReview[]> {
         const greyMatter = DataSchema.parse(data);
 
         return {
-          slug: data.slug,
+          slug: greyMatter.slug,
           date: greyMatter.date,
           grade: greyMatter.grade,
           imdbId: greyMatter.imdb_id,

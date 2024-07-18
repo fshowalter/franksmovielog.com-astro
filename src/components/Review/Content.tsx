@@ -15,25 +15,20 @@ function formatDate(date: Date) {
   return dateFormat.format(date);
 }
 
-export interface ContentReviewData
-  extends Pick<Review, "grade" | "date" | "content"> {}
-
-export function Content({
-  review,
-  className,
-}: {
-  review: ContentReviewData;
+interface Props extends Pick<Review, "grade" | "date" | "content"> {
   className?: string;
-}) {
+}
+
+export function Content({ grade, date, content, className }: Props) {
   return (
     <div className={twMerge("flex flex-col gap-y-8", className)}>
       <div className="flex flex-col items-center">
-        <Grade grade={review.grade} height={32} />
+        <Grade grade={grade} height={32} />
         <div className="flex flex-col items-center tracking-0.5px text-subtle">
-          <span>on</span> {formatDate(review.date)}
+          <span>on</span> {formatDate(date)}
         </div>
       </div>
-      <LongFormText text={review.content} className="max-w-prose" />
+      <LongFormText text={content} className="max-w-prose" />
     </div>
   );
 }

@@ -2,41 +2,48 @@ import type { Review } from "src/api/reviews";
 import { PageTitle } from "src/components/PageTitle";
 import { twMerge } from "tailwind-merge";
 
-export interface HeaderReviewData
+interface Props
   extends Pick<
     Review,
     "title" | "originalTitle" | "year" | "countries" | "runtimeMinutes"
-  > {}
+  > {
+  className?: string;
+}
 
 export function Header({
-  review,
+  title,
+  originalTitle,
+  year,
+  countries,
+  runtimeMinutes,
   className,
-}: {
-  review: HeaderReviewData;
-  className?: string;
-}) {
+}: Props) {
   return (
     <header className={twMerge("flex flex-col gap-y-4", className)}>
-      <PageTitle>{review.title}</PageTitle>
-      <OriginalTitle originalTitle={review.originalTitle} />
-      <Meta review={review} />
+      <PageTitle>{title}</PageTitle>
+      <OriginalTitle value={originalTitle} />
+      <Meta year={year} countries={countries} runtimeMinutes={runtimeMinutes} />
     </header>
   );
 }
 
-function OriginalTitle({ originalTitle }: { originalTitle: string | null }) {
-  if (!originalTitle) {
+function OriginalTitle({ value }: { value: string | null }) {
+  if (!value) {
     return null;
   }
 
-  return <div className="text-muted">({originalTitle})</div>;
+  return <div className="text-muted">({value})</div>;
 }
 
-function Meta({ review }: { review: HeaderReviewData }) {
+function Meta({
+  year,
+  countries,
+  runtimeMinutes,
+}: Pick<Props, "year" | "countries" | "runtimeMinutes">) {
   return (
     <div className="text-muted">
-      {review.year} <span>|</span>{" "}
-      {review.countries.reduce<JSX.Element | null>((acc, country) => {
+      {year} <span>|</span>{" "}
+      {countries.reduce<JSX.Element | null>((acc, country) => {
         if (acc === null) {
           return <>{country}</>;
         }
@@ -49,7 +56,7 @@ function Meta({ review }: { review: HeaderReviewData }) {
           </>
         );
       }, null)}{" "}
-      <span>|</span> {review.runtimeMinutes}
+      <span>|</span> {runtimeMinutes}
       &#x02009;min{" "}
       <span>
         <span>|</span> <a href="#credits">More...</a>

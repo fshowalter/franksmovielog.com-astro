@@ -61,7 +61,7 @@ export function Article({
           />
           <StillList
             stills={moreReviewsStills}
-            titles={moreReviewsValues}
+            values={moreReviewsValues}
             seeAllLinkTarget="/reviews/"
             seeAllLinkText="Reviews"
           />

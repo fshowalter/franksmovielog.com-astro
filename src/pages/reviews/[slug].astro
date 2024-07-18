@@ -1,17 +1,6 @@
 ---
-import { getImage } from "astro:assets";
-import { getAvatars } from "src/api/avatars";
-import { getFluidWidthPosters } from "src/api/posters";
-import type { Review as IReview } from "src/api/reviews";
 import { allReviews } from "src/api/reviews";
-import { getStillImagePath, getStills,images } from "src/api/stills";
-import {
-  ChipAvatarImageConfig,
-  PosterImageConfig,
-  Review,
-  StillImageConfig,
-} from "src/components/Review";
-import { StillListItemImageConfig } from "src/components/StillListItem";
+import { getProps, Review } from "src/components/Review";
 import Layout from "src/layouts/Layout.astro";
 import { textStarsForGrade } from "src/utils/textStarsForGrade";
 
@@ -25,7 +14,7 @@ export async function getStaticPaths() {
           slug: review.slug,
         },
         props: {
-          review: review,
+          slug: review.slug,
         },
       };
     })
@@ -33,46 +22,19 @@ export async function getStaticPaths() {
 }
 
 interface Props {
-  review: IReview;
+  slug: string;
 }
 
-const { review } = Astro.props;
+const { slug } = Astro.props;
 
-const imagePath = getStillImagePath(review.slug);
-const stillFile = await images[imagePath]!();
-
-const optimizedImage = await getImage({
-  src: stillFile.default,
-  width: 1200,
-  height: 675,
-  format: "jpeg",
-  quality: 80,
-});
-
-const seoImageSrc = optimizedImage.src;
-
-const stills = await getStills(StillImageConfig);
-const stillImageData = stills[review.slug]!;
-const avatars = await getAvatars(ChipAvatarImageConfig);
-
-const stillListStills = await getStills(StillListItemImageConfig);
-
-const posters = await getFluidWidthPosters(PosterImageConfig);
-const posterImageData = posters[review.slug]!;
+const props = await getProps(slug);
 ---
 
 <Layout
-  title={`${review.title} (${review.year})`}
-  description={`${textStarsForGrade(review.grade)} ${review.excerptPlainText ?? ""}`}
-  image={seoImageSrc}
+  title={`${props.value.title} (${props.value.year})`}
+  description={`${textStarsForGrade(props.value.grade)} ${props.value.excerptPlainText ?? ""}`}
+  image={props.seoImageSrc}
   article
 >
-  <Review
-    review={review}
-    stillImageData={stillImageData}
-    posterImageData={posterImageData}
-    avatars={avatars}
-    seoImageSrc={seoImageSrc}
-    stillListStills={stillListStills}
-  />
+  <Review {...props} />
 </Layout>

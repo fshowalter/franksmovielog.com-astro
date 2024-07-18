@@ -29,7 +29,7 @@ export async function getStills({
   const key = width;
 
   if (key in cache) {
-    return cache[key]!;
+    return cache[key];
   }
 
   const imageMap: Record<string, StillImageData> = {};

@@ -8,19 +8,18 @@ export const ChipAvatarImageConfig = {
   quality: 80,
 };
 
-export interface ChipsReviewData
-  extends Pick<Review, "castAndCrew" | "collections"> {}
+interface Props extends Pick<Review, "castAndCrew" | "collections"> {
+  avatars: Record<string, AvatarImageData>;
+}
 
 export function Chips({
-  review,
+  castAndCrew,
+  collections,
   avatars,
-}: {
-  review: ChipsReviewData;
-  avatars: Record<string, AvatarImageData>;
-}): JSX.Element {
+}: Props): JSX.Element {
   return (
     <ul className="flex flex-wrap gap-2">
-      {review.castAndCrew.map((member) => {
+      {castAndCrew.map((member) => {
         return (
           <Chip
             linkTarget={`/cast-and-crew/${member.slug}`}
@@ -30,7 +29,7 @@ export function Chips({
           />
         );
       })}
-      {review.collections.map((collection) => {
+      {collections.map((collection) => {
         return (
           <Chip
             linkTarget={`/collections/${collection.slug}`}
@@ -51,7 +50,7 @@ function Chip({
 }: {
   linkTarget: string;
   name: string;
-  imageData: AvatarImageData | unknown;
+  imageData: AvatarImageData | undefined;
 }) {
   return (
     <li className="block">

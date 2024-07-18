@@ -1,27 +1,27 @@
 import type { StillImageData } from "src/api/stills";
 
-import type { StillListItemData } from "./StillListItem";
+import type { StillListItemValue } from "./StillListItem";
 import { StillListItem } from "./StillListItem";
 
 export function StillList({
-  titles,
+  values,
   seeAllLinkText,
   seeAllLinkTarget,
   stills,
 }: {
-  titles: StillListItemData[];
+  values: StillListItemValue[];
   seeAllLinkText: string;
   seeAllLinkTarget: string;
   stills: Record<string, StillImageData>;
 }): JSX.Element {
   return (
     <ul className="w-full tablet:grid tablet:w-auto tablet:grid-cols-[repeat(2,minmax(100px,312px))] tablet:gap-8 tablet:px-gutter desktop:max-w-unset desktop:grid-cols-[repeat(4,1fr)] desktop:px-pageMargin desktop:pt-2">
-      {titles.map((title) => {
+      {values.map((value) => {
         return (
           <StillListItem
-            key={title.slug}
-            title={title}
-            imageData={stills[title.slug]!}
+            key={value.slug}
+            value={value}
+            imageData={stills[value.slug]}
           />
         );
       })}

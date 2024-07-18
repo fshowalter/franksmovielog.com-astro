@@ -1,10 +1,12 @@
 import type { Review } from "src/api/reviews";
 
-export interface StructuredDataReviewData
+interface Props
   extends Pick<
     Review,
     "title" | "imdbId" | "directorNames" | "year" | "grade"
-  > {}
+  > {
+  seoImageSrc: string;
+}
 
 const gradeMap: Record<string, number> = {
   A: 5,
@@ -15,29 +17,30 @@ const gradeMap: Record<string, number> = {
 };
 
 export function StructuredData({
-  review,
+  title,
+  imdbId,
+  directorNames,
+  year,
+  grade,
   seoImageSrc,
-}: {
-  review: StructuredDataReviewData;
-  seoImageSrc: string;
-}) {
+}: Props) {
   const structuredData = {
     "@context": "http://schema.org",
     "@type": "Review",
     itemReviewed: {
       "@type": "Movie",
-      name: review.title,
-      sameAs: `http://www.imdb.com/title/${review.imdbId}/`,
+      name: title,
+      sameAs: `http://www.imdb.com/title/${imdbId}/`,
       image: seoImageSrc,
-      dateCreated: review.year,
+      dateCreated: year,
       director: {
         "@type": "Person",
-        name: review.directorNames[0],
+        name: directorNames[0],
       },
     },
     reviewRating: {
       "@type": "Rating",
-      ratingValue: gradeMap[review.grade[0]!],
+      ratingValue: gradeMap[grade[0]],
     },
     author: {
       "@type": "Person",

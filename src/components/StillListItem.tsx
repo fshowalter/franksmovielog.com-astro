@@ -11,7 +11,7 @@ export const StillListItemImageConfig = {
   quality: 80,
 };
 
-export interface StillListItemData {
+export interface StillListItemValue {
   title: string;
   grade: string;
   slug: string;
@@ -20,22 +20,22 @@ export interface StillListItemData {
 }
 
 export function StillListItem({
-  title,
+  value,
   imageData,
 }: {
-  title: StillListItemData;
+  value: StillListItemValue;
   imageData: StillImageData;
 }) {
   return (
     <li className="flow-root w-full px-gutter py-6 even:bg-subtle tablet:grid tablet:max-w-[312px] tablet:grid-rows-[auto_auto_1fr_auto] tablet:gap-y-2 tablet:overflow-hidden tablet:rounded-lg tablet:bg-default tablet:p-0 tablet:pb-8 tablet:shadow-all tablet:shadow-border tablet:even:bg-default">
       <div className="row-start-1 row-end-1">
         <a
-          href={`/reviews/${title.slug}/`}
+          href={`/reviews/${value.slug}/`}
           className="safari-border-radius-fix float-right mb-2 ml-6 block w-[calc(50%_-_12px)] max-w-[312px] overflow-hidden rounded-lg tablet:float-none tablet:m-0 tablet:w-auto tablet:rounded-none"
         >
           <Still
-            title={title.title}
-            year={title.year}
+            title={value.title}
+            year={value.year}
             imageData={imageData}
             width={StillListItemImageConfig.width}
             height={StillListItemImageConfig.height}
@@ -48,20 +48,20 @@ export function StillListItem({
       </div>
       <div className="row-start-2 mb-2 tablet:m-0 tablet:px-6">
         <a
-          href={`/reviews/${title.slug}/`}
+          href={`/reviews/${value.slug}/`}
           className="block text-md text-default"
         >
-          {title.title}{" "}
+          {value.title}{" "}
           <span className="text-sm font-light leading-none text-muted">
-            {title.year}
+            {value.year}
           </span>
         </a>
       </div>
       <div className="mb-6 tablet:m-0 tablet:px-6 tablet:pb-6">
-        <Grade grade={title.grade} height={16} />
+        <Grade grade={value.grade} height={16} />
       </div>
       <div className="tablet:px-6">
-        <Genres genres={title.genres} />
+        <Genres genres={value.genres} />
       </div>
     </li>
   );

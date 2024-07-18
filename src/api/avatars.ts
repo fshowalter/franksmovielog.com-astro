@@ -25,7 +25,7 @@ export async function getAvatars({
   const key = width.toString();
 
   if (key in cache) {
-    return cache[key]!;
+    return cache[key];
   }
 
   const imageMap: Record<string, AvatarImageData> = {};

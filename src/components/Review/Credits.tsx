@@ -10,31 +10,36 @@ export const PosterImageConfig = {
   sizes: "(min-width: 248px) 248px, 100vw",
 };
 
-export interface CreditsReviewData
+export interface Props
   extends Pick<
     Review,
     | "title"
     | "year"
-    | "slug"
     | "originalTitle"
     | "countries"
     | "runtimeMinutes"
     | "directorNames"
     | "principalCastNames"
     | "writerNames"
-  > {}
-
-export function Credits({
-  review,
-  className,
-  children,
-  posterImageData,
-}: {
-  review: CreditsReviewData;
+  > {
   className?: string;
   children: React.ReactNode;
   posterImageData: PosterImageData;
-}): JSX.Element {
+}
+
+export function Credits({
+  title,
+  year,
+  originalTitle,
+  countries,
+  runtimeMinutes,
+  directorNames,
+  principalCastNames,
+  writerNames,
+  className,
+  children,
+  posterImageData,
+}: Props): JSX.Element {
   return (
     <aside
       id="credits"
@@ -44,13 +49,12 @@ export function Credits({
       )}
     >
       <header className="flex items-center justify-center gap-x-2 pb-6 text-center text-2.5xl">
-        {review.title}{" "}
-        <span className="text-sm font-light text-subtle">({review.year})</span>
+        {title} <span className="text-sm font-light text-subtle">({year})</span>
       </header>
       <div className="poster-border mb-4 h-full mt-0 max-w-poster tablet:mx-0 mx-auto block w-full tablet:float-left tablet:mr-gutter">
         <Poster
-          title={review.title}
-          year={review.year}
+          title={title}
+          year={year}
           width={PosterImageConfig.width}
           height={PosterImageConfig.height}
           sizes={PosterImageConfig.sizes}
@@ -62,30 +66,24 @@ export function Credits({
       </div>
 
       <dl className="flex flex-col gap-y-4">
-        {review.originalTitle && (
-          <Credit title="Original Title" creditValue={review.originalTitle} />
+        {originalTitle && (
+          <Credit term="Original Title" value={originalTitle} />
         )}
-        <Credit title="Financing" creditValue={toSentence(review.countries)} />
+        <Credit term="Financing" value={toSentence(countries)} />
+        <Credit term="Running Time" value={`${runtimeMinutes} min`} />
         <Credit
-          title="Running Time"
-          creditValue={`${review.runtimeMinutes} min`}
-        />
-        <Credit
-          title="Directed by"
-          creditValue={review.directorNames.map((name) => (
+          term="Directed by"
+          value={directorNames.map((name) => (
             <div key={name}>{name}</div>
           ))}
         />
         <Credit
-          title="Written by"
-          creditValue={review.writerNames.map((name) => (
+          term="Written by"
+          value={writerNames.map((name) => (
             <div key={name}>{name}</div>
           ))}
         />
-        <Credit
-          title="Starring"
-          creditValue={toSentence(review.principalCastNames)}
-        />
+        <Credit term="Starring" value={toSentence(principalCastNames)} />
       </dl>
       <div className="h-8 min-h-8" />
       {children}
@@ -103,17 +101,11 @@ export function Credits({
   );
 }
 
-function Credit({
-  title,
-  creditValue,
-}: {
-  title: string;
-  creditValue: React.ReactNode;
-}) {
+function Credit({ term, value }: { term: string; value: React.ReactNode }) {
   return (
     <div className="overflow-hidden">
-      <dt className="font-bold text-subtle">{title}</dt>
-      <dd className="text-subtle">{creditValue}</dd>
+      <dt className="font-bold text-subtle">{term}</dt>
+      <dd className="text-subtle">{value}</dd>
     </div>
   );
 }

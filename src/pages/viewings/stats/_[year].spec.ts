@@ -3,17 +3,17 @@ import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 import { loadRenderers } from "astro:container";
 import { allStatYears } from "src/api/yearStats";
-import { describe, expect, it } from "vitest";
+import { describe, it } from "vitest";
 
 import YearStats from "./[year].astro";
 
 const statYears = await allStatYears();
 
 describe("/viewings/stats/:year", () => {
-  it.each(statYears)(
+  it.for(statYears)(
     "matches snapshot for year %i",
     { timeout: 10000 },
-    async (year) => {
+    async (year, { expect }) => {
       const renderers = await loadRenderers([reactContainerRenderer()]);
       const container = await AstroContainer.create({ renderers });
       const result = await container.renderToString(

@@ -22,19 +22,19 @@ function Date({ date }: { date: Date }) {
   );
 }
 
-function Medium({ viewing }: { viewing: Viewing }) {
-  if (!viewing.medium) {
+function Medium({ value }: { value: Viewing["medium"] }) {
+  if (!value) {
     return null;
   }
   return (
     <span className="font-light text-muted">
-      <span>via</span> <span>{viewing.medium}</span>
+      <span>via</span> <span>{value}</span>
     </span>
   );
 }
 
-function MediumNotes({ viewing }: { viewing: Viewing }) {
-  if (!viewing.mediumNotes) {
+function MediumNotes({ value }: { value: Viewing["mediumNotes"] }) {
+  if (!value) {
     return null;
   }
   return (
@@ -42,7 +42,7 @@ function MediumNotes({ viewing }: { viewing: Viewing }) {
       (
       <RenderedMarkdown
         // eslint-disable-next-line react/no-danger
-        text={viewing.mediumNotes}
+        text={value}
         className="text-sm leading-none"
         as="span"
       />
@@ -51,8 +51,8 @@ function MediumNotes({ viewing }: { viewing: Viewing }) {
   );
 }
 
-function VenueNotes({ viewing }: { viewing: Viewing }) {
-  if (!viewing.venueNotes) {
+function VenueNotes({ value }: { value: Viewing["venueNotes"] }) {
+  if (!value) {
     return null;
   }
   return (
@@ -60,7 +60,7 @@ function VenueNotes({ viewing }: { viewing: Viewing }) {
       (
       <RenderedMarkdown
         // eslint-disable-next-line react/no-danger
-        text={viewing.venueNotes}
+        text={value}
         as="span"
         className="text-sm leading-none"
       />
@@ -69,19 +69,19 @@ function VenueNotes({ viewing }: { viewing: Viewing }) {
   );
 }
 
-function Venue({ viewing }: { viewing: Viewing }) {
-  if (!viewing.venue) {
+function Venue({ value }: { value: Viewing["venue"] }) {
+  if (!value) {
     return null;
   }
   return (
     <span className="font-light text-subtle">
-      <span>at</span> <span>{viewing.venue}</span>
+      <span>at</span> <span>{value}</span>
     </span>
   );
 }
 
-function ViewingNotes({ viewing }: { viewing: Viewing }) {
-  if (!viewing.viewingNotes) {
+function ViewingNotes({ value }: { value: Viewing["viewingNotes"] }) {
+  if (!value) {
     return null;
   }
   return (
@@ -89,13 +89,13 @@ function ViewingNotes({ viewing }: { viewing: Viewing }) {
       <RenderedMarkdown
         className="leading-normal text-default"
         // eslint-disable-next-line react/no-danger
-        text={viewing.viewingNotes}
+        text={value}
       />
     </div>
   );
 }
 
-export function ViewingHistoryListItem({ viewing }: { viewing: Viewing }) {
+export function ViewingHistoryListItem({ value }: { value: Viewing }) {
   return (
     <li className="flex flex-col px-gutter even:bg-subtle">
       <div className="flex gap-x-[1ch] py-4">
@@ -103,13 +103,14 @@ export function ViewingHistoryListItem({ viewing }: { viewing: Viewing }) {
           <DateIcon className="mt-1 w-4" />{" "}
         </div>
         <div className="grow">
-          <Date date={viewing.date} />
-          <Medium viewing={viewing} /> <MediumNotes viewing={viewing} />
-          <Venue viewing={viewing} /> <VenueNotes viewing={viewing} />
+          <Date date={value.date} />
+          <Medium value={value.medium} />{" "}
+          <MediumNotes value={value.mediumNotes} />
+          <Venue value={value.venue} /> <VenueNotes value={value.venueNotes} />
         </div>
       </div>
       <div>
-        <ViewingNotes viewing={viewing} />
+        <ViewingNotes value={value.viewingNotes} />
       </div>
     </li>
   );

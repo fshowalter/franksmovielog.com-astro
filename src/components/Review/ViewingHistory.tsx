@@ -2,15 +2,11 @@ import type { Review } from "src/api/reviews";
 
 import { ViewingHistoryListItem } from "./ViewingHistoryListItem";
 
-export interface ViewingHistoryReviewData extends Pick<Review, "viewings"> {}
-
-export function ViewingHistory({
-  review,
-  className,
-}: {
-  review: ViewingHistoryReviewData;
+interface Props extends Pick<Review, "viewings"> {
   className?: string;
-}) {
+}
+
+export function ViewingHistory({ viewings, className }: Props) {
   return (
     <div className={className}>
       <h3 className="border-bottom px-gutter text-md font-normal text-subtle">
@@ -18,8 +14,8 @@ export function ViewingHistory({
         <div className="h-2 min-h-2" />
       </h3>
       <ul>
-        {review.viewings.map((viewing) => (
-          <ViewingHistoryListItem key={viewing.sequence} viewing={viewing} />
+        {viewings.map((viewing) => (
+          <ViewingHistoryListItem key={viewing.sequence} value={viewing} />
         ))}
       </ul>
     </div>

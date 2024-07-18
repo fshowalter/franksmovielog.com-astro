@@ -14,7 +14,7 @@ export interface Props {
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/content/assets/posters/*.png",
-)!;
+);
 
 const fluidWidthCache: Record<string, Record<string, PosterImageData>> = {};
 const fixedWidthCache: Record<string, Record<string, PosterImageData>> = {};
@@ -26,14 +26,14 @@ export async function getFluidWidthPosters({
   const key = width.toString();
 
   if (key in fluidWidthCache) {
-    return fluidWidthCache[key]!;
+    return fluidWidthCache[key];
   }
 
   const imageMap: Record<string, PosterImageData> = {};
 
   await Promise.all(
     Object.keys(images).map(async (image) => {
-      const poasterFile = await images[image]!();
+      const poasterFile = await images[image]();
 
       const optimizedImage = await getImage({
         src: poasterFile.default,
@@ -63,14 +63,14 @@ export async function getFixedWidthPosters({
   const key = width.toString();
 
   if (key in fixedWidthCache) {
-    return fixedWidthCache[key]!;
+    return fixedWidthCache[key];
   }
 
   const imageMap: Record<string, PosterImageData> = {};
 
   await Promise.all(
     Object.keys(images).map(async (image) => {
-      const poasterFile = await images[image]!();
+      const poasterFile = await images[image]();
 
       const optimizedImage = await getImage({
         src: poasterFile.default,

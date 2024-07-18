@@ -2,22 +2,23 @@ import type { Review } from "src/api/reviews";
 import type { StillImageData } from "src/api/stills";
 import { StillList } from "src/components/StillList";
 import { StillListHeading } from "src/components/StillListHeading";
-import type { StillListItemData } from "src/components/StillListItem";
+import type { StillListItemValue } from "src/components/StillListItem";
 import { StillListNav } from "src/components/StillListNav";
 import { twMerge } from "tailwind-merge";
 
-export interface MoreReviewsReviewData
-  extends Pick<Review, "moreCastAndCrew" | "moreCollections" | "moreReviews"> {}
-
-export function MoreReviews({
-  review,
-  className,
-  stillListStills,
-}: {
-  review: MoreReviewsReviewData;
+export interface Props
+  extends Pick<Review, "moreCastAndCrew" | "moreCollections" | "moreReviews"> {
   className?: string;
   stillListStills: Record<string, StillImageData>;
-}) {
+}
+
+export function MoreReviews({
+  moreCastAndCrew,
+  moreCollections,
+  moreReviews,
+  className,
+  stillListStills,
+}: Props) {
   return (
     <div
       className={twMerge(
@@ -25,24 +26,24 @@ export function MoreReviews({
         className,
       )}
     >
-      {review.moreCastAndCrew.map((castAndCrewMember) => (
+      {moreCastAndCrew.map((castAndCrewMember) => (
         <MoreReviewsList
           key={castAndCrewMember.slug}
           leadText={leadTextForCreditKind(castAndCrewMember.creditKind)}
           linkText={castAndCrewMember.name}
           linkTarget={`/cast-and-crew/${castAndCrewMember.slug}`}
-          titles={castAndCrewMember.titles}
+          values={castAndCrewMember.titles}
           stills={stillListStills}
         />
       ))}
 
-      {review.moreCollections.map((collection) => (
+      {moreCollections.map((collection) => (
         <MoreReviewsList
           key={collection.slug}
           leadText="More"
           linkText={collection.name}
           linkTarget={`/collections/${collection.slug}`}
-          titles={collection.titles}
+          values={collection.titles}
           stills={stillListStills}
         />
       ))}
@@ -51,7 +52,7 @@ export function MoreReviews({
         leadText="More"
         linkText="Reviews"
         linkTarget="/reviews/"
-        titles={review.moreReviews}
+        values={moreReviews}
         stills={stillListStills}
       />
     </div>
@@ -76,7 +77,7 @@ function leadTextForCreditKind(
 }
 
 function MoreReviewsList({
-  titles,
+  values,
   leadText,
   linkText,
   linkTarget,
@@ -85,7 +86,7 @@ function MoreReviewsList({
   leadText: string;
   linkText: string;
   linkTarget: string;
-  titles: StillListItemData[];
+  values: StillListItemValue[];
   stills: Record<string, StillImageData>;
 }) {
   return (
@@ -96,7 +97,7 @@ function MoreReviewsList({
         linkTarget={linkTarget}
       />
       <StillList
-        titles={titles}
+        values={values}
         seeAllLinkTarget={linkTarget}
         seeAllLinkText={linkText}
         stills={stills}

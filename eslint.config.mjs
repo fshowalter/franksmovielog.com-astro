@@ -5,48 +5,11 @@ import react from "eslint-plugin-react";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 import testingLibrary from "eslint-plugin-testing-library";
 import vitest from "eslint-plugin-vitest";
-import tseslint from "typescript-eslint";
+import tsEslint from "typescript-eslint";
 
-export default tseslint.config(
+export default tsEslint.config(
   {
     ignores: ["dist/", ".astro/"],
-  },
-  {
-    files: ["test/*.js", "*.mjs"],
-    languageOptions: {
-      parserOptions: {
-        sourceType: "module",
-      },
-    },
-  },
-  eslint.configs.recommended,
-  ...tseslint.configs.strictTypeChecked,
-  ...eslintPluginAstro.configs["flat/recommended"], // In CommonJS, the `flat/` prefix is required.
-  {
-    plugins: {
-      react: fixupPluginRules({ rules: react.rules }),
-    },
-    rules: {
-      ...react.configs.recommended.rules,
-    },
-  },
-  {
-    languageOptions: {
-      parserOptions: {
-        project: true,
-        tsconfigRootDir: import.meta.dirname,
-      },
-    },
-  },
-  {
-    settings: {
-      react: {
-        version: "detect",
-      },
-    },
-    rules: {
-      "react/react-in-jsx-scope": "off",
-    },
   },
   {
     plugins: {
@@ -57,8 +20,45 @@ export default tseslint.config(
       "simple-import-sort/exports": "error",
     },
   },
+  ...eslintPluginAstro.configs["flat/recommended"], // In CommonJS, the `flat/` prefix is required.
+  eslint.configs.recommended,
   {
-    // 3) Now we enable eslint-plugin-testing-library rules or preset only for matching testing files!
+    files: ["**/*.ts", "**/*.tsx"],
+    extends: [
+      eslint.configs.recommended,
+      ...tsEslint.configs.recommendedTypeChecked,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+    plugins: {
+      react: fixupPluginRules({ rules: react.rules }),
+    },
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
+    rules: {
+      "@typescript-eslint/array-type": "error",
+      "@typescript-eslint/consistent-type-imports": "error",
+      ...react.configs.recommended.rules,
+      "react/react-in-jsx-scope": "off",
+    },
+  },
+  {
+    files: ["src/**/?(*.)+(spec|test).[jt]s?(x)"],
+    plugins: {
+      vitest,
+    },
+    rules: {
+      ...vitest.configs.recommended.rules,
+    },
+  },
+  {
     files: ["src/components/**/?(*.)+(spec|test).[jt]s?(x)"],
     plugins: {
       vitest,
@@ -71,5 +71,4 @@ export default tseslint.config(
       ...vitest.configs.recommended.rules,
     },
   },
-  // ...
 );

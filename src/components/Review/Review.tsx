@@ -4,19 +4,12 @@ import type { Review } from "src/api/reviews";
 import type { StillImageData } from "src/api/stills";
 import { Still } from "src/components/Still";
 
-import type { ChipsReviewData } from "./Chips";
 import { Chips } from "./Chips";
-import type { ContentReviewData } from "./Content";
 import { Content } from "./Content";
-import type { CreditsReviewData } from "./Credits";
 import { Credits } from "./Credits";
-import type { HeaderReviewData } from "./Header";
 import { Header } from "./Header";
-import type { MoreReviewsReviewData } from "./MoreReviews";
 import { MoreReviews } from "./MoreReviews";
-import type { StructuredDataReviewData } from "./StructuredData";
 import { StructuredData } from "./StructuredData";
-import type { ViewingHistoryReviewData } from "./ViewingHistory";
 import { ViewingHistory } from "./ViewingHistory";
 
 export const StillImageConfig = {
@@ -25,18 +18,8 @@ export const StillImageConfig = {
   sizes: "(min-width: 960px) 960px, 100vw",
 };
 
-interface ReviewValue
-  extends Pick<Review, "title" | "year" | "slug">,
-    HeaderReviewData,
-    ContentReviewData,
-    ViewingHistoryReviewData,
-    CreditsReviewData,
-    ChipsReviewData,
-    MoreReviewsReviewData,
-    StructuredDataReviewData {}
-
 export interface Props {
-  review: ReviewValue;
+  value: Review;
   stillImageData: StillImageData;
   posterImageData: PosterImageData;
   avatars: Record<string, AvatarImageData>;
@@ -45,7 +28,7 @@ export interface Props {
 }
 
 export function Review({
-  review,
+  value,
   stillImageData,
   posterImageData,
   avatars,
@@ -55,12 +38,16 @@ export function Review({
   return (
     <main id="top" className="scroll-margin-top flex flex-col items-center">
       <Header
-        review={review}
+        title={value.title}
+        year={value.year}
+        originalTitle={value.originalTitle}
+        countries={value.countries}
+        runtimeMinutes={value.runtimeMinutes}
         className="px-pageMargin py-6 text-center desktop:py-8"
       />
       <Still
-        title={review.title}
-        year={review.year}
+        title={value.title}
+        year={value.year}
         width={StillImageConfig.width}
         height={StillImageConfig.height}
         sizes={StillImageConfig.sizes}
@@ -70,25 +57,53 @@ export function Review({
         decoding="sync"
       />
       <div className="h-6 min-h-6 tablet:h-8 tablet:min-h-8" />
-      <Content review={review} className="items-center px-pageMargin" />
+      <Content
+        grade={value.grade}
+        date={value.date}
+        content={value.content}
+        className="items-center px-pageMargin"
+      />
       <div className="spacer-y-20" />
-      <ViewingHistory review={review} className="w-full max-w-popout" />
+      <ViewingHistory
+        viewings={value.viewings}
+        className="w-full max-w-popout"
+      />
       <div className="spacer-y-32" />
       <Credits
-        review={review}
+        title={value.title}
+        year={value.year}
+        directorNames={value.directorNames}
+        principalCastNames={value.principalCastNames}
+        writerNames={value.writerNames}
+        originalTitle={value.originalTitle}
+        runtimeMinutes={value.runtimeMinutes}
+        countries={value.countries}
         posterImageData={posterImageData}
         className="w-full max-w-popout"
       >
-        <Chips review={review} avatars={avatars} />
+        <Chips
+          castAndCrew={value.castAndCrew}
+          collections={value.collections}
+          avatars={avatars}
+        />
       </Credits>
       <div className="spacer-y-32" />
       <MoreReviews
-        review={review}
+        moreCastAndCrew={value.moreCastAndCrew}
+        moreCollections={value.moreCollections}
+        moreReviews={value.moreReviews}
         stillListStills={stillListStills}
         className="w-full max-w-popout tablet:max-w-full"
       />
       <div className="spacer-y-32 tablet:spacer-y-0" />
-      <StructuredData review={review} seoImageSrc={seoImageSrc} />
+      <StructuredData
+        title={value.title}
+        year={value.year}
+        directorNames={value.directorNames}
+        imdbId={value.imdbId}
+        grade={value.grade}
+        seoImageSrc={seoImageSrc}
+      />
     </main>
   );
 }
