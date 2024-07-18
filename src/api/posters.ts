@@ -46,8 +46,8 @@ export async function getFluidWidthPosters({
       });
 
       imageMap[basename(image, extname(image))] = {
-        srcSet: optimizedImage.srcSet.attribute,
-        src: optimizedImage.src,
+        srcSet: normalizeSources(optimizedImage.srcSet.attribute),
+        src: normalizeSources(optimizedImage.src),
       };
     }),
   );
