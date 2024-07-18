@@ -6,10 +6,10 @@ import { ListItemMediumAndVenue } from "src/components/ListItemMediumAndVenue";
 import { ListItemPoster } from "src/components/ListItemPoster";
 import { ListItemTitle } from "src/components/ListItemTitle";
 
-import type { Action } from "./Viewings.reducer";
-import { ActionType } from "./Viewings.reducer";
+import type { ActionType } from "./Viewings.reducer";
+import { Actions } from "./Viewings.reducer";
 
-export interface ListItemViewingData
+export interface ListItemValue
   extends Pick<
     Viewing,
     | "sequence"
@@ -29,31 +29,31 @@ export interface ListItemViewingData
 }
 
 export function List({
-  groupedItems,
+  groupedValues,
   visibleCount,
   totalCount,
   dispatch,
   posters,
 }: {
-  groupedItems: Map<string, Map<string, ListItemViewingData[]>>;
+  groupedValues: Map<string, Map<string, ListItemValue[]>>;
   visibleCount: number;
   totalCount: number;
   posters: Record<string, PosterImageData>;
-  dispatch: React.Dispatch<Action>;
+  dispatch: React.Dispatch<ActionType>;
 }) {
   return (
     <GroupedList
-      data-testid="poster-list"
-      groupedItems={groupedItems}
+      data-testid="list"
+      groupedValues={groupedValues}
       visibleCount={visibleCount}
       totalCount={totalCount}
-      onShowMore={() => dispatch({ type: ActionType.SHOW_MORE })}
+      onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
     >
       {(dateGroup) => {
-        const [dayAndDate, viewings] = dateGroup;
+        const [dayAndDate, values] = dateGroup;
         return (
           <DateListItem
-            viewings={viewings}
+            values={values}
             key={dayAndDate}
             posters={posters}
             dayAndDate={dayAndDate}
@@ -66,11 +66,11 @@ export function List({
 
 function DateListItem({
   dayAndDate,
-  viewings,
+  values,
   posters,
 }: {
   dayAndDate: string;
-  viewings: ListItemViewingData[];
+  values: ListItemValue[];
   posters: Record<string, PosterImageData>;
 }): JSX.Element {
   const [day, date] = dayAndDate.split("-");
@@ -87,12 +87,12 @@ function DateListItem({
         <div className="h-4 min-h-4" />
       </div>
       <ul className="flex grow flex-col gap-y-4">
-        {viewings.map((viewing) => {
+        {values.map((value) => {
           return (
             <SubListItem
-              viewing={viewing}
-              key={viewing.sequence}
-              imageData={posters[viewing.slug || "default"]!}
+              value={value}
+              key={value.sequence}
+              imageData={posters[value.slug || "default"]}
             />
           );
         })}
@@ -102,36 +102,33 @@ function DateListItem({
 }
 
 function SubListItem({
-  viewing,
+  value,
   imageData,
 }: {
-  viewing: ListItemViewingData;
+  value: ListItemValue;
   imageData: PosterImageData;
 }): JSX.Element {
   return (
     <ListItem className="items-center pt-0 shadow-bottom even:bg-unset last-of-type:shadow-none">
       <ListItemPoster
-        slug={viewing.slug}
-        title={viewing.title}
-        year={viewing.year}
+        slug={value.slug}
+        title={value.title}
+        year={value.year}
         imageData={imageData}
       />
       <div className="grow">
         <div>
           <ListItemTitle
-            title={viewing.title}
-            year={viewing.year}
-            slug={viewing.slug}
+            title={value.title}
+            year={value.year}
+            slug={value.slug}
           />
           <div className="spacer-y-1 tablet:spacer-y-2" />
         </div>
         <div className="flex flex-col text-sm/none font-light tracking-0.5px text-subtle">
           <div className="spacer-y-1 tablet:spacer-y-0" />
           <div>
-            <ListItemMediumAndVenue
-              medium={viewing.medium}
-              venue={viewing.venue}
-            />
+            <ListItemMediumAndVenue medium={value.medium} venue={value.venue} />
           </div>
         </div>
         <div className="spacer-y-2" />

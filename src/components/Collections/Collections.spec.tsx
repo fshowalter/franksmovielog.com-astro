@@ -2,7 +2,8 @@ import { act, render, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { describe, it } from "vitest";
 
-import { Collections, getProps } from "./";
+import { Collections } from "./Collections";
+import { getProps } from "./getProps";
 
 const props = await getProps();
 

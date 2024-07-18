@@ -3,7 +3,8 @@ import { userEvent } from "@testing-library/user-event";
 import { select } from "react-select-event";
 import { describe, it } from "vitest";
 
-import { getProps, Reviews } from "./";
+import { getProps } from "./getProps";
+import { Reviews } from "./Reviews";
 
 const props = await getProps();
 

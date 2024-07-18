@@ -1,43 +1,41 @@
 import type { FilterableState } from "src/utils";
 import { filterTools, sortNumber } from "src/utils";
 
-import type { ListItemViewingData } from "./List";
+import type { ListItemValue } from "./List";
 
 const SHOW_COUNT_DEFAULT = 100;
 
 export type Sort = "viewing-date-desc" | "viewing-date-asc";
 
-const { updateFilter, clearFilter } = filterTools(sortItems, groupItems);
+const { updateFilter, clearFilter } = filterTools(sortValues, groupValues);
 
-function sortItems(items: ListItemViewingData[], sortOrder: Sort) {
-  const sortMap: Record<
-    Sort,
-    (a: ListItemViewingData, b: ListItemViewingData) => number
-  > = {
-    "viewing-date-desc": (a, b) => sortNumber(a.sequence, b.sequence) * -1,
-    "viewing-date-asc": (a, b) => sortNumber(a.sequence, b.sequence),
-  };
+function sortValues(values: ListItemValue[], sortOrder: Sort) {
+  const sortMap: Record<Sort, (a: ListItemValue, b: ListItemValue) => number> =
+    {
+      "viewing-date-desc": (a, b) => sortNumber(a.sequence, b.sequence) * -1,
+      "viewing-date-asc": (a, b) => sortNumber(a.sequence, b.sequence),
+    };
 
   const comparer = sortMap[sortOrder];
-  return items.sort(comparer);
+  return values.sort(comparer);
 }
 
-function groupItems(
-  items: ListItemViewingData[],
-): Map<string, Map<string, ListItemViewingData[]>> {
-  const groupedItems = new Map<string, Map<string, ListItemViewingData[]>>();
+function groupValues(
+  values: ListItemValue[],
+): Map<string, Map<string, ListItemValue[]>> {
+  const groupedValues = new Map<string, Map<string, ListItemValue[]>>();
 
-  items.map((item) => {
-    const monthYearGroup = `${item.viewingMonth} ${item.viewingYear}`;
+  values.map((value) => {
+    const monthYearGroup = `${value.viewingMonth} ${value.viewingYear}`;
 
-    let groupValue = groupedItems.get(monthYearGroup);
+    let groupValue = groupedValues.get(monthYearGroup);
 
     if (!groupValue) {
-      groupValue = new Map<string, ListItemViewingData[]>();
-      groupedItems.set(monthYearGroup, groupValue);
+      groupValue = new Map<string, ListItemValue[]>();
+      groupedValues.set(monthYearGroup, groupValue);
     }
 
-    const dayGroup = `${item.viewingDay}-${item.viewingDate}`;
+    const dayGroup = `${value.viewingDay}-${value.viewingDate}`;
 
     let dayGroupValue = groupValue.get(dayGroup);
 
@@ -46,36 +44,36 @@ function groupItems(
       groupValue.set(dayGroup, dayGroupValue);
     }
 
-    dayGroupValue.push(item);
+    dayGroupValue.push(value);
   });
 
-  return groupedItems;
+  return groupedValues;
 }
 
 type State = FilterableState<
-  ListItemViewingData,
+  ListItemValue,
   Sort,
-  Map<string, Map<string, ListItemViewingData[]>>
+  Map<string, Map<string, ListItemValue[]>>
 >;
 
 export function initState({
-  items,
-  sort,
+  values,
+  initialSort,
 }: {
-  items: ListItemViewingData[];
-  sort: Sort;
+  values: ListItemValue[];
+  initialSort: Sort;
 }): State {
   return {
-    allItems: items,
-    filteredItems: items,
+    allValues: values,
+    filteredValues: values,
     filters: {},
-    groupedItems: groupItems(items.slice(0, SHOW_COUNT_DEFAULT)),
+    groupedValues: groupValues(values.slice(0, SHOW_COUNT_DEFAULT)),
     showCount: SHOW_COUNT_DEFAULT,
-    sortValue: sort,
+    sortValue: initialSort,
   };
 }
 
-export enum ActionType {
+export enum Actions {
   FILTER_TITLE = "FILTER_TITLE",
   FILTER_MEDIUM = "FILTER_MEDIUM",
   FILTER_GENRES = "FILTER_GENRES",
@@ -87,45 +85,45 @@ export enum ActionType {
 }
 
 interface FilterTitleAction {
-  type: ActionType.FILTER_TITLE;
+  type: Actions.FILTER_TITLE;
   value: string;
 }
 
 interface FilterMediumAction {
-  type: ActionType.FILTER_MEDIUM;
+  type: Actions.FILTER_MEDIUM;
   value: string;
 }
 
 interface FilterVenueAction {
-  type: ActionType.FILTER_VENUE;
+  type: Actions.FILTER_VENUE;
   value: string;
 }
 
 interface FilterGenresAction {
-  type: ActionType.FILTER_GENRES;
+  type: Actions.FILTER_GENRES;
   values: string[];
 }
 
 interface FilterReleaseYearAction {
-  type: ActionType.FILTER_RELEASE_YEAR;
+  type: Actions.FILTER_RELEASE_YEAR;
   values: [string, string];
 }
 
 interface FilterViewingYearAction {
-  type: ActionType.FILTER_VIEWING_YEAR;
+  type: Actions.FILTER_VIEWING_YEAR;
   values: [string, string];
 }
 
 interface SortAction {
-  type: ActionType.SORT;
+  type: Actions.SORT;
   value: Sort;
 }
 
 interface ShowMoreAction {
-  type: ActionType.SHOW_MORE;
+  type: Actions.SHOW_MORE;
 }
 
-export type Action =
+export type ActionType =
   | FilterTitleAction
   | FilterReleaseYearAction
   | FilterViewingYearAction
@@ -135,77 +133,72 @@ export type Action =
   | SortAction
   | ShowMoreAction;
 
-/**
- * Applies the given action to the given state, returning a new State object.
- * @param state The current state.
- * @param action The action to apply.
- */
-export function reducer(state: State, action: Action): State {
-  let groupedItems;
-  let filteredItems;
+export function reducer(state: State, action: ActionType): State {
+  let groupedValues;
+  let filteredValues;
 
   switch (action.type) {
-    case ActionType.FILTER_TITLE: {
+    case Actions.FILTER_TITLE: {
       const regex = new RegExp(action.value, "i");
-      return updateFilter(state, "title", (item) => {
-        return regex.test(item.title);
+      return updateFilter(state, "title", (value) => {
+        return regex.test(value.title);
       });
     }
-    case ActionType.FILTER_RELEASE_YEAR: {
-      return updateFilter(state, "releaseYear", (item) => {
-        const releaseYear = item.year;
+    case Actions.FILTER_RELEASE_YEAR: {
+      return updateFilter(state, "releaseYear", (value) => {
+        const releaseYear = value.year;
         return (
           releaseYear >= action.values[0] && releaseYear <= action.values[1]
         );
       });
     }
-    case ActionType.FILTER_MEDIUM: {
+    case Actions.FILTER_MEDIUM: {
       return (
         clearFilter(action.value, state, "medium") ??
-        updateFilter(state, "medium", (item) => {
-          return item.medium === action.value;
+        updateFilter(state, "medium", (value) => {
+          return value.medium === action.value;
         })
       );
     }
-    case ActionType.FILTER_VENUE: {
+    case Actions.FILTER_VENUE: {
       return (
         clearFilter(action.value, state, "venue") ??
-        updateFilter(state, "venue", (item) => {
-          return item.venue === action.value;
+        updateFilter(state, "venue", (value) => {
+          return value.venue === action.value;
         })
       );
     }
-    case ActionType.FILTER_GENRES: {
-      return updateFilter(state, "genres", (item) => {
-        return action.values.every((genre) => item.genres.includes(genre));
+    case Actions.FILTER_GENRES: {
+      return updateFilter(state, "genres", (value) => {
+        return action.values.every((genre) => value.genres.includes(genre));
       });
     }
-    case ActionType.FILTER_VIEWING_YEAR: {
-      return updateFilter(state, "viewingYear", (item) => {
+    case Actions.FILTER_VIEWING_YEAR: {
+      return updateFilter(state, "viewingYear", (value) => {
         return (
-          item.viewingYear >= action.values[0] &&
-          item.viewingYear <= action.values[1]
+          value.viewingYear >= action.values[0] &&
+          value.viewingYear <= action.values[1]
         );
       });
     }
-    case ActionType.SORT: {
-      filteredItems = sortItems(state.filteredItems, action.value);
-      groupedItems = groupItems(filteredItems.slice(0, state.showCount));
+    case Actions.SORT: {
+      filteredValues = sortValues(state.filteredValues, action.value);
+      groupedValues = groupValues(filteredValues.slice(0, state.showCount));
       return {
         ...state,
         sortValue: action.value,
-        filteredItems,
-        groupedItems,
+        filteredValues,
+        groupedValues,
       };
     }
-    case ActionType.SHOW_MORE: {
+    case Actions.SHOW_MORE: {
       const showCount = state.showCount + SHOW_COUNT_DEFAULT;
 
-      groupedItems = groupItems(state.filteredItems.slice(0, showCount));
+      groupedValues = groupValues(state.filteredValues.slice(0, showCount));
 
       return {
         ...state,
-        groupedItems,
+        groupedValues,
         showCount,
       };
     }

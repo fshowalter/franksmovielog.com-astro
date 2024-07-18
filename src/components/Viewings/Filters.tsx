@@ -4,8 +4,8 @@ import { SelectField } from "src/components/SelectField";
 import { SelectOptions } from "src/components/SelectOptions";
 import { YearInput } from "src/components/YearInput";
 
-import type { Action, Sort } from "./Viewings.reducer";
-import { ActionType } from "./Viewings.reducer";
+import type { ActionType, Sort } from "./Viewings.reducer";
+import { Actions } from "./Viewings.reducer";
 
 export function Filters({
   dispatch,
@@ -16,7 +16,7 @@ export function Filters({
   distinctMedia,
   sortValue,
 }: {
-  dispatch: React.Dispatch<Action>;
+  dispatch: React.Dispatch<ActionType>;
   distinctReleaseYears: readonly string[];
   distinctViewingYears: readonly string[];
   distinctGenres: readonly string[];
@@ -30,28 +30,28 @@ export function Filters({
         label="Title"
         placeholder="Enter all or part of a title"
         onInputChange={(value) =>
-          dispatch({ type: ActionType.FILTER_TITLE, value })
+          dispatch({ type: Actions.FILTER_TITLE, value })
         }
       />
       <YearInput
         label="Release Year"
         years={distinctReleaseYears}
         onYearChange={(values) =>
-          dispatch({ type: ActionType.FILTER_RELEASE_YEAR, values })
+          dispatch({ type: Actions.FILTER_RELEASE_YEAR, values })
         }
       />
       <YearInput
         label="Viewing Year"
         years={distinctViewingYears}
         onYearChange={(values) =>
-          dispatch({ type: ActionType.FILTER_VIEWING_YEAR, values })
+          dispatch({ type: Actions.FILTER_VIEWING_YEAR, values })
         }
       />
       <SelectField
         label="Medium"
         onChange={(e) =>
           dispatch({
-            type: ActionType.FILTER_MEDIUM,
+            type: Actions.FILTER_MEDIUM,
             value: e.target.value,
           })
         }
@@ -62,7 +62,7 @@ export function Filters({
         label="Venue"
         onChange={(e) =>
           dispatch({
-            type: ActionType.FILTER_VENUE,
+            type: Actions.FILTER_VENUE,
             value: e.target.value,
           })
         }
@@ -74,7 +74,7 @@ export function Filters({
         options={distinctGenres}
         onChange={(e) =>
           dispatch({
-            type: ActionType.FILTER_GENRES,
+            type: Actions.FILTER_GENRES,
             values: e.map((selection) => selection.value),
           })
         }
@@ -84,7 +84,7 @@ export function Filters({
         label="Order By"
         onChange={(e) =>
           dispatch({
-            type: ActionType.SORT,
+            type: Actions.SORT,
             value: e.target.value as Sort,
           })
         }
