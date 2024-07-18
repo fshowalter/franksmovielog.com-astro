@@ -114,7 +114,7 @@ function FluidListItemPoster({
       <a
         href={`/reviews/${slug}/`}
         className={twMerge(
-          "safari-border-radius-fix min-w-12 w-full max-w-12 overflow-hidden rounded-lg shadow-all tablet:max-w-poster",
+          "safari-border-radius-fix w-full min-w-12 max-w-12 overflow-hidden rounded-lg shadow-all tablet:max-w-poster",
           className,
         )}
       >
