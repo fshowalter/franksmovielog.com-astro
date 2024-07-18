@@ -8,7 +8,7 @@ import {
   TableRow,
 } from "./StatsTable";
 
-export interface MediaDistributionValue {
+interface Value {
   name: string;
   count: number;
 }
@@ -16,7 +16,7 @@ export interface MediaDistributionValue {
 export function MediaDistribution({
   values,
 }: {
-  values: readonly MediaDistributionValue[];
+  values: readonly Value[];
 }): JSX.Element | null {
   const maxBar = values.reduce((acc, value) => {
     const count = value.count;

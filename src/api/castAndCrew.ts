@@ -3,7 +3,7 @@ import {
   type CastAndCrewMemberJson,
 } from "./data/castAndCrewJson";
 
-export interface CastAndCrew {
+interface CastAndCrew {
   castAndCrew: CastAndCrewMember[];
   distinctReleaseYears: string[];
 }

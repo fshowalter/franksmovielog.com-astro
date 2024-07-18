@@ -40,8 +40,6 @@ const MostWatchedPersonSchema = z.object({
   viewings: z.array(MostWatchedPersonViewing),
 });
 
-export type MostWatchedPerson = z.infer<typeof MostWatchedPersonSchema>;
-
 const AlltimeStatsJsonSchema = z.object({
   viewingCount: z.number(),
   titleCount: z.number(),

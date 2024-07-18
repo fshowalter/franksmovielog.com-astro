@@ -2,7 +2,7 @@ import { allPagesMarkdown } from "./data/pagesMarkdown";
 import { allReviewedTitlesJson } from "./data/reviewedTitlesJson";
 import { getHtml } from "./utils/markdown/getHtml";
 
-export interface MarkdownPage {
+interface MarkdownPage {
   title: string;
   content: string | null;
 }

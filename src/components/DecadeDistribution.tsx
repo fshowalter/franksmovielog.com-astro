@@ -8,7 +8,7 @@ import {
   TableRow,
 } from "./StatsTable";
 
-export interface DecadeDistributionValue {
+interface Value {
   name: string;
   count: number;
 }
@@ -16,7 +16,7 @@ export interface DecadeDistributionValue {
 export function DecadeDistribution({
   values,
 }: {
-  values: readonly DecadeDistributionValue[];
+  values: readonly Value[];
 }): JSX.Element {
   const maxBar = values.reduce((acc, value) => {
     const count = value.count;

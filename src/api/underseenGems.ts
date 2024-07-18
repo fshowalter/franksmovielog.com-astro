@@ -3,7 +3,7 @@ import { allUnderseenGemsJson } from "./data/underseenGemsJson";
 
 export interface UnderseenGem extends UnderseenGemsJson {}
 
-export interface UnderseenGems {
+interface UnderseenGems {
   underseenGems: UnderseenGem[];
   distinctReleaseYears: string[];
   distinctGenres: string[];
