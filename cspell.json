@@ -10,11 +10,12 @@
   ],
   "dictionaries": ["project-words", "typescript", "node", "html", "npm"],
   "ignorePaths": [
-    "node_modules",
-    "/project-words.txt",
     "**/__snapshots__/**",
     "**/fixtures/**",
-    "content/**"
+    "/project-words.txt",
+    "content/**",
+    "node_modules",
+    "public/_redirects"
   ],
   "useGitignore": true
 }
