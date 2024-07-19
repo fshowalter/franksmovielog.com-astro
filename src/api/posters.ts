@@ -34,10 +34,10 @@ export async function getFluidWidthPosters({
 
   await Promise.all(
     Object.keys(images).map(async (image) => {
-      const poasterFile = await images[image]();
+      const posterFile = await images[image]();
 
       const optimizedImage = await getImage({
-        src: poasterFile.default,
+        src: posterFile.default,
         width: width,
         height: height,
         format: "avif",
@@ -71,10 +71,10 @@ export async function getFixedWidthPosters({
 
   await Promise.all(
     Object.keys(images).map(async (image) => {
-      const poasterFile = await images[image]();
+      const posterFile = await images[image]();
 
       const optimizedImage = await getImage({
-        src: poasterFile.default,
+        src: posterFile.default,
         width: width,
         height: height,
         format: "avif",

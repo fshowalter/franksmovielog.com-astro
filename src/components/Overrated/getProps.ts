@@ -1,4 +1,4 @@
-import { allOverratedDisappintments } from "src/api/overratedDisappointments";
+import { allOverratedDisappointments } from "src/api/overratedDisappointments";
 import { getFixedWidthPosters } from "src/api/posters";
 import { ListItemPosterImageConfig } from "src/components/ListItemPoster";
 
@@ -6,15 +6,15 @@ import type { ListItemValue } from "./List";
 import type { Props } from "./Overrated";
 
 export async function getProps(): Promise<Props> {
-  const { overratedDisappintments, distinctGenres, distinctReleaseYears } =
-    await allOverratedDisappintments();
+  const { overratedDisappointments, distinctGenres, distinctReleaseYears } =
+    await allOverratedDisappointments();
   const posters = await getFixedWidthPosters(ListItemPosterImageConfig);
 
-  overratedDisappintments.sort((a, b) =>
+  overratedDisappointments.sort((a, b) =>
     b.releaseSequence.localeCompare(a.releaseSequence),
   );
 
-  const values = overratedDisappintments.map((review) => {
+  const values = overratedDisappointments.map((review) => {
     const listItemData: ListItemValue = {
       imdbId: review.imdbId,
       title: review.title,

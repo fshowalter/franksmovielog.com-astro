@@ -120,8 +120,8 @@ export async function allReviews(): Promise<Reviews> {
       title.genres.forEach((genre) => distinctGenres.add(genre));
       distinctReleaseYears.add(title.year);
 
-      const review = reviewsMarkdown.find((reviewsarkdown) => {
-        return reviewsarkdown.slug === title.slug;
+      const review = reviewsMarkdown.find((reviewsmarkdown) => {
+        return reviewsmarkdown.slug === title.slug;
       });
 
       if (!review) {

@@ -3,7 +3,7 @@ type onChangeHandler = (value: string) => void;
 /**
  * Wraps a given function in a setTimeout call with the given milliseconds.
  * @param func The function to wrap.
- * @param wait The number of millisecods to wait before executing.
+ * @param wait The number of milliseconds to wait before executing.
  * @param args The function args.
  */
 function delay<F extends onChangeHandler>(
