@@ -10,17 +10,17 @@ export function Filters({
   distinctReleaseYears,
   hideReviewed,
   sortValue,
-  showHideReviewd,
+  showHideReviewed,
 }: {
   dispatch: React.Dispatch<ActionType>;
-  showHideReviewd: boolean;
+  showHideReviewed: boolean;
   hideReviewed: boolean;
   distinctReleaseYears: readonly string[];
   sortValue: Sort;
 }): JSX.Element {
   return (
     <>
-      {showHideReviewd && (
+      {showHideReviewed && (
         <div className="flex basis-full flex-col items-center justify-end">
           <Button onClick={() => dispatch({ type: Actions.TOGGLE_REVIEWED })}>
             {hideReviewed ? "Show Reviewed" : "Hide Reviewed"}

@@ -9,14 +9,14 @@ export function LabelText({
   htmlFor?: string;
   as?: ElementType;
 }) {
-  const Componet = as;
+  const Component = as;
 
   return (
-    <Componet
+    <Component
       className="inline-block h-6 text-left text-sm font-semibold leading-none tracking-0.5px"
       htmlFor={htmlFor}
     >
       {text}
-    </Componet>
+    </Component>
   );
 }
