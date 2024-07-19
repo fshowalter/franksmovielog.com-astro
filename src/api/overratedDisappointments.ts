@@ -4,17 +4,17 @@ import { allOverratedDisappointmentsJson } from "./data/overratedDisappointments
 export interface OverratedDisappointment extends OverratedDisappointmentsJson {}
 
 interface OverratedDisappointments {
-  overratedDisappintments: OverratedDisappointment[];
+  overratedDisappointments: OverratedDisappointment[];
   distinctReleaseYears: string[];
   distinctGenres: string[];
 }
 
-export async function allOverratedDisappintments(): Promise<OverratedDisappointments> {
+export async function allOverratedDisappointments(): Promise<OverratedDisappointments> {
   const overratedJson = await allOverratedDisappointmentsJson();
   const distinctReleaseYears = new Set<string>();
   const distinctGenres = new Set<string>();
 
-  const overratedDisappintments = overratedJson.map((title) => {
+  const overratedDisappointments = overratedJson.map((title) => {
     title.genres.forEach((genre) => distinctGenres.add(genre));
     distinctReleaseYears.add(title.year);
 
@@ -24,7 +24,7 @@ export async function allOverratedDisappintments(): Promise<OverratedDisappointm
   });
 
   return {
-    overratedDisappintments: overratedDisappintments,
+    overratedDisappointments: overratedDisappointments,
     distinctGenres: Array.from(distinctGenres).toSorted(),
     distinctReleaseYears: Array.from(distinctReleaseYears).toSorted(),
   };

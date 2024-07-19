@@ -15,7 +15,7 @@ Source for www.franksmovielog.com. Built with [Astro](https://astro.build/).
 
     See [the instructions at the NVM repo](https://github.com/nvm-sh/nvm#installing-and-updating).
 
-1.  **Intialize your Node env.**
+1.  **Initialize your Node env.**
 
     An .nvmrc is included in the project.
 
