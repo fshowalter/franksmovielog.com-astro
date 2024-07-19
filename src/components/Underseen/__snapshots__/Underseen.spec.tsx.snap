@@ -18511,7 +18511,7 @@ exports[`Underseen > renders 1`] = `
                   class="reactSelect__control css-8r88ul-control"
                 >
                   <div
-                    class="reactSelect__value-container reactSelect__value-container--is-multi css-1fdsijx-ValueContainer"
+                    class="reactSelect__value-container reactSelect__value-container--is-multi css-hlgwow"
                   >
                     <div
                       class="reactSelect__placeholder css-5rb5s-placeholder"
@@ -18535,7 +18535,7 @@ exports[`Underseen > renders 1`] = `
                     />
                   </div>
                   <div
-                    class="reactSelect__indicators css-1hb7zxy-IndicatorsContainer"
+                    class="reactSelect__indicators css-1wy0on6"
                   >
                     <span
                       class="reactSelect__indicator-separator css-1xn9wwu-indicatorSeparator"
