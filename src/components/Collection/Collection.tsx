@@ -54,7 +54,7 @@ export function Collection({
           hideReviewed={state.hideReviewed}
           sortValue={state.sortValue}
           distinctReleaseYears={distinctReleaseYears}
-          showHideReviewd={value.reviewCount != value.titles.length}
+          showHideReviewed={value.reviewCount != value.titles.length}
         />
       }
       list={

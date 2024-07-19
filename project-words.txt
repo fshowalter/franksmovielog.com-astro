@@ -21,7 +21,6 @@ notcomingsoon
 popout
 rehype
 Rehype
-Reviewd
 reviewsmarkdown
 ripnotcomingsoon
 Showalter
