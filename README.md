@@ -1,54 +1,73 @@
-# Astro Starter Kit: Basics
+<p align="center">
+  <a href="https://www.franksmovielog.com">
+    <img alt="Frank's Movie Log" src="https://www.franksmovielog.com/assets/default_og.jpg" width="500" />
+  </a>
+</p>
+<h1 align="center">
+  Frank's Movie Log (v2)
+</h1>
 
-```sh
-npm create astro@latest -- --template basics
-```
+Source for www.franksmovielog.com. Built with [Astro](https://astro.build/).
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Setup
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+1.  **Install nvm.**
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+    See [the instructions at the NVM repo](https://github.com/nvm-sh/nvm#installing-and-updating).
 
-## 🚀 Project Structure
+1.  **Intialize your Node env.**
 
-Inside of your Astro project, you'll see the following folders and files:
+    An .nvmrc is included in the project.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+    ```shell
+    # use the .nvmrc version of Node.
+    nvm use
+    ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+1.  **Install dependencies.**
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+    NPM has come a long way and we don't need workspaces (yet)
 
-Any static assets, like images, can be placed in the `public/` directory.
+    ```shell
+    npm i
+    ```
 
-## 🧞 Commands
+1.  **Start a Dev server.**
 
-All commands are run from the root of the project, from a terminal:
+    ```shell
+    # start Astro dev.
+    npm run dev
+    ```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+1.  **Open the source code and start editing!**
 
-## 👀 Want to learn more?
+    The site is now running at `http://localhost:4321`.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## What's inside?
+
+A quick look at the non-standard directories included in the project.
+
+    .
+    ├── content
+    ├── src/images
+    ├── src/styles
+    └── src/utils
+
+1.  **`/content`**: The movie log content. Reviews and data copied from the backend system, as well as front-end
+    specific assets like backdrops and posters. It also contains the content for the [about](https://www.franksmovielog.com/about/) and [how I grade](https://www.franksmovielog.com/how-i-grade/) pages. We don't leverage Astro's content directory because I prefer keeping content and code separate.
+
+1.  **`/src/api`**: Functions to access the data in the `/content` folder. This replaces Gatsby's GraphQL layer. `/src/api/data` contains [Zod](https://zod.dev/) schemas to validate all the JSON and Markdown.
+
+1.  **`/src/utils`**: Shared utility functions.
+
+## Deployment
+
+Push to Github and Actions builds the project and POST's to Netlify.
+
+## Why not Next?
+
+I considered Next. Even ported the entire site over and had it all working. React Server Components are sweet. But Vercel (and Next) are focused on _apps_ not static sites. They don't have an asset pipeline and Vercel doesn't even cache anything in the `/public` folder. This makes sense as most _apps_ will offload this to a CDN. But for a static site, it's the priority.
+
+Astro, while not perfect, has static sites as it's top priority, and it's asset pipeline is easy to use. The biggest downside is that now the static pages in my site (the home pages, the review pages, and the stats pages) are now _really_ static with no javascript loading, so each page is a full-reload. **But** given most visits to my site are for single reviews, this seems like a better option.
+
+Still, I hope Astro soon supports RSCs so those pages that are interactive (like the review and viewing lists) can benefit from the faster client-rendering.
