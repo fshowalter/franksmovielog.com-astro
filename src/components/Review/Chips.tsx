@@ -56,7 +56,7 @@ function Chip({
     <li className="block">
       <a
         href={linkTarget}
-        className="flex items-center whitespace-nowrap rounded-lg bg-inverse px-4 py-2 shadow-all hover:shadow-accent"
+        className="flex items-center whitespace-nowrap rounded-lg bg-inverse px-4 py-2 text-accent shadow-all hover:shadow-accent"
       >
         <Avatar
           alt={`More ${name} reviews`}

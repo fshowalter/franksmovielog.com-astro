@@ -87,7 +87,11 @@ export function MostWatchedPeople({
 
 function Name({ value }: { value: ListItemValue }): JSX.Element {
   if (value.slug) {
-    return <a href={`/cast-and-crew/${value.slug}/`}>{value.name}</a>;
+    return (
+      <a className="text-accent" href={`/cast-and-crew/${value.slug}/`}>
+        {value.name}
+      </a>
+    );
   }
 
   return <>{value.name}</>;

@@ -65,7 +65,7 @@ function MemberListItem({
 function Name({ value }: { value: ListItemValue }) {
   return (
     <div>
-      <a href={`/cast-and-crew/${value.slug}/`} className="text-md">
+      <a href={`/cast-and-crew/${value.slug}/`} className="text-md text-accent">
         <div className="leading-normal">{value.name}</div>
       </a>
       <div className="spacer-y-1" />

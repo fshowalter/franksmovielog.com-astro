@@ -6,6 +6,7 @@ import simpleImportSort from "eslint-plugin-simple-import-sort";
 import tailwind from "eslint-plugin-tailwindcss";
 import testingLibrary from "eslint-plugin-testing-library";
 import vitest from "eslint-plugin-vitest";
+import globals from "globals";
 import tsEslint from "typescript-eslint";
 
 export default tsEslint.config(
@@ -23,6 +24,14 @@ export default tsEslint.config(
     },
   },
   ...eslintPluginAstro.configs.recommended,
+  {
+    files: ["*.js"],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+      },
+    },
+  },
   {
     files: ["**/*.ts", "**/*.tsx"],
     extends: [...tsEslint.configs.recommendedTypeChecked],

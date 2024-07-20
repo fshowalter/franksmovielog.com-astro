@@ -26,7 +26,7 @@ export function StillList({
         );
       })}
       <li className="col-[1_/_-1] block px-gutter py-4 text-right shadow-bottom shadow-border tablet:absolute tablet:right-0 tablet:top-0 tablet:shadow-none desktop:right-[var(--gutter-width)]">
-        <a href={seeAllLinkTarget}>
+        <a className="text-accent" href={seeAllLinkTarget}>
           All{" "}
           <span className="inline tablet:hidden desktop:inline">
             {seeAllLinkText}

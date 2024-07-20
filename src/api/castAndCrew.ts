@@ -10,8 +10,6 @@ interface CastAndCrew {
 
 export interface CastAndCrewMember extends CastAndCrewMemberJson {}
 
-let cache: CastAndCrew;
-
 export async function allCastAndCrew(): Promise<CastAndCrew> {
   const castAndCrewJson = await allCastAndCrewJson();
   const releaseYears = new Set<string>();
@@ -22,10 +20,8 @@ export async function allCastAndCrew(): Promise<CastAndCrew> {
     });
   });
 
-  cache = {
+  return {
     castAndCrew: castAndCrewJson,
     distinctReleaseYears: Array.from(releaseYears).toSorted(),
   };
-
-  return cache;
 }

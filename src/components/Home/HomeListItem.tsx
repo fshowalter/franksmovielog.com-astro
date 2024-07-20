@@ -1,4 +1,4 @@
-import type { Review } from "src/api/reviews";
+import type { ReviewWithExcerpt } from "src/api/reviews";
 import type { StillImageData } from "src/api/stills";
 import { Grade } from "src/components/Grade";
 import { RenderedMarkdown } from "src/components/RenderedMarkdown";
@@ -22,7 +22,7 @@ function formatDate(reviewDate: Date) {
 
 export interface ListItemValue
   extends Pick<
-    Review,
+    ReviewWithExcerpt,
     | "imdbId"
     | "sequence"
     | "title"

@@ -27,12 +27,7 @@ interface ReviewViewing extends MarkdownViewing {
   viewingNotes: string | null;
 }
 
-export interface Review extends ReviewedTitleJson, MarkdownReview {
-  viewings: ReviewViewing[];
-  excerpt: string;
-  excerptPlainText: string;
-  content: string | null;
-}
+export interface Review extends ReviewedTitleJson, MarkdownReview {}
 
 interface Reviews {
   reviews: Review[];
@@ -40,8 +35,6 @@ interface Reviews {
   distinctReleaseYears: string[];
   distinctGenres: string[];
 }
-
-let cache: Reviews;
 
 function getMastProcessor() {
   return remark().use(remarkGfm).use(smartypants);
@@ -66,128 +59,130 @@ function getHtmlAsSpan(
   return linkReviewedTitles(html, reviewedTitles);
 }
 
-function getExcerptHtml(
-  content: string,
-  slug: string,
-  reviewedTitles: { imdbId: string; slug: string }[],
-) {
+export interface ReviewWithExcerpt extends Review {
+  excerpt: string;
+}
+
+export async function loadExcerptHtml(
+  review: Review,
+): Promise<ReviewWithExcerpt> {
+  const reviewsMarkdown = await allReviewsMarkdown();
+  const reviewedTitlesJson = await allReviewedTitlesJson();
+  const { rawContent } = reviewsMarkdown.find((markdown) => {
+    return markdown.slug === review.slug;
+  })!;
+
   let excerptHtml = getMastProcessor()
     .use(removeFootnotes)
     .use(trimToExcerpt)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
     .use(rehypeStringify)
-    .processSync(content)
+    .processSync(rawContent)
     .toString();
 
-  const hasExcerptBreak = content.includes(EXCERPT_SEPARATOR);
+  const hasExcerptBreak = rawContent.includes(EXCERPT_SEPARATOR);
 
   if (hasExcerptBreak) {
     excerptHtml = excerptHtml.replace(/\n+$/, "");
     excerptHtml = excerptHtml.replace(
       /<\/p>$/,
-      ` <a data-continue-reading href="/reviews/${slug}/">Continue reading...</a></p>`,
+      ` <a class="!no-underline uppercase whitespace-nowrap text-accent text-sm leading-none" href="/reviews/${review.slug}/">Continue reading...</a></p>`,
     );
   }
 
-  return linkReviewedTitles(excerptHtml, reviewedTitles);
+  return {
+    ...review,
+    excerpt: linkReviewedTitles(excerptHtml, reviewedTitlesJson),
+  };
 }
 
-function getExcerptPlainText(content: string) {
-  return getMastProcessor()
+export interface ReviewWithContent extends Review {
+  viewings: ReviewViewing[];
+  excerptPlainText: string;
+  content: string | null;
+}
+
+export async function loadContent(review: Review): Promise<ReviewWithContent> {
+  const viewingsMarkdown = await allViewingsMarkdown();
+  const reviewedTitlesJson = await allReviewedTitlesJson();
+
+  const excerptPlainText = getMastProcessor()
     .use(removeFootnotes)
     .use(trimToExcerpt)
     .use(strip)
-    .processSync(content)
+    .processSync(review.rawContent)
     .toString();
+
+  const viewings = viewingsMarkdown
+    .filter((viewing) => {
+      return viewing.imdbId === review.imdbId;
+    })
+    .map((viewing) => {
+      return {
+        ...viewing,
+        venueNotes: getHtmlAsSpan(viewing.venueNotesRaw, reviewedTitlesJson),
+        mediumNotes: getHtmlAsSpan(viewing.mediumNotesRaw, reviewedTitlesJson),
+        viewingNotes: getHtml(viewing.viewingNotesRaw, reviewedTitlesJson),
+      };
+    });
+
+  if (viewings.length === 0) {
+    throw new Error(
+      `No markdown viewings found with imdb_id ${review.imdbId} for title "${review.title}"`,
+    );
+  }
+
+  return {
+    ...review,
+    viewings,
+    content: getHtml(review.rawContent, reviewedTitlesJson),
+    excerptPlainText,
+  };
 }
 
 async function parseReviewedTitlesJson(
   reviewedTitlesJson: ReviewedTitleJson[],
 ): Promise<Reviews> {
-  const reviewsMarkdown = await allReviewsMarkdown();
-  const viewingsMarkdown = await allViewingsMarkdown();
   const distinctReviewYears = new Set<string>();
   const distinctReleaseYears = new Set<string>();
   const distinctGenres = new Set<string>();
+  const reviewsMarkdown = await allReviewsMarkdown();
 
-  const reviews = await Promise.all(
-    reviewedTitlesJson.map((title) => {
-      title.genres.forEach((genre) => distinctGenres.add(genre));
-      distinctReleaseYears.add(title.year);
+  const reviews = reviewedTitlesJson.map((title) => {
+    title.genres.forEach((genre) => distinctGenres.add(genre));
+    distinctReleaseYears.add(title.year);
 
-      const review = reviewsMarkdown.find((reviewsmarkdown) => {
+    const { rawContent, grade, date } = reviewsMarkdown.find(
+      (reviewsmarkdown) => {
         return reviewsmarkdown.slug === title.slug;
-      });
+      },
+    )!;
 
-      if (!review) {
-        throw new Error(
-          `No markdown review found with slug ${title.slug} for title "${title.title}"`,
-        );
-      }
+    distinctReviewYears.add(
+      date.toLocaleDateString("en-US", {
+        timeZone: "UTC",
+        year: "numeric",
+      }),
+    );
 
-      distinctReviewYears.add(
-        review.date.toLocaleDateString("en-US", {
-          timeZone: "UTC",
-          year: "numeric",
-        }),
-      );
-
-      const viewings = viewingsMarkdown
-        .filter((viewing) => {
-          return viewing.imdbId === title.imdbId;
-        })
-        .map((viewing) => {
-          return {
-            ...viewing,
-            venueNotes: getHtmlAsSpan(
-              viewing.venueNotesRaw,
-              reviewedTitlesJson,
-            ),
-            mediumNotes: getHtmlAsSpan(
-              viewing.mediumNotesRaw,
-              reviewedTitlesJson,
-            ),
-            viewingNotes: getHtml(viewing.viewingNotesRaw, reviewedTitlesJson),
-          };
-        });
-
-      if (viewings.length === 0) {
-        throw new Error(
-          `No markdown viewings found with imdb_id ${title.imdbId} for title "${title.title}"`,
-        );
-      }
-
-      return {
-        ...title,
-        ...review,
-        viewings,
-        content: getHtml(review.rawContent, reviewedTitlesJson),
-        excerpt: getExcerptHtml(
-          review.rawContent,
-          title.slug,
-          reviewedTitlesJson,
-        ),
-        excerptPlainText: getExcerptPlainText(review.rawContent),
-      };
-    }),
-  );
+    return {
+      ...title,
+      rawContent,
+      grade,
+      date,
+    };
+  });
 
   return {
-    reviews: reviews,
+    reviews,
     distinctGenres: Array.from(distinctGenres).toSorted(),
     distinctReleaseYears: Array.from(distinctReleaseYears).toSorted(),
     distinctReviewYears: Array.from(distinctReviewYears).toSorted(),
   };
 }
 
-let mostRecentReviewsCache: Review[] = [];
-
 export async function mostRecentReviews(limit: number) {
-  if (mostRecentReviewsCache.length >= limit) {
-    return mostRecentReviewsCache.slice(0, limit);
-  }
-
   const reviewedTitlesJson = await allReviewedTitlesJson();
 
   reviewedTitlesJson.sort((a, b) => b.sequence.localeCompare(a.sequence));
@@ -195,19 +190,10 @@ export async function mostRecentReviews(limit: number) {
 
   const { reviews } = await parseReviewedTitlesJson(slicedTitles);
 
-  mostRecentReviewsCache = reviews;
-
-  return mostRecentReviewsCache;
+  return reviews;
 }
 
 export async function allReviews(): Promise<Reviews> {
-  if (cache) {
-    return cache;
-  }
-
   const reviewedTitlesJson = await allReviewedTitlesJson();
-
-  cache = await parseReviewedTitlesJson(reviewedTitlesJson);
-
-  return cache;
+  return await parseReviewedTitlesJson(reviewedTitlesJson);
 }

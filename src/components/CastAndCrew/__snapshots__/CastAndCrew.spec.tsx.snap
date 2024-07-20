@@ -23,7 +23,7 @@ exports[`CastAndCrew > can filter by name 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-wayne/"
       >
         <div
@@ -81,7 +81,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/abel-ferrara/"
       >
         <div
@@ -136,7 +136,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/alfred-hitchcock/"
       >
         <div
@@ -187,7 +187,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/billy-wilder/"
       >
         <div
@@ -238,7 +238,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/brian-de-palma/"
       >
         <div
@@ -289,7 +289,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/burt-reynolds/"
       >
         <div
@@ -344,7 +344,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/clive-barker/"
       >
         <div
@@ -399,7 +399,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dario-argento/"
       >
         <div
@@ -454,7 +454,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-cronenberg/"
       >
         <div
@@ -509,7 +509,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-lean/"
       >
         <div
@@ -560,7 +560,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-mamet/"
       >
         <div
@@ -615,7 +615,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/frank-sinatra/"
       >
         <div
@@ -666,7 +666,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/fritz-lang/"
       >
         <div
@@ -717,7 +717,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/george-a-romero/"
       >
         <div
@@ -772,7 +772,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/howard-hawks/"
       >
         <div
@@ -823,7 +823,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ingmar-bergman/"
       >
         <div
@@ -878,7 +878,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-nicholson/"
       >
         <div
@@ -933,7 +933,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-boorman/"
       >
         <div
@@ -988,7 +988,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-carpenter/"
       >
         <div
@@ -1043,7 +1043,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-ford/"
       >
         <div
@@ -1094,7 +1094,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-frankenheimer/"
       >
         <div
@@ -1146,7 +1146,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-huston/"
       >
         <div
@@ -1201,7 +1201,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-sturges/"
       >
         <div
@@ -1248,7 +1248,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-wayne/"
       >
         <div
@@ -1299,7 +1299,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ken-russell/"
       >
         <div
@@ -1354,7 +1354,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lucio-fulci/"
       >
         <div
@@ -1409,7 +1409,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/luis-bunuel/"
       >
         <div
@@ -1460,7 +1460,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/mario-bava/"
       >
         <div
@@ -1511,7 +1511,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michael-haneke/"
       >
         <div
@@ -1562,7 +1562,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michele-soavi/"
       >
         <div
@@ -1617,7 +1617,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/neil-labute/"
       >
         <div
@@ -1668,7 +1668,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/paul-thomas-anderson/"
       >
         <div
@@ -1719,7 +1719,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-altman/"
       >
         <div
@@ -1770,7 +1770,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roger-corman/"
       >
         <div
@@ -1825,7 +1825,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roman-polanski/"
       >
         <div
@@ -1880,7 +1880,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sam-peckinpah/"
       >
         <div
@@ -1935,7 +1935,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sidney-lumet/"
       >
         <div
@@ -1986,7 +1986,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stanley-kubrick/"
       >
         <div
@@ -2037,7 +2037,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stephen-king/"
       >
         <div
@@ -2092,7 +2092,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tobe-hooper/"
       >
         <div
@@ -2147,7 +2147,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tod-browning/"
       >
         <div
@@ -2198,7 +2198,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tony-scott/"
       >
         <div
@@ -2249,7 +2249,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/wes-craven/"
       >
         <div
@@ -2304,7 +2304,7 @@ exports[`CastAndCrew > can filter directors 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-friedkin/"
       >
         <div
@@ -2366,7 +2366,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/abel-ferrara/"
       >
         <div
@@ -2421,7 +2421,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/alfred-hitchcock/"
       >
         <div
@@ -2472,7 +2472,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/bela-lugosi/"
       >
         <div
@@ -2524,7 +2524,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ben-johnson/"
       >
         <div
@@ -2571,7 +2571,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/bette-davis/"
       >
         <div
@@ -2618,7 +2618,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/billy-wilder/"
       >
         <div
@@ -2669,7 +2669,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/boris-karloff/"
       >
         <div
@@ -2716,7 +2716,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/brian-de-palma/"
       >
         <div
@@ -2767,7 +2767,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/burt-reynolds/"
       >
         <div
@@ -2822,7 +2822,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/cary-grant/"
       >
         <div
@@ -2869,7 +2869,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/christopher-lee/"
       >
         <div
@@ -2916,7 +2916,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/clive-barker/"
       >
         <div
@@ -2971,7 +2971,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dario-argento/"
       >
         <div
@@ -3026,7 +3026,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-cronenberg/"
       >
         <div
@@ -3081,7 +3081,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-lean/"
       >
         <div
@@ -3132,7 +3132,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-mamet/"
       >
         <div
@@ -3187,7 +3187,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dean-martin/"
       >
         <div
@@ -3234,7 +3234,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/errol-flynn/"
       >
         <div
@@ -3285,7 +3285,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/frank-sinatra/"
       >
         <div
@@ -3336,7 +3336,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/fritz-lang/"
       >
         <div
@@ -3387,7 +3387,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/gene-hackman/"
       >
         <div
@@ -3434,7 +3434,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/george-a-romero/"
       >
         <div
@@ -3489,7 +3489,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/howard-hawks/"
       >
         <div
@@ -3540,7 +3540,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/humphrey-bogart/"
       >
         <div
@@ -3587,7 +3587,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ingmar-bergman/"
       >
         <div
@@ -3642,7 +3642,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-lemmon/"
       >
         <div
@@ -3689,7 +3689,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-nicholson/"
       >
         <div
@@ -3744,7 +3744,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/james-coburn/"
       >
         <div
@@ -3795,7 +3795,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/james-stewart/"
       >
         <div
@@ -3842,7 +3842,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-boorman/"
       >
         <div
@@ -3897,7 +3897,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-carpenter/"
       >
         <div
@@ -3952,7 +3952,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-ford/"
       >
         <div
@@ -4003,7 +4003,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-frankenheimer/"
       >
         <div
@@ -4055,7 +4055,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-huston/"
       >
         <div
@@ -4110,7 +4110,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-sturges/"
       >
         <div
@@ -4157,7 +4157,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-wayne/"
       >
         <div
@@ -4208,7 +4208,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ken-russell/"
       >
         <div
@@ -4263,7 +4263,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lee-marvin/"
       >
         <div
@@ -4310,7 +4310,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/leigh-brackett/"
       >
         <div
@@ -4357,7 +4357,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lucio-fulci/"
       >
         <div
@@ -4412,7 +4412,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/luis-bunuel/"
       >
         <div
@@ -4463,7 +4463,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/marilyn-monroe/"
       >
         <div
@@ -4510,7 +4510,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/mario-bava/"
       >
         <div
@@ -4561,7 +4561,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michael-haneke/"
       >
         <div
@@ -4612,7 +4612,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michele-soavi/"
       >
         <div
@@ -4667,7 +4667,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/neil-labute/"
       >
         <div
@@ -4718,7 +4718,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/paul-thomas-anderson/"
       >
         <div
@@ -4769,7 +4769,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/peter-cushing/"
       >
         <div
@@ -4816,7 +4816,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/raymond-chandler/"
       >
         <div
@@ -4863,7 +4863,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-altman/"
       >
         <div
@@ -4914,7 +4914,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-mitchum/"
       >
         <div
@@ -4965,7 +4965,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roger-corman/"
       >
         <div
@@ -5020,7 +5020,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roman-polanski/"
       >
         <div
@@ -5075,7 +5075,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sam-peckinpah/"
       >
         <div
@@ -5130,7 +5130,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sidney-lumet/"
       >
         <div
@@ -5181,7 +5181,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stanley-kubrick/"
       >
         <div
@@ -5232,7 +5232,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stephen-king/"
       >
         <div
@@ -5287,7 +5287,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/steve-mcqueen/"
       >
         <div
@@ -5334,7 +5334,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tobe-hooper/"
       >
         <div
@@ -5389,7 +5389,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tod-browning/"
       >
         <div
@@ -5440,7 +5440,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tony-scott/"
       >
         <div
@@ -5491,7 +5491,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/vincent-price/"
       >
         <div
@@ -5543,7 +5543,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ward-bond/"
       >
         <div
@@ -5590,7 +5590,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/warren-oates/"
       >
         <div
@@ -5637,7 +5637,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/wes-craven/"
       >
         <div
@@ -5692,7 +5692,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-friedkin/"
       >
         <div
@@ -5747,7 +5747,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-holden/"
       >
         <div
@@ -5794,7 +5794,7 @@ exports[`CastAndCrew > can filter directors then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-powell/"
       >
         <div
@@ -5848,7 +5848,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/abel-ferrara/"
       >
         <div
@@ -5903,7 +5903,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/bela-lugosi/"
       >
         <div
@@ -5955,7 +5955,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ben-johnson/"
       >
         <div
@@ -6002,7 +6002,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/bette-davis/"
       >
         <div
@@ -6049,7 +6049,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/boris-karloff/"
       >
         <div
@@ -6096,7 +6096,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/burt-reynolds/"
       >
         <div
@@ -6151,7 +6151,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/cary-grant/"
       >
         <div
@@ -6198,7 +6198,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/christopher-lee/"
       >
         <div
@@ -6245,7 +6245,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/clive-barker/"
       >
         <div
@@ -6300,7 +6300,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dario-argento/"
       >
         <div
@@ -6355,7 +6355,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-cronenberg/"
       >
         <div
@@ -6410,7 +6410,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-mamet/"
       >
         <div
@@ -6465,7 +6465,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dean-martin/"
       >
         <div
@@ -6512,7 +6512,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/errol-flynn/"
       >
         <div
@@ -6563,7 +6563,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/frank-sinatra/"
       >
         <div
@@ -6614,7 +6614,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/gene-hackman/"
       >
         <div
@@ -6661,7 +6661,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/george-a-romero/"
       >
         <div
@@ -6716,7 +6716,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/humphrey-bogart/"
       >
         <div
@@ -6763,7 +6763,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ingmar-bergman/"
       >
         <div
@@ -6818,7 +6818,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-lemmon/"
       >
         <div
@@ -6865,7 +6865,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-nicholson/"
       >
         <div
@@ -6920,7 +6920,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/james-coburn/"
       >
         <div
@@ -6971,7 +6971,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/james-stewart/"
       >
         <div
@@ -7018,7 +7018,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-boorman/"
       >
         <div
@@ -7073,7 +7073,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-carpenter/"
       >
         <div
@@ -7133,7 +7133,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-huston/"
       >
         <div
@@ -7188,7 +7188,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-wayne/"
       >
         <div
@@ -7239,7 +7239,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ken-russell/"
       >
         <div
@@ -7294,7 +7294,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lee-marvin/"
       >
         <div
@@ -7341,7 +7341,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lucio-fulci/"
       >
         <div
@@ -7396,7 +7396,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/marilyn-monroe/"
       >
         <div
@@ -7443,7 +7443,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michele-soavi/"
       >
         <div
@@ -7498,7 +7498,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/peter-cushing/"
       >
         <div
@@ -7545,7 +7545,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-mitchum/"
       >
         <div
@@ -7596,7 +7596,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roger-corman/"
       >
         <div
@@ -7651,7 +7651,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roman-polanski/"
       >
         <div
@@ -7706,7 +7706,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sam-peckinpah/"
       >
         <div
@@ -7761,7 +7761,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stephen-king/"
       >
         <div
@@ -7816,7 +7816,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/steve-mcqueen/"
       >
         <div
@@ -7863,7 +7863,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tobe-hooper/"
       >
         <div
@@ -7918,7 +7918,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/vincent-price/"
       >
         <div
@@ -7970,7 +7970,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ward-bond/"
       >
         <div
@@ -8017,7 +8017,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/warren-oates/"
       >
         <div
@@ -8064,7 +8064,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/wes-craven/"
       >
         <div
@@ -8119,7 +8119,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-friedkin/"
       >
         <div
@@ -8174,7 +8174,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-holden/"
       >
         <div
@@ -8221,7 +8221,7 @@ exports[`CastAndCrew > can filter performers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-powell/"
       >
         <div
@@ -8275,7 +8275,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/abel-ferrara/"
       >
         <div
@@ -8330,7 +8330,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/alfred-hitchcock/"
       >
         <div
@@ -8381,7 +8381,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/bela-lugosi/"
       >
         <div
@@ -8433,7 +8433,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ben-johnson/"
       >
         <div
@@ -8480,7 +8480,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/bette-davis/"
       >
         <div
@@ -8527,7 +8527,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/billy-wilder/"
       >
         <div
@@ -8578,7 +8578,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/boris-karloff/"
       >
         <div
@@ -8625,7 +8625,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/brian-de-palma/"
       >
         <div
@@ -8676,7 +8676,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/burt-reynolds/"
       >
         <div
@@ -8731,7 +8731,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/cary-grant/"
       >
         <div
@@ -8778,7 +8778,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/christopher-lee/"
       >
         <div
@@ -8825,7 +8825,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/clive-barker/"
       >
         <div
@@ -8880,7 +8880,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dario-argento/"
       >
         <div
@@ -8935,7 +8935,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-cronenberg/"
       >
         <div
@@ -8990,7 +8990,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-lean/"
       >
         <div
@@ -9041,7 +9041,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-mamet/"
       >
         <div
@@ -9096,7 +9096,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dean-martin/"
       >
         <div
@@ -9143,7 +9143,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/errol-flynn/"
       >
         <div
@@ -9194,7 +9194,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/frank-sinatra/"
       >
         <div
@@ -9245,7 +9245,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/fritz-lang/"
       >
         <div
@@ -9296,7 +9296,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/gene-hackman/"
       >
         <div
@@ -9343,7 +9343,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/george-a-romero/"
       >
         <div
@@ -9398,7 +9398,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/howard-hawks/"
       >
         <div
@@ -9449,7 +9449,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/humphrey-bogart/"
       >
         <div
@@ -9496,7 +9496,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ingmar-bergman/"
       >
         <div
@@ -9551,7 +9551,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-lemmon/"
       >
         <div
@@ -9598,7 +9598,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-nicholson/"
       >
         <div
@@ -9653,7 +9653,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/james-coburn/"
       >
         <div
@@ -9704,7 +9704,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/james-stewart/"
       >
         <div
@@ -9751,7 +9751,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-boorman/"
       >
         <div
@@ -9806,7 +9806,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-carpenter/"
       >
         <div
@@ -9861,7 +9861,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-ford/"
       >
         <div
@@ -9912,7 +9912,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-frankenheimer/"
       >
         <div
@@ -9964,7 +9964,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-huston/"
       >
         <div
@@ -10019,7 +10019,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-sturges/"
       >
         <div
@@ -10066,7 +10066,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-wayne/"
       >
         <div
@@ -10117,7 +10117,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ken-russell/"
       >
         <div
@@ -10172,7 +10172,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lee-marvin/"
       >
         <div
@@ -10219,7 +10219,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/leigh-brackett/"
       >
         <div
@@ -10266,7 +10266,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lucio-fulci/"
       >
         <div
@@ -10321,7 +10321,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/luis-bunuel/"
       >
         <div
@@ -10372,7 +10372,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/marilyn-monroe/"
       >
         <div
@@ -10419,7 +10419,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/mario-bava/"
       >
         <div
@@ -10470,7 +10470,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michael-haneke/"
       >
         <div
@@ -10521,7 +10521,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michele-soavi/"
       >
         <div
@@ -10576,7 +10576,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/neil-labute/"
       >
         <div
@@ -10627,7 +10627,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/paul-thomas-anderson/"
       >
         <div
@@ -10678,7 +10678,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/peter-cushing/"
       >
         <div
@@ -10725,7 +10725,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/raymond-chandler/"
       >
         <div
@@ -10772,7 +10772,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-altman/"
       >
         <div
@@ -10823,7 +10823,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-mitchum/"
       >
         <div
@@ -10874,7 +10874,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roger-corman/"
       >
         <div
@@ -10929,7 +10929,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roman-polanski/"
       >
         <div
@@ -10984,7 +10984,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sam-peckinpah/"
       >
         <div
@@ -11039,7 +11039,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sidney-lumet/"
       >
         <div
@@ -11090,7 +11090,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stanley-kubrick/"
       >
         <div
@@ -11141,7 +11141,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stephen-king/"
       >
         <div
@@ -11196,7 +11196,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/steve-mcqueen/"
       >
         <div
@@ -11243,7 +11243,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tobe-hooper/"
       >
         <div
@@ -11298,7 +11298,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tod-browning/"
       >
         <div
@@ -11349,7 +11349,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tony-scott/"
       >
         <div
@@ -11400,7 +11400,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/vincent-price/"
       >
         <div
@@ -11452,7 +11452,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ward-bond/"
       >
         <div
@@ -11499,7 +11499,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/warren-oates/"
       >
         <div
@@ -11546,7 +11546,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/wes-craven/"
       >
         <div
@@ -11601,7 +11601,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-friedkin/"
       >
         <div
@@ -11656,7 +11656,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-holden/"
       >
         <div
@@ -11703,7 +11703,7 @@ exports[`CastAndCrew > can filter performers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-powell/"
       >
         <div
@@ -11757,7 +11757,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/abel-ferrara/"
       >
         <div
@@ -11812,7 +11812,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/alfred-hitchcock/"
       >
         <div
@@ -11863,7 +11863,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/billy-wilder/"
       >
         <div
@@ -11914,7 +11914,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/brian-de-palma/"
       >
         <div
@@ -11965,7 +11965,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/burt-reynolds/"
       >
         <div
@@ -12020,7 +12020,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/clive-barker/"
       >
         <div
@@ -12075,7 +12075,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dario-argento/"
       >
         <div
@@ -12130,7 +12130,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-cronenberg/"
       >
         <div
@@ -12185,7 +12185,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-lean/"
       >
         <div
@@ -12236,7 +12236,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-mamet/"
       >
         <div
@@ -12291,7 +12291,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/errol-flynn/"
       >
         <div
@@ -12342,7 +12342,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/fritz-lang/"
       >
         <div
@@ -12393,7 +12393,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/george-a-romero/"
       >
         <div
@@ -12448,7 +12448,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/howard-hawks/"
       >
         <div
@@ -12499,7 +12499,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ingmar-bergman/"
       >
         <div
@@ -12554,7 +12554,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-nicholson/"
       >
         <div
@@ -12609,7 +12609,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/james-coburn/"
       >
         <div
@@ -12660,7 +12660,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-boorman/"
       >
         <div
@@ -12715,7 +12715,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-carpenter/"
       >
         <div
@@ -12770,7 +12770,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-ford/"
       >
         <div
@@ -12826,7 +12826,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-huston/"
       >
         <div
@@ -12881,7 +12881,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ken-russell/"
       >
         <div
@@ -12936,7 +12936,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/leigh-brackett/"
       >
         <div
@@ -12983,7 +12983,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lucio-fulci/"
       >
         <div
@@ -13038,7 +13038,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/luis-bunuel/"
       >
         <div
@@ -13089,7 +13089,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/mario-bava/"
       >
         <div
@@ -13140,7 +13140,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michael-haneke/"
       >
         <div
@@ -13191,7 +13191,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michele-soavi/"
       >
         <div
@@ -13246,7 +13246,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/neil-labute/"
       >
         <div
@@ -13297,7 +13297,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/paul-thomas-anderson/"
       >
         <div
@@ -13348,7 +13348,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/raymond-chandler/"
       >
         <div
@@ -13395,7 +13395,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-altman/"
       >
         <div
@@ -13446,7 +13446,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-mitchum/"
       >
         <div
@@ -13497,7 +13497,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roger-corman/"
       >
         <div
@@ -13552,7 +13552,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roman-polanski/"
       >
         <div
@@ -13607,7 +13607,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sam-peckinpah/"
       >
         <div
@@ -13662,7 +13662,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sidney-lumet/"
       >
         <div
@@ -13713,7 +13713,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stanley-kubrick/"
       >
         <div
@@ -13764,7 +13764,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stephen-king/"
       >
         <div
@@ -13819,7 +13819,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tobe-hooper/"
       >
         <div
@@ -13874,7 +13874,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tod-browning/"
       >
         <div
@@ -13925,7 +13925,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tony-scott/"
       >
         <div
@@ -13976,7 +13976,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/wes-craven/"
       >
         <div
@@ -14031,7 +14031,7 @@ exports[`CastAndCrew > can filter writers 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-friedkin/"
       >
         <div
@@ -14093,7 +14093,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/abel-ferrara/"
       >
         <div
@@ -14148,7 +14148,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/alfred-hitchcock/"
       >
         <div
@@ -14199,7 +14199,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/bela-lugosi/"
       >
         <div
@@ -14251,7 +14251,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ben-johnson/"
       >
         <div
@@ -14298,7 +14298,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/bette-davis/"
       >
         <div
@@ -14345,7 +14345,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/billy-wilder/"
       >
         <div
@@ -14396,7 +14396,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/boris-karloff/"
       >
         <div
@@ -14443,7 +14443,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/brian-de-palma/"
       >
         <div
@@ -14494,7 +14494,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/burt-reynolds/"
       >
         <div
@@ -14549,7 +14549,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/cary-grant/"
       >
         <div
@@ -14596,7 +14596,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/christopher-lee/"
       >
         <div
@@ -14643,7 +14643,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/clive-barker/"
       >
         <div
@@ -14698,7 +14698,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dario-argento/"
       >
         <div
@@ -14753,7 +14753,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-cronenberg/"
       >
         <div
@@ -14808,7 +14808,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-lean/"
       >
         <div
@@ -14859,7 +14859,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-mamet/"
       >
         <div
@@ -14914,7 +14914,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dean-martin/"
       >
         <div
@@ -14961,7 +14961,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/errol-flynn/"
       >
         <div
@@ -15012,7 +15012,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/frank-sinatra/"
       >
         <div
@@ -15063,7 +15063,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/fritz-lang/"
       >
         <div
@@ -15114,7 +15114,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/gene-hackman/"
       >
         <div
@@ -15161,7 +15161,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/george-a-romero/"
       >
         <div
@@ -15216,7 +15216,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/howard-hawks/"
       >
         <div
@@ -15267,7 +15267,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/humphrey-bogart/"
       >
         <div
@@ -15314,7 +15314,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ingmar-bergman/"
       >
         <div
@@ -15369,7 +15369,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-lemmon/"
       >
         <div
@@ -15416,7 +15416,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-nicholson/"
       >
         <div
@@ -15471,7 +15471,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/james-coburn/"
       >
         <div
@@ -15522,7 +15522,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/james-stewart/"
       >
         <div
@@ -15569,7 +15569,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-boorman/"
       >
         <div
@@ -15624,7 +15624,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-carpenter/"
       >
         <div
@@ -15679,7 +15679,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-ford/"
       >
         <div
@@ -15730,7 +15730,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-frankenheimer/"
       >
         <div
@@ -15782,7 +15782,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-huston/"
       >
         <div
@@ -15837,7 +15837,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-sturges/"
       >
         <div
@@ -15884,7 +15884,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-wayne/"
       >
         <div
@@ -15935,7 +15935,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ken-russell/"
       >
         <div
@@ -15990,7 +15990,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lee-marvin/"
       >
         <div
@@ -16037,7 +16037,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/leigh-brackett/"
       >
         <div
@@ -16084,7 +16084,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lucio-fulci/"
       >
         <div
@@ -16139,7 +16139,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/luis-bunuel/"
       >
         <div
@@ -16190,7 +16190,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/marilyn-monroe/"
       >
         <div
@@ -16237,7 +16237,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/mario-bava/"
       >
         <div
@@ -16288,7 +16288,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michael-haneke/"
       >
         <div
@@ -16339,7 +16339,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michele-soavi/"
       >
         <div
@@ -16394,7 +16394,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/neil-labute/"
       >
         <div
@@ -16445,7 +16445,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/paul-thomas-anderson/"
       >
         <div
@@ -16496,7 +16496,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/peter-cushing/"
       >
         <div
@@ -16543,7 +16543,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/raymond-chandler/"
       >
         <div
@@ -16590,7 +16590,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-altman/"
       >
         <div
@@ -16641,7 +16641,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-mitchum/"
       >
         <div
@@ -16692,7 +16692,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roger-corman/"
       >
         <div
@@ -16747,7 +16747,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roman-polanski/"
       >
         <div
@@ -16802,7 +16802,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sam-peckinpah/"
       >
         <div
@@ -16857,7 +16857,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sidney-lumet/"
       >
         <div
@@ -16908,7 +16908,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stanley-kubrick/"
       >
         <div
@@ -16959,7 +16959,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stephen-king/"
       >
         <div
@@ -17014,7 +17014,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/steve-mcqueen/"
       >
         <div
@@ -17061,7 +17061,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tobe-hooper/"
       >
         <div
@@ -17116,7 +17116,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tod-browning/"
       >
         <div
@@ -17167,7 +17167,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tony-scott/"
       >
         <div
@@ -17218,7 +17218,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/vincent-price/"
       >
         <div
@@ -17270,7 +17270,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ward-bond/"
       >
         <div
@@ -17317,7 +17317,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/warren-oates/"
       >
         <div
@@ -17364,7 +17364,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/wes-craven/"
       >
         <div
@@ -17419,7 +17419,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-friedkin/"
       >
         <div
@@ -17474,7 +17474,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-holden/"
       >
         <div
@@ -17521,7 +17521,7 @@ exports[`CastAndCrew > can filter writers then show all 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-powell/"
       >
         <div
@@ -17575,7 +17575,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/abel-ferrara/"
       >
         <div
@@ -17630,7 +17630,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/alfred-hitchcock/"
       >
         <div
@@ -17681,7 +17681,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/bela-lugosi/"
       >
         <div
@@ -17733,7 +17733,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ben-johnson/"
       >
         <div
@@ -17780,7 +17780,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/bette-davis/"
       >
         <div
@@ -17827,7 +17827,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/billy-wilder/"
       >
         <div
@@ -17878,7 +17878,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/boris-karloff/"
       >
         <div
@@ -17925,7 +17925,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/brian-de-palma/"
       >
         <div
@@ -17976,7 +17976,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/burt-reynolds/"
       >
         <div
@@ -18031,7 +18031,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/cary-grant/"
       >
         <div
@@ -18078,7 +18078,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/christopher-lee/"
       >
         <div
@@ -18125,7 +18125,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/clive-barker/"
       >
         <div
@@ -18180,7 +18180,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dario-argento/"
       >
         <div
@@ -18235,7 +18235,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-cronenberg/"
       >
         <div
@@ -18290,7 +18290,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-lean/"
       >
         <div
@@ -18341,7 +18341,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-mamet/"
       >
         <div
@@ -18396,7 +18396,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dean-martin/"
       >
         <div
@@ -18443,7 +18443,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/errol-flynn/"
       >
         <div
@@ -18494,7 +18494,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/frank-sinatra/"
       >
         <div
@@ -18545,7 +18545,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/fritz-lang/"
       >
         <div
@@ -18596,7 +18596,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/gene-hackman/"
       >
         <div
@@ -18643,7 +18643,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/george-a-romero/"
       >
         <div
@@ -18698,7 +18698,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/howard-hawks/"
       >
         <div
@@ -18749,7 +18749,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/humphrey-bogart/"
       >
         <div
@@ -18796,7 +18796,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ingmar-bergman/"
       >
         <div
@@ -18851,7 +18851,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-lemmon/"
       >
         <div
@@ -18898,7 +18898,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-nicholson/"
       >
         <div
@@ -18953,7 +18953,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/james-coburn/"
       >
         <div
@@ -19004,7 +19004,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/james-stewart/"
       >
         <div
@@ -19051,7 +19051,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-boorman/"
       >
         <div
@@ -19106,7 +19106,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-carpenter/"
       >
         <div
@@ -19161,7 +19161,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-ford/"
       >
         <div
@@ -19212,7 +19212,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-frankenheimer/"
       >
         <div
@@ -19264,7 +19264,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-huston/"
       >
         <div
@@ -19319,7 +19319,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-sturges/"
       >
         <div
@@ -19366,7 +19366,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-wayne/"
       >
         <div
@@ -19417,7 +19417,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ken-russell/"
       >
         <div
@@ -19472,7 +19472,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lee-marvin/"
       >
         <div
@@ -19519,7 +19519,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/leigh-brackett/"
       >
         <div
@@ -19566,7 +19566,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lucio-fulci/"
       >
         <div
@@ -19621,7 +19621,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/luis-bunuel/"
       >
         <div
@@ -19672,7 +19672,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/marilyn-monroe/"
       >
         <div
@@ -19719,7 +19719,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/mario-bava/"
       >
         <div
@@ -19770,7 +19770,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michael-haneke/"
       >
         <div
@@ -19821,7 +19821,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michele-soavi/"
       >
         <div
@@ -19876,7 +19876,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/neil-labute/"
       >
         <div
@@ -19927,7 +19927,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/paul-thomas-anderson/"
       >
         <div
@@ -19978,7 +19978,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/peter-cushing/"
       >
         <div
@@ -20025,7 +20025,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/raymond-chandler/"
       >
         <div
@@ -20072,7 +20072,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-altman/"
       >
         <div
@@ -20123,7 +20123,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-mitchum/"
       >
         <div
@@ -20174,7 +20174,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roger-corman/"
       >
         <div
@@ -20229,7 +20229,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roman-polanski/"
       >
         <div
@@ -20284,7 +20284,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sam-peckinpah/"
       >
         <div
@@ -20339,7 +20339,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sidney-lumet/"
       >
         <div
@@ -20390,7 +20390,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stanley-kubrick/"
       >
         <div
@@ -20441,7 +20441,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stephen-king/"
       >
         <div
@@ -20496,7 +20496,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/steve-mcqueen/"
       >
         <div
@@ -20543,7 +20543,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tobe-hooper/"
       >
         <div
@@ -20598,7 +20598,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tod-browning/"
       >
         <div
@@ -20649,7 +20649,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tony-scott/"
       >
         <div
@@ -20700,7 +20700,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/vincent-price/"
       >
         <div
@@ -20752,7 +20752,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ward-bond/"
       >
         <div
@@ -20799,7 +20799,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/warren-oates/"
       >
         <div
@@ -20846,7 +20846,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/wes-craven/"
       >
         <div
@@ -20901,7 +20901,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-friedkin/"
       >
         <div
@@ -20956,7 +20956,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-holden/"
       >
         <div
@@ -21003,7 +21003,7 @@ exports[`CastAndCrew > can sort by name asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-powell/"
       >
         <div
@@ -21057,7 +21057,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-powell/"
       >
         <div
@@ -21104,7 +21104,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-holden/"
       >
         <div
@@ -21151,7 +21151,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-friedkin/"
       >
         <div
@@ -21206,7 +21206,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/wes-craven/"
       >
         <div
@@ -21261,7 +21261,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/warren-oates/"
       >
         <div
@@ -21313,7 +21313,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ward-bond/"
       >
         <div
@@ -21360,7 +21360,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/vincent-price/"
       >
         <div
@@ -21407,7 +21407,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tony-scott/"
       >
         <div
@@ -21458,7 +21458,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tod-browning/"
       >
         <div
@@ -21509,7 +21509,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tobe-hooper/"
       >
         <div
@@ -21564,7 +21564,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/steve-mcqueen/"
       >
         <div
@@ -21611,7 +21611,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stephen-king/"
       >
         <div
@@ -21666,7 +21666,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stanley-kubrick/"
       >
         <div
@@ -21717,7 +21717,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sidney-lumet/"
       >
         <div
@@ -21768,7 +21768,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sam-peckinpah/"
       >
         <div
@@ -21823,7 +21823,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roman-polanski/"
       >
         <div
@@ -21878,7 +21878,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roger-corman/"
       >
         <div
@@ -21933,7 +21933,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-mitchum/"
       >
         <div
@@ -21984,7 +21984,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-altman/"
       >
         <div
@@ -22035,7 +22035,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/raymond-chandler/"
       >
         <div
@@ -22082,7 +22082,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/peter-cushing/"
       >
         <div
@@ -22129,7 +22129,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/paul-thomas-anderson/"
       >
         <div
@@ -22180,7 +22180,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/neil-labute/"
       >
         <div
@@ -22231,7 +22231,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michele-soavi/"
       >
         <div
@@ -22286,7 +22286,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michael-haneke/"
       >
         <div
@@ -22337,7 +22337,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/mario-bava/"
       >
         <div
@@ -22388,7 +22388,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/marilyn-monroe/"
       >
         <div
@@ -22435,7 +22435,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/luis-bunuel/"
       >
         <div
@@ -22486,7 +22486,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lucio-fulci/"
       >
         <div
@@ -22541,7 +22541,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/leigh-brackett/"
       >
         <div
@@ -22588,7 +22588,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lee-marvin/"
       >
         <div
@@ -22635,7 +22635,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ken-russell/"
       >
         <div
@@ -22690,7 +22690,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-wayne/"
       >
         <div
@@ -22741,7 +22741,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-sturges/"
       >
         <div
@@ -22793,7 +22793,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-huston/"
       >
         <div
@@ -22848,7 +22848,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-frankenheimer/"
       >
         <div
@@ -22895,7 +22895,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-ford/"
       >
         <div
@@ -22946,7 +22946,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-carpenter/"
       >
         <div
@@ -23001,7 +23001,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-boorman/"
       >
         <div
@@ -23056,7 +23056,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/james-stewart/"
       >
         <div
@@ -23103,7 +23103,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/james-coburn/"
       >
         <div
@@ -23154,7 +23154,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-nicholson/"
       >
         <div
@@ -23209,7 +23209,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-lemmon/"
       >
         <div
@@ -23256,7 +23256,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ingmar-bergman/"
       >
         <div
@@ -23311,7 +23311,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/humphrey-bogart/"
       >
         <div
@@ -23358,7 +23358,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/howard-hawks/"
       >
         <div
@@ -23409,7 +23409,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/george-a-romero/"
       >
         <div
@@ -23464,7 +23464,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/gene-hackman/"
       >
         <div
@@ -23511,7 +23511,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/fritz-lang/"
       >
         <div
@@ -23562,7 +23562,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/frank-sinatra/"
       >
         <div
@@ -23613,7 +23613,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/errol-flynn/"
       >
         <div
@@ -23664,7 +23664,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dean-martin/"
       >
         <div
@@ -23711,7 +23711,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-mamet/"
       >
         <div
@@ -23766,7 +23766,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-lean/"
       >
         <div
@@ -23817,7 +23817,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-cronenberg/"
       >
         <div
@@ -23872,7 +23872,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dario-argento/"
       >
         <div
@@ -23927,7 +23927,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/clive-barker/"
       >
         <div
@@ -23982,7 +23982,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/christopher-lee/"
       >
         <div
@@ -24029,7 +24029,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/cary-grant/"
       >
         <div
@@ -24076,7 +24076,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/burt-reynolds/"
       >
         <div
@@ -24131,7 +24131,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/brian-de-palma/"
       >
         <div
@@ -24182,7 +24182,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/boris-karloff/"
       >
         <div
@@ -24229,7 +24229,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/billy-wilder/"
       >
         <div
@@ -24280,7 +24280,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/bette-davis/"
       >
         <div
@@ -24332,7 +24332,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ben-johnson/"
       >
         <div
@@ -24379,7 +24379,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/bela-lugosi/"
       >
         <div
@@ -24426,7 +24426,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/alfred-hitchcock/"
       >
         <div
@@ -24477,7 +24477,7 @@ exports[`CastAndCrew > can sort by name desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/abel-ferrara/"
       >
         <div
@@ -24539,7 +24539,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/abel-ferrara/"
       >
         <div
@@ -24599,7 +24599,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ben-johnson/"
       >
         <div
@@ -24646,7 +24646,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-lean/"
       >
         <div
@@ -24697,7 +24697,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-mamet/"
       >
         <div
@@ -24752,7 +24752,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dean-martin/"
       >
         <div
@@ -24799,7 +24799,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/george-a-romero/"
       >
         <div
@@ -24854,7 +24854,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-boorman/"
       >
         <div
@@ -24909,7 +24909,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ken-russell/"
       >
         <div
@@ -24964,7 +24964,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/leigh-brackett/"
       >
         <div
@@ -25011,7 +25011,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/luis-bunuel/"
       >
         <div
@@ -25062,7 +25062,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/marilyn-monroe/"
       >
         <div
@@ -25109,7 +25109,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/neil-labute/"
       >
         <div
@@ -25160,7 +25160,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/paul-thomas-anderson/"
       >
         <div
@@ -25211,7 +25211,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roger-corman/"
       >
         <div
@@ -25266,7 +25266,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roman-polanski/"
       >
         <div
@@ -25321,7 +25321,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sidney-lumet/"
       >
         <div
@@ -25372,7 +25372,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stanley-kubrick/"
       >
         <div
@@ -25423,7 +25423,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stephen-king/"
       >
         <div
@@ -25478,7 +25478,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tobe-hooper/"
       >
         <div
@@ -25533,7 +25533,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tony-scott/"
       >
         <div
@@ -25584,7 +25584,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/billy-wilder/"
       >
         <div
@@ -25635,7 +25635,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/burt-reynolds/"
       >
         <div
@@ -25690,7 +25690,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/errol-flynn/"
       >
         <div
@@ -25741,7 +25741,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/frank-sinatra/"
       >
         <div
@@ -25792,7 +25792,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/gene-hackman/"
       >
         <div
@@ -25839,7 +25839,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/james-stewart/"
       >
         <div
@@ -25886,7 +25886,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-frankenheimer/"
       >
         <div
@@ -25933,7 +25933,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lee-marvin/"
       >
         <div
@@ -25980,7 +25980,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/mario-bava/"
       >
         <div
@@ -26031,7 +26031,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michele-soavi/"
       >
         <div
@@ -26086,7 +26086,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/raymond-chandler/"
       >
         <div
@@ -26133,7 +26133,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-altman/"
       >
         <div
@@ -26184,7 +26184,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/fritz-lang/"
       >
         <div
@@ -26235,7 +26235,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-lemmon/"
       >
         <div
@@ -26287,7 +26287,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-huston/"
       >
         <div
@@ -26342,7 +26342,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-sturges/"
       >
         <div
@@ -26389,7 +26389,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/steve-mcqueen/"
       >
         <div
@@ -26436,7 +26436,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-friedkin/"
       >
         <div
@@ -26491,7 +26491,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-nicholson/"
       >
         <div
@@ -26546,7 +26546,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-carpenter/"
       >
         <div
@@ -26601,7 +26601,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sam-peckinpah/"
       >
         <div
@@ -26656,7 +26656,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/alfred-hitchcock/"
       >
         <div
@@ -26707,7 +26707,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/clive-barker/"
       >
         <div
@@ -26762,7 +26762,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dario-argento/"
       >
         <div
@@ -26817,7 +26817,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/howard-hawks/"
       >
         <div
@@ -26868,7 +26868,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michael-haneke/"
       >
         <div
@@ -26919,7 +26919,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/vincent-price/"
       >
         <div
@@ -26971,7 +26971,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ward-bond/"
       >
         <div
@@ -27018,7 +27018,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/warren-oates/"
       >
         <div
@@ -27065,7 +27065,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tod-browning/"
       >
         <div
@@ -27116,7 +27116,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-holden/"
       >
         <div
@@ -27163,7 +27163,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/cary-grant/"
       >
         <div
@@ -27210,7 +27210,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-cronenberg/"
       >
         <div
@@ -27265,7 +27265,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/james-coburn/"
       >
         <div
@@ -27316,7 +27316,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/wes-craven/"
       >
         <div
@@ -27371,7 +27371,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/bela-lugosi/"
       >
         <div
@@ -27418,7 +27418,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lucio-fulci/"
       >
         <div
@@ -27473,7 +27473,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-ford/"
       >
         <div
@@ -27524,7 +27524,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-mitchum/"
       >
         <div
@@ -27575,7 +27575,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/bette-davis/"
       >
         <div
@@ -27622,7 +27622,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/peter-cushing/"
       >
         <div
@@ -27669,7 +27669,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/brian-de-palma/"
       >
         <div
@@ -27720,7 +27720,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/christopher-lee/"
       >
         <div
@@ -27767,7 +27767,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/boris-karloff/"
       >
         <div
@@ -27814,7 +27814,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ingmar-bergman/"
       >
         <div
@@ -27869,7 +27869,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-wayne/"
       >
         <div
@@ -27920,7 +27920,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/humphrey-bogart/"
       >
         <div
@@ -27967,7 +27967,7 @@ exports[`CastAndCrew > can sort by review count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-powell/"
       >
         <div
@@ -28021,7 +28021,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-powell/"
       >
         <div
@@ -28068,7 +28068,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/humphrey-bogart/"
       >
         <div
@@ -28115,7 +28115,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-wayne/"
       >
         <div
@@ -28166,7 +28166,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ingmar-bergman/"
       >
         <div
@@ -28221,7 +28221,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/boris-karloff/"
       >
         <div
@@ -28268,7 +28268,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/brian-de-palma/"
       >
         <div
@@ -28319,7 +28319,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/christopher-lee/"
       >
         <div
@@ -28366,7 +28366,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/bette-davis/"
       >
         <div
@@ -28413,7 +28413,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/peter-cushing/"
       >
         <div
@@ -28460,7 +28460,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-ford/"
       >
         <div
@@ -28511,7 +28511,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-mitchum/"
       >
         <div
@@ -28562,7 +28562,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/bela-lugosi/"
       >
         <div
@@ -28609,7 +28609,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lucio-fulci/"
       >
         <div
@@ -28664,7 +28664,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/cary-grant/"
       >
         <div
@@ -28711,7 +28711,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-cronenberg/"
       >
         <div
@@ -28766,7 +28766,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/james-coburn/"
       >
         <div
@@ -28817,7 +28817,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/wes-craven/"
       >
         <div
@@ -28872,7 +28872,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tod-browning/"
       >
         <div
@@ -28923,7 +28923,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-holden/"
       >
         <div
@@ -28970,7 +28970,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/alfred-hitchcock/"
       >
         <div
@@ -29021,7 +29021,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/clive-barker/"
       >
         <div
@@ -29076,7 +29076,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dario-argento/"
       >
         <div
@@ -29131,7 +29131,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/howard-hawks/"
       >
         <div
@@ -29182,7 +29182,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michael-haneke/"
       >
         <div
@@ -29233,7 +29233,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/vincent-price/"
       >
         <div
@@ -29285,7 +29285,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ward-bond/"
       >
         <div
@@ -29332,7 +29332,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/warren-oates/"
       >
         <div
@@ -29379,7 +29379,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-nicholson/"
       >
         <div
@@ -29434,7 +29434,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-carpenter/"
       >
         <div
@@ -29489,7 +29489,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sam-peckinpah/"
       >
         <div
@@ -29544,7 +29544,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/fritz-lang/"
       >
         <div
@@ -29595,7 +29595,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-lemmon/"
       >
         <div
@@ -29647,7 +29647,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-huston/"
       >
         <div
@@ -29702,7 +29702,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-sturges/"
       >
         <div
@@ -29749,7 +29749,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/steve-mcqueen/"
       >
         <div
@@ -29796,7 +29796,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-friedkin/"
       >
         <div
@@ -29851,7 +29851,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/billy-wilder/"
       >
         <div
@@ -29902,7 +29902,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/burt-reynolds/"
       >
         <div
@@ -29957,7 +29957,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/errol-flynn/"
       >
         <div
@@ -30008,7 +30008,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/frank-sinatra/"
       >
         <div
@@ -30059,7 +30059,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/gene-hackman/"
       >
         <div
@@ -30106,7 +30106,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/james-stewart/"
       >
         <div
@@ -30153,7 +30153,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-frankenheimer/"
       >
         <div
@@ -30200,7 +30200,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lee-marvin/"
       >
         <div
@@ -30247,7 +30247,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/mario-bava/"
       >
         <div
@@ -30298,7 +30298,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michele-soavi/"
       >
         <div
@@ -30353,7 +30353,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/raymond-chandler/"
       >
         <div
@@ -30400,7 +30400,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-altman/"
       >
         <div
@@ -30451,7 +30451,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/abel-ferrara/"
       >
         <div
@@ -30511,7 +30511,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ben-johnson/"
       >
         <div
@@ -30558,7 +30558,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-lean/"
       >
         <div
@@ -30609,7 +30609,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-mamet/"
       >
         <div
@@ -30664,7 +30664,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dean-martin/"
       >
         <div
@@ -30711,7 +30711,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/george-a-romero/"
       >
         <div
@@ -30766,7 +30766,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-boorman/"
       >
         <div
@@ -30821,7 +30821,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ken-russell/"
       >
         <div
@@ -30876,7 +30876,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/leigh-brackett/"
       >
         <div
@@ -30923,7 +30923,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/luis-bunuel/"
       >
         <div
@@ -30974,7 +30974,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/marilyn-monroe/"
       >
         <div
@@ -31021,7 +31021,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/neil-labute/"
       >
         <div
@@ -31072,7 +31072,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/paul-thomas-anderson/"
       >
         <div
@@ -31123,7 +31123,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roger-corman/"
       >
         <div
@@ -31178,7 +31178,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roman-polanski/"
       >
         <div
@@ -31233,7 +31233,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sidney-lumet/"
       >
         <div
@@ -31284,7 +31284,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stanley-kubrick/"
       >
         <div
@@ -31335,7 +31335,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stephen-king/"
       >
         <div
@@ -31390,7 +31390,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tobe-hooper/"
       >
         <div
@@ -31445,7 +31445,7 @@ exports[`CastAndCrew > can sort by review count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tony-scott/"
       >
         <div
@@ -31503,7 +31503,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tod-browning/"
       >
         <div
@@ -31554,7 +31554,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/paul-thomas-anderson/"
       >
         <div
@@ -31605,7 +31605,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/leigh-brackett/"
       >
         <div
@@ -31652,7 +31652,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stanley-kubrick/"
       >
         <div
@@ -31703,7 +31703,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/neil-labute/"
       >
         <div
@@ -31754,7 +31754,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-lean/"
       >
         <div
@@ -31805,7 +31805,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/clive-barker/"
       >
         <div
@@ -31860,7 +31860,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-boorman/"
       >
         <div
@@ -31915,7 +31915,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sam-peckinpah/"
       >
         <div
@@ -31970,7 +31970,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tony-scott/"
       >
         <div
@@ -32021,7 +32021,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/raymond-chandler/"
       >
         <div
@@ -32073,7 +32073,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ben-johnson/"
       >
         <div
@@ -32120,7 +32120,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/george-a-romero/"
       >
         <div
@@ -32175,7 +32175,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tobe-hooper/"
       >
         <div
@@ -32230,7 +32230,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michael-haneke/"
       >
         <div
@@ -32281,7 +32281,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michele-soavi/"
       >
         <div
@@ -32336,7 +32336,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-carpenter/"
       >
         <div
@@ -32391,7 +32391,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/abel-ferrara/"
       >
         <div
@@ -32446,7 +32446,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dario-argento/"
       >
         <div
@@ -32501,7 +32501,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-friedkin/"
       >
         <div
@@ -32556,7 +32556,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roman-polanski/"
       >
         <div
@@ -32611,7 +32611,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/marilyn-monroe/"
       >
         <div
@@ -32658,7 +32658,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/mario-bava/"
       >
         <div
@@ -32709,7 +32709,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/wes-craven/"
       >
         <div
@@ -32764,7 +32764,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-cronenberg/"
       >
         <div
@@ -32819,7 +32819,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/steve-mcqueen/"
       >
         <div
@@ -32866,7 +32866,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/billy-wilder/"
       >
         <div
@@ -32917,7 +32917,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-mamet/"
       >
         <div
@@ -32972,7 +32972,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/fritz-lang/"
       >
         <div
@@ -33023,7 +33023,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/brian-de-palma/"
       >
         <div
@@ -33074,7 +33074,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/luis-bunuel/"
       >
         <div
@@ -33125,7 +33125,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-frankenheimer/"
       >
         <div
@@ -33172,7 +33172,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lucio-fulci/"
       >
         <div
@@ -33227,7 +33227,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/howard-hawks/"
       >
         <div
@@ -33278,7 +33278,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ken-russell/"
       >
         <div
@@ -33333,7 +33333,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dean-martin/"
       >
         <div
@@ -33380,7 +33380,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-sturges/"
       >
         <div
@@ -33432,7 +33432,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ward-bond/"
       >
         <div
@@ -33479,7 +33479,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-altman/"
       >
         <div
@@ -33530,7 +33530,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/alfred-hitchcock/"
       >
         <div
@@ -33581,7 +33581,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sidney-lumet/"
       >
         <div
@@ -33632,7 +33632,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/warren-oates/"
       >
         <div
@@ -33684,7 +33684,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-huston/"
       >
         <div
@@ -33739,7 +33739,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/frank-sinatra/"
       >
         <div
@@ -33790,7 +33790,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lee-marvin/"
       >
         <div
@@ -33837,7 +33837,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roger-corman/"
       >
         <div
@@ -33892,7 +33892,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/errol-flynn/"
       >
         <div
@@ -33943,7 +33943,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ingmar-bergman/"
       >
         <div
@@ -33998,7 +33998,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-ford/"
       >
         <div
@@ -34049,7 +34049,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-powell/"
       >
         <div
@@ -34096,7 +34096,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-nicholson/"
       >
         <div
@@ -34151,7 +34151,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-lemmon/"
       >
         <div
@@ -34198,7 +34198,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/bela-lugosi/"
       >
         <div
@@ -34245,7 +34245,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-holden/"
       >
         <div
@@ -34292,7 +34292,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/cary-grant/"
       >
         <div
@@ -34339,7 +34339,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/humphrey-bogart/"
       >
         <div
@@ -34386,7 +34386,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/gene-hackman/"
       >
         <div
@@ -34433,7 +34433,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stephen-king/"
       >
         <div
@@ -34488,7 +34488,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/james-stewart/"
       >
         <div
@@ -34535,7 +34535,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/james-coburn/"
       >
         <div
@@ -34586,7 +34586,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/peter-cushing/"
       >
         <div
@@ -34633,7 +34633,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/boris-karloff/"
       >
         <div
@@ -34680,7 +34680,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/bette-davis/"
       >
         <div
@@ -34727,7 +34727,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/vincent-price/"
       >
         <div
@@ -34774,7 +34774,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/burt-reynolds/"
       >
         <div
@@ -34829,7 +34829,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-mitchum/"
       >
         <div
@@ -34880,7 +34880,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-wayne/"
       >
         <div
@@ -34931,7 +34931,7 @@ exports[`CastAndCrew > can sort by title count asc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/christopher-lee/"
       >
         <div
@@ -34985,7 +34985,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/christopher-lee/"
       >
         <div
@@ -35032,7 +35032,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-wayne/"
       >
         <div
@@ -35083,7 +35083,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-mitchum/"
       >
         <div
@@ -35134,7 +35134,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/burt-reynolds/"
       >
         <div
@@ -35189,7 +35189,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/vincent-price/"
       >
         <div
@@ -35236,7 +35236,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/bette-davis/"
       >
         <div
@@ -35283,7 +35283,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/boris-karloff/"
       >
         <div
@@ -35330,7 +35330,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/peter-cushing/"
       >
         <div
@@ -35377,7 +35377,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/james-coburn/"
       >
         <div
@@ -35428,7 +35428,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/james-stewart/"
       >
         <div
@@ -35475,7 +35475,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/gene-hackman/"
       >
         <div
@@ -35522,7 +35522,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stephen-king/"
       >
         <div
@@ -35577,7 +35577,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/humphrey-bogart/"
       >
         <div
@@ -35624,7 +35624,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/cary-grant/"
       >
         <div
@@ -35671,7 +35671,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-holden/"
       >
         <div
@@ -35718,7 +35718,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/bela-lugosi/"
       >
         <div
@@ -35765,7 +35765,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-lemmon/"
       >
         <div
@@ -35812,7 +35812,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/jack-nicholson/"
       >
         <div
@@ -35867,7 +35867,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-powell/"
       >
         <div
@@ -35914,7 +35914,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-ford/"
       >
         <div
@@ -35965,7 +35965,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ingmar-bergman/"
       >
         <div
@@ -36020,7 +36020,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/errol-flynn/"
       >
         <div
@@ -36071,7 +36071,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/frank-sinatra/"
       >
         <div
@@ -36122,7 +36122,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lee-marvin/"
       >
         <div
@@ -36169,7 +36169,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roger-corman/"
       >
         <div
@@ -36229,7 +36229,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-huston/"
       >
         <div
@@ -36284,7 +36284,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sidney-lumet/"
       >
         <div
@@ -36335,7 +36335,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/warren-oates/"
       >
         <div
@@ -36382,7 +36382,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/alfred-hitchcock/"
       >
         <div
@@ -36433,7 +36433,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/robert-altman/"
       >
         <div
@@ -36484,7 +36484,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-sturges/"
       >
         <div
@@ -36536,7 +36536,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ward-bond/"
       >
         <div
@@ -36583,7 +36583,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dean-martin/"
       >
         <div
@@ -36630,7 +36630,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ken-russell/"
       >
         <div
@@ -36685,7 +36685,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/howard-hawks/"
       >
         <div
@@ -36736,7 +36736,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-frankenheimer/"
       >
         <div
@@ -36783,7 +36783,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/lucio-fulci/"
       >
         <div
@@ -36838,7 +36838,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/luis-bunuel/"
       >
         <div
@@ -36889,7 +36889,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/brian-de-palma/"
       >
         <div
@@ -36940,7 +36940,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/billy-wilder/"
       >
         <div
@@ -36991,7 +36991,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-mamet/"
       >
         <div
@@ -37046,7 +37046,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/fritz-lang/"
       >
         <div
@@ -37097,7 +37097,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-cronenberg/"
       >
         <div
@@ -37152,7 +37152,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/steve-mcqueen/"
       >
         <div
@@ -37199,7 +37199,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/marilyn-monroe/"
       >
         <div
@@ -37246,7 +37246,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/mario-bava/"
       >
         <div
@@ -37297,7 +37297,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/wes-craven/"
       >
         <div
@@ -37352,7 +37352,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/roman-polanski/"
       >
         <div
@@ -37407,7 +37407,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/abel-ferrara/"
       >
         <div
@@ -37462,7 +37462,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/dario-argento/"
       >
         <div
@@ -37517,7 +37517,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/william-friedkin/"
       >
         <div
@@ -37572,7 +37572,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-carpenter/"
       >
         <div
@@ -37627,7 +37627,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michele-soavi/"
       >
         <div
@@ -37682,7 +37682,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/michael-haneke/"
       >
         <div
@@ -37738,7 +37738,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/ben-johnson/"
       >
         <div
@@ -37785,7 +37785,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/george-a-romero/"
       >
         <div
@@ -37840,7 +37840,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tobe-hooper/"
       >
         <div
@@ -37895,7 +37895,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/raymond-chandler/"
       >
         <div
@@ -37942,7 +37942,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/clive-barker/"
       >
         <div
@@ -37997,7 +37997,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/john-boorman/"
       >
         <div
@@ -38052,7 +38052,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/sam-peckinpah/"
       >
         <div
@@ -38107,7 +38107,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tony-scott/"
       >
         <div
@@ -38158,7 +38158,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/david-lean/"
       >
         <div
@@ -38209,7 +38209,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/neil-labute/"
       >
         <div
@@ -38260,7 +38260,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/stanley-kubrick/"
       >
         <div
@@ -38311,7 +38311,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/leigh-brackett/"
       >
         <div
@@ -38358,7 +38358,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/paul-thomas-anderson/"
       >
         <div
@@ -38409,7 +38409,7 @@ exports[`CastAndCrew > can sort by title count desc 1`] = `
     </a>
     <div>
       <a
-        class="text-md"
+        class="text-md text-accent"
         href="/cast-and-crew/tod-browning/"
       >
         <div

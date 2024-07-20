@@ -10,13 +10,7 @@ interface Collections {
 
 export interface Collection extends CollectionJson {}
 
-let cache: Collections;
-
 export async function allCollections(): Promise<Collections> {
-  if (cache) {
-    return cache;
-  }
-
   const collections = await allCollectionsJson();
   const releaseYears = new Set<string>();
 
@@ -26,10 +20,8 @@ export async function allCollections(): Promise<Collections> {
     });
   });
 
-  cache = {
+  return {
     collections: collections,
     distinctReleaseYears: Array.from(releaseYears).toSorted(),
   };
-
-  return cache;
 }

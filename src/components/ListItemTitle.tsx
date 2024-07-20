@@ -13,7 +13,7 @@ export function ListItemTitle({
 
   if (slug) {
     return (
-      <a href={`/reviews/${slug}/`} className="block text-md">
+      <a href={`/reviews/${slug}/`} className="block text-md text-accent">
         {title}&#8239;&#8239;{yearBox}
       </a>
     );

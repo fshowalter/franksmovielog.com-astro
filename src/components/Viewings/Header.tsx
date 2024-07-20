@@ -22,7 +22,11 @@ export function Header({
       </div>
       <div className="h-4 min-h-4" />
       <p className="text-subtle">
-        See more <a href="/viewings/stats/">stats</a>.
+        See more{" "}
+        <a className="text-accent" href="/viewings/stats/">
+          stats
+        </a>
+        .
       </p>
     </>
   );

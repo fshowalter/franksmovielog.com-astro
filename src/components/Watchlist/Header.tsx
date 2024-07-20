@@ -15,7 +15,11 @@ export function Header({ titleCount }: { titleCount: number }): JSX.Element {
       </p>
       <div className="spacer-y-4" />
       <p className="text-subtle">
-        Track my <a href="/watchlist/progress/">progress</a>.
+        Track my{" "}
+        <a className="text-accent" href="/watchlist/progress/">
+          progress
+        </a>
+        .
       </p>
     </>
   );

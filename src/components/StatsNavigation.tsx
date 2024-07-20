@@ -11,7 +11,9 @@ function AllTimeLink({
 
   return (
     <li className="block">
-      <a href={linkFunc("all")}>All-Time</a>
+      <a className="text-accent" href={linkFunc("all")}>
+        All-Time
+      </a>
     </li>
   );
 }
@@ -31,7 +33,9 @@ function YearLink({
 
   return (
     <li className="block">
-      <a href={linkFunc(year)}>{year}</a>
+      <a className="text-accent" href={linkFunc(year)}>
+        {year}
+      </a>
     </li>
   );
 }

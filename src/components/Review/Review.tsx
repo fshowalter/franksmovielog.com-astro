@@ -1,6 +1,6 @@
 import type { AvatarImageData } from "src/api/avatars";
 import type { PosterImageData } from "src/api/posters";
-import type { Review } from "src/api/reviews";
+import type { Review, ReviewWithContent } from "src/api/reviews";
 import type { StillImageData } from "src/api/stills";
 import { Still } from "src/components/Still";
 
@@ -19,7 +19,7 @@ export const StillImageConfig = {
 };
 
 export interface Props {
-  value: Review;
+  value: ReviewWithContent;
   stillImageData: StillImageData;
   posterImageData: PosterImageData;
   avatars: Record<string, AvatarImageData>;

@@ -1,8 +1,8 @@
-import type { Review } from "src/api/reviews";
+import type { ReviewWithContent } from "src/api/reviews";
 import { DateIcon } from "src/components/DateIcon";
 import { RenderedMarkdown } from "src/components/RenderedMarkdown";
 
-type Viewing = Review["viewings"][0];
+type Viewing = ReviewWithContent["viewings"][0];
 
 const dateFormat = new Intl.DateTimeFormat("en-US", {
   weekday: "short",

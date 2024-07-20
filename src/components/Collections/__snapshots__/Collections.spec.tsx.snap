@@ -22,7 +22,7 @@ exports[`Collections > can filter by name 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/friday-the-13th/"
     >
       <div
@@ -64,7 +64,7 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/childs-play/"
     >
       <div
@@ -99,7 +99,7 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/friday-the-13th/"
     >
       <div
@@ -134,7 +134,7 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/halloween/"
     >
       <div
@@ -169,7 +169,7 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/hammer-films/"
     >
       <div
@@ -204,7 +204,7 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/hatchet/"
     >
       <div
@@ -239,7 +239,7 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/james-bond/"
     >
       <div
@@ -274,7 +274,7 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/phantasm/"
     >
       <div
@@ -309,7 +309,7 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/saw/"
     >
       <div
@@ -344,7 +344,7 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/shaw-brothers/"
     >
       <div
@@ -379,7 +379,7 @@ exports[`Collections > can sort by name asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/universal-monsters/"
     >
       <div
@@ -421,7 +421,7 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/universal-monsters/"
     >
       <div
@@ -456,7 +456,7 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/shaw-brothers/"
     >
       <div
@@ -491,7 +491,7 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/saw/"
     >
       <div
@@ -526,7 +526,7 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/phantasm/"
     >
       <div
@@ -561,7 +561,7 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/james-bond/"
     >
       <div
@@ -596,7 +596,7 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/hatchet/"
     >
       <div
@@ -631,7 +631,7 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/hammer-films/"
     >
       <div
@@ -666,7 +666,7 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/halloween/"
     >
       <div
@@ -701,7 +701,7 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/friday-the-13th/"
     >
       <div
@@ -736,7 +736,7 @@ exports[`Collections > can sort by name desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/childs-play/"
     >
       <div
@@ -778,7 +778,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/universal-monsters/"
     >
       <div
@@ -813,7 +813,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/hatchet/"
     >
       <div
@@ -848,7 +848,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/phantasm/"
     >
       <div
@@ -883,7 +883,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/halloween/"
     >
       <div
@@ -918,7 +918,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/james-bond/"
     >
       <div
@@ -953,7 +953,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/saw/"
     >
       <div
@@ -988,7 +988,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/shaw-brothers/"
     >
       <div
@@ -1023,7 +1023,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/childs-play/"
     >
       <div
@@ -1058,7 +1058,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/friday-the-13th/"
     >
       <div
@@ -1093,7 +1093,7 @@ exports[`Collections > can sort by review count asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/hammer-films/"
     >
       <div
@@ -1135,7 +1135,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/friday-the-13th/"
     >
       <div
@@ -1170,7 +1170,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/hammer-films/"
     >
       <div
@@ -1205,7 +1205,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/childs-play/"
     >
       <div
@@ -1240,7 +1240,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/saw/"
     >
       <div
@@ -1275,7 +1275,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/shaw-brothers/"
     >
       <div
@@ -1310,7 +1310,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/halloween/"
     >
       <div
@@ -1345,7 +1345,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/james-bond/"
     >
       <div
@@ -1380,7 +1380,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/phantasm/"
     >
       <div
@@ -1415,7 +1415,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/hatchet/"
     >
       <div
@@ -1450,7 +1450,7 @@ exports[`Collections > can sort by review count desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/universal-monsters/"
     >
       <div
@@ -1492,7 +1492,7 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/hatchet/"
     >
       <div
@@ -1527,7 +1527,7 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/phantasm/"
     >
       <div
@@ -1562,7 +1562,7 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/childs-play/"
     >
       <div
@@ -1597,7 +1597,7 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/saw/"
     >
       <div
@@ -1632,7 +1632,7 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/friday-the-13th/"
     >
       <div
@@ -1667,7 +1667,7 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/halloween/"
     >
       <div
@@ -1702,7 +1702,7 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/james-bond/"
     >
       <div
@@ -1737,7 +1737,7 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/universal-monsters/"
     >
       <div
@@ -1772,7 +1772,7 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/hammer-films/"
     >
       <div
@@ -1807,7 +1807,7 @@ exports[`Collections > can sort by title count asc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/shaw-brothers/"
     >
       <div
@@ -1849,7 +1849,7 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/shaw-brothers/"
     >
       <div
@@ -1884,7 +1884,7 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/hammer-films/"
     >
       <div
@@ -1919,7 +1919,7 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/universal-monsters/"
     >
       <div
@@ -1954,7 +1954,7 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/james-bond/"
     >
       <div
@@ -1989,7 +1989,7 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/halloween/"
     >
       <div
@@ -2024,7 +2024,7 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/friday-the-13th/"
     >
       <div
@@ -2059,7 +2059,7 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/saw/"
     >
       <div
@@ -2094,7 +2094,7 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/childs-play/"
     >
       <div
@@ -2129,7 +2129,7 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/phantasm/"
     >
       <div
@@ -2164,7 +2164,7 @@ exports[`Collections > can sort by title count desc 1`] = `
       />
     </a>
     <a
-      class="text-md"
+      class="text-md text-accent"
       href="/collections/hatchet/"
     >
       <div
