@@ -13,10 +13,12 @@ dirents
 Drafthouse
 franksmovielog
 fshowalter
+hellraiser
 imdb
 knip
 Loudoun
 mdast
+movielog
 popout
 rehype
 Rehype
