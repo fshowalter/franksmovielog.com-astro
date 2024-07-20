@@ -36,7 +36,10 @@ export function Review({
   stillListStills,
 }: Props): JSX.Element {
   return (
-    <main id="top" className="scroll-margin-top flex flex-col items-center">
+    <main
+      id="top"
+      className="flex scroll-mt-[var(--header-offset)] flex-col items-center"
+    >
       <Header
         title={value.title}
         year={value.year}

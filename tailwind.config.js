@@ -36,9 +36,6 @@ export default {
       max: "1472px",
     },
     extend: {
-      backgroundImage: {
-        notcomingsoon: "url('/assets/ripnotcomingsoon.jpg')",
-      },
       boxShadow: {
         all: "0 0 0 1px var(--border-default)",
         bottom: "0px 1px var(--border-default)",
@@ -70,7 +67,6 @@ export default {
         prose: PROSE_CONTENT_WIDTH,
         popout: `calc((var(--gutter-width) * 2) + ${PROSE_CONTENT_WIDTH})`,
         poster: POSTER_WIDTH,
-        "1/2": "50%",
         unset: "unset",
       },
       padding: {

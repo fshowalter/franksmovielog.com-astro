@@ -43882,7 +43882,7 @@ exports[`Collection > renders 1`] = `
           </div>
         </div>
         <fieldset
-          class="border-all rounded-md px-gutter pb-8 pt-6 text-subtle desktop:sticky desktop:top-[208px] desktop:self-start max:top-[160px]"
+          class="rounded-md px-gutter pb-8 pt-6 text-subtle shadow-all desktop:sticky desktop:top-[208px] desktop:self-start max:top-[160px]"
         >
           <legend
             class="bg-default px-ch text-center text-md"

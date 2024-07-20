@@ -44,7 +44,7 @@ export function Credits({
     <aside
       id="credits"
       className={twMerge(
-        "scroll-margin-top relative bg-subtle px-gutter pb-8 pt-8 tablet:pt-12",
+        "relative scroll-mt-[var(--header-offset)] bg-subtle px-gutter pb-8 pt-8 tablet:pt-12",
         className,
       )}
     >
@@ -90,7 +90,7 @@ export function Credits({
       <div className="h-8 min-h-8" />
       <a
         href="#top"
-        className="mx-auto flex max-w-1/2 cursor-pointer content-center items-center justify-center rounded-lg p-2 shadow-all shadow-border hover:shadow-border-accent"
+        className="mx-auto flex max-w-[50%] cursor-pointer content-center items-center justify-center rounded-lg p-2 shadow-all hover:shadow-border-accent"
       >
         Back to Top
         <svg viewBox="0 0 24 24" className="size-6 fill-default">
