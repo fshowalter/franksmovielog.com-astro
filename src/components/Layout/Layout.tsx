@@ -20,7 +20,7 @@ export function Layout({
       </a>
       <div
         className={
-          "image-filter mx-auto min-h-4 w-full max-w-canvas bg-notcomingsoon desktop:sticky desktop:top-0 desktop:z-40"
+          "image-filter mx-auto min-h-4 w-full max-w-canvas bg-[url('/assets/ripnotcomingsoon.avif')] desktop:sticky desktop:top-0 desktop:z-40"
         }
       />
 

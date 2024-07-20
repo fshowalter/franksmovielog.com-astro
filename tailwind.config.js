@@ -36,9 +36,6 @@ export default {
       max: "1472px",
     },
     extend: {
-      backgroundImage: {
-        notcomingsoon: "url('/assets/ripnotcomingsoon.jpg')",
-      },
       boxShadow: {
         all: "0 0 0 1px var(--border-default)",
         bottom: "0px 1px var(--border-default)",
