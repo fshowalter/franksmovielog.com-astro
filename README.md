@@ -64,6 +64,14 @@ A quick look at the non-standard directories included in the project.
 
 Push to Github and Actions builds the project and POST's to Netlify.
 
+## What's new in v2?
+
+Gatsby's [deathbed status](https://github.com/gatsbyjs/gatsby/commits/master/) prompted me to migrate to a new framework. I tried Next.js first (see [why not next?](#why-not-next) below) and decided on Astro. Losing Gatsby's GraphQL layer hurt (I still miss it) but the move means I can finally use ES modules and bump multiple dependencies (looking at you, [unified](https://github.com/unifiedjs/unified)).
+
+I also opted to prune as many dependencies as possible in the name of simplicity. Notably:
+
+- Vanilla Extract and Sprinkles in favor of Tailwind. The big draw for Vanilla Extract was the ability to leverage Typescript to type the styles, but Tailwind now has an eslint plugin that covers this usecase.
+
 ## Why not Next?
 
 I considered Next. Even ported the entire site over and had it all working. React Server Components are sweet. But Vercel (and Next) are focused on _apps_ not static sites. They don't have an asset pipeline and Vercel doesn't even cache anything in the `/public` folder. This makes sense as most _apps_ will offload this to a CDN. But for a static site, it's the priority.
