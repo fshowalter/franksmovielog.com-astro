@@ -21,6 +21,17 @@ import {
   trimToExcerpt,
 } from "./utils/markdown/trimToExcerpt";
 
+let cachedViewingsMarkdown: MarkdownViewing[] | null = null;
+let cachedMarkdownReviews: MarkdownReview[] | null = null;
+let cachedReviewedTitlesJson: ReviewedTitleJson[] | null = null;
+let cachedReviews: Reviews | null = null;
+
+if (import.meta.env.MODE !== "development") {
+  cachedViewingsMarkdown = await allViewingsMarkdown();
+  cachedReviewedTitlesJson = await allReviewedTitlesJson();
+  cachedMarkdownReviews = await allReviewsMarkdown();
+}
+
 interface ReviewViewing extends MarkdownViewing {
   venueNotes: string | null;
   mediumNotes: string | null;
@@ -66,8 +77,10 @@ export interface ReviewWithExcerpt extends Review {
 export async function loadExcerptHtml(
   review: Review,
 ): Promise<ReviewWithExcerpt> {
-  const reviewsMarkdown = await allReviewsMarkdown();
-  const reviewedTitlesJson = await allReviewedTitlesJson();
+  const reviewsMarkdown = cachedMarkdownReviews || (await allReviewsMarkdown());
+  const reviewedTitlesJson =
+    cachedReviewedTitlesJson || (await allReviewedTitlesJson());
+
   const { rawContent } = reviewsMarkdown.find((markdown) => {
     return markdown.slug === review.slug;
   })!;
@@ -104,7 +117,8 @@ export interface ReviewWithContent extends Review {
 }
 
 export async function loadContent(review: Review): Promise<ReviewWithContent> {
-  const viewingsMarkdown = await allViewingsMarkdown();
+  const viewingsMarkdown =
+    cachedViewingsMarkdown || (await allViewingsMarkdown());
   const reviewedTitlesJson = await allReviewedTitlesJson();
 
   const excerptPlainText = getMastProcessor()
@@ -147,7 +161,7 @@ async function parseReviewedTitlesJson(
   const distinctReviewYears = new Set<string>();
   const distinctReleaseYears = new Set<string>();
   const distinctGenres = new Set<string>();
-  const reviewsMarkdown = await allReviewsMarkdown();
+  const reviewsMarkdown = cachedMarkdownReviews || (await allReviewsMarkdown());
 
   const reviews = reviewedTitlesJson.map((title) => {
     title.genres.forEach((genre) => distinctGenres.add(genre));
@@ -183,7 +197,8 @@ async function parseReviewedTitlesJson(
 }
 
 export async function mostRecentReviews(limit: number) {
-  const reviewedTitlesJson = await allReviewedTitlesJson();
+  const reviewedTitlesJson =
+    cachedReviewedTitlesJson || (await allReviewedTitlesJson());
 
   reviewedTitlesJson.sort((a, b) => b.sequence.localeCompare(a.sequence));
   const slicedTitles = reviewedTitlesJson.slice(0, limit);
@@ -194,6 +209,16 @@ export async function mostRecentReviews(limit: number) {
 }
 
 export async function allReviews(): Promise<Reviews> {
-  const reviewedTitlesJson = await allReviewedTitlesJson();
-  return await parseReviewedTitlesJson(reviewedTitlesJson);
+  if (cachedReviews) {
+    return cachedReviews;
+  }
+  const reviewedTitlesJson =
+    cachedReviewedTitlesJson || (await allReviewedTitlesJson());
+  const reviews = await parseReviewedTitlesJson(reviewedTitlesJson);
+
+  if (!import.meta.env.DEV) {
+    cachedReviews = reviews;
+  }
+
+  return reviews;
 }
