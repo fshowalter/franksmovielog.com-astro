@@ -19,7 +19,7 @@
     "test:coverage": "vitest run src --coverage.all true --coverage",
     "test:update": "vitest -u run src",
     "test:watch": "vitest src",
-    "test": "vitest run src/pages"
+    "test": "vitest run src"
   },
   "dependencies": {
     "@astrojs/check": "0.8.2",
