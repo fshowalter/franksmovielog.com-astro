@@ -1,10 +1,12 @@
+import { Button } from "./Button";
+
 export function ShowMoreButton({
   onClick,
 }: {
   onClick: () => void;
 }): JSX.Element {
   return (
-    <button onClick={onClick} className="button gap-x-4 px-pageMargin">
+    <Button onClick={onClick} className="gap-x-4">
       <svg
         width="24"
         height="24"
@@ -16,6 +18,6 @@ export function ShowMoreButton({
         <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
       </svg>
       Show More...
-    </button>
+    </Button>
   );
 }

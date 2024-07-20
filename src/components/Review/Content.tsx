@@ -1,4 +1,4 @@
-import type { Review } from "src/api/reviews";
+import type { ReviewWithContent } from "src/api/reviews";
 import { Grade } from "src/components/Grade";
 import { LongFormText } from "src/components/LongFormText";
 import { twMerge } from "tailwind-merge";
@@ -15,7 +15,7 @@ function formatDate(date: Date) {
   return dateFormat.format(date);
 }
 
-interface Props extends Pick<Review, "grade" | "date" | "content"> {
+interface Props extends Pick<ReviewWithContent, "grade" | "date" | "content"> {
   className?: string;
 }
 

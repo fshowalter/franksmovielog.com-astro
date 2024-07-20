@@ -1,8 +1,8 @@
-import type { Review } from "src/api/reviews";
+import type { ReviewWithContent } from "src/api/reviews";
 
 import { ViewingHistoryListItem } from "./ViewingHistoryListItem";
 
-interface Props extends Pick<Review, "viewings"> {
+interface Props extends Pick<ReviewWithContent, "viewings"> {
   className?: string;
 }
 

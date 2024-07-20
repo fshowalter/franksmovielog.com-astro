@@ -6,8 +6,8 @@ import simpleImportSort from "eslint-plugin-simple-import-sort";
 import tailwind from "eslint-plugin-tailwindcss";
 import testingLibrary from "eslint-plugin-testing-library";
 import vitest from "eslint-plugin-vitest";
-import tsEslint from "typescript-eslint";
 import globals from "globals";
+import tsEslint from "typescript-eslint";
 
 export default tsEslint.config(
   {
@@ -27,7 +27,9 @@ export default tsEslint.config(
   {
     files: ["*.js"],
     languageOptions: {
-      ...globals.node,
+      globals: {
+        ...globals.node,
+      },
     },
   },
   {
