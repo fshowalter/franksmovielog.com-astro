@@ -9,7 +9,7 @@ interface Props extends Pick<Review, "viewings"> {
 export function ViewingHistory({ viewings, className }: Props) {
   return (
     <div className={className}>
-      <h3 className="border-bottom px-gutter text-md font-normal text-subtle">
+      <h3 className="px-gutter text-md font-normal text-subtle shadow-bottom">
         Viewing History
         <div className="h-2 min-h-2" />
       </h3>

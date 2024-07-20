@@ -3,7 +3,7 @@ import { SiteSearchForm } from "./SiteSearchForm";
 
 export function Mast({ currentPath }: { currentPath: string }) {
   return (
-    <header className="border-bottom flex flex-col items-center gap-6 bg-default px-pageMargin py-6 text-center desktop:sticky desktop:top-4 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:justify-between desktop:py-8 desktop:text-left">
+    <header className="flex flex-col items-center gap-6 bg-default px-pageMargin py-6 text-center shadow-bottom desktop:sticky desktop:top-4 desktop:z-40 desktop:flex-row desktop:flex-wrap desktop:justify-between desktop:py-8 desktop:text-left">
       <div className="items-inherit justify-items-inherit flex flex-col">
         <h1
           className="whitespace-nowrap font-normal leading-8"

@@ -67,7 +67,6 @@ export default {
         prose: PROSE_CONTENT_WIDTH,
         popout: `calc((var(--gutter-width) * 2) + ${PROSE_CONTENT_WIDTH})`,
         poster: POSTER_WIDTH,
-        "1/2": "50%",
         unset: "unset",
       },
       padding: {
