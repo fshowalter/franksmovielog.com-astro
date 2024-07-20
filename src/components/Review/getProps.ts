@@ -1,7 +1,7 @@
 import { getImage } from "astro:assets";
 import { getAvatars } from "src/api/avatars";
 import { getFluidWidthPosters } from "src/api/posters";
-import { allReviews } from "src/api/reviews";
+import { allReviews, loadContent } from "src/api/reviews";
 import { getStillImagePath, getStills, images } from "src/api/stills";
 import { StillListItemImageConfig } from "src/components/StillListItem";
 import { normalizeSources } from "src/utils";
@@ -13,9 +13,11 @@ import { type Props, StillImageConfig } from "./Review";
 export async function getProps(slug: string): Promise<Props> {
   const { reviews } = await allReviews();
 
-  const value = reviews.find((review) => {
+  const review = reviews.find((review) => {
     return review.slug === slug;
   })!;
+
+  const value = await loadContent(review);
 
   const imagePath = getStillImagePath(value.slug);
   const stillFile = await images[imagePath]();

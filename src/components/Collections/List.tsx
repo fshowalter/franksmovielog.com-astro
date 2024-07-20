@@ -60,7 +60,7 @@ function CollectionListItem({
 
 function CollectionName({ value }: { value: ListItemValue }) {
   return (
-    <a href={`/collections/${value.slug}/`} className="text-md">
+    <a href={`/collections/${value.slug}/`} className="text-md text-accent">
       <div className="leading-normal">{value.name}</div>
     </a>
   );

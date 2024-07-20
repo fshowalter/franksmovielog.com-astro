@@ -65055,6 +65055,7 @@ exports[`/watchlist > renders 1`] = `
           >
             Track my 
             <a
+              class="text-accent"
               href="/watchlist/progress/"
             >
               progress

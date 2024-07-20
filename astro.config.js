@@ -2,6 +2,25 @@ import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
 
+function contentHmr() {
+  return {
+    name: "content-hmr",
+    enforce: "post",
+    // HMR
+    handleHotUpdate({ file, server }) {
+      console.log(file);
+      if (file.includes("/content/")) {
+        console.log("reloading content file...");
+
+        server.ws.send({
+          type: "full-reload",
+          path: "*",
+        });
+      }
+    },
+  };
+}
+
 // https://astro.build/config
 export default defineConfig({
   site: "http://www.franksmovielog.com",
@@ -10,6 +29,7 @@ export default defineConfig({
     optimizeDeps: {
       exclude: ["fsevents"],
     },
+    plugins: [contentHmr()],
   },
   integrations: [
     react(),

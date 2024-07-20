@@ -1,11 +1,15 @@
 import rss from "@astrojs/rss";
 import { getImage } from "astro:assets";
-import { mostRecentReviews, type Review } from "src/api/reviews";
+import {
+  loadExcerptHtml,
+  mostRecentReviews,
+  type ReviewWithExcerpt,
+} from "src/api/reviews";
 import { getStillImagePath, images } from "src/api/stills";
 import { normalizeSources } from "src/utils";
 import { textStarsForGrade } from "src/utils/textStarsForGrade";
 
-function addMetaToExcerpt(excerpt: string, review: Review) {
+function addMetaToExcerpt(excerpt: string, review: ReviewWithExcerpt) {
   const meta = `${textStarsForGrade(
     review.grade,
   )} D: ${review.directorNames.join(
@@ -16,7 +20,13 @@ function addMetaToExcerpt(excerpt: string, review: Review) {
 }
 
 export async function GET() {
-  const rssItems = await mostRecentReviews(10);
+  const reviews = await mostRecentReviews(10);
+
+  const rssItems = await Promise.all(
+    reviews.map(async (review) => {
+      return await loadExcerptHtml(review);
+    }),
+  );
 
   return rss({
     // `<title>` field in output xml

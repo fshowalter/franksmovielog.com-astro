@@ -1113,7 +1113,7 @@ exports[`Collection > can filter by release year 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/the-boxer-from-shantung-1972/"
             >
               The Boxer from Shantung
@@ -1336,7 +1336,7 @@ exports[`Collection > can filter by release year 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/five-fingers-of-death-1972/"
             >
               Five Fingers of Death
@@ -10840,7 +10840,7 @@ exports[`Collection > can show hidden reviewed titles 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/the-boxer-from-shantung-1972/"
             >
               The Boxer from Shantung
@@ -11063,7 +11063,7 @@ exports[`Collection > can show hidden reviewed titles 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/five-fingers-of-death-1972/"
             >
               Five Fingers of Death
@@ -15225,7 +15225,7 @@ exports[`Collection > can show more titles 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/the-boxer-from-shantung-1972/"
             >
               The Boxer from Shantung
@@ -15448,7 +15448,7 @@ exports[`Collection > can show more titles 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/five-fingers-of-death-1972/"
             >
               Five Fingers of Death
@@ -18632,7 +18632,7 @@ exports[`Collection > can show more titles 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/crippled-avengers-1978/"
             >
               Crippled Avengers
@@ -20788,7 +20788,7 @@ exports[`Collection > can show more titles 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/five-elements-ninjas-1982/"
             >
               Five Elements Ninjas
@@ -20929,7 +20929,7 @@ exports[`Collection > can show more titles 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/human-lanterns-1982/"
             >
               Human Lanterns
@@ -21502,7 +21502,7 @@ exports[`Collection > can show more titles 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/the-boxers-omen-1983/"
             >
               The Boxer's Omen
@@ -21788,7 +21788,7 @@ exports[`Collection > can show more titles 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/the-eight-diagram-pole-fighter-1984/"
             >
               The Eight Diagram Pole Fighter
@@ -21876,7 +21876,7 @@ exports[`Collection > can sort by grade with best first 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/five-fingers-of-death-1972/"
             >
               Five Fingers of Death
@@ -21935,7 +21935,7 @@ exports[`Collection > can sort by grade with best first 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/the-boxers-omen-1983/"
             >
               The Boxer's Omen
@@ -22016,7 +22016,7 @@ exports[`Collection > can sort by grade with best first 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/the-boxer-from-shantung-1972/"
             >
               The Boxer from Shantung
@@ -22075,7 +22075,7 @@ exports[`Collection > can sort by grade with best first 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/crippled-avengers-1978/"
             >
               Crippled Avengers
@@ -22134,7 +22134,7 @@ exports[`Collection > can sort by grade with best first 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/five-elements-ninjas-1982/"
             >
               Five Elements Ninjas
@@ -22215,7 +22215,7 @@ exports[`Collection > can sort by grade with best first 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/human-lanterns-1982/"
             >
               Human Lanterns
@@ -22296,7 +22296,7 @@ exports[`Collection > can sort by grade with best first 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/the-eight-diagram-pole-fighter-1984/"
             >
               The Eight Diagram Pole Fighter
@@ -26219,7 +26219,7 @@ exports[`Collection > can sort by grade with worst first 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/the-eight-diagram-pole-fighter-1984/"
             >
               The Eight Diagram Pole Fighter
@@ -26300,7 +26300,7 @@ exports[`Collection > can sort by grade with worst first 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/human-lanterns-1982/"
             >
               Human Lanterns
@@ -26381,7 +26381,7 @@ exports[`Collection > can sort by grade with worst first 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/the-boxer-from-shantung-1972/"
             >
               The Boxer from Shantung
@@ -26440,7 +26440,7 @@ exports[`Collection > can sort by grade with worst first 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/crippled-avengers-1978/"
             >
               Crippled Avengers
@@ -26499,7 +26499,7 @@ exports[`Collection > can sort by grade with worst first 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/five-elements-ninjas-1982/"
             >
               Five Elements Ninjas
@@ -26580,7 +26580,7 @@ exports[`Collection > can sort by grade with worst first 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/five-fingers-of-death-1972/"
             >
               Five Fingers of Death
@@ -26639,7 +26639,7 @@ exports[`Collection > can sort by grade with worst first 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/the-boxers-omen-1983/"
             >
               The Boxer's Omen
@@ -31079,7 +31079,7 @@ exports[`Collection > can sort by release date with newest first 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/the-eight-diagram-pole-fighter-1984/"
             >
               The Eight Diagram Pole Fighter
@@ -31242,7 +31242,7 @@ exports[`Collection > can sort by release date with newest first 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/the-boxers-omen-1983/"
             >
               The Boxer's Omen
@@ -31815,7 +31815,7 @@ exports[`Collection > can sort by release date with newest first 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/human-lanterns-1982/"
             >
               Human Lanterns
@@ -31956,7 +31956,7 @@ exports[`Collection > can sort by release date with newest first 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/five-elements-ninjas-1982/"
             >
               Five Elements Ninjas
@@ -34153,7 +34153,7 @@ exports[`Collection > can sort by release date with newest first 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/crippled-avengers-1978/"
             >
               Crippled Avengers
@@ -37101,7 +37101,7 @@ exports[`Collection > can sort by release date with oldest first 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/the-boxer-from-shantung-1972/"
             >
               The Boxer from Shantung
@@ -37324,7 +37324,7 @@ exports[`Collection > can sort by release date with oldest first 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/five-fingers-of-death-1972/"
             >
               Five Fingers of Death
@@ -40209,7 +40209,7 @@ exports[`Collection > can sort by title 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/the-boxer-from-shantung-1972/"
             >
               The Boxer from Shantung
@@ -40309,7 +40309,7 @@ exports[`Collection > can sort by title 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/the-boxers-omen-1983/"
             >
               The Boxer's Omen
@@ -41046,7 +41046,7 @@ exports[`Collection > can sort by title 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/crippled-avengers-1978/"
             >
               Crippled Avengers
@@ -41764,7 +41764,7 @@ exports[`Collection > can sort by title 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/the-eight-diagram-pole-fighter-1984/"
             >
               The Eight Diagram Pole Fighter
@@ -42214,7 +42214,7 @@ exports[`Collection > can sort by title 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/five-elements-ninjas-1982/"
             >
               Five Elements Ninjas
@@ -42273,7 +42273,7 @@ exports[`Collection > can sort by title 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/five-fingers-of-death-1972/"
             >
               Five Fingers of Death
@@ -43319,7 +43319,7 @@ exports[`Collection > can sort by title 1`] = `
         >
           <div>
             <a
-              class="block text-md"
+              class="block text-md text-accent"
               href="/reviews/human-lanterns-1982/"
             >
               Human Lanterns
@@ -46870,7 +46870,7 @@ exports[`Collection > renders 1`] = `
                 >
                   <div>
                     <a
-                      class="block text-md"
+                      class="block text-md text-accent"
                       href="/reviews/the-boxer-from-shantung-1972/"
                     >
                       The Boxer from Shantung  
@@ -47088,7 +47088,7 @@ exports[`Collection > renders 1`] = `
                 >
                   <div>
                     <a
-                      class="block text-md"
+                      class="block text-md text-accent"
                       href="/reviews/five-fingers-of-death-1972/"
                     >
                       Five Fingers of Death  

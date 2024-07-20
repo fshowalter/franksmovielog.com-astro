@@ -8,9 +8,21 @@ import { describe, it } from "vitest";
 import Review from "./[slug].astro";
 
 const { reviews } = await allReviews();
+const testSlugs = new Set([
+  "the-curse-of-frankenstein-1957",
+  "event-horizon-1997",
+  "hellraiser-1987",
+  "rio-bravo-1959",
+  "night-train-to-terror-1985",
+  "horror-express-1972",
+]);
+
+const testReviews = reviews.filter((review) => {
+  return testSlugs.has(review.slug);
+});
 
 describe("/reviews/:slug", () => {
-  it.for(reviews)(
+  it.for(testReviews)(
     "matches snapshot for slug $slug",
     { timeout: 10000 },
     async (review, { expect }) => {

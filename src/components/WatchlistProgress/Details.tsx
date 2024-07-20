@@ -78,7 +78,12 @@ function Name({ value, valueType }: { valueType: ValueType; value: Value }) {
     linkTarget = `/cast-and-crew/${value.slug}`;
   }
 
-  if (value.slug) return <a href={linkTarget}>{value.name}</a>;
+  if (value.slug)
+    return (
+      <a className="text-accent" href={linkTarget}>
+        {value.name}
+      </a>
+    );
 
   return <span className="text-subtle">{value.name}</span>;
 }
