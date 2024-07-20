@@ -1,5 +1,3 @@
-"use client";
-
 import { useReducer } from "react";
 import type { AvatarImageData } from "src/api/avatars";
 import type { Collection } from "src/api/collections";
