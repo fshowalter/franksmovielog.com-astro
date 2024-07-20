@@ -76,7 +76,6 @@ function getExcerptHtml(
     .use(trimToExcerpt)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
-    .use(rootAsSpan)
     .use(rehypeStringify)
     .processSync(content)
     .toString();
@@ -103,12 +102,9 @@ function getExcerptPlainText(content: string) {
     .toString();
 }
 
-export async function allReviews(): Promise<Reviews> {
-  if (cache) {
-    return cache;
-  }
-
-  const reviewedTitlesJson = await allReviewedTitlesJson();
+async function parseReviewedTitlesJson(
+  reviewedTitlesJson: ReviewedTitleJson[],
+): Promise<Reviews> {
   const reviewsMarkdown = await allReviewsMarkdown();
   const viewingsMarkdown = await allViewingsMarkdown();
   const distinctReviewYears = new Set<string>();
@@ -177,12 +173,41 @@ export async function allReviews(): Promise<Reviews> {
     }),
   );
 
-  cache = {
+  return {
     reviews: reviews,
     distinctGenres: Array.from(distinctGenres).toSorted(),
     distinctReleaseYears: Array.from(distinctReleaseYears).toSorted(),
     distinctReviewYears: Array.from(distinctReviewYears).toSorted(),
   };
+}
+
+let mostRecentReviewsCache: Review[] = [];
+
+export async function mostRecentReviews(limit: number) {
+  if (mostRecentReviewsCache.length >= limit) {
+    return mostRecentReviewsCache.slice(0, limit);
+  }
+
+  const reviewedTitlesJson = await allReviewedTitlesJson();
+
+  reviewedTitlesJson.sort((a, b) => b.sequence.localeCompare(a.sequence));
+  const slicedTitles = reviewedTitlesJson.slice(0, limit);
+
+  const { reviews } = await parseReviewedTitlesJson(slicedTitles);
+
+  mostRecentReviewsCache = reviews;
+
+  return mostRecentReviewsCache;
+}
+
+export async function allReviews(): Promise<Reviews> {
+  if (cache) {
+    return cache;
+  }
+
+  const reviewedTitlesJson = await allReviewedTitlesJson();
+
+  cache = await parseReviewedTitlesJson(reviewedTitlesJson);
 
   return cache;
 }

@@ -1,6 +1,6 @@
 import rss from "@astrojs/rss";
 import { getImage } from "astro:assets";
-import { allReviews, type Review } from "src/api/reviews";
+import { mostRecentReviews, type Review } from "src/api/reviews";
 import { getStillImagePath, images } from "src/api/stills";
 import { normalizeSources } from "src/utils";
 import { textStarsForGrade } from "src/utils/textStarsForGrade";
@@ -16,11 +16,7 @@ function addMetaToExcerpt(excerpt: string, review: Review) {
 }
 
 export async function GET() {
-  const { reviews } = await allReviews();
-
-  reviews.sort((a, b) => b.sequence.localeCompare(a.sequence));
-
-  const rssItems = reviews.slice(0, 10);
+  const rssItems = await mostRecentReviews(10);
 
   return rss({
     // `<title>` field in output xml
