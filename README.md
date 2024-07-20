@@ -70,7 +70,11 @@ Gatsby's [deathbed status](https://github.com/gatsbyjs/gatsby/commits/master/) p
 
 I also opted to prune as many dependencies as possible in the name of simplicity. Notably:
 
-- Vanilla Extract and Sprinkles in favor of Tailwind. The big draw for Vanilla Extract was the ability to leverage Typescript to type the styles, but Tailwind now has an eslint plugin that covers this usecase.
+- Tailwind instead of Vanilla Extract and Sprinkles. The big draw for Vanilla Extract was the ability to leverage Typescript to type the styles, but Tailwind now has an eslint plugin that covers this use case.
+
+- Vitest instead of Jest. Astro's built on Vite (which handles Typescript transpilation), so Vitest is a minimal add. Adding Jest would bring Babel into the mix.
+
+- Npm instead of Yarn. I still prefer Yarn's DX (having to type 'run' for every NPM script is annoying) but Yarn's recent change to how it resolved peer deps made me wary of its long-term stability. I don't need workspaces (yet) so NPM will do.
 
 ## Why not Next?
 
