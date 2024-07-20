@@ -91,10 +91,6 @@
     filter: var(--image-filter);
   }
 
-  a {
-    color: var(--fg-accent);
-  }
-
   a[data-continue-reading] {
     font-size: 0.875rem;
     line-height: 1;
@@ -117,7 +113,7 @@
 
   .rendered-markdown {
     a {
-      color: var(--fg-accent);
+      text-decoration: underline;
     }
 
     p {

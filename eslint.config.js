@@ -7,6 +7,7 @@ import tailwind from "eslint-plugin-tailwindcss";
 import testingLibrary from "eslint-plugin-testing-library";
 import vitest from "eslint-plugin-vitest";
 import tsEslint from "typescript-eslint";
+import globals from "globals";
 
 export default tsEslint.config(
   {
@@ -23,6 +24,12 @@ export default tsEslint.config(
     },
   },
   ...eslintPluginAstro.configs.recommended,
+  {
+    files: ["*.js"],
+    languageOptions: {
+      ...globals.node,
+    },
+  },
   {
     files: ["**/*.ts", "**/*.tsx"],
     extends: [...tsEslint.configs.recommendedTypeChecked],
