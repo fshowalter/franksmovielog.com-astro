@@ -72037,7 +72037,8 @@ exports[`/watchlist > renders 1`] = `
             class="h-8 min-h-8"
           />
           <button
-            class="button gap-x-4 px-pageMargin"
+            class="relative flex w-full max-w-lg cursor-pointer justify-center whitespace-nowrap rounded-3xl bg-subtle px-4 py-2 text-base leading-6 text-default shadow-all hover:shadow-accent gap-x-4"
+            type="button"
           >
             <svg
               class="fill-accent"
